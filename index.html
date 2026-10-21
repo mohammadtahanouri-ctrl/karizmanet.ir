@@ -7,6 +7,12 @@
     <meta name="description" content="کافی‌نت آنلاین کاریزما نت؛ ثبت‌نام سامانه‌های دولتی، پرینت، کپی، اسکن، تایپ و کلیه خدمات اداری به‌صورت غیرحضوری. سریع، مطمئن، در سراسر ایران.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+
     <style>
         :root {
             --bg: #0b1120;
@@ -46,7 +52,8 @@
             --keyboard-text-color: #0284c7;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Vazirmatn', sans-serif; -webkit-tap-highlight-color: transparent; }
-        body { background: var(--bg); color: var(--text-main); line-height: 1.7; overflow-x: hidden; transition: background 0.3s, color 0.3s; padding-bottom: 70px; }
+        html, body { background-color: var(--bg); color: var(--text-main); line-height: 1.7; overflow-x: hidden; transition: background 0.3s, color 0.3s; }
+        body { padding-bottom: 70px; }
         a { color: inherit; text-decoration: none; }
 
         /* Header & Expanded Search */
@@ -59,14 +66,14 @@
 
         .header-actions { display: flex; align-items: center; gap: 8px; flex: 1; justify-content: flex-end; position: relative; }
         
-        /* Search Box (Smart Expand) */
-        .search-box-mini { position: relative; width: 180px; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 101; }
-        .search-box-mini input { width: 100%; padding: 7px 12px 7px 30px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); color: var(--text-main); font-size: 12px; outline: none; transition: all 0.3s; }
+        /* Search Box (Smart Expand Desktop) */
+        .search-box-mini { position: relative; width: 200px; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 101; }
+        .search-box-mini input { width: 100%; padding: 7px 12px 7px 35px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); color: var(--text-main); font-size: 13px; outline: none; transition: all 0.3s; }
         .search-box-mini input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(99,102,241,0.3); }
-        .search-box-mini i { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 12px; cursor: pointer; z-index: 2;}
+        .search-box-mini i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 13px; cursor: pointer; z-index: 2;}
         
         /* Search Expanded State */
-        .search-box-mini.expanded { width: 340px; }
+        .search-box-mini.expanded { width: 350px; }
         
         /* Search Shake Animation */
         @keyframes shake {
@@ -74,8 +81,8 @@
             10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
             20%, 40%, 60%, 80% { transform: translateX(5px); }
         }
-        .search-box-mini.shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; border-color: var(--danger); }
-        .search-box-mini.shake input { border-color: var(--danger); }
+        .search-box-mini.shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; }
+        .search-box-mini.shake input { border-color: var(--danger); box-shadow: 0 0 10px rgba(239,68,68,0.3); }
 
         /* Match Glow Effect */
         @keyframes pulseMatch {
@@ -92,7 +99,7 @@
         .btn-icon:hover { background: var(--primary); color: #fff; }
         .cart-badge { position: absolute; top: -4px; right: -4px; background: var(--danger); color: #fff; font-size: 9px; font-weight: bold; width: 16px; height: 16px; border-radius: 50%; display: grid; place-items: center; display: none; }
 
-        /* --- HERO: 3D Monitor & Glass Keyboard (Compact & Vibrant) --- */
+        /* --- HERO: 3D Monitor & Glass Keyboard --- */
         .hero { padding: 30px 20px 40px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(99,102,241,0.15), transparent 70%); position: relative; display: flex; flex-direction: column; align-items: center; overflow: hidden; }
         .hero-badge { display: inline-block; padding: 6px 16px; border-radius: 30px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.3); color: var(--primary); font-size: 13px; font-weight: 700; margin-bottom: 20px; backdrop-filter: blur(10px); animation: fadeInDown 0.8s ease-out; }
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
@@ -191,6 +198,14 @@
         .form-group input, .form-group textarea { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text-main); font-family: inherit; font-size: 14px; outline: none; }
         .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); }
 
+        /* Checkout Result Specific */
+        .payment-box { background: var(--surface); border: 2px dashed var(--primary); border-radius: 16px; padding: 20px; margin: 20px 0; text-align: center; }
+        .payment-box .card-number { font-size: 22px; font-weight: 800; letter-spacing: 2px; color: var(--accent); margin: 10px 0; direction: ltr; font-family: monospace; }
+        .payment-box .owner-name { font-size: 16px; font-weight: 700; color: var(--text-main); }
+        .receipt-grid { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+        .receipt-opt { width: 60px; height: 60px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); display: grid; place-items: center; font-size: 26px; transition: 0.2s; }
+        .receipt-opt:hover { transform: scale(1.1); border-color: var(--primary); }
+        
         /* Contact Modal Specific */
         .contact-grid { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
         .contact-item { display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--surface); border-radius: 12px; border: 1px solid var(--border); }
@@ -212,18 +227,16 @@
         .upload-opt span { font-size: 12px; font-weight: 700; color: var(--text-main); }
         
         /* Icon Colors */
-        .c-telegram { color: #0088cc; text-shadow: 0 0 10px rgba(0,136,204,0.5); }
-        .c-eitaa { color: #ff9800; text-shadow: 0 0 10px rgba(255,152,0,0.5); }
-        .c-rubika { color: #a855f7; text-shadow: 0 0 10px rgba(168,85,247,0.5); }
-        .c-bale { color: #0ea5e9; text-shadow: 0 0 10px rgba(14,165,233,0.5); }
-        .c-shad { color: #22c55e; text-shadow: 0 0 10px rgba(34,197,94,0.5); }
+        .c-telegram { color: #0088cc; }
+        .c-eitaa { color: #ff9800; }
+        .c-rubika { color: #a855f7; }
+        .c-bale { color: #0ea5e9; }
+        .c-shad { color: #22c55e; }
+        .c-sms { color: #fbbf24; }
 
         /* Mobile Search Overrides */
         @media (max-width: 767px) {
-            .search-box-mini {
-                width: auto; /* override desktop width */
-                flex: 1;
-            }
+            .search-box-mini { width: 100%; flex: 1; }
             .search-box-mini.expanded {
                 position: absolute;
                 top: -5px; left: 0; right: 0;
@@ -264,7 +277,7 @@
         <div class="header-actions">
             <div class="search-box-mini" id="searchBoxContainer">
                 <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
-                <input type="text" id="searchInput" placeholder="جستجو...">
+                <input type="text" id="searchInput" placeholder="جستجو در خدمات و سایت‌ها...">
             </div>
             <button class="btn-icon" onclick="toggleTheme()" title="تغییر تم"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
             <button class="btn-icon" onclick="toggleCart()" title="سبد خرید">
@@ -337,7 +350,7 @@
         </div>
         <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">آیا امکان پرداخت آنلاین وجود دارد؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">بله، در حال حاضر پس از ثبت درخواست، شماره کارت برای شما نمایش داده می‌شود. به زودی درگاه پرداخت آنلاین (زرین‌پال) نیز به سایت متصل خواهد شد.</div>
+            <div class="faq-a">در حال حاضر پرداخت به صورت کارت به کارت انجام می‌شود. پس از ثبت درخواست، شماره کارت برای شما نمایش داده می‌شود و باید رسید را ارسال کنید. به زودی درگاه پرداخت آنلاین نیز اضافه خواهد شد.</div>
         </div>
     </section>
 
@@ -362,13 +375,56 @@
 
     <!-- Checkout Modal -->
     <dialog id="checkout-modal">
-        <h2 style="margin-bottom: 20px;"><i class="fa-solid fa-file-invoice"></i> تکمیل اطلاعات</h2>
-        <div class="form-group"><label>نام و نام خانوادگی</label><input type="text" id="chk-name" placeholder="مثال: علی رضایی"></div>
-        <div class="form-group"><label>شماره تماس یا آیدی پیام‌رسان</label><input type="text" id="chk-contact" placeholder="۰۹۱۲... یا @username"></div>
-        <div class="form-group"><label>توضیحات (اختیاری)</label><textarea id="chk-desc" rows="2" placeholder="اگر توضیح خاصی دارید بنویسید..."></textarea></div>
-        <div style="display: flex; gap: 10px; margin-top: 20px;">
-            <button class="btn-add" style="flex: 1; justify-content: center; padding: 12px;" onclick="submitOrder()">تایید و ساخت پیام <i class="fa-solid fa-check"></i></button>
-            <button class="btn-add" style="background: var(--surface); color: var(--text-main); flex: 0.5; justify-content: center; padding: 12px;" onclick="document.getElementById('checkout-modal').close()">انصراف</button>
+        <!-- Step 1: Form -->
+        <div id="chk-step1">
+            <h2 style="margin-bottom: 20px;"><i class="fa-solid fa-file-invoice"></i> تکمیل اطلاعات</h2>
+            <div class="form-group"><label>نام و نام خانوادگی</label><input type="text" id="chk-name" placeholder="مثال: علی رضایی"></div>
+            <div class="form-group"><label>شماره تماس یا آیدی پیام‌رسان</label><input type="text" id="chk-contact" placeholder="۰۹۱۲... یا @username"></div>
+            <div class="form-group"><label>توضیحات (اختیاری)</label><textarea id="chk-desc" rows="2" placeholder="اگر توضیح خاصی دارید بنویسید..."></textarea></div>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button class="btn-checkout" onclick="submitOrder()">ثبت اطلاعات و مشاهده فاکتور <i class="fa-solid fa-arrow-left"></i></button>
+                <button class="btn-add" style="background: var(--surface); color: var(--text-main); padding: 12px;" onclick="document.getElementById('checkout-modal').close()">انصراف</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Invoice & Payment -->
+        <div id="chk-step2" style="display: none;">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <i class="fa-solid fa-circle-check" style="font-size: 50px; color: var(--success); margin-bottom: 10px;"></i>
+                <h2>فاکتور صادر شد!</h2>
+                <p style="color: var(--text-muted); font-size: 13px;">مبلغ قابل پرداخت: <b id="chk-total-price" style="color: var(--accent); font-size: 16px;"></b> تومان</p>
+            </div>
+
+            <div class="box" style="background: var(--surface-glass); border: 1px solid var(--border); border-radius: 12px; padding: 15px; margin-bottom: 20px;">
+                <h4 style="margin-bottom: 10px; font-size: 14px;">۱. ارسال خلاصه سفارش به مدیر:</h4>
+                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 10px;">لطفاً برای اطلاع مدیر از ثبت سفارش، یکی از روش‌های زیر را انتخاب کنید:</p>
+                <div style="display: flex; gap: 10px;">
+                    <a href="#" id="btn-sms-admin" class="btn-add" style="flex: 1; justify-content: center; background: #10b981;"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
+                    <a href="#" id="btn-tg-admin" class="btn-add" style="flex: 1; justify-content: center; background: #0088cc;"><i class="fa-brands fa-telegram"></i> تلگرام</a>
+                </div>
+            </div>
+
+            <div class="payment-box">
+                <h4 style="margin-bottom: 5px; font-size: 14px;">۲. واریز مبلغ به شماره کارت:</h4>
+                <div class="card-number" id="card-number-text">6219 8619 4552 4204</div>
+                <div class="owner-name">به نام: <b>نرجس ملائی</b></div>
+                <button onclick="copyCardNumber()" style="margin-top: 10px; background: var(--primary); color: #fff; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; font-size: 12px;"><i class="fa-solid fa-copy"></i> کپی شماره کارت</button>
+            </div>
+
+            <div class="box" style="background: var(--surface-glass); border: 1px solid var(--border); border-radius: 12px; padding: 15px; text-align: center;">
+                <h4 style="margin-bottom: 10px; font-size: 14px;">۳. ارسال رسید پرداخت:</h4>
+                <p style="font-size: 12px; color: var(--text-muted);">پس از واریز، تصویر رسید را حتماً برای ما ارسال کنید:</p>
+                <div class="receipt-grid">
+                    <a href="sms:09960062320" class="receipt-opt c-sms" title="پیامک"><i class="fa-solid fa-comment-sms"></i></a>
+                    <a href="https://t.me/kavehnouri" target="_blank" class="receipt-opt c-telegram" title="تلگرام"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://eitaa.com/kavehnouri" target="_blank" class="receipt-opt c-eitaa" title="ایتا"><i class="fa-solid fa-comment-dots"></i></a>
+                    <a href="https://rubika.ir/kavehnouri" target="_blank" class="receipt-opt c-rubika" title="روبیکا"><i class="fa-solid fa-comments"></i></a>
+                    <a href="https://ble.ir/kavehnouri" target="_blank" class="receipt-opt c-bale" title="بله"><i class="fa-solid fa-comment"></i></a>
+                    <a href="https://shad.ir/kavehnouri" target="_blank" class="receipt-opt c-shad" title="شاد"><i class="fa-solid fa-graduation-cap"></i></a>
+                </div>
+            </div>
+            
+            <button class="btn-add" style="width: 100%; justify-content: center; margin-top: 15px; background: var(--surface);" onclick="location.reload()">بستن و بازگشت</button>
         </div>
     </dialog>
 
@@ -409,25 +465,20 @@
         
         <div class="upload-options">
             <div class="upload-row">
-                <!-- Telegram -->
-                <a href="https://t.me/kavehnouri" onclick="return openMessenger(event, 'tg://resolve?domain=kavehnouri', 'https://t.me/kavehnouri')" class="upload-opt">
+                <a href="https://t.me/kavehnouri" target="_blank" class="upload-opt">
                     <i class="fa-brands fa-telegram c-telegram"></i><span>تلگرام</span>
                 </a>
-                <!-- Eitaa -->
                 <a href="https://eitaa.com/kavehnouri" class="upload-opt">
                     <i class="fa-solid fa-comment-dots c-eitaa"></i><span>ایتا</span>
                 </a>
-                <!-- Rubika -->
                 <a href="https://rubika.ir/kavehnouri" class="upload-opt">
                     <i class="fa-solid fa-comments c-rubika"></i><span>روبیکا</span>
                 </a>
             </div>
             <div class="upload-row">
-                <!-- Bale -->
                 <a href="https://ble.ir/kavehnouri" class="upload-opt">
                     <i class="fa-solid fa-comment c-bale"></i><span>بله</span>
                 </a>
-                <!-- Shad -->
                 <a href="https://shad.ir/kavehnouri" class="upload-opt">
                     <i class="fa-solid fa-graduation-cap c-shad"></i><span>شاد</span>
                 </a>
@@ -448,7 +499,7 @@
     </div>
 
     <script>
-        // Data: Services and Categorized Links
+        // Data
         const D = {
             "s": [
                 ["ثبت‌نام و سامانه‌ها", "ثبت‌نام اینترنتی متفرقه (تا یک صفحه)", 260000, 235000], ["ثبت‌نام و سامانه‌ها", "ورود به سامانه ملی مجوزها و ثبت‌نام اولیه", 155000, 140000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سجام", 170000, 155000], ["ثبت‌نام و سامانه‌ها", "احراز هویت سجام", 150000, 135000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام اولیه سامانه سخا", 120000, 110000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام ثنا + احراز هویت", 305000, 275000], ["ثبت‌نام و سامانه‌ها", "بازیابی رمز ثنا", 48500, 43500], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه همیاب ۲۴", 220000, 200000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه ثبت‌من", 120000, 110000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه جیکا (GICA)", 350000, 315000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه سماح (اربعین / زیارتی)", 145000, 130000], ["ثبت‌نام و سامانه‌ها", "امضای دیجیتال با توکن", 215000, 195000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه میخک", 285000, 255000], ["خودرو و ترافیک", "استعلام و پرداخت خلافی", 85000, 75000], ["خودرو و ترافیک", "استعلام و پرداخت آزادراهی", 75000, 70000], ["خودرو و ترافیک", "نوبت‌گیری تعویض پلاک خودرو", 205000, 185000], ["خودرو و ترافیک", "پیش‌ثبت‌نام خودرو", 200000, 180000], ["خودرو و ترافیک", "ثبت‌نام خودرو فرسوده", 200000, 180000], ["خودرو و ترافیک", "پرداخت مالیات نقل‌وانتقال خودرو", 155000, 140000], ["خودرو و ترافیک", "ثبت‌نام گواهینامه موتورسیکلت", 365000, 330000], ["وام و بانک", "ثبت‌نام وام ازدواج", 165000, 150000], ["وام و بانک", "ثبت‌نام وام فرزندآوری", 265000, 240000], ["وام و بانک", "ثبت‌نام وام بانک مهر ایران / رسالت", 255000, 230000], ["وام و بانک", "ثبت‌نام وام اشتغال", 310000, 280000], ["وام و بانک", "ثبت‌نام مسکن ملی", 220000, 200000], ["وام و بانک", "ثبت‌نام وام ودیعه مسکن", 265000, 240000], ["وام و بانک", "افتتاح حساب آنلاین بانکی", 245000, 220000], ["وام و بانک", "ثبت / تأیید / انتقال چک صیادی", 75000, 70000], ["وام و بانک", "صدور سفته الکترونیکی", 205000, 185000], ["بیمه و تأمین اجتماعی", "ثبت‌نام در سامانه تأمین اجتماعی", 105000, 95000], ["بیمه و تأمین اجتماعی", "دریافت فیش بیمه", 50000, 45000], ["بیمه و تأمین اجتماعی", "دریافت سوابق بیمه", 60000, 55000], ["بیمه و تأمین اجتماعی", "ارسال لیست بیمه کارگاه (تا ۳ نفر)", 200000, 180000], ["بیمه و تأمین اجتماعی", "ثبت‌نام / تمدید بیمه سلامت", 185000, 165000], ["بیمه و تأمین اجتماعی", "ثبت‌نام / تمدید بیمه ورزشی", 125000, 115000], ["بیمه و تأمین اجتماعی", "ثبت اعتراض یارانه", 150000, 135000], ["بیمه و تأمین اجتماعی", "ثبت‌نام وام بازنشستگان", 105000, 95000], ["مالیات و کسب‌وکار", "ثبت‌نام کد اقتصادی (حقیقی)", 375000, 340000], ["مالیات و کسب‌وکار", "ویرایش کد اقتصادی", 70000, 65000], ["مالیات و کسب‌وکار", "اظهارنامه مالیاتی مشاغل گروه ۳", 470000, 425000], ["مالیات و کسب‌وکار", "اظهارنامه مالیاتی مشاغل گروه ۲", 650000, 585000], ["مالیات و کسب‌وکار", "ثبت اعتراض مالیاتی", 210000, 190000], ["مالیات و کسب‌وکار", "لیست مالیات حقوق کارکنان (تا ۴ نفر)", 185000, 165000], ["مالیات و کسب‌وکار", "صدور / تمدید جواز کسب (نوین اصناف)", 330000, 295000], ["مالیات و کسب‌وکار", "ثبت‌نام سامانه سامح (بهداشت)", 350000, 315000], ["مالیات و کسب‌وکار", "پلمپ دفاتر", 415000, 375000], ["مالیات و کسب‌وکار", "ثبت‌نام نظام مهندسی", 250000, 225000], ["مالیات و کسب‌وکار", "ثبت‌نام ستاد ایران", 495000, 445000], ["مالیات و کسب‌وکار", "ثبت مزایده در ستاد ایران", 520000, 470000], ["مالیات و کسب‌وکار", "ثبت مناقصه در ستاد ایران", 1100000, 990000], ["آموزش و دانشگاه", "ثبت‌نام غیرحضوری دانشگاه آزاد", 365000, 330000], ["آموزش و دانشگاه", "ثبت‌نام غیرحضوری دانشگاه پیام نور", 400000, 360000], ["آموزش و دانشگاه", "ثبت‌نام غیرحضوری دانشگاه دولتی", 525000, 475000], ["آموزش و دانشگاه", "ثبت‌نام اولیه سامانه سجاد", 295000, 265000], ["آموزش و دانشگاه", "ثبت هر درخواست در سامانه سجاد", 235000, 210000], ["آموزش و دانشگاه", "تأییدیه تحصیلی", 205000, 185000], ["آموزش و دانشگاه", "ثبت‌نام سنجش بدو ورود / پیش‌دبستانی", 260000, 235000], ["آموزش و دانشگاه", "ثبت‌نام مدارس تیزهوشان / نمونه دولتی", 235000, 210000], ["آموزش و دانشگاه", "ثبت‌نام کتاب درسی", 100000, 90000], ["آموزش و دانشگاه", "ثبت‌نام دانش‌آموز در سامانه my.medu", 250000, 225000], ["قضایی و ثبت احوال", "دریافت ابلاغیه قضایی", 43500, 39000], ["قضایی و ثبت احوال", "نوبت‌دهی قضایی", 110000, 100000], ["قضایی و ثبت احوال", "گواهی عدم سوءپیشینه", 130000, 115000], ["قضایی و ثبت احوال", "ثبت درخواست در سامانه ثبت‌احوال (NCR)", 135000, 120000], ["قضایی و ثبت احوال", "درخواست کد پستی", 200000, 180000], ["خدمات عمومی و اداری", "ورود به سایت و بررسی (بدون نتیجه)", 45000, 40500], ["خدمات عمومی و اداری", "دریافت فیش حقوقی / کارنامه / کارت ورود به جلسه", 48500, 43500], ["خدمات عمومی و اداری", "ساخت / ارسال ایمیل", 65000, 60000], ["خدمات عمومی و اداری", "ارسال / دریافت فکس (هر صفحه)", 40000, 36000], ["خدمات عمومی و اداری", "بلیط قطار (هر نفر)", 180000, 160000], ["خدمات عمومی و اداری", "بلیط هواپیما (هر نفر)", 240000, 215000], ["تایپ، اسکن و پرینت", "تایپ فارسی (هر صفحه)", 70000, 65000], ["تایپ، اسکن و پرینت", "تایپ انگلیسی (هر صفحه)", 130000, 115000], ["تایپ، اسکن و پرینت", "تایپ نامه اداری", 65000, 60000], ["تایپ، اسکن و پرینت", "تایپ جدول (هر صفحه)", 70000, 65000], ["تایپ، اسکن و پرینت", "ایجاد هر صفحه پاورپوینت", 33500, 30000], ["تایپ، اسکن و پرینت", "اسکن (A4)", 18500, 16500], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A5", 6000, 5500], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A4 تک‌رو", 11000, 10000], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A4 دورو", 13500, 12000], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A3", 19500, 17500], ["تایپ، اسکن و پرینت", "پرینت رنگی A4 (متن)", 25000, 22500], ["تایپ، اسکن و پرینت", "پرینت رنگی A3 (متن)", 35000, 31500], ["تایپ، اسکن و پرینت", "پرینت رنگی A4 (عکس کامل)", 45000, 40500], ["خدمات فنی", "نصب ویندوز (PC و لپ‌تاپ)", 500000, 450000], ["خدمات فنی", "نصب نرم‌افزار کاربردی + آنتی‌ویروس", 500000, 450000], ["خدمات فنی", "عیب‌یابی نرم‌افزاری", 300000, 270000]
@@ -566,25 +617,13 @@
             }
         });
 
-        // --- Messenger Deep Link Handler ---
-        function openMessenger(e, appScheme, webFallback) {
-            e.preventDefault();
-            window.location.href = appScheme;
-            setTimeout(() => {
-                window.location.href = webFallback;
-            }, 1500);
-            return false;
-        }
-
         // --- Initialization & Rendering ---
         function init() {
             renderTabs();
             renderServices();
             renderCategorizedLinks();
             updateCartUI();
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            updateThemeIcon(savedTheme);
+            updateThemeIcon(localStorage.getItem('theme') || 'dark');
         }
 
         function toggleTheme() {
@@ -596,6 +635,7 @@
         }
         function updateThemeIcon(theme) {
             const icon = $('#theme-icon');
+            if(!icon) return;
             icon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
         }
 
@@ -707,24 +747,57 @@
             document.querySelectorAll('.faq-item').forEach(faq => { if(faq !== item) faq.classList.remove('active'); });
         }
         function openModal(id) { document.getElementById(id).showModal(); }
+        
+        // --- Checkout Logic ---
         function openCheckout() {
             if(Object.keys(cart).length === 0) return alert('سبد خرید شما خالی است!');
-            toggleCart(); $('#checkout-modal').showModal();
+            toggleCart(); 
+            $('#chk-step1').style.display = 'block';
+            $('#chk-step2').style.display = 'none';
+            $('#checkout-modal').showModal();
         }
+
         function submitOrder() {
-            const name = $('#chk-name').value.trim(), contact = $('#chk-contact').value.trim(), desc = $('#chk-desc').value.trim();
+            const name = $('#chk-name').value.trim();
+            const contact = $('#chk-contact').value.trim();
+            const desc = $('#chk-desc').value.trim();
+
             if(!name || !contact) return alert('لطفاً نام و راه ارتباطی را وارد کنید.');
+
             let orderText = `سلام، درخواست جدید از سایت کاریزما نت\n\n👤 نام: ${name}\n📞 ارتباط: ${contact}\n\n🛒 اقلام سفارش:\n`;
             let total = 0;
+            
             for(let idx in cart) {
-                const item = cart[idx], itemTotal = item.price * item.qty; total += itemTotal;
+                const item = cart[idx];
+                const itemTotal = item.price * item.qty;
+                total += itemTotal;
                 orderText += `▪️ ${item.title} (${fa(item.qty)} عدد) = ${fa(itemTotal)} تومان\n`;
             }
+            
             orderText += `\n💰 جمع کل: ${fa(total)} تومان\n`;
             if(desc) orderText += `\n📝 توضیحات: ${desc}`;
-            const tgLink = `https://t.me/kavehnouri?text=${encodeURIComponent(orderText)}`;
-            $('#checkout-modal').innerHTML = `<div style="text-align: center; padding: 20px;"><i class="fa-solid fa-circle-check" style="font-size: 60px; color: var(--success); margin-bottom: 20px;"></i><h2>درخواست شما آماده است!</h2><p style="color: var(--text-muted); margin-bottom: 20px; font-size: 14px;">برای نهایی کردن، روی دکمه زیر کلیک کنید تا پیام در تلگرام باز شود.</p><a href="${tgLink}" target="_blank" class="btn-checkout" style="display: block; text-align: center; text-decoration: none;">ارسال در تلگرام <i class="fa-brands fa-telegram"></i></a><button onclick="location.reload()" style="margin-top: 15px; background: none; border: none; color: var(--text-muted); cursor: pointer; font-family: inherit;">بستن و بازگشت</button></div>`;
+
+            // Set Admin Links
+            $('#btn-sms-admin').href = `sms:09960062320?body=${encodeURIComponent(orderText)}`;
+            $('#btn-tg-admin').href = `https://t.me/kavehnouri?text=${encodeURIComponent(orderText)}`;
+            
+            // Set Total Price
+            $('#chk-total-price').innerText = fa(total);
+
+            // Show step 2
+            $('#chk-step1').style.display = 'none';
+            $('#chk-step2').style.display = 'block';
         }
+
+        function copyCardNumber() {
+            const card = '6219861945524204';
+            navigator.clipboard.writeText(card).then(() => {
+                alert('شماره کارت کپی شد!');
+            }).catch(() => {
+                alert('خطا در کپی کردن. لطفاً دستی یادداشت کنید: ' + card);
+            });
+        }
+
         init();
     </script>
 </body>

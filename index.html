@@ -1,87 +1,521 @@
-<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>کاریزما نت | کافی‌نت آنلاین در سراسر ایران — ثبت‌نام اینترنتی، پرینت و کپی، خدمات اداری</title><meta name="description" content="کافی‌نت آنلاین کاریزما نت؛ ثبت‌نام در سامانه‌های دولتی، بانکی، دانشگاهی و بیمه، پرینت و کپی، اسکن، تایپ و کلیه خدمات اداری به‌صورت غیرحضوری در سراسر ایران. سفارش آنلاین، پرداخت امن، پیگیری اختصاصی."><meta name="keywords" content="کافی نت آنلاین، کافی‌نت آنلاین، ثبت نام اینترنتی، خدمات کافی نت، پرینت و کپی، اسکن، تایپ، خدمات اداری، خدمات دولتی، سامانه های دولتی، ثبت نام سجام، ثبت نام ثنا، کاریزما نت، karizmanet"><style>*{box-sizing:border-box}body{margin:0;font-family:Vazirmatn,Tahoma,"Segoe UI",sans-serif;background:#0f172a;color:#e2e8f0;line-height:1.7}
-a{color:inherit;text-decoration:none}header{position:sticky;top:0;z-index:9;display:flex;align-items:center;gap:12px;padding:10px 16px;background:#0b1220ee;backdrop-filter:blur(8px);border-bottom:1px solid #1e293b}
-.logo{font-weight:800;font-size:20px;background:linear-gradient(90deg,#38bdf8,#a78bfa);-webkit-background-clip:text;color:transparent}
-nav{display:flex;gap:14px;font-size:14px;flex:1;overflow-x:auto;white-space:nowrap}nav a{color:#94a3b8}nav a:hover{color:#fff}
-#q{width:190px;max-width:42vw;padding:8px 12px;border-radius:20px;border:1px solid #334155;background:#1e293b;color:#fff;font:inherit;font-size:14px}
-.hero{padding:44px 16px 30px;text-align:center;background:radial-gradient(circle at 20% 0,#4338ca55,transparent 50%),radial-gradient(circle at 85% 20%,#0ea5e955,transparent 45%)}
-.hero h1{margin:0 0 8px;font-size:clamp(22px,4.6vw,36px);line-height:1.4}
-.hero-badge{display:inline-block;padding:6px 14px;border-radius:20px;background:#6366f133;border:1px solid #6366f1;color:#a5b4fc;font-size:13px;margin-bottom:14px}
-.hero-slogan{font-size:17px;color:#38bdf8;font-weight:700;margin:6px auto 12px}
-.hero p{margin:0 auto;max-width:720px;color:#cbd5e1}
-.btn{display:inline-block;margin-top:16px;padding:10px 22px;border-radius:24px;background:linear-gradient(90deg,#6366f1,#0ea5e9);color:#fff;border:0;font:inherit;cursor:pointer}
-section{max-width:1100px;margin:0 auto;padding:22px 14px}h2{font-size:21px;margin:0 0 12px;border-right:4px solid #6366f1;padding-right:10px}h3{font-size:15px;color:#94a3b8;margin:18px 0 8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
-.card{display:flex;align-items:center;gap:10px;padding:10px;border-radius:14px;background:#1e293b;border:1px solid #334155;transition:.15s;font-size:13px}
-.card:hover{transform:translateY(-3px);border-color:var(--c)}.ic{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:linear-gradient(135deg,var(--c),var(--d))}
-.svc{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:12px;background:#1e293b;border:1px solid #334155;margin-bottom:6px;font-size:14px;flex-wrap:wrap;transition:border-color .15s,background .15s}
-.svc.on{border-color:#22c55e;background:#14532d55}
-.svc-main{display:flex;align-items:center;gap:10px;flex:1;cursor:pointer;min-width:200px}
-.svc-main input[type="checkbox"]{width:18px;height:18px;accent-color:#22c55e;flex:none}
-.svc-main .nm{flex:1;min-width:130px}
-.svc-main .old{color:#94a3b8;text-decoration:line-through;font-size:12px;flex:none}
-.svc-main .pr{color:#4ade80;font-weight:700;white-space:nowrap;flex:none;font-size:13px}
-.svc-main .pr small{color:#94a3b8;font-size:11px}
-.qty{display:none;align-items:center;background:#0b1220;border:1px solid #475569;border-radius:18px;padding:2px;flex:none;gap:0}
-.svc.on .qty{display:inline-flex;animation:fade .2s ease}
-.qty button{width:26px;height:26px;border:0;border-radius:50%;background:#334155;color:#fff;cursor:pointer;font-size:16px;line-height:1;display:grid;place-items:center;transition:background .15s,transform .1s;padding:0;font-family:inherit}
-.qty button:hover{background:#6366f1}
-.qty button:active{transform:scale(.9)}
-.qty .qn{min-width:30px;text-align:center;font-weight:700;color:#fff;font-size:13px;padding:0 4px}
-@keyframes fade{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
-#bar{position:sticky;bottom:0;z-index:8;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#0b1220;border-top:1px solid #334155}#bar b{font-size:18px;color:#4ade80;flex:1}
-/* اصلاح استایل بخش اخبار */
-.news{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
-.n{display:flex;flex-direction:column;justify-content:space-between;padding:14px;border-radius:14px;background:#1e293b;border:1px solid #334155;font-size:13px;transition:.15s}
-.n:hover{border-color:#38bdf8;transform:translateY(-2px)}
-.n small{color:#38bdf8;font-size:11px;margin-bottom:6px;display:block}
-.n b{font-size:14px;line-height:1.5;margin-bottom:10px;display:block;color:#fff}
-.n .read-more{color:#94a3b8;font-size:12px;display:flex;align-items:center;gap:4px}
-dialog{max-width:520px;width:92vw;border:1px solid #475569;border-radius:18px;background:#0f172a;color:#e2e8f0;padding:18px;direction:rtl}dialog::backdrop{background:#000a}
-input,textarea{width:100%;padding:9px;margin:4px 0 8px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#fff;font:inherit}
-.box{padding:10px;border-radius:12px;background:#1e293b;margin:8px 0;font-size:14px}.cc{direction:ltr;font-size:20px;letter-spacing:2px;color:#fde047;text-align:center;margin:6px 0}
-.row{display:flex;gap:6px;flex-wrap:wrap}.row a,.row button{flex:1;min-width:90px;text-align:center;padding:8px;border-radius:10px;border:0;background:#334155;color:#fff;font:inherit;font-size:13px;cursor:pointer}
-footer{padding:26px 14px;text-align:center;color:#94a3b8;border-top:1px solid #1e293b;font-size:14px}.hide{display:none!important}</style></head><body>
-<header><a class="logo" href="#top">کاریزما نت</a><nav><a href="#services">خدمات</a><a href="#news">اخبار</a><a href="#links">سایت‌ها</a><a href="#contact">تماس</a></nav><input id="q" type="search" placeholder="🔍 جستجو در خدمات و سایت‌ها"></header>
-<div class="hero" id="top">
-<div class="hero-badge">🚀 کافی‌نت آنلاین در سراسر ایران</div>
-<h1>کافی‌نت آنلاین کاریزما نت — ثبت‌نام اینترنتی، پرینت و کپی، خدمات اداری و دولتی</h1>
-<p class="hero-slogan">کافی‌نت، در جیب شما؛ سریع، مطمئن، پیگیری اختصاصی</p>
-<p>از ثبت‌نام در سامانه‌های دولتی، بانکی، دانشگاهی و بیمه گرفته تا پرینت، کپی، اسکن و تایپ — همه خدمات کافی‌نت را بدون رفت‌وآمد و از هر جای ایران سفارش دهید. کاریزما نت، همراه مطمئن شما در خدمات اینترنتی.</p>
-<a class="btn" href="#services">انتخاب خدمات</a>
-</div>
-<section id="services"><h2>خدمات و قیمت‌ها</h2><p style="font-size:13px;color:#94a3b8">قیمت‌ها تقریبی و بر پایه میانگین نرخ اصناف است (خط‌خورده). هزینه پرینت، اسکن و کارمزد پرداخت‌های اینترنتی در صورت نیاز جداگانه محاسبه می‌شود و قیمت نهایی پس از بررسی درخواست تأیید می‌شود.</p><div id="svcs"></div></section>
-<section id="news"><h2>اخبار روز</h2><div class="news" id="news-list"></div></section>
-<section id="links"><h2>سایت‌های مهم (رایگان)</h2><div id="sites"></div></section>
-<section id="contact"><h2>تماس با ما</h2><div class="box">📞 شماره تماس و پیامک: <a href="tel:09960062320"><b>۰۹۹۶۰۰۶۲۳۲۰</b></a><br>💬 ایتا، روبیکا و تلگرام: <b dir="ltr">@kavehnouri</b></div></section>
-<div id="bar"><b id="tot">۰ تومان (۰ خدمت)</b><button class="btn" id="go" style="margin:0">ثبت درخواست</button></div>
-<footer>© کاریزما نت – karizmanet.ir</footer>
-<dialog id="dlg"><h3 style="margin-top:0;color:#fff">ثبت درخواست</h3>
-<input id="nm" placeholder="نام و نام خانوادگی"><input id="ct" placeholder="شماره موبایل یا آیدی پیام‌رسان شما"><textarea id="ds" rows="2" placeholder="توضیحات (اختیاری)"></textarea><button class="btn" id="send" style="margin:0 0 8px">مرحله بعد</button>
-<div id="step2" class="hide"><div class="box">۱) متن درخواست را برای ما بفرستید:<textarea id="msgtxt" rows="5" readonly></textarea><div class="row"><button id="cp">کپی متن</button><a id="t" target="_blank">تلگرام</a><a href="https://eitaa.com/kavehnouri" target="_blank">ایتا</a><a href="https://rubika.ir/kavehnouri" target="_blank">روبیکا</a><a id="sms">پیامک</a></div></div>
-<div class="box">۲) مبلغ را کارت‌به‌کارت واریز کنید:<div class="cc">6219 8619 4552 4204</div>به نام <b>نرجس ملائی</b> <button id="cc" style="margin-right:8px;border:0;border-radius:8px;padding:4px 10px;cursor:pointer">کپی شماره کارت</button></div>
-<div class="box">۳) رسید پرداخت را به آیدی <b dir="ltr">@kavehnouri</b> در ایتا، روبیکا یا تلگرام بفرستید. سپس یک پیامک متنی به شماره <b>۰۹۹۶۰۰۶۲۳۲۰</b> بفرستید تا کار شما سریع‌تر انجام شود. پس از تأیید رسید، کار شما انجام می‌شود.</div></div>
-<button id="x" style="margin-top:6px;border:0;background:none;color:#94a3b8;cursor:pointer">بستن</button></dialog>
-<script>const D={"s": [["ثبت‌نام و سامانه‌ها", "ثبت‌نام اینترنتی متفرقه (تا یک صفحه)", 260000, 235000], ["ثبت‌نام و سامانه‌ها", "ورود به سامانه ملی مجوزها و ثبت‌نام اولیه", 155000, 140000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سجام", 170000, 155000], ["ثبت‌نام و سامانه‌ها", "احراز هویت سجام", 150000, 135000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام اولیه سامانه سخا", 120000, 110000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام ثنا + احراز هویت", 305000, 275000], ["ثبت‌نام و سامانه‌ها", "بازیابی رمز ثنا", 48500, 43500], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه همیاب ۲۴", 220000, 200000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه ثبت‌من", 120000, 110000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه جیکا (GICA)", 350000, 315000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه سماح (اربعین / زیارتی)", 145000, 130000], ["ثبت‌نام و سامانه‌ها", "امضای دیجیتال با توکن", 215000, 195000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه میخک", 285000, 255000], ["خودرو و ترافیک", "استعلام و پرداخت خلافی", 85000, 75000], ["خودرو و ترافیک", "استعلام و پرداخت آزادراهی", 75000, 70000], ["خودرو و ترافیک", "نوبت‌گیری تعویض پلاک خودرو", 205000, 185000], ["خودرو و ترافیک", "پیش‌ثبت‌نام خودرو", 200000, 180000], ["خودرو و ترافیک", "ثبت‌نام خودرو فرسوده", 200000, 180000], ["خودرو و ترافیک", "پرداخت مالیات نقل‌وانتقال خودرو", 155000, 140000], ["خودرو و ترافیک", "ثبت‌نام گواهینامه موتورسیکلت", 365000, 330000], ["وام و بانک", "ثبت‌نام وام ازدواج", 165000, 150000], ["وام و بانک", "ثبت‌نام وام فرزندآوری", 265000, 240000], ["وام و بانک", "ثبت‌نام وام بانک مهر ایران / رسالت", 255000, 230000], ["وام و بانک", "ثبت‌نام وام اشتغال", 310000, 280000], ["وام و بانک", "ثبت‌نام مسکن ملی", 220000, 200000], ["وام و بانک", "ثبت‌نام وام ودیعه مسکن", 265000, 240000], ["وام و بانک", "افتتاح حساب آنلاین بانکی", 245000, 220000], ["وام و بانک", "ثبت / تأیید / انتقال چک صیادی", 75000, 70000], ["وام و بانک", "صدور سفته الکترونیکی", 205000, 185000], ["بیمه و تأمین اجتماعی", "ثبت‌نام در سامانه تأمین اجتماعی", 105000, 95000], ["بیمه و تأمین اجتماعی", "دریافت فیش بیمه", 50000, 45000], ["بیمه و تأمین اجتماعی", "دریافت سوابق بیمه", 60000, 55000], ["بیمه و تأمین اجتماعی", "ارسال لیست بیمه کارگاه (تا ۳ نفر)", 200000, 180000], ["بیمه و تأمین اجتماعی", "ثبت‌نام / تمدید بیمه سلامت", 185000, 165000], ["بیمه و تأمین اجتماعی", "ثبت‌نام / تمدید بیمه ورزشی", 125000, 115000], ["بیمه و تأمین اجتماعی", "ثبت اعتراض یارانه", 150000, 135000], ["بیمه و تأمین اجتماعی", "ثبت‌نام وام بازنشستگان", 105000, 95000], ["مالیات و کسب‌وکار", "ثبت‌نام کد اقتصادی (حقیقی)", 375000, 340000], ["مالیات و کسب‌وکار", "ویرایش کد اقتصادی", 70000, 65000], ["مالیات و کسب‌وکار", "اظهارنامه مالیاتی مشاغل گروه ۳", 470000, 425000], ["مالیات و کسب‌وکار", "اظهارنامه مالیاتی مشاغل گروه ۲", 650000, 585000], ["مالیات و کسب‌وکار", "ثبت اعتراض مالیاتی", 210000, 190000], ["مالیات و کسب‌وکار", "لیست مالیات حقوق کارکنان (تا ۴ نفر)", 185000, 165000], ["مالیات و کسب‌وکار", "صدور / تمدید جواز کسب (نوین اصناف)", 330000, 295000], ["مالیات و کسب‌وکار", "ثبت‌نام سامانه سامح (بهداشت)", 350000, 315000], ["مالیات و کسب‌وکار", "پلمپ دفاتر", 415000, 375000], ["مالیات و کسب‌وکار", "ثبت‌نام نظام مهندسی", 250000, 225000], ["مالیات و کسب‌وکار", "ثبت‌نام ستاد ایران", 495000, 445000], ["مالیات و کسب‌وکار", "ثبت مزایده در ستاد ایران", 520000, 470000], ["مالیات و کسب‌وکار", "ثبت مناقصه در ستاد ایران", 1100000, 990000], ["آموزش و دانشگاه", "ثبت‌نام غیرحضوری دانشگاه آزاد", 365000, 330000], ["آموزش و دانشگاه", "ثبت‌نام غیرحضوری دانشگاه پیام نور", 400000, 360000], ["آموزش و دانشگاه", "ثبت‌نام غیرحضوری دانشگاه دولتی", 525000, 475000], ["آموزش و دانشگاه", "ثبت‌نام اولیه سامانه سجاد", 295000, 265000], ["آموزش و دانشگاه", "ثبت هر درخواست در سامانه سجاد", 235000, 210000], ["آموزش و دانشگاه", "تأییدیه تحصیلی", 205000, 185000], ["آموزش و دانشگاه", "ثبت‌نام سنجش بدو ورود / پیش‌دبستانی", 260000, 235000], ["آموزش و دانشگاه", "ثبت‌نام مدارس تیزهوشان / نمونه دولتی", 235000, 210000], ["آموزش و دانشگاه", "ثبت‌نام کتاب درسی", 100000, 90000], ["آموزش و دانشگاه", "ثبت‌نام دانش‌آموز در سامانه my.medu", 250000, 225000], ["قضایی و ثبت احوال", "دریافت ابلاغیه قضایی", 43500, 39000], ["قضایی و ثبت احوال", "نوبت‌دهی قضایی", 110000, 100000], ["قضایی و ثبت احوال", "گواهی عدم سوءپیشینه", 130000, 115000], ["قضایی و ثبت احوال", "ثبت درخواست در سامانه ثبت‌احوال (NCR)", 135000, 120000], ["قضایی و ثبت احوال", "درخواست کد پستی", 200000, 180000], ["خدمات عمومی و اداری", "ورود به سایت و بررسی (بدون نتیجه)", 45000, 40500], ["خدمات عمومی و اداری", "دریافت فیش حقوقی / کارنامه / کارت ورود به جلسه", 48500, 43500], ["خدمات عمومی و اداری", "ساخت / ارسال ایمیل", 65000, 60000], ["خدمات عمومی و اداری", "ارسال / دریافت فکس (هر صفحه)", 40000, 36000], ["خدمات عمومی و اداری", "بلیط قطار (هر نفر)", 180000, 160000], ["خدمات عمومی و اداری", "بلیط هواپیما (هر نفر)", 240000, 215000], ["تایپ، اسکن و پرینت", "تایپ فارسی (هر صفحه)", 70000, 65000], ["تایپ، اسکن و پرینت", "تایپ انگلیسی (هر صفحه)", 130000, 115000], ["تایپ، اسکن و پرینت", "تایپ نامه اداری", 65000, 60000], ["تایپ، اسکن و پرینت", "تایپ جدول (هر صفحه)", 70000, 65000], ["تایپ، اسکن و پرینت", "ایجاد هر صفحه پاورپوینت", 33500, 30000], ["تایپ، اسکن و پرینت", "اسکن (A4)", 18500, 16500], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A5", 6000, 5500], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A4 تک‌رو", 11000, 10000], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A4 دورو", 13500, 12000], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A3", 19500, 17500], ["تایپ، اسکن و پرینت", "پرینت رنگی A4 (متن)", 25000, 22500], ["تایپ، اسکن و پرینت", "پرینت رنگی A3 (متن)", 35000, 31500], ["تایپ، اسکن و پرینت", "پرینت رنگی A4 (عکس کامل)", 45000, 40500], ["خدمات فنی", "نصب ویندوز (PC و لپ‌تاپ)", 500000, 450000], ["خدمات فنی", "نصب نرم‌افزار کاربردی + آنتی‌ویروس", 500000, 450000], ["خدمات فنی", "عیب‌یابی نرم‌افزاری", 300000, 270000]], "l": [["دولتی و هویتی", "سامانه ثنا", "https://sana.adliran.ir", "⚖️"], ["دولتی و هویتی", "قوه قضائیه", "https://adliran.ir", "🏛️"], ["دولتی و هویتی", "ثبت‌احوال", "https://www.sabteahval.ir", "🪪"], ["دولتی و هویتی", "پلیس +۱۰", "https://www.epolice.ir", "👮"], ["دولتی و هویتی", "پلیس فتا", "https://www.cyberpolice.ir", "🛡️"], ["دولتی و هویتی", "راهور ۱۲۰", "https://www.rahvar120.ir", "🚦"], ["دولتی و هویتی", "ثبت اسناد و املاک", "https://www.ssaa.ir", "📜"], ["دولتی و هویتی", "پست ایران", "https://www.post.ir", "📮"], ["دولتی و هویتی", "همیاب ۲۴", "https://hamyab24.ir", "📱"], ["دولتی و هویتی", "گمرک ایران", "https://www.irica.gov.ir", "🚢"], ["مالیات و کسب‌وکار", "سازمان امور مالیاتی", "https://tax.gov.ir", "💰"], ["مالیات و کسب‌وکار", "سامانه مودیان", "https://my.tax.ir", "🧾"], ["مالیات و کسب‌وکار", "ستاد ایران", "https://www.setadiran.ir", "🏗️"], ["مالیات و کسب‌وکار", "روزنامه رسمی", "https://www.rrk.ir", "📰"], ["مالیات و کسب‌وکار", "ثبت شرکت‌ها", "https://www.ilenc.ir", "🏢"], ["مالیات و کسب‌وکار", "اتاق بازرگانی", "https://www.iccima.ir", "🤝"], ["بانک و بورس", "بانک مرکزی", "https://www.cbi.ir", "🏦"], ["بانک و بورس", "بانک ملی", "https://www.bmi.ir", "🏦"], ["بانک و بورس", "بانک ملت", "https://www.bankmellat.ir", "🏦"], ["بانک و بورس", "بانک صادرات", "https://www.bsi.ir", "🏦"], ["بانک و بورس", "بانک سپه", "https://www.banksepah.ir", "🏦"], ["بانک و بورس", "بانک مسکن", "https://www.bank-maskan.ir", "🏠"], ["بانک و بورس", "بانک کشاورزی", "https://www.bki.ir", "🌾"], ["بانک و بورس", "بانک تجارت", "https://www.tejaratbank.ir", "🏦"], ["بانک و بورس", "بانک پاسارگاد", "https://www.bpi.ir", "🏦"], ["بانک و بورس", "سپرده‌گذاری مرکزی (سجام)", "https://www.csdiran.ir", "📈"], ["بانک و بورس", "کدال", "https://www.codal.ir", "📊"], ["بانک و بورس", "سهام عدالت", "https://www.samanehom.ir", "📈"], ["آموزش و دانشگاه", "سازمان سنجش", "https://www.sanjesh.org", "🎓"], ["آموزش و دانشگاه", "آموزش‌وپرورش", "https://www.medu.ir", "🏫"], ["آموزش و دانشگاه", "وزارت علوم", "https://www.msrt.ir", "🔬"], ["آموزش و دانشگاه", "دانشگاه آزاد", "https://www.iau.ac.ir", "🎓"], ["آموزش و دانشگاه", "دانشگاه پیام نور", "https://www.pnu.ac.ir", "🎓"], ["آموزش و دانشگاه", "علمی‌کاربردی", "https://www.uast.ac.ir", "🛠️"], ["آموزش و دانشگاه", "فنی‌وحرفه‌ای", "https://www.irantvto.ir", "🔧"], ["آموزش و دانشگاه", "کتاب‌های درسی", "https://chap.sch.ir", "📚"], ["آموزش و دانشگاه", "ایرانداک", "https://irandoc.ac.ir", "🗂️"], ["بیمه و سلامت", "تأمین اجتماعی", "https://www.tamin.ir", "🛡️"], ["بیمه و سلامت", "خدمات الکترونیک تأمین", "https://eservices.tamin.ir", "💻"], ["بیمه و سلامت", "بیمه سلامت", "https://ihio.gov.ir", "❤️"], ["بیمه و سلامت", "بیمه ایران", "https://www.iraninsurance.ir", "☂️"], ["بیمه و سلامت", "سامانه سلامت", "https://salamat.gov.ir", "🩺"], ["بیمه و سلامت", "پذیرش ۲۴ (نوبت پزشک)", "https://www.paziresh24.com", "👨‍⚕️"], ["بیمه و سلامت", "دکترتو", "https://doctoreto.com", "💊"], ["خودرو و سفر", "ایران‌خودرو", "https://www.ikco.ir", "🚗"], ["خودرو و سفر", "سایپا", "https://www.saipacorp.com", "🚙"], ["خودرو و سفر", "قطار رجا", "https://www.raja.ir", "🚆"], ["خودرو و سفر", "علی‌بابا", "https://www.alibaba.ir", "✈️"], ["خودرو و سفر", "اسنپ", "https://www.snapp.ir", "🚕"], ["خودرو و سفر", "تپسی", "https://www.tap30.ir", "🚖"], ["خودرو و سفر", "باما", "https://bama.ir", "🚘"], ["قبض و ارتباطات", "توانیر (برق)", "https://www.tavanir.org.ir", "⚡"], ["قبض و ارتباطات", "شرکت ملی گاز", "https://www.nigc.ir", "🔥"], ["قبض و ارتباطات", "مخابرات", "https://www.tci.ir", "☎️"], ["قبض و ارتباطات", "همراه اول", "https://www.mci.ir", "📶"], ["قبض و ارتباطات", "ایرانسل", "https://www.irancell.ir", "📶"], ["قبض و ارتباطات", "رایتل", "https://www.rightel.ir", "📶"], ["قبض و ارتباطات", "قبضینو", "https://www.ghabzino.com", "🧾"], ["پیام‌رسان و شبکه اجتماعی", "ایتا", "https://eitaa.com", "💬"], ["پیام‌رسان و شبکه اجتماعی", "روبیکا", "https://rubika.ir", "💬"], ["پیام‌رسان و شبکه اجتماعی", "بله", "https://web.bale.ai", "💬"], ["پیام‌رسان و شبکه اجتماعی", "گپ", "https://gap.im", "💬"], ["پیام‌رسان و شبکه اجتماعی", "تلگرام وب", "https://web.telegram.org", "✈️"], ["پیام‌رسان و شبکه اجتماعی", "واتساپ وب", "https://web.whatsapp.com", "📞"], ["پیام‌رسان و شبکه اجتماعی", "اینستاگرام", "https://www.instagram.com", "📸"], ["پیام‌رسان و شبکه اجتماعی", "آپارات", "https://www.aparat.com", "🎬"], ["خرید و سرگرمی", "دیجی‌کالا", "https://www.digikala.com", "🛒"], ["خرید و سرگرمی", "دیوار", "https://divar.ir", "📌"], ["خرید و سرگرمی", "شیپور", "https://www.sheypoor.com", "📣"], ["خرید و سرگرمی", "ترب", "https://torob.com", "🔎"], ["خرید و سرگرمی", "فیلیمو", "https://www.filimo.com", "🎞️"], ["خرید و سرگرمی", "نماوا", "https://www.namava.ir", "🍿"], ["خرید و سرگرمی", "تلوبیون", "https://telewebion.com", "📺"], ["خرید و سرگرمی", "طاقچه", "https://taaghche.com", "📖"], ["خرید و سرگرمی", "کتابراه", "https://www.ketabrah.ir", "📕"], ["ابزار و پژوهش", "گوگل", "https://www.google.com", "🔍"], ["ابزار و پژوهش", "گوگل اسکالر", "https://scholar.google.com", "🧠"], ["ابزار و پژوهش", "مترجم گوگل", "https://translate.google.com", "🌐"], ["ابزار و پژوهش", "ویکی‌پدیا فارسی", "https://fa.wikipedia.org", "📚"], ["ابزار و پژوهش", "SID مقالات", "https://sid.ir", "📑"], ["ابزار و پژوهش", "مگ‌ایران", "https://www.magiran.com", "📰"], ["ابزار و پژوهش", "نورمگز", "https://www.noormags.ir", "📗"], ["ابزار و پژوهش", "گنجور", "https://ganjoor.net", "🪶"], ["ابزار و پژوهش", "لغت‌نامه دهخدا", "https://www.loghatnameh.org", "📖"], ["ابزار و پژوهش", "iLovePDF", "https://www.ilovepdf.com", "📄"], ["ابزار و پژوهش", "Smallpdf", "https://smallpdf.com", "🗜️"], ["ابزار و پژوهش", "Canva", "https://www.canva.com", "🎨"], ["ابزار و پژوهش", "حذف پس‌زمینه", "https://www.remove.bg", "✂️"], ["ابزار و پژوهش", "Convertio", "https://convertio.co", "🔄"], ["ابزار و پژوهش", "Gmail", "https://mail.google.com", "✉️"], ["ابزار و پژوهش", "Google Drive", "https://drive.google.com", "☁️"]], "n": [["ایرنا", "https://www.irna.ir", "سیاسی"], ["ایسنا", "https://www.isna.ir", "سیاسی"], ["مهر", "https://www.mehrnews.com", "سیاسی"], ["تسنیم", "https://www.tasnimnews.com", "سیاسی"], ["فارس", "https://www.farsnews.ir", "سیاسی"], ["خبرآنلاین", "https://www.khabaronline.ir", "سیاسی"], ["اکوایران", "https://www.ecoiran.com", "اقتصادی"], ["دنیای اقتصاد", "https://donya-e-eqtesad.com", "اقتصادی"], ["زومیت", "https://www.zoomit.ir", "فناوری"], ["دیجیاتو", "https://digiato.com", "فناوری"]]};
-const $=s=>document.querySelector(s),fa=n=>n.toLocaleString('fa-IR'),ID='kavehnouri',PH='09960062320',CARD='6219861945524204';
-const hue=i=>(i*47)%360,col=i=>[`hsl(${hue(i)} 75% 55%)`,`hsl(${(hue(i)+50)%360} 70% 40%)`];
-const QTY_WORDS=['هر صفحه','هر نفر','هر درخواست','پاورپوینت','اسکن','فکس','تایپ','پرینت','کپی','نصب','بلیط','استعلام'];
-const hasQty=name=>QTY_WORDS.some(w=>name.includes(w));
-let sel=new Set(),qtyStore=new Map(),cats=[...new Set(D.l.map(x=>x[0]))];
-const getQty=i=>qtyStore.get(i)||1;
-const setQty=(i,v)=>qtyStore.set(i,Math.max(1,Math.min(999,v)));
-$('#svcs').innerHTML=[...new Set(D.s.map(x=>x[0]))].map(c=>`<h3>${c}</h3>`+D.s.map((x,i)=>x[0]==c?`<div class="svc" data-t="${x[1]}" data-i="${i}"><label class="svc-main"><input type="checkbox" data-i="${i}"><span class="nm">${x[1]}</span><span class="old">${fa(x[2])}</span><span class="pr">${fa(x[3])} تومان</span></label>${hasQty(x[1])?`<div class="qty" data-i="${i}"><button type="button" class="minus" aria-label="کاهش">−</button><span class="qn">۱</span><button type="button" class="plus" aria-label="افزایش">+</button></div>`:''}</div>`:'').join('')).join('');
-$('#sites').innerHTML=cats.map((c,k)=>`<h3>${c}</h3><div class="grid">`+D.l.filter(x=>x[0]==c).map((x,i)=>{const [a,b]=col(k*7+i);return `<a class="card" href="${x[2]}" target="_blank" rel="noopener" data-t="${x[1]}" style="--c:${a};--d:${b}"><span class="ic">${x[3]}</span>${x[1]}</a>`}).join('')+'</div>').join('');
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>کاریزما نت | کافی‌نت آنلاین و خدمات دیجیتال</title>
+    <meta name="description" content="کافی‌نت آنلاین کاریزما نت؛ ثبت‌نام سامانه‌های دولتی، پرینت، کپی، اسکن، تایپ و کلیه خدمات اداری به‌صورت غیرحضوری. سریع، مطمئن، در سراسر ایران.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Dark Theme (Default) */
+            --bg: #0b1120;
+            --surface: #1e293b;
+            --surface-glass: rgba(30, 41, 59, 0.7);
+            --border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --accent: #0ea5e9;
+            --success: #22c55e;
+            --danger: #ef4444;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
 
-// بخش اصلاح شده اخبار
-$('#news-list').innerHTML=D.n.map(x=>`<a class="n" href="${x[1]}" target="_blank" rel="noopener"><div><small>${x[2]}</small><b>${x[0]}</b></div><span class="read-more">آخرین اخبار ←</span></a>`).join('');
-fetch('news.json').then(r=>r.ok?r.json():Promise.reject()).then(j=>{$('#news-list').innerHTML=j.slice(0,12).map(x=>`<a class="n" href="${x.link}" target="_blank" rel="noopener"><div><small>${x.source} • ${x.cat}</small><b>${x.title}</b></div><span class="read-more">مشاهده خبر ←</span></a>`).join('')}).catch(()=>{});
+        [data-theme="light"] {
+            --bg: #f1f5f9;
+            --surface: #ffffff;
+            --surface-glass: rgba(255, 255, 255, 0.85);
+            --border: rgba(0, 0, 0, 0.08);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
 
-function tot(){let t=0;sel.forEach(i=>t+=D.s[i][3]*getQty(i));$('#tot').textContent=fa(t)+' تومان ('+fa(sel.size)+' خدمت)';return t}
-function updatePriceDisplay(i){const el=document.querySelector(`.svc[data-i="${i}"] .pr`);if(!el)return;const unit=D.s[i][3],q=getQty(i);if(q>1){el.innerHTML=`<small>${fa(q)} × ${fa(unit)} =</small> ${fa(unit*q)}`}else{el.textContent=fa(unit)+' تومان'}}
-$('#svcs').onchange=e=>{if(e.target.type!=='checkbox')return;const i=+e.target.dataset.i,row=e.target.closest('.svc');if(e.target.checked){sel.add(i);if(!qtyStore.has(i))qtyStore.set(i,1);row.classList.add('on')}else{sel.delete(i);row.classList.remove('on')}tot()};
-$('#svcs').onclick=e=>{const qtyEl=e.target.closest('.qty');if(!qtyEl)return;e.preventDefault();e.stopPropagation();const btn=e.target.closest('button');if(!btn)return;const i=+qtyEl.dataset.i,cur=getQty(i),next=btn.classList.contains('plus')?Math.min(999,cur+1):Math.max(1,cur-1);setQty(i,next);qtyEl.querySelector('.qn').textContent=fa(next);updatePriceDisplay(i);tot()};
-$('#q').oninput=e=>{const v=e.target.value.trim();document.querySelectorAll('[data-t]').forEach(el=>el.classList.toggle('hide',v&&!el.dataset.t.includes(v)))};
-function msg(){const l=[...sel].map(i=>{const q=getQty(i),unit=D.s[i][3],total=unit*q;return '• '+D.s[i][1]+(q>1?` × ${fa(q)}`:'')+' – '+fa(total)+' تومان'}).join('\n');return `سلام، درخواست از سایت karizmanet.ir\nنام: ${$('#nm').value}\nراه ارتباطی: ${$('#ct').value}\n${l}\nجمع: ${fa(tot())} تومان\n${$('#ds').value}`}
-$('#go').onclick=()=>{if(!sel.size)return alert('حداقل یک خدمت را تیک بزنید.');$('#dlg').showModal()};
-$('#send').onclick=()=>{if(!$('#nm').value||!$('#ct').value)return alert('نام و راه ارتباطی را وارد کنید.');const m=msg();$('#msgtxt').value=m;$('#step2').classList.remove('hide');$('#t').href='https://t.me/'+ID+'?text='+encodeURIComponent(m);$('#sms').href='sms:'+PH+'?body='+encodeURIComponent(m)};
-$('#cp').onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#msgtxt').value);$('#cc').onclick=()=>navigator.clipboard&&navigator.clipboard.writeText(CARD);$('#x').onclick=()=>$('#dlg').close();</script></body></html>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Vazirmatn', sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background: var(--bg); color: var(--text-main); line-height: 1.7; overflow-x: hidden; transition: background 0.3s, color 0.3s; padding-bottom: 70px; }
+        a { color: inherit; text-decoration: none; }
+        
+        /* --- Header & Nav --- */
+        header { position: sticky; top: 0; z-index: 100; background: var(--surface-glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-weight: 800; font-size: 22px; background: linear-gradient(90deg, var(--accent), var(--primary)); -webkit-background-clip: text; color: transparent; display: flex; align-items: center; gap: 8px; }
+        .logo i { color: var(--accent); }
+        .nav-links { display: none; gap: 20px; font-weight: 700; font-size: 14px; }
+        .nav-links a { color: var(--text-muted); transition: color 0.2s; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .header-actions { display: flex; align-items: center; gap: 12px; }
+        .btn-icon { background: var(--surface); border: 1px solid var(--border); color: var(--text-main); width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: 0.2s; font-size: 16px; position: relative; }
+        .btn-icon:hover { background: var(--primary); color: #fff; }
+        .cart-badge { position: absolute; top: -5px; right: -5px; background: var(--danger); color: #fff; font-size: 10px; font-weight: bold; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; display: none; }
+
+        /* --- Hero --- */
+        .hero { padding: 50px 20px 30px; text-align: center; background: radial-gradient(circle at 50% -20%, rgba(99,102,241,0.2), transparent 70%); position: relative; }
+        .hero-badge { display: inline-block; padding: 6px 16px; border-radius: 30px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.3); color: var(--primary); font-size: 13px; font-weight: 700; margin-bottom: 16px; backdrop-filter: blur(10px); }
+        .hero h1 { font-size: clamp(28px, 6vw, 42px); font-weight: 800; line-height: 1.3; margin-bottom: 12px; }
+        .hero h1 span { background: linear-gradient(90deg, #38bdf8, #a78bfa); -webkit-background-clip: text; color: transparent; }
+        .hero p { color: var(--text-muted); max-width: 600px; margin: 0 auto 24px; font-size: 15px; }
+        
+        /* --- Search Box --- */
+        .search-container { max-width: 500px; margin: 0 auto; position: relative; }
+        .search-container input { width: 100%; padding: 14px 20px 14px 50px; border-radius: 30px; background: var(--surface); border: 1px solid var(--border); color: var(--text-main); font-size: 15px; box-shadow: var(--shadow); transition: 0.3s; outline: none; }
+        .search-container input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(99,102,241,0.2); }
+        .search-container i { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 18px; }
+
+        /* --- Sections --- */
+        section { max-width: 1100px; margin: 0 auto; padding: 30px 16px; }
+        .section-title { font-size: 22px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section-title i { color: var(--primary); }
+
+        /* --- Tabs --- */
+        .tabs { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 20px; scrollbar-width: none; }
+        .tabs::-webkit-scrollbar { display: none; }
+        .tab { padding: 8px 16px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); font-size: 13px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: 0.2s; }
+        .tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+        /* --- Services Grid --- */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+        .svc-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 16px; transition: 0.3s; position: relative; display: flex; flex-direction: column; gap: 12px; }
+        .svc-card:hover { border-color: var(--primary); box-shadow: 0 10px 25px rgba(99,102,241,0.15); transform: translateY(-3px); }
+        .svc-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .svc-title { font-weight: 700; font-size: 15px; }
+        .svc-cat { font-size: 11px; color: var(--text-muted); background: var(--bg); padding: 2px 8px; border-radius: 10px; }
+        .svc-prices { display: flex; align-items: center; gap: 10px; margin-top: auto; }
+        .svc-old { color: var(--text-muted); text-decoration: line-through; font-size: 13px; }
+        .svc-new { color: var(--success); font-weight: 800; font-size: 16px; }
+        
+        .svc-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; border-top: 1px solid var(--border); padding-top: 12px; }
+        .qty-control { display: flex; align-items: center; background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 2px; }
+        .qty-control button { width: 28px; height: 28px; border: none; background: transparent; color: var(--text-main); cursor: pointer; font-size: 16px; border-radius: 50%; transition: 0.2s; }
+        .qty-control button:hover { background: var(--primary); color: #fff; }
+        .qty-control span { width: 30px; text-align: center; font-weight: 700; font-size: 14px; }
+        
+        .btn-add { background: var(--primary); color: #fff; border: none; padding: 8px 16px; border-radius: 20px; font-weight: 700; cursor: pointer; transition: 0.2s; display: flex; align-items: center; gap: 6px; font-size: 13px; }
+        .btn-add:hover { background: var(--primary-hover); }
+        .btn-add.added { background: var(--success); }
+
+        /* --- Upload Section --- */
+        .upload-box { background: var(--surface); border: 2px dashed var(--border); border-radius: 20px; padding: 40px 20px; text-align: center; transition: 0.3s; cursor: pointer; }
+        .upload-box:hover { border-color: var(--primary); background: rgba(99,102,241,0.05); }
+        .upload-box i { font-size: 40px; color: var(--primary); margin-bottom: 12px; }
+        .upload-box h3 { font-size: 16px; margin-bottom: 6px; }
+        .upload-box p { color: var(--text-muted); font-size: 13px; }
+
+        /* --- Trust & FAQ --- */
+        .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+        .faq-q { padding: 16px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-a { padding: 0 16px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; color: var(--text-muted); font-size: 14px; }
+        .faq-item.active .faq-a { max-height: 200px; padding-bottom: 16px; }
+        .faq-item.active .faq-q i { transform: rotate(180deg); }
+
+        /* --- Cart Drawer --- */
+        .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 1000; opacity: 0; visibility: hidden; transition: 0.3s; }
+        .cart-overlay.open { opacity: 1; visibility: visible; }
+        .cart-drawer { position: fixed; top: 0; left: -100%; width: 100%; max-width: 400px; height: 100%; background: var(--bg); z-index: 1001; box-shadow: 5px 0 30px rgba(0,0,0,0.5); transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; }
+        .cart-drawer.open { left: 0; }
+        .cart-header { padding: 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .cart-header h2 { font-size: 18px; display: flex; align-items: center; gap: 8px; }
+        .cart-items { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 15px; }
+        .cart-item { display: flex; justify-content: space-between; align-items: center; background: var(--surface); padding: 12px; border-radius: 12px; border: 1px solid var(--border); }
+        .cart-item-info h4 { font-size: 14px; margin-bottom: 4px; }
+        .cart-item-info span { font-size: 13px; color: var(--success); font-weight: 700; }
+        .cart-footer { padding: 20px; border-top: 1px solid var(--border); background: var(--surface); }
+        .cart-total { display: flex; justify-content: space-between; font-size: 18px; font-weight: 800; margin-bottom: 15px; }
+        .btn-checkout { width: 100%; padding: 14px; border-radius: 12px; background: linear-gradient(90deg, var(--primary), var(--accent)); color: #fff; border: none; font-weight: 800; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        .btn-checkout:hover { opacity: 0.9; transform: scale(1.02); }
+        .empty-cart { text-align: center; color: var(--text-muted); margin-top: 50px; }
+        .empty-cart i { font-size: 50px; margin-bottom: 15px; opacity: 0.5; }
+
+        /* --- Bottom Nav (Mobile) --- */
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface-glass); backdrop-filter: blur(16px); border-top: 1px solid var(--border); display: flex; justify-content: space-around; padding: 10px 0; z-index: 99; }
+        .bn-item { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--text-muted); font-size: 11px; font-weight: 700; transition: 0.2s; }
+        .bn-item i { font-size: 20px; }
+        .bn-item.active { color: var(--primary); }
+
+        /* --- Modal (Checkout) --- */
+        dialog { width: 90%; max-width: 500px; margin: auto; background: var(--bg); color: var(--text-main); border: 1px solid var(--border); border-radius: 20px; padding: 24px; box-shadow: var(--shadow); }
+        dialog::backdrop { background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 700; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text-main); font-family: inherit; font-size: 14px; outline: none; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); }
+
+        /* Utilities */
+        .hide { display: none !important; }
+        .text-center { text-align: center; }
+        
+        @media (min-width: 768px) {
+            body { padding-bottom: 0; }
+            .nav-links { display: flex; }
+            .bottom-nav { display: none; }
+            .hero { padding: 80px 20px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo"><i class="fa-solid fa-bolt"></i> کاریزما نت</div>
+        <nav class="nav-links">
+            <a href="#services">خدمات و قیمت‌ها</a>
+            <a href="#upload">آپلود فایل پرینت</a>
+            <a href="#faq">سوالات متداول</a>
+        </nav>
+        <div class="header-actions">
+            <button class="btn-icon" onclick="toggleTheme()" title="تغییر تم"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
+            <button class="btn-icon" onclick="toggleCart()" title="سبد خرید">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cart-badge">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-badge"><i class="fa-solid fa-rocket"></i> نسل جدید خدمات آنلاین در ایران</div>
+        <h1>کافی‌نت، <span>در جیب شما</span>؛<br>سریع، مطمئن، پیگیری اختصاصی</h1>
+        <p>از ثبت‌نام‌های دولتی تا پرینت و اسکن؛ هر کاری داری، بدون رفت‌وآمد و از هر جای ایران به ما بسپار.</p>
+        
+        <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="جستجوی خدمت (مثلاً: پرینت، ثنا، سجام...)">
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> خدمات و تعرفه‌ها</h2>
+        
+        <!-- Tabs -->
+        <div class="tabs" id="tabs-container">
+            <!-- Dynamically injected -->
+        </div>
+
+        <!-- Grid -->
+        <div class="services-grid" id="services-grid">
+            <!-- Dynamically injected -->
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload">
+        <h2 class="section-title"><i class="fa-solid fa-cloud-arrow-up"></i> آپلود فایل برای پرینت</h2>
+        <div class="upload-box" onclick="alert('در نسخه‌های بعدی، اتصال به سرور برای آپلود فایل فعال می‌شود. فعلاً می‌توانید فایل را در تلگرام برای ما ارسال کنید.')">
+            <i class="fa-solid fa-file-pdf"></i>
+            <h3>فایل خود را اینجا رها کنید یا کلیک کنید</h3>
+            <p>پشتیبانی از PDF، Word، Excel و تصاویر (حداکثر ۵۰ مگابایت)</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2 class="section-title"><i class="fa-solid fa-circle-question"></i> سوالات متداول</h2>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">چطور مطمئن بشم کارم انجام میشه؟ <i class="fa-solid fa-chevron-down"></i></div>
+            <div class="faq-a">تمامی درخواست‌ها دارای کد رهگیری هستند. پس از پرداخت و انجام کار، فایل یا نتیجه نهایی از طریق راه‌های ارتباطی (ایتا، روبیکا، تلگرام یا پیامک) برای شما ارسال می‌شود.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">هزینه پرینت و کپی چطور محاسبه می‌شود؟ <i class="fa-solid fa-chevron-down"></i></div>
+            <div class="faq-a">قیمت‌ها بر اساس هر برگ (تک‌رو یا دورو، رنگی یا سیاه‌وسفید) است. تعداد برگ‌ها را در سبد خرید مشخص می‌کنید و مبلغ به صورت خودکار محاسبه می‌شود.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">آیا امکان پرداخت آنلاین وجود دارد؟ <i class="fa-solid fa-chevron-down"></i></div>
+            <div class="faq-a">بله، در حال حاضر پس از ثبت درخواست، شماره کارت برای شما نمایش داده می‌شود. به زودی درگاه پرداخت آنلاین (زرین‌پال) نیز به سایت متصل خواهد شد.</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 30px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px;">
+        © کاریزما نت ۱۴۰۳ - طراحی شده با <i class="fa-solid fa-heart" style="color: var(--danger);"></i> برای شما
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2><i class="fa-solid fa-cart-shopping"></i> سبد درخواست‌ها</h2>
+            <button class="btn-icon" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Dynamically injected -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>جمع کل:</span>
+                <span id="cart-total-price">۰ تومان</span>
+            </div>
+            <button class="btn-checkout" onclick="openCheckout()">ثبت نهایی درخواست <i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <dialog id="checkout-modal">
+        <h2 style="margin-bottom: 20px;"><i class="fa-solid fa-file-invoice"></i> تکمیل اطلاعات</h2>
+        <div class="form-group">
+            <label>نام و نام خانوادگی</label>
+            <input type="text" id="chk-name" placeholder="مثال: علی رضایی">
+        </div>
+        <div class="form-group">
+            <label>شماره تماس یا آیدی پیام‌رسان</label>
+            <input type="text" id="chk-contact" placeholder="۰۹۱۲... یا @username">
+        </div>
+        <div class="form-group">
+            <label>توضیحات (اختیاری)</label>
+            <textarea id="chk-desc" rows="2" placeholder="اگر توضیح خاصی دارید بنویسید..."></textarea>
+        </div>
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <button class="btn-add" style="flex: 1; justify-content: center; padding: 12px;" onclick="submitOrder()">تایید و ساخت پیام <i class="fa-solid fa-check"></i></button>
+            <button class="btn-add" style="background: var(--surface); color: var(--text-main); flex: 0.5; justify-content: center; padding: 12px;" onclick="document.getElementById('checkout-modal').close()">انصراف</button>
+        </div>
+    </dialog>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <div class="bottom-nav">
+        <a href="#services" class="bn-item active"><i class="fa-solid fa-house"></i> خدمات</a>
+        <a href="#upload" class="bn-item"><i class="fa-solid fa-cloud-arrow-up"></i> آپلود</a>
+        <a href="#faq" class="bn-item"><i class="fa-solid fa-circle-question"></i> سوالات</a>
+        <a href="tel:09960062320" class="bn-item"><i class="fa-solid fa-phone"></i> تماس</a>
+    </div>
+
+    <script>
+        // Data (Extracted from your previous code)
+        const D = {"s": [
+            ["ثبت‌نام و سامانه‌ها", "ثبت‌نام اینترنتی متفرقه (تا یک صفحه)", 260000, 235000], ["ثبت‌نام و سامانه‌ها", "ورود به سامانه ملی مجوزها و ثبت‌نام اولیه", 155000, 140000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سجام", 170000, 155000], ["ثبت‌نام و سامانه‌ها", "احراز هویت سجام", 150000, 135000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام اولیه سامانه سخا", 120000, 110000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام ثنا + احراز هویت", 305000, 275000], ["ثبت‌نام و سامانه‌ها", "بازیابی رمز ثنا", 48500, 43500], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه همیاب ۲۴", 220000, 200000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه ثبت‌من", 120000, 110000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه جیکا (GICA)", 350000, 315000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه سماح (اربعین / زیارتی)", 145000, 130000], ["ثبت‌نام و سامانه‌ها", "امضای دیجیتال با توکن", 215000, 195000], ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه میخک", 285000, 255000], ["خودرو و ترافیک", "استعلام و پرداخت خلافی", 85000, 75000], ["خودرو و ترافیک", "استعلام و پرداخت آزادراهی", 75000, 70000], ["خودرو و ترافیک", "نوبت‌گیری تعویض پلاک خودرو", 205000, 185000], ["خودرو و ترافیک", "پیش‌ثبت‌نام خودرو", 200000, 180000], ["خودرو و ترافیک", "ثبت‌نام خودرو فرسوده", 200000, 180000], ["خودرو و ترافیک", "پرداخت مالیات نقل‌وانتقال خودرو", 155000, 140000], ["خودرو و ترافیک", "ثبت‌نام گواهینامه موتورسیکلت", 365000, 330000], ["وام و بانک", "ثبت‌نام وام ازدواج", 165000, 150000], ["وام و بانک", "ثبت‌نام وام فرزندآوری", 265000, 240000], ["وام و بانک", "ثبت‌نام وام بانک مهر ایران / رسالت", 255000, 230000], ["وام و بانک", "ثبت‌نام وام اشتغال", 310000, 280000], ["وام و بانک", "ثبت‌نام مسکن ملی", 220000, 200000], ["وام و بانک", "ثبت‌نام وام ودیعه مسکن", 265000, 240000], ["وام و بانک", "افتتاح حساب آنلاین بانکی", 245000, 220000], ["وام و بانک", "ثبت / تأیید / انتقال چک صیادی", 75000, 70000], ["وام و بانک", "صدور سفته الکترونیکی", 205000, 185000], ["بیمه و تأمین اجتماعی", "ثبت‌نام در سامانه تأمین اجتماعی", 105000, 95000], ["بیمه و تأمین اجتماعی", "دریافت فیش بیمه", 50000, 45000], ["بیمه و تأمین اجتماعی", "دریافت سوابق بیمه", 60000, 55000], ["بیمه و تأمین اجتماعی", "ارسال لیست بیمه کارگاه (تا ۳ نفر)", 200000, 180000], ["بیمه و تأمین اجتماعی", "ثبت‌نام / تمدید بیمه سلامت", 185000, 165000], ["بیمه و تأمین اجتماعی", "ثبت‌نام / تمدید بیمه ورزشی", 125000, 115000], ["بیمه و تأمین اجتماعی", "ثبت اعتراض یارانه", 150000, 135000], ["بیمه و تأمین اجتماعی", "ثبت‌نام وام بازنشستگان", 105000, 95000], ["مالیات و کسب‌وکار", "ثبت‌نام کد اقتصادی (حقیقی)", 375000, 340000], ["مالیات و کسب‌وکار", "ویرایش کد اقتصادی", 70000, 65000], ["مالیات و کسب‌وکار", "اظهارنامه مالیاتی مشاغل گروه ۳", 470000, 425000], ["مالیات و کسب‌وکار", "اظهارنامه مالیاتی مشاغل گروه ۲", 650000, 585000], ["مالیات و کسب‌وکار", "ثبت اعتراض مالیاتی", 210000, 190000], ["مالیات و کسب‌وکار", "لیست مالیات حقوق کارکنان (تا ۴ نفر)", 185000, 165000], ["مالیات و کسب‌وکار", "صدور / تمدید جواز کسب (نوین اصناف)", 330000, 295000], ["مالیات و کسب‌وکار", "ثبت‌نام سامانه سامح (بهداشت)", 350000, 315000], ["مالیات و کسب‌وکار", "پلمپ دفاتر", 415000, 375000], ["مالیات و کسب‌وکار", "ثبت‌نام نظام مهندسی", 250000, 225000], ["مالیات و کسب‌وکار", "ثبت‌نام ستاد ایران", 495000, 445000], ["مالیات و کسب‌وکار", "ثبت مزایده در ستاد ایران", 520000, 470000], ["مالیات و کسب‌وکار", "ثبت مناقصه در ستاد ایران", 1100000, 990000], ["آموزش و دانشگاه", "ثبت‌نام غیرحضوری دانشگاه آزاد", 365000, 330000], ["آموزش و دانشگاه", "ثبت‌نام غیرحضوری دانشگاه پیام نور", 400000, 360000], ["آموزش و دانشگاه", "ثبت‌نام غیرحضوری دانشگاه دولتی", 525000, 475000], ["آموزش و دانشگاه", "ثبت‌نام اولیه سامانه سجاد", 295000, 265000], ["آموزش و دانشگاه", "ثبت هر درخواست در سامانه سجاد", 235000, 210000], ["آموزش و دانشگاه", "تأییدیه تحصیلی", 205000, 185000], ["آموزش و دانشگاه", "ثبت‌نام سنجش بدو ورود / پیش‌دبستانی", 260000, 235000], ["آموزش و دانشگاه", "ثبت‌نام مدارس تیزهوشان / نمونه دولتی", 235000, 210000], ["آموزش و دانشگاه", "ثبت‌نام کتاب درسی", 100000, 90000], ["آموزش و دانشگاه", "ثبت‌نام دانش‌آموز در سامانه my.medu", 250000, 225000], ["قضایی و ثبت احوال", "دریافت ابلاغیه قضایی", 43500, 39000], ["قضایی و ثبت احوال", "نوبت‌دهی قضایی", 110000, 100000], ["قضایی و ثبت احوال", "گواهی عدم سوءپیشینه", 130000, 115000], ["قضایی و ثبت احوال", "ثبت درخواست در سامانه ثبت‌احوال (NCR)", 135000, 120000], ["قضایی و ثبت احوال", "درخواست کد پستی", 200000, 180000], ["خدمات عمومی و اداری", "ورود به سایت و بررسی (بدون نتیجه)", 45000, 40500], ["خدمات عمومی و اداری", "دریافت فیش حقوقی / کارنامه / کارت ورود به جلسه", 48500, 43500], ["خدمات عمومی و اداری", "ساخت / ارسال ایمیل", 65000, 60000], ["خدمات عمومی و اداری", "ارسال / دریافت فکس (هر صفحه)", 40000, 36000], ["خدمات عمومی و اداری", "بلیط قطار (هر نفر)", 180000, 160000], ["خدمات عمومی و اداری", "بلیط هواپیما (هر نفر)", 240000, 215000], ["تایپ، اسکن و پرینت", "تایپ فارسی (هر صفحه)", 70000, 65000], ["تایپ، اسکن و پرینت", "تایپ انگلیسی (هر صفحه)", 130000, 115000], ["تایپ، اسکن و پرینت", "تایپ نامه اداری", 65000, 60000], ["تایپ، اسکن و پرینت", "تایپ جدول (هر صفحه)", 70000, 65000], ["تایپ، اسکن و پرینت", "ایجاد هر صفحه پاورپوینت", 33500, 30000], ["تایپ، اسکن و پرینت", "اسکن (A4)", 18500, 16500], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A5", 6000, 5500], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A4 تک‌رو", 11000, 10000], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A4 دورو", 13500, 12000], ["تایپ، اسکن و پرینت", "پرینت / کپی سیاه‌وسفید A3", 19500, 17500], ["تایپ، اسکن و پرینت", "پرینت رنگی A4 (متن)", 25000, 22500], ["تایپ، اسکن و پرینت", "پرینت رنگی A3 (متن)", 35000, 31500], ["تایپ، اسکن و پرینت", "پرینت رنگی A4 (عکس کامل)", 45000, 40500], ["خدمات فنی", "نصب ویندوز (PC و لپ‌تاپ)", 500000, 450000], ["خدمات فنی", "نصب نرم‌افزار کاربردی + آنتی‌ویروس", 500000, 450000], ["خدمات فنی", "عیب‌یابی نرم‌افزاری", 300000, 270000]
+        ]};
+
+        // Variables
+        let cart = {}; // { index: { qty, title, price } }
+        let activeCategory = 'همه';
+        const $ = document.querySelector.bind(document);
+        const fa = n => n.toLocaleString('fa-IR');
+
+        // 1. Initialize App
+        function init() {
+            renderTabs();
+            renderServices();
+            updateCartUI();
+            
+            // Theme setup
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+
+            // Search listener
+            $('#searchInput').addEventListener('input', (e) => {
+                renderServices(e.target.value.trim());
+            });
+        }
+
+        // 2. Theme Toggle
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeIcon(next);
+        }
+        function updateThemeIcon(theme) {
+            const icon = $('#theme-icon');
+            if(theme === 'dark') {
+                icon.className = 'fa-solid fa-sun';
+            } else {
+                icon.className = 'fa-solid fa-moon';
+            }
+        }
+
+        // 3. Render Tabs
+        function renderTabs() {
+            const categories = ['همه', ...new Set(D.s.map(item => item[0]))];
+            const container = $('#tabs-container');
+            container.innerHTML = categories.map(cat => 
+                `<div class="tab ${cat === activeCategory ? 'active' : ''}" onclick="setCategory('${cat}')">${cat}</div>`
+            ).join('');
+        }
+
+        // 4. Filter Logic
+        function setCategory(cat) {
+            activeCategory = cat;
+            renderTabs();
+            renderServices($('#searchInput').value.trim());
+        }
+
+        // 5. Render Services Grid
+        function renderServices(searchQuery = '') {
+            const grid = $('#services-grid');
+            let filtered = D.s.map((item, index) => ({ ...item, originalIndex: index }));
+
+            if (activeCategory !== 'همه') {
+                filtered = filtered.filter(item => item[0] === activeCategory);
+            }
+            if (searchQuery) {
+                filtered = filtered.filter(item => item[1].includes(searchQuery));
+            }
+
+            if(filtered.length === 0) {
+                grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);"><i class="fa-solid fa-face-frown" style="font-size: 40px; margin-bottom: 10px;"></i><br>خدمتی با این مشخصات یافت نشد.</div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(item => {
+                const idx = item.originalIndex;
+                const isInCart = cart[idx] !== undefined;
+                const qty = isInCart ? cart[idx].qty : 1;
+                const hasQty = ['هر صفحه','هر نفر','هر درخواست','پاورپوینت','اسکن','فکس','تایپ','پرینت','کپی','نصب','بلیط','استعلام'].some(w => item[1].includes(w));
+
+                return `
+                <div class="svc-card">
+                    <div class="svc-header">
+                        <div class="svc-title">${item[1]}</div>
+                        <div class="svc-cat">${item[0]}</div>
+                    </div>
+                    <div class="svc-prices">
+                        <span class="svc-old">${fa(item[2])}</span>
+                        <span class="svc-new">${fa(item[3])} تومان</span>
+                    </div>
+                    <div class="svc-actions">
+                        ${hasQty ? `
+                        <div class="qty-control">
+                            <button onclick="changeQty(${idx}, -1)">−</button>
+                            <span id="qty-${idx}">${fa(qty)}</span>
+                            <button onclick="changeQty(${idx}, 1)">+</button>
+                        </div>
+                        ` : `<div></div>`}
+                        <button class="btn-add ${isInCart ? 'added' : ''}" onclick="addToCart(${idx})">
+                            ${isInCart ? '<i class="fa-solid fa-check"></i> اضافه شد' : '<i class="fa-solid fa-plus"></i> افزودن'}
+                        </button>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        // 6. Cart Logic
+        function changeQty(idx, delta) {
+            if(cart[idx]) {
+                cart[idx].qty = Math.max(1, Math.min(999, cart[idx].qty + delta));
+                updateCartUI();
+                renderServices($('#searchInput').value.trim());
+                // Also update span immediately if it exists
+                const span = document.getElementById(`qty-${idx}`);
+                if(span) span.innerText = fa(cart[idx].qty);
+            }
+        }
+
+        function addToCart(idx) {
+            if(cart[idx]) {
+                // If already in cart, maybe remove it? Or do nothing. Let's make it toggle.
+                delete cart[idx];
+            } else {
+                const item = D.s[idx];
+                cart[idx] = { qty: 1, title: item[1], price: item[3] };
+            }
+            renderServices($('#searchInput').value.trim());
+            updateCartUI();
+            if(Object.keys(cart).length > 0 && !$('#cart-drawer').classList.contains('open')) {
+                // Auto open cart on first add (Optional: can be annoying, let's just shake the badge)
+                // toggleCart(); 
+            }
+        }
+
+        function updateCartUI() {
+            const badge = $('#cart-badge');
+            const itemsContainer = $('#cart-items');
+            const totalPriceEl = $('#cart-total-price');
+            
+            const keys = Object.keys(cart);
+            let total = 0;
+            let count = 0;
+
+            if(keys.length === 0) {
+                itemsContainer.innerHTML = `<div class="empty-cart"><i class="fa-solid fa-cart-arrow-down"></i><br>سبد خرید شما خالی است.</div>`;
+                badge.style.display = 'none';
+            } else {
+                badge.style.display = 'grid';
+                itemsContainer.innerHTML = keys.map(idx => {
+                    const item = cart[idx];
+                    const itemTotal = item.price * item.qty;
+                    total += itemTotal;
+                    count += item.qty;
+                    return `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <h4>${item.title}</h4>
+                            <span>${fa(item.qty)} × ${fa(item.price)} = ${fa(itemTotal)} تومان</span>
+                        </div>
+                        <button class="btn-icon" style="width: 30px; height: 30px; font-size: 12px; color: var(--danger);" onclick="addToCart(${idx})">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                    `;
+                }).join('');
+                badge.innerText = fa(count);
+            }
+            
+            totalPriceEl.innerText = fa(total) + ' تومان';
+        }
+
+        function toggleCart() {
+            $('#cart-overlay').classList.toggle('open');
+            $('#cart-drawer').classList.toggle('open');
+        }
+
+        // 7. FAQ Toggle
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            item.classList.toggle('active');
+            // Close others
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                if(faq !== item) faq.classList.remove('active');
+            });
+        }
+
+        // 8. Checkout
+        function openCheckout() {
+            if(Object.keys(cart).length === 0) return alert('سبد خرید شما خالی است!');
+            toggleCart();
+            $('#checkout-modal').showModal();
+        }
+
+        function submitOrder() {
+            const name = $('#chk-name').value.trim();
+            const contact = $('#chk-contact').value.trim();
+            const desc = $('#chk-desc').value.trim();
+
+            if(!name || !contact) return alert('لطفاً نام و راه ارتباطی را وارد کنید.');
+
+            let orderText = `سلام، درخواست جدید از سایت کاریزما نت\n\n👤 نام: ${name}\n📞 ارتباط: ${contact}\n\n🛒 اقلام سفارش:\n`;
+            let total = 0;
+            
+            for(let idx in cart) {
+                const item = cart[idx];
+                const itemTotal = item.price * item.qty;
+                total += itemTotal;
+                orderText += `▪️ ${item.title} (${fa(item.qty)} عدد) = ${fa(itemTotal)} تومان\n`;
+            }
+            
+            orderText += `\n💰 جمع کل: ${fa(total)} تومان\n`;
+            if(desc) orderText += `\n📝 توضیحات: ${desc}`;
+
+            // Generate Telegram Link
+            const tgLink = `https://t.me/kavehnouri?text=${encodeURIComponent(orderText)}`;
+            
+            // Show success state
+            $('#checkout-modal').innerHTML = `
+                <div style="text-align: center; padding: 20px;">
+                    <i class="fa-solid fa-circle-check" style="font-size: 60px; color: var(--success); margin-bottom: 20px;"></i>
+                    <h2>درخواست شما آماده است!</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 14px;">برای نهایی کردن، روی دکمه زیر کلیک کنید تا پیام در تلگرام باز شود.</p>
+                    <a href="${tgLink}" target="_blank" class="btn-checkout" style="display: block; text-align: center; text-decoration: none;">ارسال در تلگرام <i class="fa-brands fa-telegram"></i></a>
+                    <button onclick="location.reload()" style="margin-top: 15px; background: none; border: none; color: var(--text-muted); cursor: pointer; font-family: inherit;">بستن و بازگشت</button>
+                </div>
+            `;
+        }
+
+        // Start
+        init();
+    </script>
+</body>
+</html>

@@ -52,12 +52,16 @@
             --keyboard-text-color: #0284c7;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Vazirmatn', sans-serif; -webkit-tap-highlight-color: transparent; }
+        
+        /* FIX: Add padding-top to body to account for fixed header */
         html, body { background-color: var(--bg); color: var(--text-main); line-height: 1.7; overflow-x: hidden; transition: background 0.3s, color 0.3s; }
-        body { padding-bottom: 70px; }
+        body { padding-top: 65px; padding-bottom: 70px; }
+        
         a { color: inherit; text-decoration: none; }
 
-        /* Header & Expanded Search */
-        header { position: sticky; top: 0; z-index: 100; background: var(--surface-glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+        /* FIX: Change header to fixed position */
+        header { position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 100; background: var(--surface-glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+        
         .logo { font-weight: 800; font-size: 20px; background: linear-gradient(90deg, var(--accent), var(--primary)); -webkit-background-clip: text; color: transparent; display: flex; align-items: center; gap: 6px; white-space: nowrap; z-index: 102;}
         .logo i { color: var(--accent); }
         .nav-links { display: none; gap: 16px; font-weight: 700; font-size: 13px; }
@@ -102,7 +106,7 @@
         /* --- HERO: 3D Monitor & Glass Keyboard --- */
         .hero { padding: 30px 20px 40px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(99,102,241,0.15), transparent 70%); position: relative; display: flex; flex-direction: column; align-items: center; overflow: hidden; }
         
-        /* --- NEW VIBRANT HERO BADGE --- */
+        /* Vibrant Hero Badge */
         .hero-badge { 
             display: inline-flex; 
             align-items: center;
@@ -231,7 +235,7 @@
         .receipt-opt { width: 60px; height: 60px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); display: grid; place-items: center; font-size: 26px; transition: 0.2s; }
         .receipt-opt:hover { transform: scale(1.1); border-color: var(--primary); }
         
-        /* --- FAST BADGE FOR SMS BUTTON --- */
+        /* FAST BADGE FOR SMS BUTTON */
         .sms-btn-wrapper { position: relative; flex: 1; display: flex; }
         .sms-btn-wrapper .btn-add { width: 100%; justify-content: center; background: #10b981; position: relative; overflow: visible; }
         .fast-badge {
@@ -305,7 +309,7 @@
         }
 
         @media (min-width: 768px) {
-            body { padding-bottom: 0; }
+            body { padding-bottom: 0; padding-top: 65px; }
             .nav-links { display: flex; }
             .bottom-nav { display: none; }
             .header-actions { flex: 0; }

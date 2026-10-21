@@ -27,7 +27,7 @@
             --glass-bg: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.15);
             --keyboard-bg: rgba(15, 23, 42, 0.6);
-            --keyboard-text-color: #38bdf8; /* رنگ نئونی برای کیبورد */
+            --keyboard-text-color: #38bdf8;
         }
         [data-theme="light"] {
             --bg: #f1f5f9;
@@ -49,88 +49,66 @@
         body { background: var(--bg); color: var(--text-main); line-height: 1.7; overflow-x: hidden; transition: background 0.3s, color 0.3s; padding-bottom: 70px; }
         a { color: inherit; text-decoration: none; }
 
-        /* Header */
+        /* Header & Expanded Search */
         header { position: sticky; top: 0; z-index: 100; background: var(--surface-glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-        .logo { font-weight: 800; font-size: 20px; background: linear-gradient(90deg, var(--accent), var(--primary)); -webkit-background-clip: text; color: transparent; display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+        .logo { font-weight: 800; font-size: 20px; background: linear-gradient(90deg, var(--accent), var(--primary)); -webkit-background-clip: text; color: transparent; display: flex; align-items: center; gap: 6px; white-space: nowrap; z-index: 102;}
         .logo i { color: var(--accent); }
         .nav-links { display: none; gap: 16px; font-weight: 700; font-size: 13px; }
         .nav-links a { color: var(--text-muted); transition: color 0.2s; cursor: pointer; }
         .nav-links a:hover { color: var(--primary); }
 
-        .header-actions { display: flex; align-items: center; gap: 8px; flex: 1; justify-content: flex-end; }
-        .search-box-mini { position: relative; flex: 1; max-width: 180px; }
-        .search-box-mini input { width: 100%; padding: 7px 12px 7px 30px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); color: var(--text-main); font-size: 12px; outline: none; transition: 0.3s; }
-        .search-box-mini input:focus { border-color: var(--primary); }
-        .search-box-mini i { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 12px; }
+        .header-actions { display: flex; align-items: center; gap: 8px; flex: 1; justify-content: flex-end; position: relative; }
+        
+        /* Search Box (Smart Expand) */
+        .search-box-mini { position: relative; flex: 1; max-width: 180px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 101; }
+        .search-box-mini input { width: 100%; padding: 7px 12px 7px 30px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); color: var(--text-main); font-size: 12px; outline: none; transition: all 0.3s; }
+        .search-box-mini input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(99,102,241,0.3); }
+        .search-box-mini i { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 12px; cursor: pointer;}
+        
+        /* Search Expanded State */
+        .search-box-mini.expanded { max-width: 400px; flex: 2; }
+        
+        /* Search Shake Animation */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        .search-box-mini.shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; border-color: var(--danger); }
 
-        .btn-icon { background: var(--surface); border: 1px solid var(--border); color: var(--text-main); width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: 0.2s; font-size: 14px; position: relative; flex-shrink: 0; }
+        /* Match Glow Effect */
+        @keyframes pulseMatch {
+            0% { transform: scale(1); box-shadow: 0 0 0px var(--accent); }
+            50% { transform: scale(1.02); box-shadow: 0 0 20px rgba(14, 165, 233, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 0 10px rgba(14, 165, 233, 0.2); }
+        }
+        .search-match {
+            border-color: var(--accent) !important;
+            animation: pulseMatch 1s ease;
+        }
+
+        .btn-icon { background: var(--surface); border: 1px solid var(--border); color: var(--text-main); width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: 0.2s; font-size: 14px; position: relative; flex-shrink: 0; z-index: 102;}
         .btn-icon:hover { background: var(--primary); color: #fff; }
         .cart-badge { position: absolute; top: -4px; right: -4px; background: var(--danger); color: #fff; font-size: 9px; font-weight: bold; width: 16px; height: 16px; border-radius: 50%; display: grid; place-items: center; display: none; }
 
         /* --- HERO: 3D Monitor & Glass Keyboard (Compact & Vibrant) --- */
-        .hero { 
-            padding: 30px 20px 40px; 
-            text-align: center; 
-            background: radial-gradient(circle at 50% 0%, rgba(99,102,241,0.15), transparent 70%); 
-            position: relative; display: flex; flex-direction: column; align-items: center; 
-            overflow: hidden; 
-        }
-        
-        .hero-badge { 
-            display: inline-block; padding: 6px 16px; border-radius: 30px; 
-            background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.3); 
-            color: var(--primary); font-size: 13px; font-weight: 700; 
-            margin-bottom: 20px; backdrop-filter: blur(10px); 
-            animation: fadeInDown 0.8s ease-out;
-        }
-        
+        .hero { padding: 30px 20px 40px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(99,102,241,0.15), transparent 70%); position: relative; display: flex; flex-direction: column; align-items: center; overflow: hidden; }
+        .hero-badge { display: inline-block; padding: 6px 16px; border-radius: 30px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.3); color: var(--primary); font-size: 13px; font-weight: 700; margin-bottom: 20px; backdrop-filter: blur(10px); animation: fadeInDown 0.8s ease-out; }
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
         
         .monitor-wrapper { position: relative; width: 100%; max-width: 800px; perspective: 1200px; }
-        
-        /* Monitor Screen */
-        .monitor { 
-            position: relative; width: 95%; margin: 0 auto; aspect-ratio: 16/8; 
-            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
-            border: 2px solid var(--glass-border); border-radius: 20px; 
-            box-shadow: 0 0 40px var(--screen-glow), inset 0 0 20px rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; 
-            padding: 20px; transform: rotateX(5deg); transition: transform 0.5s;
-        }
-        .monitor::before {
-            content: ''; position: absolute; inset: 8px; border-radius: 14px; 
-            background: var(--screen-bg); z-index: 1;
-        }
+        .monitor { position: relative; width: 95%; margin: 0 auto; aspect-ratio: 16/8; background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02)); border: 2px solid var(--glass-border); border-radius: 20px; box-shadow: 0 0 40px var(--screen-glow), inset 0 0 20px rgba(0,0,0,0.5); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; padding: 20px; transform: rotateX(5deg); transition: transform 0.5s; }
+        .monitor::before { content: ''; position: absolute; inset: 8px; border-radius: 14px; background: var(--screen-bg); z-index: 1; }
         .monitor-content { position: relative; z-index: 2; text-align: center; }
-        .monitor h1 { 
-            font-size: clamp(20px, 4vw, 34px); font-weight: 800; line-height: 1.4; color: var(--text-main); 
-            text-shadow: 0 0 15px var(--primary), 0 0 30px var(--accent); margin-bottom: 0;
-        }
+        .monitor h1 { font-size: clamp(20px, 4vw, 34px); font-weight: 800; line-height: 1.4; color: var(--text-main); text-shadow: 0 0 15px var(--primary), 0 0 30px var(--accent); margin-bottom: 0; }
         .monitor h1 span { color: var(--accent); }
         
-        /* Monitor Stand */
         .monitor-neck { width: 60px; height: 25px; background: linear-gradient(to bottom, var(--glass-border), transparent); margin: 0 auto; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%); }
         .monitor-base { width: 180px; height: 10px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 10px; margin: 0 auto; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
-        /* Glass Keyboard (Flatter & Vibrant Text) */
-        .keyboard { 
-            position: relative; width: 90%; max-width: 700px; margin: -5px auto 0; 
-            background: var(--keyboard-bg); border: 1px solid var(--glass-border); 
-            border-radius: 12px; padding: 20px 15px; 
-            transform: rotateX(35deg) translateY(-10px); transform-origin: top center;
-            box-shadow: 0 25px 40px rgba(0,0,0,0.5), inset 0 0 30px rgba(255,255,255,0.05);
-            backdrop-filter: blur(20px); transition: transform 0.5s;
-        }
-        .keyboard::before {
-            content: ''; position: absolute; inset: 5px; border-radius: 8px;
-            background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 20px 20px; z-index: 0;
-        }
-        .keyboard-text { 
-            position: relative; z-index: 2; color: var(--keyboard-text-color); font-weight: 800; 
-            font-size: clamp(13px, 2vw, 16px); line-height: 1.6; text-align: center;
-            text-shadow: 0 0 10px rgba(56, 189, 248, 0.6), 0 2px 4px rgba(0,0,0,0.8);
-        }
+        .keyboard { position: relative; width: 90%; max-width: 700px; margin: -5px auto 0; background: var(--keyboard-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 20px 15px; transform: rotateX(35deg) translateY(-10px); transform-origin: top center; box-shadow: 0 25px 40px rgba(0,0,0,0.5), inset 0 0 30px rgba(255,255,255,0.05); backdrop-filter: blur(20px); transition: transform 0.5s; }
+        .keyboard::before { content: ''; position: absolute; inset: 5px; border-radius: 8px; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px; z-index: 0; }
+        .keyboard-text { position: relative; z-index: 2; color: var(--keyboard-text-color); font-weight: 800; font-size: clamp(13px, 2vw, 16px); line-height: 1.6; text-align: center; text-shadow: 0 0 10px rgba(56, 189, 248, 0.6), 0 2px 4px rgba(0,0,0,0.8); }
 
         /* Sections */
         section { max-width: 1100px; margin: 0 auto; padding: 25px 16px; }
@@ -226,13 +204,7 @@
         /* Upload Modal Specific (Pyramid Layout) */
         .upload-options { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
         .upload-row { display: flex; justify-content: center; gap: 12px; }
-        .upload-opt { 
-            width: 90px; padding: 15px 10px;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; 
-            background: var(--glass-bg); border: 1px solid var(--glass-border); 
-            border-radius: 16px; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-            backdrop-filter: blur(10px);
-        }
+        .upload-opt { width: 90px; padding: 15px 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); backdrop-filter: blur(10px); }
         .upload-opt:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
         .upload-opt i { font-size: 32px; transition: transform 0.3s; }
         .upload-opt:hover i { transform: scale(1.1); }
@@ -245,12 +217,27 @@
         .c-bale { color: #0ea5e9; text-shadow: 0 0 10px rgba(14,165,233,0.5); }
         .c-shad { color: #22c55e; text-shadow: 0 0 10px rgba(34,197,94,0.5); }
 
+        /* Mobile Search Overrides */
+        @media (max-width: 767px) {
+            .search-box-mini.expanded {
+                position: absolute;
+                top: -5px; left: 0; right: 0;
+                max-width: none; width: 100%;
+                padding: 5px;
+                background: var(--surface);
+                border-radius: 20px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+                z-index: 105;
+            }
+            .search-box-mini.expanded input { font-size: 14px; padding: 10px 15px 10px 40px; background: var(--bg);}
+            .search-box-mini.expanded i { left: 15px; font-size: 16px; }
+        }
+
         @media (min-width: 768px) {
             body { padding-bottom: 0; }
             .nav-links { display: flex; }
             .bottom-nav { display: none; }
             .header-actions { flex: 0; }
-            .search-box-mini { max-width: 220px; }
             .hero { padding: 40px 20px 60px; }
             .monitor { width: 85%; }
             .keyboard { width: 80%; padding: 25px 20px; }
@@ -270,8 +257,8 @@
             <a onclick="openModal('contact-modal')">تماس</a>
         </nav>
         <div class="header-actions">
-            <div class="search-box-mini">
-                <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="search-box-mini" id="searchBoxContainer">
+                <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
                 <input type="text" id="searchInput" placeholder="جستجو...">
             </div>
             <button class="btn-icon" onclick="toggleTheme()" title="تغییر تم"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
@@ -284,21 +271,15 @@
 
     <!-- HERO: 3D Monitor & Glass Keyboard -->
     <div class="hero">
-        <!-- Badge Back -->
         <div class="hero-badge"><i class="fa-solid fa-rocket"></i> نسل جدید خدمات آنلاین در ایران</div>
-        
         <div class="monitor-wrapper">
-            <!-- Monitor -->
             <div class="monitor">
                 <div class="monitor-content">
                     <h1>کافی‌نت، <span>در جیب شما</span>؛<br>سریع، مطمئن، پیگیری اختصاصی</h1>
                 </div>
             </div>
-            <!-- Monitor Stand -->
             <div class="monitor-neck"></div>
             <div class="monitor-base"></div>
-            
-            <!-- Glass Keyboard (Flatter) -->
             <div class="keyboard">
                 <p class="keyboard-text">از ثبت‌نام در سامانه‌های دولتی و بانکی گرفته تا پرینت، کپی، اسکن و تایپ؛ همه خدمات کافی‌نت را بدون رفت‌وآمد و از هر جای ایران سفارش دهید.</p>
             </div>
@@ -416,41 +397,29 @@
         </div>
     </dialog>
 
-    <!-- Upload Modal (Pyramid Layout & No ID Text) -->
+    <!-- Upload Modal -->
     <dialog id="upload-modal">
         <h2 style="margin-bottom: 10px; text-align: center;"><i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل برای پرینت</h2>
         <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">پیام‌رسان مورد نظر خود را انتخاب کنید:</p>
         
         <div class="upload-options">
-            <!-- Top Row (3 items) -->
             <div class="upload-row">
-                <!-- Telegram -->
                 <a href="https://t.me/kavehnouri" target="_blank" class="upload-opt">
-                    <i class="fa-brands fa-telegram c-telegram"></i>
-                    <span>تلگرام</span>
+                    <i class="fa-brands fa-telegram c-telegram"></i><span>تلگرام</span>
                 </a>
-                <!-- Eitaa -->
                 <a href="https://eitaa.com/kavehnouri" target="_blank" class="upload-opt">
-                    <i class="fa-solid fa-comment-dots c-eitaa"></i>
-                    <span>ایتا</span>
+                    <i class="fa-solid fa-comment-dots c-eitaa"></i><span>ایتا</span>
                 </a>
-                <!-- Rubika -->
                 <a href="https://rubika.ir/kavehnouri" target="_blank" class="upload-opt">
-                    <i class="fa-solid fa-comments c-rubika"></i>
-                    <span>روبیکا</span>
+                    <i class="fa-solid fa-comments c-rubika"></i><span>روبیکا</span>
                 </a>
             </div>
-            <!-- Bottom Row (2 items centered) -->
             <div class="upload-row">
-                <!-- Bale -->
                 <a href="https://web.bale.ai/chat?uid=@ikavehnouri" target="_blank" class="upload-opt">
-                    <i class="fa-solid fa-comment c-bale"></i>
-                    <span>بله</span>
+                    <i class="fa-solid fa-comment c-bale"></i><span>بله</span>
                 </a>
-                <!-- Shad -->
                 <a href="https://shad.ir/" target="_blank" class="upload-opt">
-                    <i class="fa-solid fa-graduation-cap c-shad"></i>
-                    <span>شاد</span>
+                    <i class="fa-solid fa-graduation-cap c-shad"></i><span>شاد</span>
                 </a>
             </div>
         </div>
@@ -541,6 +510,59 @@
         const $ = document.querySelector.bind(document);
         const fa = n => n.toLocaleString('fa-IR');
 
+        // --- Smart Search & UI ---
+        const searchBox = $('#searchBoxContainer');
+        const searchInput = $('#searchInput');
+        const searchIcon = $('#searchIcon');
+        let typingTimer;
+
+        // 1. Expand/Collapse Search Box
+        searchInput.addEventListener('focus', () => searchBox.classList.add('expanded'));
+        searchInput.addEventListener('blur', () => {
+            if(!searchInput.value.trim()) searchBox.classList.remove('expanded');
+        });
+        searchIcon.addEventListener('click', () => searchInput.focus());
+
+        // 2. Smart Normalization (Case & Arabic/Persian characters)
+        function normalizeText(text) {
+            if(!text) return '';
+            return text.toString().toLowerCase()
+                .replace(/ي/g, 'ی')
+                .replace(/ك/g, 'ک')
+                .replace(/ة/g, 'ه')
+                .replace(/[أإآ]/g, 'ا')
+                .replace(/\s+/g, ' ');
+        }
+
+        // 3. Input Event (Debounce for Scroll/Shake)
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            renderServices(query);
+            renderCategorizedLinks(query);
+
+            clearTimeout(typingTimer);
+            if(query.length > 0) {
+                typingTimer = setTimeout(() => {
+                    const hasServices = $('#services-grid').children.length > 0 && !$('#services-grid').innerHTML.includes('یافت نشد');
+                    const hasLinks = $('#links-container').innerHTML.includes('link-card');
+                    
+                    if(!hasServices && !hasLinks) {
+                        // No results -> Shake
+                        searchBox.classList.add('shake');
+                        setTimeout(() => searchBox.classList.remove('shake'), 500);
+                    } else {
+                        // Results found -> Scroll to first match
+                        const firstMatch = document.querySelector('.search-match');
+                        if(firstMatch) {
+                            firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                }, 800); // Wait 800ms after user stops typing
+            }
+        });
+
+
+        // --- Initialization & Rendering ---
         function init() {
             renderTabs();
             renderServices();
@@ -549,11 +571,6 @@
             const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
             updateThemeIcon(savedTheme);
-            $('#searchInput').addEventListener('input', (e) => {
-                const query = e.target.value.trim();
-                renderServices(query);
-                renderCategorizedLinks(query);
-            });
         }
 
         function toggleTheme() {
@@ -586,19 +603,27 @@
             const grid = $('#services-grid');
             let filtered = D.s.map((item, index) => ({ ...item, originalIndex: index }));
             if (activeCategory !== 'همه') filtered = filtered.filter(item => item[0] === activeCategory);
-            if (searchQuery) filtered = filtered.filter(item => item[1].includes(searchQuery));
+            
+            const normalizedQuery = normalizeText(searchQuery);
+            if (normalizedQuery) {
+                filtered = filtered.filter(item => normalizeText(item[1]).includes(normalizedQuery));
+            }
 
             if(filtered.length === 0) {
                 grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);"><i class="fa-solid fa-face-frown" style="font-size: 40px; margin-bottom: 10px;"></i><br>خدمتی با این مشخصات یافت نشد.</div>`;
                 return;
             }
+            
+            const isSearching = normalizedQuery.length > 0;
+            const matchClass = isSearching ? 'search-match' : '';
+
             grid.innerHTML = filtered.map(item => {
                 const idx = item.originalIndex;
                 const isInCart = cart[idx] !== undefined;
                 const qty = isInCart ? cart[idx].qty : 1;
                 const hasQty = ['هر صفحه','هر نفر','هر درخواست','پاورپوینت','اسکن','فکس','تایپ','پرینت','کپی','نصب','بلیط','استعلام'].some(w => item[1].includes(w));
                 return `
-                <div class="svc-card">
+                <div class="svc-card ${matchClass}">
                     <div class="svc-title">${item[1]}</div>
                     <div class="svc-prices"><span class="svc-old">${fa(item[2])}</span><span class="svc-new">${fa(item[3])} تومان</span></div>
                     <div class="svc-actions">
@@ -612,11 +637,15 @@
         function renderCategorizedLinks(searchQuery = '') {
             const container = $('#links-container');
             let html = '';
+            const normalizedQuery = normalizeText(searchQuery);
+            const isSearching = normalizedQuery.length > 0;
+            const matchClass = isSearching ? 'search-match' : '';
+
             for (const [category, links] of Object.entries(D.l)) {
-                const filteredLinks = searchQuery ? links.filter(l => l.name.includes(searchQuery)) : links;
+                const filteredLinks = normalizedQuery ? links.filter(l => normalizeText(l.name).includes(normalizedQuery)) : links;
                 if (filteredLinks.length > 0) {
                     html += `<h3 style="margin: 20px 0 10px; font-size: 16px; color: var(--text-muted); border-bottom: 1px solid var(--border); padding-bottom: 5px;">${category}</h3>`;
-                    html += `<div class="links-grid">${filteredLinks.map(link => `<a href="${link.url}" target="_blank" rel="noopener" class="link-card"><span class="emoji">${link.icon}</span><span>${link.name}</span></a>`).join('')}</div>`;
+                    html += `<div class="links-grid">${filteredLinks.map(link => `<a href="${link.url}" target="_blank" rel="noopener" class="link-card ${matchClass}"><span class="emoji">${link.icon}</span><span>${link.name}</span></a>`).join('')}</div>`;
                 }
             }
             container.innerHTML = html || '<p style="text-align:center; color:var(--text-muted); padding:20px;">سایتی یافت نشد.</p>';

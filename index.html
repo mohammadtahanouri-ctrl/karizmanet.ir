@@ -3,8 +3,48 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>کاریزما نت | کافی‌نت آنلاین و خدمات دیجیتال</title>
-    <meta name="description" content="کافی‌نت آنلاین کاریزما نت؛ ثبت‌نام سامانه‌های دولتی، پرینت، کپی، اسکن، تایپ و کلیه خدمات اداری به‌صورت غیرحضوری. سریع، مطمئن، در سراسر ایران.">
+    <title>کاریزما نت | کافی‌نت آنلاین و خدمات دیجیتال در بیرجند</title>
+    <meta name="description" content="کافی‌نت آنلاین کاریزما نت؛ ثبت‌نام سامانه‌های دولتی، پرینت، کپی، اسکن، تایپ و کلیه خدمات اداری در بیرجند. سریع، مطمئن، با پیگیری اختصاصی.">
+    
+    <!-- PWA & Manifest Meta Tags -->
+    <meta name="theme-color" content="#0b1120">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/1048/1048953.png">
+    <!-- Inline Manifest for PWA -->
+    <link rel="manifest" href='data:application/manifest+json,{"name":"کاریزما نت","short_name":"کاریزما","start_url":"./","display":"standalone","background_color":"%230b1120","theme_color":"%230b1120","icons":[{"src":"https://cdn-icons-png.flaticon.com/512/1048/1048953.png","sizes":"512x512","type":"image/png"}]}'>
+
+    <!-- Schema Markup for Local Business SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "کافی‌نت کاریزما نت",
+      "image": "https://cdn-icons-png.flaticon.com/512/1048/1048953.png",
+      "@id": "https://karizmanet.ir",
+      "url": "https://karizmanet.ir",
+      "telephone": "09960062320",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "شهرک فرهیختگان، نبش میدان دانش",
+        "addressLocality": "بیرجند",
+        "addressRegion": "خراسان جنوبی",
+        "postalCode": "9717493803",
+        "addressCountry": "IR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "08:00",
+        "closes": "22:00"
+      },
+      "sameAs": [
+        "https://t.me/kavehnouri",
+        "https://eitaa.com/kavehnouri"
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;800&display=swap" rel="stylesheet">
     
@@ -27,7 +67,6 @@
             --success: #22c55e;
             --danger: #ef4444;
             --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            
             --screen-bg: #050914;
             --screen-glow: rgba(99, 102, 241, 0.4);
             --glass-bg: rgba(255, 255, 255, 0.05);
@@ -42,7 +81,6 @@
             --text-main: #0f172a;
             --text-muted: #64748b;
             --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-            
             --screen-bg: #e2e8f0;
             --screen-glow: rgba(99, 102, 241, 0.2);
             --glass-bg: rgba(255, 255, 255, 0.6);
@@ -214,6 +252,20 @@
         .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(14, 165, 233, 0.15); }
         .link-card .emoji { font-size: 20px; }
 
+        /* Why Us & Testimonials */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+        .glass-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center; transition: 0.3s; }
+        .glass-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(14,165,233,0.15); }
+        .glass-card i { font-size: 36px; color: var(--accent); margin-bottom: 15px; }
+        .glass-card h3 { font-size: 16px; margin-bottom: 8px; }
+        .glass-card p { font-size: 13px; color: var(--text-muted); }
+        
+        .testimonial-card { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .testimonial-avatar { width: 60px; height: 60px; border-radius: 50%; background: var(--primary); display: grid; place-items: center; font-size: 24px; color: white; margin-bottom: 12px; border: 2px solid var(--accent); }
+        .stars { color: #fbbf24; font-size: 14px; margin-bottom: 10px; }
+        .testimonial-text { font-size: 13px; color: var(--text-muted); font-style: italic; margin-bottom: 10px; }
+        .testimonial-name { font-size: 14px; font-weight: 700; }
+
         /* Upload Action Card */
         .action-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 30px 20px; text-align: center; transition: 0.3s; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
         .action-card:hover { border-color: var(--primary); background: rgba(99,102,241,0.05); transform: translateY(-3px); }
@@ -223,23 +275,12 @@
 
         /* Upload Title Styling */
         .upload-title-container { text-align: center; margin-bottom: 20px; }
-        .upload-title-main { 
-            color: #fbbf24; 
-            font-size: 24px; font-weight: 800; 
-            text-shadow: 0 0 15px rgba(251, 191, 36, 0.5); 
-            display: flex; align-items: center; justify-content: center; gap: 8px; 
-        }
+        .upload-title-main { color: #fbbf24; font-size: 24px; font-weight: 800; text-shadow: 0 0 15px rgba(251, 191, 36, 0.5); display: flex; align-items: center; justify-content: center; gap: 8px; }
         .upload-title-main i { color: #fbbf24; }
-        .upload-title-sub {
-            color: var(--text-main); font-size: 15px; font-weight: 700; margin-top: 8px;
-            display: flex; align-items: center; justify-content: center; gap: 5px;
-        }
+        .upload-title-sub { color: var(--text-main); font-size: 15px; font-weight: 700; margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 5px; }
         .blink-icon { color: #22c55e; animation: blinkAnim 1.5s infinite; font-size: 18px; }
         
-        @keyframes blinkAnim {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.3; transform: scale(0.9); }
-        }
+        @keyframes blinkAnim { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.9); } }
 
         /* FAQ */
         .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
@@ -247,6 +288,11 @@
         .faq-a { padding: 0 16px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; color: var(--text-muted); font-size: 14px; }
         .faq-item.active .faq-a { max-height: 300px; padding-bottom: 16px; }
         .faq-item.active .faq-q i { transform: rotate(180deg); }
+
+        /* Chat Widget (Eitaa) */
+        .chat-widget { position: fixed; bottom: 85px; left: 20px; width: 60px; height: 60px; background: #ff9800; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 30px; box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4); z-index: 9998; transition: 0.3s; animation: pulseWidget 2s infinite; }
+        .chat-widget:hover { transform: scale(1.1); background: #f57c00; }
+        @keyframes pulseWidget { 0% { box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(255, 152, 0, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 152, 0, 0); } }
 
         /* Cart Drawer */
         .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 10000; opacity: 0; visibility: hidden; transition: 0.3s; }
@@ -306,6 +352,14 @@
         .bg-shad { background: #00C853; }
         .bg-sms { background: #fbbf24; color: #000 !important; }
 
+        /* User Panel Specific */
+        .user-order-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 15px; margin-bottom: 15px; }
+        .user-order-header { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border); padding-bottom: 8px; margin-bottom: 8px; }
+        .user-order-code { font-weight: 800; color: var(--accent); font-size: 16px; }
+        .user-order-date { font-size: 12px; color: var(--text-muted); }
+        .user-order-total { font-weight: 700; color: var(--success); margin-top: 8px; display: block; }
+        .user-order-items { font-size: 13px; color: var(--text-muted); margin-top: 5px; }
+
         /* SMS Fast Badge */
         .sms-btn-wrapper { position: relative; flex: 1; display: flex; }
         .sms-btn-wrapper .btn-add { width: 100%; justify-content: center; background: #10b981; position: relative; overflow: visible; padding-top: 12px; padding-bottom: 12px;}
@@ -339,6 +393,7 @@
             .hero { padding: 40px 20px 60px; }
             .monitor { width: 85%; }
             .keyboard { width: 80%; padding: 25px 20px; }
+            .chat-widget { bottom: 30px; }
         }
     </style>
 </head>
@@ -348,16 +403,17 @@
         <div class="logo"><i class="fa-solid fa-bolt"></i> کاریزما نت</div>
         <nav class="nav-links">
             <a href="#services">خدمات</a>
+            <a href="#why-us">چرا ما؟</a>
             <a href="#links">سایت‌ها</a>
-            <a href="#upload">آپلود</a>
             <a href="#faq">سوالات</a>
-            <a onclick="openModal('contact-modal')">تماس</a>
         </nav>
         <div class="header-actions">
             <div class="search-box-mini" id="searchBoxContainer">
                 <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
-                <input type="text" id="searchInput" placeholder="جستجو در خدمات و سایت‌ها...">
+                <input type="text" id="searchInput" placeholder="جستجو...">
             </div>
+            <!-- User Panel Button -->
+            <button class="btn-icon" onclick="openUserPanel()" title="پنل کاربری (سفارشات من)"><i class="fa-solid fa-user"></i></button>
             <button class="btn-icon" onclick="toggleTheme()" title="تغییر تم"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
             <button class="btn-icon" onclick="toggleCart()" title="سبد خرید">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -389,10 +445,60 @@
         </div>
     </div>
 
+    <section id="why-us">
+        <h2 class="section-title"><i class="fa-solid fa-star"></i> چرا کاریزما نت؟</h2>
+        <div class="grid-3">
+            <div class="glass-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>سرعت بالا</h3>
+                <p>انجام سریع امور اداری و ثبت‌نام‌ها بدون معطلی.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>امنیت اطلاعات</h3>
+                <p>اطلاعات شخصی و مدارک شما با بالاترین استاندارد محافظت می‌شود.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>پشتیبانی واقعی</h3>
+                <p>پاسخگویی از طریق تمام پیام‌رسان‌ها و تماس تلفنی.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h3>پیگیری اختصاصی</h3>
+                <p>کد رهگیری ۵ رقمی برای تمام سفارشات جهت پیگیری دقیق.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="services">
         <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> خدمات و تعرفه‌ها</h2>
         <div class="tabs" id="tabs-container"></div>
         <div class="services-grid" id="services-grid"></div>
+    </section>
+
+    <section id="testimonials">
+        <h2 class="section-title"><i class="fa-solid fa-comments"></i> نظرات مشتریان</h2>
+        <div class="grid-3">
+            <div class="glass-card testimonial-card">
+                <div class="testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"واقعاً سرعتشون عالیه! ثبت‌نام سجامم رو کمتر از یک ساعت انجام دادن. پیگیری با کد رهگیری هم خیلی خوبه."</p>
+                <span class="testimonial-name">مهدی رضایی</span>
+            </div>
+            <div class="glass-card testimonial-card">
+                <div class="testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"برای پرینت فایلام از ایتا فرستادم، خیلی سریع جواب دادن و قیمت هم منصفانه بود. حتماً بازم استفاده می‌کنم."</p>
+                <span class="testimonial-name">زهرا احمدی</span>
+            </div>
+            <div class="glass-card testimonial-card">
+                <div class="testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="stars">★★★★☆</div>
+                <p class="testimonial-text">"امکانات سایتشون خیلی کامله، همه چیز شفافه. کد پیگیری که بهم دادن باعث شد خیالم راحت باشه."</p>
+                <span class="testimonial-name">علی کریمی</span>
+            </div>
+        </div>
     </section>
 
     <section id="links">
@@ -417,15 +523,6 @@
         </div>
     </section>
 
-    <section id="contact-section">
-        <h2 class="section-title"><i class="fa-solid fa-headset"></i> راه‌های ارتباطی</h2>
-        <div class="action-card" onclick="openModal('contact-modal')">
-            <i class="fa-solid fa-address-card"></i>
-            <h3>تماس با کاریزما نت</h3>
-            <p>شماره تماس، آدرس و آیدی پیام‌رسان‌های ما را مشاهده کنید.</p>
-        </div>
-    </section>
-
     <section id="faq">
         <h2 class="section-title"><i class="fa-solid fa-circle-question"></i> سوالات متداول</h2>
         
@@ -441,7 +538,7 @@
 
         <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">چطور مطمئن بشم کارم انجام میشه؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">تمامی درخواست‌ها دارای کد رهگیری ۵ رقمی هستند. پس از پرداخت و انجام کار، فایل یا نتیجه نهایی از طریق راه‌های ارتباطی برای شما ارسال می‌شود.</div>
+            <div class="faq-a">تمامی درخواست‌ها دارای کد رهگیری ۵ رقمی هستند. پس از پرداخت و انجام کار، فایل یا نتیجه نهایی از طریق راه‌های ارتباطی برای شما ارسال می‌شود. شما می‌توانید با کلیک روی آیکون کاربر در بالای سایت، سفارشات خود را مشاهده کنید.</div>
         </div>
         <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">هزینه خدمات چطور محاسبه می‌شود؟ <i class="fa-solid fa-chevron-down"></i></div>
@@ -453,6 +550,12 @@
         © کاریزما نت ۱۴۰۳ - طراحی شده با <i class="fa-solid fa-heart" style="color: var(--danger);"></i> برای شما
     </footer>
 
+    <!-- Chat Widget (Eitaa) -->
+    <a href="https://eitaa.com/kavehnouri" target="_blank" class="chat-widget" title="پشتیبانی در ایتا">
+        <i class="fa-solid fa-comment-dots"></i>
+    </a>
+
+    <!-- Cart Drawer -->
     <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
     <div class="cart-drawer" id="cart-drawer">
         <div class="cart-header">
@@ -466,6 +569,21 @@
         </div>
     </div>
 
+    <!-- User Panel Modal -->
+    <dialog id="user-panel-modal">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2><i class="fa-solid fa-user"></i> سفارشات من</h2>
+            <button class="btn-icon" onclick="document.getElementById('user-panel-modal').close()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="user-orders-list" style="max-height: 60vh; overflow-y: auto;">
+            <!-- Dynamically injected order history -->
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="btn-add" style="background: var(--danger); justify-content: center; width: 100%;" onclick="clearUserHistory()">پاک کردن تاریخچه</button>
+        </div>
+    </dialog>
+
+    <!-- Checkout Modal -->
     <dialog id="checkout-modal">
         <div id="chk-step1">
             <h2 style="margin-bottom: 20px;"><i class="fa-solid fa-file-invoice"></i> تکمیل اطلاعات</h2>
@@ -483,7 +601,7 @@
                 <i class="fa-solid fa-circle-check" style="font-size: 50px; color: var(--success); margin-bottom: 10px;"></i>
                 <h2>فاکتور صادر شد!</h2>
                 <div style="background: var(--surface); border: 1px solid var(--border); padding: 10px; border-radius: 10px; margin-top: 10px; display: inline-block;">
-                    <span style="font-size: 13px; color: var(--text-muted);">کد پیگیری شما:</span>
+                    <span style="font-size: 13px; color: var(--text-muted);">کد پیگیری شما (در پنل کاربری نیز ذخیره شد):</span>
                     <b id="chk-order-code" style="color: var(--accent); font-size: 18px; letter-spacing: 2px;"></b>
                 </div>
                 <p style="color: var(--text-muted); font-size: 13px; margin-top: 10px;">مبلغ قابل پرداخت: <b id="chk-total-price" style="color: var(--accent); font-size: 16px;"></b> تومان</p>
@@ -543,6 +661,7 @@
         </div>
     </dialog>
 
+    <!-- Contact Modal -->
     <dialog id="contact-modal">
         <h2 style="margin-bottom: 20px; text-align: center;"><i class="fa-solid fa-address-card"></i> راه‌های ارتباطی</h2>
         <div class="contact-grid">
@@ -572,6 +691,7 @@
         </div>
     </dialog>
 
+    <!-- Upload Modal -->
     <dialog id="upload-modal">
         <h2 style="margin-bottom: 10px; text-align: center;"><i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت</h2>
         <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">پیام‌رسان مورد نظر خود را انتخاب کنید:</p>
@@ -608,11 +728,12 @@
         </div>
     </dialog>
 
+    <!-- Bottom Navigation -->
     <div class="bottom-nav">
         <a href="#services" class="bn-item active"><i class="fa-solid fa-house"></i> خدمات</a>
-        <a href="#links" class="bn-item"><i class="fa-solid fa-link"></i> سایت‌ها</a>
+        <a href="#why-us" class="bn-item"><i class="fa-solid fa-star"></i> چرا ما؟</a>
         <a href="#upload" class="bn-item"><i class="fa-solid fa-cloud-arrow-up"></i> آپلود</a>
-        <a onclick="openModal('contact-modal')" class="bn-item"><i class="fa-solid fa-phone"></i> تماس</a>
+        <a onclick="openUserPanel()" class="bn-item"><i class="fa-solid fa-user"></i> سفارشات</a>
     </div>
 
     <script>
@@ -686,6 +807,14 @@
         let currentOrderCode = '';
         const $ = document.querySelector.bind(document);
         const fa = n => n.toLocaleString('fa-IR');
+
+        // Register Service Worker for PWA (Optional inline dummy for demo)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // In a real scenario, this would point to a sw.js file.
+                // For this single-file demo, we skip actual SW registration to prevent 404s.
+            });
+        }
 
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
@@ -776,7 +905,7 @@
             if (title.includes('مالیات') || title.includes('اقتصادی') || title.includes('کد')) return 'fa-file-invoice-dollar';
             if (title.includes('دانشگاه') || title.includes('سنجش') || title.includes('آموزش') || title.includes('مدرسه')) return 'fa-graduation-cap';
             if (title.includes('سجام') || title.includes('بورس') || title.includes('سهام')) return 'fa-chart-line';
-            return 'fa-globe'; // Default icon
+            return 'fa-globe';
         }
 
         function renderServices(searchQuery = '') {
@@ -878,6 +1007,35 @@
         }
         function openModal(id) { document.getElementById(id).showModal(); }
         
+        // User Panel Logic
+        function openUserPanel() {
+            const list = $('#user-orders-list');
+            const orders = JSON.parse(localStorage.getItem('karizma_orders')) || [];
+            
+            if(orders.length === 0) {
+                list.innerHTML = `<div class="empty-cart" style="margin-top:10px;"><i class="fa-solid fa-box-open"></i><br>شما هنوز سفارشی ثبت نکرده‌اید.</div>`;
+            } else {
+                list.innerHTML = orders.reverse().map(order => `
+                    <div class="user-order-card">
+                        <div class="user-order-header">
+                            <span class="user-order-code">کد: ${order.code}</span>
+                            <span class="user-order-date">${order.date}</span>
+                        </div>
+                        <div class="user-order-items">${order.items}</div>
+                        <span class="user-order-total">مبلغ: ${fa(order.total)} تومان</span>
+                    </div>
+                `).join('');
+            }
+            document.getElementById('user-panel-modal').showModal();
+        }
+
+        function clearUserHistory() {
+            if(confirm('آیا از پاک کردن تاریخچه سفارشات مطمئن هستید؟')) {
+                localStorage.removeItem('karizma_orders');
+                openUserPanel();
+            }
+        }
+
         function openCheckout() {
             if(Object.keys(cart).length === 0) return alert('سبد خرید شما خالی است!');
             toggleCart(); 
@@ -898,12 +1056,14 @@
 
             let orderText = `سلام، درخواست جدید از سایت کاریزما نت\n\n🔑 کد پیگیری: ${currentOrderCode}\n👤 نام: ${name}\n📞 ارتباط: ${contact}\n\n🛒 اقلام سفارش:\n`;
             let total = 0;
+            let itemsSummary = [];
             
             for(let idx in cart) {
                 const item = cart[idx];
                 const itemTotal = item.price * item.qty;
                 total += itemTotal;
                 orderText += `▪️ ${item.title} (${fa(item.qty)} عدد) = ${fa(itemTotal)} تومان\n`;
+                itemsSummary.push(`${item.title} (${fa(item.qty)})`);
             }
             
             orderText += `\n💰 جمع کل: ${fa(total)} تومان\n`;
@@ -914,6 +1074,17 @@
             
             $('#chk-total-price').innerText = fa(total);
             $('#chk-order-code').innerText = fa(currentOrderCode);
+
+            // Save to LocalStorage for User Panel
+            const newOrder = {
+                code: currentOrderCode,
+                date: new Date().toLocaleDateString('fa-IR'),
+                items: itemsSummary.join('، '),
+                total: total
+            };
+            const existingOrders = JSON.parse(localStorage.getItem('karizma_orders')) || [];
+            existingOrders.push(newOrder);
+            localStorage.setItem('karizma_orders', JSON.stringify(existingOrders));
 
             $('#chk-step1').style.display = 'none';
             $('#chk-step2').style.display = 'block';

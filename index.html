@@ -137,13 +137,12 @@
         .monitor-content { position: relative; z-index: 3; text-align: center; }
         .monitor h1 { font-size: clamp(20px, 5vw, 36px); font-weight: 800; line-height: 1.5; color: var(--text-main); margin-bottom: 0; }
         
-        /* Fixed Monitor Text Colors and Punctuation */
         .monitor h1 .cyan-text { 
-            color: #22d3ee; /* Neon Cyan */
+            color: #22d3ee; 
             letter-spacing: 2px;
             text-shadow: 0 0 15px #22d3ee, 0 0 30px rgba(34, 211, 238, 0.6);
             display: inline-block;
-            padding-bottom: 5px; /* Prevents punctuation from dropping */
+            padding-bottom: 5px; 
         }
         
         .monitor-neck { width: 60px; height: 25px; background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent); margin: 0 auto; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%); }
@@ -154,10 +153,9 @@
         .keyboard::before { content: ''; position: absolute; inset: 5px; border-radius: 8px; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px; z-index: 0; }
         .keyboard-text { position: relative; z-index: 2; color: #38bdf8; font-weight: 800; font-size: clamp(12px, 1.8vw, 15px); line-height: 1.8; text-align: center; text-shadow: 0 0 10px rgba(56, 189, 248, 0.6), 0 2px 4px rgba(0,0,0,0.8); }
         
-        /* Distinct Keyboard Subtext */
         .keyboard-sub { 
             display: block; 
-            color: #f43f5e; /* Neon Pink */
+            color: #f43f5e; 
             font-size: 0.95em; 
             margin-top: 8px; 
             text-shadow: 0 0 10px rgba(244, 63, 94, 0.6), 0 2px 4px rgba(0,0,0,0.8);
@@ -184,7 +182,6 @@
         .svc-card:hover { border-color: var(--primary); box-shadow: 0 10px 25px rgba(99,102,241,0.15); transform: translateY(-3px); }
         .svc-card > *:not(.svc-watermark) { position: relative; z-index: 2; }
         
-        /* Glass Watermark Style (Centered) */
         .svc-watermark {
             position: absolute; top: 50%; left: 50%;
             transform: translate(-50%, -50%) rotate(-10deg);
@@ -227,7 +224,7 @@
         /* Upload Title Styling */
         .upload-title-container { text-align: center; margin-bottom: 20px; }
         .upload-title-main { 
-            color: #fbbf24; /* Golden */
+            color: #fbbf24; 
             font-size: 24px; font-weight: 800; 
             text-shadow: 0 0 15px rgba(251, 191, 36, 0.5); 
             display: flex; align-items: center; justify-content: center; gap: 8px; 
@@ -378,14 +375,12 @@
         <div class="monitor-wrapper">
             <div class="monitor">
                 <div class="monitor-content">
-                    <!-- Updated Monitor Text -->
                     <h1><span class="cyan-text">کافی‌نت، در جیب شما؛</span><br>سریع، مطمئن، پیگیری اختصاصی</h1>
                 </div>
             </div>
             <div class="monitor-neck"></div>
             <div class="monitor-base"></div>
             <div class="keyboard">
-                <!-- Updated Keyboard Text -->
                 <p class="keyboard-text">
                     ثبت‌نام در سامانه‌های دولتی، بانکی، دانشگاهی و بیمه؛ همه خدمات آنلاین کافی‌نت را بدون رفت‌وآمد سفارش دهید.
                     <span class="keyboard-sub">(خدمات پرینت، کپی و اسکن به صورت حضوری در بیرجند)</span>
@@ -406,7 +401,6 @@
     </section>
 
     <section id="upload">
-        <!-- New Upload Title Design -->
         <div class="upload-title-container">
             <div class="upload-title-main">
                 <i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت و ویرایش
@@ -459,7 +453,6 @@
         © کاریزما نت ۱۴۰۳ - طراحی شده با <i class="fa-solid fa-heart" style="color: var(--danger);"></i> برای شما
     </footer>
 
-    <!-- Cart Drawer -->
     <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
     <div class="cart-drawer" id="cart-drawer">
         <div class="cart-header">
@@ -473,7 +466,6 @@
         </div>
     </div>
 
-    <!-- Checkout Modal -->
     <dialog id="checkout-modal">
         <div id="chk-step1">
             <h2 style="margin-bottom: 20px;"><i class="fa-solid fa-file-invoice"></i> تکمیل اطلاعات</h2>
@@ -551,7 +543,6 @@
         </div>
     </dialog>
 
-    <!-- Contact Modal -->
     <dialog id="contact-modal">
         <h2 style="margin-bottom: 20px; text-align: center;"><i class="fa-solid fa-address-card"></i> راه‌های ارتباطی</h2>
         <div class="contact-grid">
@@ -581,7 +572,6 @@
         </div>
     </dialog>
 
-    <!-- Upload Modal -->
     <dialog id="upload-modal">
         <h2 style="margin-bottom: 10px; text-align: center;"><i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت</h2>
         <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">پیام‌رسان مورد نظر خود را انتخاب کنید:</p>
@@ -618,7 +608,6 @@
         </div>
     </dialog>
 
-    <!-- Bottom Navigation -->
     <div class="bottom-nav">
         <a href="#services" class="bn-item active"><i class="fa-solid fa-house"></i> خدمات</a>
         <a href="#links" class="bn-item"><i class="fa-solid fa-link"></i> سایت‌ها</a>

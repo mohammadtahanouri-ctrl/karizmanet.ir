@@ -759,7 +759,7 @@
         // --- App Data ---
         const D = {
             "s": [
-                // --- 14 خدمات پرکاربرد (First items for top 14) ---
+                // --- 14 خدمات پرکاربرد ---
                 ["پلیس +۱۰", "دریافت معافیت تحصیلی", 250000, 200000],
                 ["خرید اینترنتی", "ثبت‌نام و خرید محصولات ایران خودرو و سایپا", 500000, 500000],
                 ["قضایی و انتظامی", "ثبت‌نام ثنا + احراز هویت", 198000, 150000],
@@ -773,7 +773,7 @@
                 ["خدمات عمومی و اداری", "دریافت گواهی کسر از حقوق", 120000, 120000],
                 ["پلیس +۱۰", "تاییدیه تحصیلی", 205000, 185000],
                 ["بیمه و تامین اجتماعی", "دریافت سوابق بیمه", 60000, 55000],
-                ["طراحی سایت", "طراحی سایت (توافقی)", 0, 0], // Index 13
+                ["طراحی سایت", "طراحی سایت (توافقی)", 0, 0],
 
                 // --- Main Services (Filtered out of top 14) ---
                 
@@ -871,8 +871,23 @@
                 "خرید اینترنتی خودرو": [
                     { "name": "فروش اینترنتی ایران خودرو", "url": "https://esale.ikco.ir", "icon": "🚗" },
                     { "name": "فروش اینترنتی سایپا", "url": "https://saipa.iranecar.com", "icon": "🚗" },
-                    { "name": "فروش اینترنتی مدیران خودرو", "url": "https://customer.mvmco.ir", "icon": "🚗" },
-                    { "name": "سامانه خودرو ۴۵", "url": "https://khodro45.com", "icon": "🚗" }
+                    { "name": "پارس خودرو", "url": "https://parskhodro.ir", "icon": "🚗" },
+                    { "name": "بهمن موتور", "url": "https://bahman.ir", "icon": "🚗" },
+                    { "name": "کرمان موتور", "url": "https://kermanmotor.com", "icon": "🚗" },
+                    { "name": "مدیران خودرو (MVM)", "url": "https://mvmco.ir", "icon": "🚗" },
+                    { "name": "فردا موتور", "url": "https://fardamotors.com", "icon": "🚗" },
+                    { "name": "ایلیا خودرو", "url": "https://ilia-auto.com", "icon": "🚗" },
+                    { "name": "تیگارد موتور", "url": "https://tigardmotor.com", "icon": "🚗" },
+                    { "name": "سروش موتور", "url": "https://soroush-motor.com", "icon": "🚗" },
+                    { "name": "لوکانو", "url": "https://ecodalucano.com", "icon": "🚗" },
+                    { "name": "دیار خودرو", "url": "https://diar-khodro.com", "icon": "🚗" },
+                    { "name": "لاماری", "url": "https://lamari.ir", "icon": "🚗" },
+                    { "name": "راسا موتور", "url": "https://rasamotor.co", "icon": "🚗" },
+                    { "name": "کوشا خودرو", "url": "https://kooshakhodro.com", "icon": "🚗" },
+                    { "name": "هرمس خودرو", "url": "https://hermeskhodro.com", "icon": "🚗" },
+                    { "name": "نامی خودرو", "url": "https://namikhodro.com", "icon": "🚗" },
+                    { "name": "سامانه خودرو ۴۵", "url": "https://khodro45.com", "icon": "🚗" },
+                    { "name": "فروش خودروهای وارداتی", "url": "https://salecars.ir", "icon": "🚗" }
                 ],
                 "لاستیک و قطعات": [
                     { "name": "فروش اینترنتی کویر تایر", "url": "https://kavirtire.ir/esale", "icon": "🛞" },
@@ -886,18 +901,21 @@
                 "قضایی و حقوقی": [
                     { "name": "سامانه ثنا (عدل ایران)", "url": "https://sana.adliran.ir", "icon": "⚖️" },
                     { "name": "درگاه خدمات قضایی", "url": "https://adliran.ir", "icon": "🏛️" },
-                    { "name": "سامانه ابلاغ الکترونیک", "url": "https://epl.ir", "icon": "📄" }
+                    { "name": "سامانه ابلاغ الکترونیک", "url": "https://eblagh.adliran.ir", "icon": "📄" }
                 ],
                 "پلیس +۱۰": [
                     { "name": "پلیس +۱۰", "url": "https://www.epolice.ir", "icon": "👮" },
                     { "name": "سامانه سخا (گذرنامه)", "url": "https://sakha.epolice.ir", "icon": "🛂" },
-                    { "name": "سامانه راهور ۱۲۰ (خلافی)", "url": "https://120.ir", "icon": "🚦" }
+                    { "name": "سامانه راهور ۱۲۰ (خلافی)", "url": "https://rahvar120.ir", "icon": "🚦" },
+                    { "name": "نوبت‌دهی تعویض پلاک", "url": "https://nobatdehi.epolice.ir", "icon": "🚗" }
                 ],
                 "مالیاتی و اقتصادی": [
                     { "name": "سازمان امور مالیاتی", "url": "https://tax.gov.ir", "icon": "💰" },
                     { "name": "سامانه مودیان", "url": "https://my.tax.gov.ir", "icon": "🧾" },
                     { "name": "سامانه ارزش افزوده", "url": "https://evat.tax.gov.ir", "icon": "📊" },
-                    { "name": "سجام", "url": "https://sejam.ir", "icon": "📈" }
+                    { "name": "سجام", "url": "https://sejam.ir", "icon": "📈" },
+                    { "name": "استعلام سهام عدالت", "url": "https://sahamedalat.ir", "icon": "📈" },
+                    { "name": "سامانه سهام عدالت", "url": "https://samanese.ir", "icon": "📈" }
                 ],
                 "بازنشستگان": [
                     { "name": "صندوق بازنشستگی کشوری", "url": "https://www.cspf.ir", "icon": "👴" },
@@ -906,16 +924,19 @@
                 ],
                 "بیمه و سلامت": [
                     { "name": "تأمین اجتماعی", "url": "https://www.tamin.ir", "icon": "🛡️" },
+                    { "name": "خدمات غیرحضوری تأمین", "url": "https://es.tamin.ir", "icon": "💻" },
                     { "name": "بیمه سلامت", "url": "https://ihio.gov.ir", "icon": "❤️" },
+                    { "name": "سامانه شهروندی بیمه سلامت", "url": "https://csp.ihio.gov.ir", "icon": "🏥" },
                     { "name": "بیمه ورزشی", "url": "https://sportfed.ir", "icon": "🏅" },
-                    { "name": "سامانه سلامت", "url": "https://salamat.gov.ir", "icon": "🩺" }
+                    { "name": "سامانه سلامت", "url": "https://salamat.gov.ir", "icon": "🩺" },
+                    { "name": "استعلام بیمه‌نامه", "url": "https://my.centinsur.ir", "icon": "📄" }
                 ],
                 "آموزشی": [
                     { "name": "سازمان سنجش", "url": "https://www.sanjesh.org", "icon": "🎓" },
                     { "name": "آموزش و پرورش", "url": "https://www.medu.ir", "icon": "🏫" },
                     { "name": "ثبت‌نام کتاب درسی", "url": "https://irtextbook.ir", "icon": "📚" },
                     { "name": "سامانه سجاد", "url": "https://sajjad.msrt.ir", "icon": "🎓" },
-                    { "name": "انتخاب واحد دانشگاه آزاد", "url": "https://azmoon.iau.ac.ir", "icon": "🎓" },
+                    { "name": "انتخاب واحد دانشگاه آزاد", "url": "https://azmoon.org", "icon": "🎓" },
                     { "name": "دانشگاه پیام نور", "url": "https://reg.pnu.ac.ir", "icon": "🎓" },
                     { "name": "مدارس تیزهوشان", "url": "https://sampad.medu.ir", "icon": "🏫" }
                 ],
@@ -1005,7 +1026,6 @@
 
         function openCategoryModal() {
             const grid = $('#cat-grid');
-            // Only show categories that have main services (index >= 14) or explicitly added
             const allCats = [...new Set(D.s.map(item => item[0]))];
             const categories = ['همه', ...allCats];
             
@@ -1115,7 +1135,6 @@
             const grid = $('#services-grid');
             let filtered = D.s.map((item, index) => ({ ...item, originalIndex: index }));
             
-            // LOGIC: Remove top 14 from "All" list, but keep them in specific categories.
             if (activeCategory === 'همه') {
                 filtered = filtered.filter(item => item.originalIndex >= 14);
             } else {

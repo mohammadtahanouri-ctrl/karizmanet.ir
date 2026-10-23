@@ -1005,7 +1005,10 @@
 
         function openCategoryModal() {
             const grid = $('#cat-grid');
-            const categories = ['همه', ...new Set(D.s.filter((_, i) => i >= 14).map(item => item[0]))];
+            // Only show categories that have main services (index >= 14) or explicitly added
+            const allCats = [...new Set(D.s.map(item => item[0]))];
+            const categories = ['همه', ...allCats];
+            
             grid.innerHTML = categories.map(cat => `
                 <div class="cat-card ${cat === activeCategory ? 'active' : ''}" onclick="setCategoryFromModal('${cat}')">
                     <i class="fa-solid ${getCategoryIcon(cat)}"></i>
@@ -1034,6 +1037,7 @@
             if (cat.includes('سجام')) return 'fa-chart-line';
             if (cat.includes('عمومی')) return 'fa-building-user';
             if (cat.includes('فنی')) return 'fa-laptop-code';
+            if (cat.includes('طراحی')) return 'fa-code';
             return 'fa-layer-group';
         }
 
@@ -1111,10 +1115,12 @@
             const grid = $('#services-grid');
             let filtered = D.s.map((item, index) => ({ ...item, originalIndex: index }));
             
-            // Filter out top 14 indices
-            filtered = filtered.filter(item => item.originalIndex >= 14);
-            
-            if (activeCategory !== 'همه') filtered = filtered.filter(item => item[0] === activeCategory);
+            // LOGIC: Remove top 14 from "All" list, but keep them in specific categories.
+            if (activeCategory === 'همه') {
+                filtered = filtered.filter(item => item.originalIndex >= 14);
+            } else {
+                filtered = filtered.filter(item => item[0] === activeCategory);
+            }
             
             const normalizedQuery = normalizeText(searchQuery);
             if (normalizedQuery) {

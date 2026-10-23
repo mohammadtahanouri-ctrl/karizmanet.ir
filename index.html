@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>کافی نت آنلاین کاریزما | خدمات دیجیتال در بیرجند</title>
     
-    <!-- SEO Meta Tags -->
     <meta name="description" content="کافی نت آنلاین کاریزما نت؛ ثبت‌نام سامانه‌های دولتی، پرینت، کپی، اسکن، تایپ و کلیه خدمات اداری در بیرجند. کافی‌نت آنلاین، کافینت آنلاین، سریع و مطمئن.">
-    <meta name="keywords" content="کافی نت آنلاین, کافی‌نت آنلاین, کافینت آنلاین, کافی نت بیرجند, کافی نت در بیرجند, ثبت نام سجام, ثبت نام ثنا, خدمات اداری, پرینت, کاریزما نت, karizmanet, خودرو, لاستیک, ایران خودرو, سایپا, مدیران خودرو">
+    <meta name="keywords" content="کافی نت آنلاین, کافی‌نت آنلاین, کافینت آنلاین, کافی نت بیرجند, ثبت نام سجام, ثبت نام ثنا, ثبت نام خودرو, خدمات اداری, پرینت, کاریزما نت, karizmanet">
     
     <meta name="theme-color" content="#0b1120">
     
-    <!-- PWA Manifest -->
     <link rel="manifest" href='data:application/manifest+json,{"name":"کافی نت آنلاین کاریزما","short_name":"کاریزما نت","start_url":"./","display":"standalone","background_color":"%230b1120","theme_color":"%230b1120","icons":[{"src":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzBiMTEyMCIvPjxyZWN0IHg9IjEwMCIgeT0iMzYwIiB3aWR0aD0iMzEyIiBoZWlnaHQ9IjMwIiByeD0iMTUiIGZpbGw9IiM2MzY2ZjEiLz48cmVjdCB4PSIxMzAiIHk9IjEyMCIgd2lkdGg9IjI1MiIgaGVpZ2h0PSIyMjAiIHJ4PSIxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTc4YmZhIiBzdHJva2Utd2lkdGg9IjE1Ii8+PHJlY3QgeD0iMTQ1IiB5PSIxMzUiIHdpZHRoPSIyMjIiIGhlaWdodD0iMTkwIiByeD0iOCIgZmlsbD0iIzFlMjUzYiIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjIzMCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyZDNoZSIgc3Ryb2tlLXdpZHRoPSIxMiIvPjxlbGxpcHNlIGN4PSIyNTYiIGN5PSIyMzAiIHJ4PSIzMCIgcnk9IjYwIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iOCIvPjxsaW5lIHgxPSIxOTYiIHkxPSIyMzAiIHgyPSIzMTYiIHkyPSIyMzAiIHN0cm9rZT0iIzIyZDNlZSIgc3Ryb2tlLXdpZHRoPSI4Ii8+PGxpbmUgeDE9IjI1NiIgeTE9IjE3MCIgeDI9IjI1NiIgeTI9IjI5MCIgc3Ryb2tlPSIjMjJkM2VlIiBzdHJva2Utd2lkdGg9IjgiLz48L3N2Zz4=","sizes":"512x512","type":"image/svg+xml","purpose":"any maskable"}]}'>
 
     <script type="application/ld+json">
@@ -90,14 +88,9 @@
         
         a { color: inherit; text-decoration: none; }
 
-        /* Particle Background */
-        #particles-canvas {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1; pointer-events: none; opacity: 0.6;
-        }
+        #particles-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; opacity: 0.6; }
         [data-theme="light"] #particles-canvas { opacity: 0.3; }
 
-        /* Header & Logo */
         header { 
             position: sticky; top: 0; left: 0; right: 0; width: 100%; z-index: 9999; 
             background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); 
@@ -106,18 +99,9 @@
             transition: all 0.3s ease; box-shadow: 0 4px 30px rgba(0,0,0,0.1);
         }
         
-        .logo-container { 
-            display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            text-decoration: none; z-index: 102; cursor: pointer;
-        }
-        .logo-main { 
-            font-weight: 800; font-size: 22px; line-height: 1.2;
-            background: linear-gradient(90deg, var(--accent), var(--primary)); 
-            -webkit-background-clip: text; color: transparent; 
-        }
-        .logo-sub { 
-            font-size: 10px; font-weight: 700; color: var(--text-muted); margin-top: 2px; 
-        }
+        .logo-container { display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; z-index: 102; cursor: pointer; }
+        .logo-main { font-weight: 800; font-size: 22px; line-height: 1.2; background: linear-gradient(90deg, var(--accent), var(--primary)); -webkit-background-clip: text; color: transparent; }
+        .logo-sub { font-size: 10px; font-weight: 700; color: var(--text-muted); margin-top: 2px; }
         
         .header-actions { display: flex; align-items: center; gap: 8px; flex: 1; justify-content: flex-end; position: relative; }
         
@@ -131,53 +115,27 @@
         .btn-icon:hover { background: var(--primary); color: #fff; box-shadow: 0 0 15px var(--glow); border-color: var(--primary); }
         .cart-badge { position: absolute; top: -4px; right: -4px; background: var(--danger); color: #fff; font-size: 9px; font-weight: bold; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; display: none; box-shadow: 0 0 10px rgba(239,68,68,0.5);}
 
-        /* Hero & 3D Monitor */
         .hero { padding: 40px 20px 50px; text-align: center; position: relative; display: flex; flex-direction: column; align-items: center; overflow: hidden; }
-        
-        .hero-badge { 
-            display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 20px; border-radius: 30px; 
-            background: rgba(250, 204, 21, 0.1); border: 1px solid rgba(250, 204, 21, 0.5); 
-            color: #facc15; font-size: clamp(11px, 3.5vw, 14px); font-weight: 800; white-space: nowrap;
-            margin-bottom: 25px; backdrop-filter: blur(10px); 
-            box-shadow: 0 0 25px rgba(250, 204, 21, 0.3), inset 0 0 10px rgba(250, 204, 21, 0.1);
-            animation: fadeInDown 0.8s ease-out, glowPulseYellow 3s infinite alternate; 
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 10px rgba(250, 204, 21, 0.6);
-        }
+        .hero-badge { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 20px; border-radius: 30px; background: rgba(250, 204, 21, 0.1); border: 1px solid rgba(250, 204, 21, 0.5); color: #facc15; font-size: clamp(11px, 3.5vw, 14px); font-weight: 800; white-space: nowrap; margin-bottom: 25px; backdrop-filter: blur(10px); box-shadow: 0 0 25px rgba(250, 204, 21, 0.3); animation: fadeInDown 0.8s ease-out, glowPulseYellow 3s infinite alternate; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 10px rgba(250, 204, 21, 0.6); }
         .hero-badge i { color: #facc15; font-size: 14px; animation: spinSlow 4s linear infinite; }
         
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes glowPulseYellow { 
-            0% { box-shadow: 0 0 15px rgba(250, 204, 21, 0.2); border-color: rgba(250, 204, 21, 0.4); }
-            100% { box-shadow: 0 0 35px rgba(250, 204, 21, 0.7); border-color: rgba(250, 204, 21, 0.9); }
-        }
+        @keyframes glowPulseYellow { 0% { box-shadow: 0 0 15px rgba(250, 204, 21, 0.2); border-color: rgba(250, 204, 21, 0.4); } 100% { box-shadow: 0 0 35px rgba(250, 204, 21, 0.7); border-color: rgba(250, 204, 21, 0.9); } }
         @keyframes spinSlow { 100% { transform: rotate(360deg); } }
         
         .monitor-wrapper { position: relative; width: 100%; max-width: 800px; perspective: 1200px; margin-top: 10px; }
-        .monitor { 
-            position: relative; width: 95%; margin: 0 auto; aspect-ratio: 16/8; 
-            background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.02));
-            border: 2px solid var(--glass-border); border-radius: 20px; 
-            box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 40px var(--glow), inset 0 0 30px rgba(255,255,255,0.1);
-            backdrop-filter: blur(20px); display: flex; align-items: center; justify-content: center; 
-            padding: 20px; transform: rotateX(8deg); transition: transform 0.5s, box-shadow 0.5s;
-        }
+        .monitor { position: relative; width: 95%; margin: 0 auto; aspect-ratio: 16/8; background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.02)); border: 2px solid var(--glass-border); border-radius: 20px; box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 40px var(--glow), inset 0 0 30px rgba(255,255,255,0.1); backdrop-filter: blur(20px); display: flex; align-items: center; justify-content: center; padding: 20px; transform: rotateX(8deg); transition: transform 0.5s, box-shadow 0.5s; }
         .monitor:hover { transform: rotateX(0deg) translateY(-5px); box-shadow: 0 35px 70px rgba(0,0,0,0.7), 0 0 70px var(--glow); }
         .monitor::before { content: ''; position: absolute; inset: 8px; border-radius: 14px; background: var(--screen-bg); z-index: 1; box-shadow: inset 0 0 20px rgba(0,0,0,0.8); }
         .monitor::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 50%; background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent); border-radius: 20px 20px 0 0; pointer-events: none; z-index: 2; }
         
         .monitor-content { position: relative; z-index: 3; text-align: center; }
         .monitor h1 { font-size: clamp(20px, 5vw, 36px); font-weight: 800; line-height: 1.5; color: var(--text-main); margin-bottom: 0; }
-        
-        .monitor h1 .cyan-text { 
-            color: #22d3ee; letter-spacing: 2px;
-            text-shadow: 0 0 15px #22d3ee, 0 0 30px rgba(34, 211, 238, 0.6);
-            display: inline-block; padding-bottom: 5px; 
-        }
+        .monitor h1 .cyan-text { color: #22d3ee; letter-spacing: 2px; text-shadow: 0 0 15px #22d3ee, 0 0 30px rgba(34, 211, 238, 0.6); display: inline-block; padding-bottom: 5px; }
         
         .monitor-neck { width: 60px; height: 25px; background: linear-gradient(to bottom, var(--glass-border), transparent); margin: 0 auto; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%); }
         .monitor-base { width: 180px; height: 10px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 10px; margin: 0 auto; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
-        /* Keyboard */
         .keyboard { position: relative; width: 90%; max-width: 700px; margin: -5px auto 0; background: var(--keyboard-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 20px 15px; transform: rotateX(35deg) translateY(-10px); transform-origin: top center; box-shadow: 0 25px 40px rgba(0,0,0,0.5), inset 0 0 30px rgba(255,255,255,0.05); backdrop-filter: blur(20px); transition: transform 0.5s; }
         .keyboard::before { content: ''; position: absolute; inset: 5px; border-radius: 8px; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px; z-index: 0; }
         .keyboard-text { position: relative; z-index: 2; color: #a78bfa; font-weight: 800; font-size: clamp(12px, 1.8vw, 15px); line-height: 1.8; text-align: center; text-shadow: 0 0 10px rgba(167, 139, 250, 0.6), 0 2px 4px rgba(0,0,0,0.8); }
@@ -185,37 +143,23 @@
         [data-theme="light"] .keyboard-text { color: #6d28d9; text-shadow: none; }
         [data-theme="light"] .keyboard-sub { color: #e11d48; text-shadow: none; font-weight: 800; }
 
-        /* Sections & Scroll Animation */
-        section { max-width: 1100px; margin: 0 auto; padding: 30px 16px; }
+        section { max-width: 1200px; margin: 0 auto; padding: 30px 16px; }
         .section-title { font-size: 24px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; font-weight: 800; }
         .section-title i { color: var(--primary); }
 
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* Separator Design */
         .separator { display: flex; align-items: center; justify-content: center; max-width: 1100px; margin: 0 auto; padding: 20px 16px; }
         .separator::before, .separator::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); }
         .separator i { color: var(--accent); margin: 0 15px; font-size: 16px; text-shadow: 0 0 10px var(--accent); animation: pulseWidget 2s infinite; }
 
-        /* Modern Category Modal Button */
         .category-trigger-wrap { display: flex; justify-content: center; margin-bottom: 25px; }
-        .btn-open-categories {
-            background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-main);
-            padding: 12px 25px; border-radius: 30px; font-size: 15px; font-weight: 800;
-            display: flex; align-items: center; gap: 10px; cursor: pointer;
-            transition: 0.3s; backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+        .btn-open-categories { background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-main); padding: 12px 25px; border-radius: 30px; font-size: 15px; font-weight: 800; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: 0.3s; backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .btn-open-categories:hover { border-color: var(--primary); box-shadow: 0 0 20px var(--glow); transform: translateY(-2px); }
         .btn-open-categories i { color: var(--primary); }
 
-        /* Category Modal Dialog */
-        .category-dialog {
-            width: 90%; max-width: 600px; margin: auto; background: var(--glass-bg); 
-            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-            border: 1px solid var(--glass-border); border-radius: 24px; padding: 25px;
-            color: var(--text-main); box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
+        .category-dialog { width: 90%; max-width: 600px; margin: auto; background: var(--glass-bg); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 25px; color: var(--text-main); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
         .category-dialog::backdrop { background: rgba(0,0,0,0.6); backdrop-filter: blur(5px); }
         .cat-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
         .cat-header h3 { font-size: 20px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
@@ -224,11 +168,7 @@
         .cat-header button:hover { transform: scale(1.2); }
         
         .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
-        .cat-card {
-            background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 16px;
-            padding: 15px 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
-            cursor: pointer; transition: 0.3s; text-align: center;
-        }
+        .cat-card { background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 16px; padding: 15px 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; cursor: pointer; transition: 0.3s; text-align: center; }
         [data-theme="light"] .cat-card { background: rgba(0,0,0,0.03); }
         .cat-card:hover { background: rgba(99, 102, 241, 0.1); border-color: var(--primary); transform: translateY(-3px); }
         .cat-card.active { background: var(--primary); border-color: var(--primary); color: #fff; box-shadow: 0 0 15px var(--glow); }
@@ -236,38 +176,30 @@
         .cat-card.active i { color: #fff; }
         .cat-card span { font-size: 13px; font-weight: 700; }
 
-        /* Services Grid */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-        .svc-card { 
-            background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 20px; 
-            transition: 0.4s; position: relative; display: flex; flex-direction: column; gap: 12px; 
-            overflow: hidden; z-index: 1; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-        }
-        .svc-card:hover { border-color: var(--primary); box-shadow: 0 15px 35px var(--glow); transform: translateY(-5px); }
+        .top-services-title { font-size: 20px; font-weight: 800; color: var(--accent); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .top-services-title i { animation: pulseWidget 2s infinite; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+        @media (max-width: 767px) { .services-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; } }
+
+        .svc-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 12px; transition: 0.3s; position: relative; display: flex; flex-direction: column; gap: 8px; overflow: hidden; z-index: 1; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); min-height: 120px; }
+        .svc-card:hover { border-color: var(--primary); box-shadow: 0 10px 25px var(--glow); transform: translateY(-3px); }
         .svc-card > *:not(.svc-watermark) { position: relative; z-index: 2; }
         
-        .svc-watermark {
-            position: absolute; top: 50%; left: 50%;
-            transform: translate(-50%, -50%) rotate(-15deg);
-            font-size: 130px; opacity: 0.1; z-index: 0; pointer-events: none;
-            color: var(--primary); filter: drop-shadow(0 0 15px rgba(99,102,241,0.6)); 
-            transition: 0.4s;
-        }
-        .svc-card:hover .svc-watermark { opacity: 0.2; transform: translate(-50%, -50%) rotate(0deg) scale(1.1); }
-        [data-theme="light"] .svc-watermark { opacity: 0.08; color: #1e293b; filter: none; }
+        .svc-watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); font-size: 90px; opacity: 0.08; z-index: 0; pointer-events: none; color: var(--primary); filter: drop-shadow(0 0 10px rgba(99,102,241,0.5)); transition: 0.3s; }
+        .svc-card:hover .svc-watermark { opacity: 0.15; transform: translate(-50%, -50%) rotate(0deg) scale(1.1); }
+        [data-theme="light"] .svc-watermark { opacity: 0.06; color: #1e293b; filter: none; }
 
-        .svc-title { font-weight: 800; font-size: 15px; line-height: 1.5; min-height: 45px; }
-        .svc-prices { display: flex; align-items: center; gap: 10px; margin-top: auto; }
-        .svc-old { color: var(--text-muted); text-decoration: line-through; font-size: 13px; }
-        .svc-new { color: var(--success); font-weight: 800; font-size: 18px; text-shadow: 0 0 10px rgba(34,197,94,0.3); }
-        .svc-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; border-top: 1px solid var(--border); padding-top: 12px; }
+        .svc-title { font-weight: 700; font-size: 13px; line-height: 1.4; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 36px; flex-grow: 1; }
         
-        .btn-add { 
-            background: var(--primary); color: #fff; border: none; padding: 10px 18px; border-radius: 25px; 
-            font-weight: 700; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 6px; font-size: 13px; 
-            position: relative; overflow: hidden; outline: none;
-        }
-        .btn-add:hover { background: var(--primary-hover); box-shadow: 0 0 15px var(--glow); }
+        .svc-prices { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: auto; flex-wrap: wrap; }
+        .svc-old { color: var(--text-muted); text-decoration: line-through; font-size: 11px; }
+        .svc-new { color: var(--success); font-weight: 800; font-size: 14px; text-shadow: 0 0 8px rgba(34,197,94,0.3); }
+        
+        .svc-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 5px; border-top: 1px solid var(--border); padding-top: 8px; }
+        
+        .btn-add { background: var(--primary); color: #fff; border: none; padding: 6px 12px; border-radius: 20px; font-weight: 700; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 4px; font-size: 11px; position: relative; overflow: hidden; outline: none; width: 100%; }
+        .btn-add:hover { background: var(--primary-hover); box-shadow: 0 0 10px var(--glow); }
         .btn-add.added { background: var(--success); }
         
         .ripple { position: absolute; border-radius: 50%; transform: scale(0); animation: ripple-anim 0.6s linear; background: rgba(255, 255, 255, 0.4); pointer-events: none; }
@@ -275,36 +207,22 @@
 
         .qty-control { display: flex; align-items: center; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 20px; padding: 2px; }
         [data-theme="light"] .qty-control { background: rgba(0,0,0,0.05); }
-        .qty-control button { width: 28px; height: 28px; border: none; background: transparent; color: var(--text-main); cursor: pointer; font-size: 16px; border-radius: 50%; transition: 0.2s; }
+        .qty-control button { width: 22px; height: 22px; border: none; background: transparent; color: var(--text-main); cursor: pointer; font-size: 14px; border-radius: 50%; transition: 0.2s; }
         .qty-control button:hover { background: var(--primary); color: #fff; }
-        .qty-control span { width: 30px; text-align: center; font-weight: 700; font-size: 14px; }
+        .qty-control span { width: 24px; text-align: center; font-weight: 700; font-size: 12px; }
 
-        /* Bento Box Layout for Why Us */
         .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-        .bento-item {
-            background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            transition: all 0.4s ease; position: relative; overflow: hidden;
-        }
+        .bento-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: all 0.4s ease; position: relative; overflow: hidden; }
         .bento-item:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 15px 35px rgba(14,165,233,0.2); }
         .bento-item i { font-size: 40px; color: var(--accent); margin-bottom: 15px; transition: transform 0.4s; }
         .bento-item:hover i { transform: scale(1.2) rotate(5deg); }
         .bento-item h3 { font-size: 18px; margin-bottom: 10px; font-weight: 800; }
         .bento-item p { font-size: 14px; color: var(--text-muted); }
-        
         .bento-item:nth-child(1) { grid-column: span 2; flex-direction: row; gap: 20px; text-align: right; }
         .bento-item:nth-child(1) i { margin-bottom: 0; font-size: 60px; }
         .bento-item:nth-child(4) { grid-column: span 3; }
+        @media (max-width: 767px) { .bento-grid { grid-template-columns: 1fr; } .bento-item:nth-child(1) { grid-column: span 1; flex-direction: column; text-align: center; } .bento-item:nth-child(1) i { margin-bottom: 15px; font-size: 40px; } .bento-item:nth-child(4) { grid-column: span 1; } }
 
-        @media (max-width: 767px) {
-            .bento-grid { grid-template-columns: 1fr; }
-            .bento-item:nth-child(1) { grid-column: span 1; flex-direction: column; text-align: center; }
-            .bento-item:nth-child(1) i { margin-bottom: 15px; font-size: 40px; }
-            .bento-item:nth-child(4) { grid-column: span 1; }
-        }
-
-        /* Links & Action Cards */
         .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
         .link-card { display: flex; align-items: center; gap: 10px; padding: 14px; border-radius: 16px; background: var(--glass-bg); border: 1px solid var(--glass-border); transition: 0.3s; font-size: 13px; font-weight: 700; backdrop-filter: blur(10px); }
         .link-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(14, 165, 233, 0.2); }
@@ -317,32 +235,18 @@
         .action-card h3 { font-size: 18px; font-weight: 800; }
         .action-card p { color: var(--text-muted); font-size: 14px; }
 
-        .upload-title-main { 
-            color: #fbbf24; font-size: clamp(15px, 4vw, 26px); font-weight: 800; 
-            display: flex; align-items: center; justify-content: center; gap: 8px; 
-            margin-bottom: 25px; white-space: nowrap;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 15px rgba(251, 191, 36, 0.5);
-        }
+        .upload-title-main { color: #fbbf24; font-size: clamp(15px, 4vw, 26px); font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 25px; white-space: nowrap; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 15px rgba(251, 191, 36, 0.5); }
 
-        /* FAQ */
         .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; margin-bottom: 12px; overflow: hidden; backdrop-filter: blur(10px); }
         .faq-q { padding: 18px; font-weight: 800; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
         .faq-a { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; color: var(--text-muted); font-size: 14px; line-height: 1.8; }
         .faq-item.active .faq-a { max-height: 400px; padding-bottom: 18px; }
         .faq-item.active .faq-q i { transform: rotate(180deg); }
 
-        /* Support Widget */
-        .support-widget { 
-            position: fixed; bottom: 85px; left: 20px; width: 60px; height: 60px; 
-            background: linear-gradient(135deg, #6366f1, #0ea5e9); 
-            border-radius: 50%; display: flex; justify-content: center; align-items: center; 
-            color: white; font-size: 28px; box-shadow: 0 4px 20px var(--glow); 
-            z-index: 9998; transition: 0.3s; animation: pulseWidget 2s infinite; cursor: pointer;
-        }
+        .support-widget { position: fixed; bottom: 85px; left: 20px; width: 60px; height: 60px; background: linear-gradient(135deg, #6366f1, #0ea5e9); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 28px; box-shadow: 0 4px 20px var(--glow); z-index: 9998; transition: 0.3s; animation: pulseWidget 2s infinite; cursor: pointer; }
         .support-widget:hover { transform: scale(1.1) translateY(-5px); box-shadow: 0 8px 30px var(--glow); }
         @keyframes pulseWidget { 0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(99, 102, 241, 0); } 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); } }
 
-        /* Cart Drawer */
         .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 10000; opacity: 0; visibility: hidden; transition: 0.3s; }
         .cart-overlay.open { opacity: 1; visibility: visible; }
         .cart-drawer { position: fixed; top: 0; left: -100%; width: 100%; max-width: 400px; height: 100%; background: var(--bg); z-index: 10001; box-shadow: 5px 0 30px rgba(0,0,0,0.5); transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; }
@@ -360,13 +264,11 @@
         .empty-cart { text-align: center; color: var(--text-muted); margin-top: 50px; }
         .empty-cart i { font-size: 60px; margin-bottom: 15px; opacity: 0.3; }
 
-        /* Bottom Nav */
         .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--glass-bg); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); display: flex; justify-content: space-around; padding: 10px 0; z-index: 999; }
         .bn-item { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--text-muted); font-size: 10px; font-weight: 700; transition: 0.3s; }
         .bn-item i { font-size: 20px; }
         .bn-item.active, .bn-item:hover { color: var(--primary); }
 
-        /* Modals */
         dialog { width: 90%; max-width: 500px; margin: auto; background: var(--bg); color: var(--text-main); border: 1px solid var(--glass-border); border-radius: 24px; padding: 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
         dialog::backdrop { background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); }
         .form-group { margin-bottom: 18px; }
@@ -442,7 +344,6 @@
 </head>
 <body>
 
-    <!-- Particle Background Canvas -->
     <canvas id="particles-canvas"></canvas>
 
     <header>
@@ -521,9 +422,12 @@
     <section id="services">
         <h2 class="section-title reveal"><i class="fa-solid fa-layer-group"></i> خدمات و تعرفه‌ها</h2>
         
+        <div class="top-services-title reveal"><i class="fa-solid fa-fire"></i> ۱۲ خدمت پرکاربرد</div>
+        <div class="services-grid reveal" id="top-services-grid" style="margin-bottom: 30px;"></div>
+
         <div class="category-trigger-wrap reveal">
             <button class="btn-open-categories" onclick="openCategoryModal()">
-                <i class="fa-solid fa-layer-group"></i> مشاهده دسته‌بندی‌های خدمات <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-list-ul"></i> مشاهده همه دسته‌بندی‌ها <i class="fa-solid fa-chevron-down"></i>
             </button>
         </div>
         
@@ -598,15 +502,12 @@
         <i class="fa-solid fa-headset"></i>
     </div>
 
-    <!-- Category Modal -->
     <dialog id="category-modal" class="category-dialog">
         <div class="cat-header">
             <h3><i class="fa-solid fa-layer-group"></i> دسته‌بندی خدمات</h3>
             <button onclick="document.getElementById('category-modal').close()"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div class="cat-grid" id="cat-grid">
-            <!-- Dynamically injected -->
-        </div>
+        <div class="cat-grid" id="cat-grid"></div>
     </dialog>
 
     <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
@@ -627,9 +528,7 @@
             <h2><i class="fa-solid fa-user"></i> سفارشات من</h2>
             <button class="btn-icon" onclick="document.getElementById('user-panel-modal').close()"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div id="user-orders-list" style="max-height: 60vh; overflow-y: auto;">
-            <!-- Dynamically injected order history -->
-        </div>
+        <div id="user-orders-list" style="max-height: 60vh; overflow-y: auto;"></div>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn-add" style="background: var(--danger); justify-content: center; width: 100%;" onclick="clearUserHistory()">پاک کردن تاریخچه</button>
         </div>
@@ -681,30 +580,12 @@
                 <h4 style="margin-bottom: 12px; font-size: 15px;">۳. ارسال رسید پرداخت:</h4>
                 <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">پس از واریز، تصویر رسید را از طریق یکی از راه‌های زیر ارسال کنید:</p>
                 <div class="receipt-grid">
-                    <a href="sms:09960062320" class="receipt-opt">
-                        <div class="brand-circle bg-sms"><i class="fa-solid fa-comment-sms"></i></div>
-                        <span>پیامک</span>
-                    </a>
-                    <a href="https://t.me/kavehnouri" target="_blank" class="receipt-opt">
-                        <div class="brand-circle bg-telegram"><i class="fa-brands fa-telegram"></i></div>
-                        <span>تلگرام</span>
-                    </a>
-                    <a href="https://eitaa.com/kavehnouri" target="_blank" class="receipt-opt">
-                        <div class="brand-circle bg-eitaa"><i class="fa-solid fa-comment-dots"></i></div>
-                        <span>ایتا</span>
-                    </a>
-                    <a href="rubika://kavehnouri" onclick="openMessenger(event, 'rubika://kavehnouri', 'https://rubika.ir/kavehnouri')" class="receipt-opt">
-                        <div class="brand-circle bg-rubika"><i class="fa-solid fa-comments"></i></div>
-                        <span>روبیکا</span>
-                    </a>
-                    <a href="https://ble.ir/kavehnouri" target="_blank" class="receipt-opt">
-                        <div class="brand-circle bg-bale"><i class="fa-solid fa-comment"></i></div>
-                        <span>بله</span>
-                    </a>
-                    <a href="https://shad.ir/kavehnouri" target="_blank" class="receipt-opt">
-                        <div class="brand-circle bg-shad"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <span>شاد</span>
-                    </a>
+                    <a href="sms:09960062320" class="receipt-opt"><div class="brand-circle bg-sms"><i class="fa-solid fa-comment-sms"></i></div><span>پیامک</span></a>
+                    <a href="https://t.me/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-telegram"><i class="fa-brands fa-telegram"></i></div><span>تلگرام</span></a>
+                    <a href="https://eitaa.com/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-eitaa"><i class="fa-solid fa-comment-dots"></i></div><span>ایتا</span></a>
+                    <a href="rubika://kavehnouri" onclick="openMessenger(event, 'rubika://kavehnouri', 'https://rubika.ir/kavehnouri')" class="receipt-opt"><div class="brand-circle bg-rubika"><i class="fa-solid fa-comments"></i></div><span>روبیکا</span></a>
+                    <a href="https://ble.ir/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-bale"><i class="fa-solid fa-comment"></i></div><span>بله</span></a>
+                    <a href="https://shad.ir/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-shad"><i class="fa-solid fa-graduation-cap"></i></div><span>شاد</span></a>
                 </div>
             </div>
             
@@ -746,34 +627,17 @@
     <dialog id="upload-modal">
         <h2 style="margin-bottom: 15px; text-align: center;"><i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت</h2>
         <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">پیام‌رسان مورد نظر خود را انتخاب کنید:</p>
-        
         <div class="upload-options">
             <div class="upload-row">
-                <a href="https://t.me/kavehnouri" target="_blank" class="upload-opt">
-                    <div class="brand-circle bg-telegram"><i class="fa-brands fa-telegram"></i></div>
-                    <span>تلگرام</span>
-                </a>
-                <a href="https://eitaa.com/kavehnouri" class="upload-opt">
-                    <div class="brand-circle bg-eitaa"><i class="fa-solid fa-comment-dots"></i></div>
-                    <span>ایتا</span>
-                </a>
-                <a href="rubika://kavehnouri" onclick="openMessenger(event, 'rubika://kavehnouri', 'https://rubika.ir/kavehnouri')" class="upload-opt">
-                    <div class="brand-circle bg-rubika"><i class="fa-solid fa-comments"></i></div>
-                    <span>روبیکا</span>
-                </a>
+                <a href="https://t.me/kavehnouri" target="_blank" class="upload-opt"><div class="brand-circle bg-telegram"><i class="fa-brands fa-telegram"></i></div><span>تلگرام</span></a>
+                <a href="https://eitaa.com/kavehnouri" class="upload-opt"><div class="brand-circle bg-eitaa"><i class="fa-solid fa-comment-dots"></i></div><span>ایتا</span></a>
+                <a href="rubika://kavehnouri" onclick="openMessenger(event, 'rubika://kavehnouri', 'https://rubika.ir/kavehnouri')" class="upload-opt"><div class="brand-circle bg-rubika"><i class="fa-solid fa-comments"></i></div><span>روبیکا</span></a>
             </div>
             <div class="upload-row">
-                <a href="https://ble.ir/kavehnouri" class="upload-opt">
-                    <div class="brand-circle bg-bale"><i class="fa-solid fa-comment"></i></div>
-                    <span>بله</span>
-                </a>
-                <a href="https://shad.ir/kavehnouri" class="upload-opt">
-                    <div class="brand-circle bg-shad"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <span>شاد</span>
-                </a>
+                <a href="https://ble.ir/kavehnouri" class="upload-opt"><div class="brand-circle bg-bale"><i class="fa-solid fa-comment"></i></div><span>بله</span></a>
+                <a href="https://shad.ir/kavehnouri" class="upload-opt"><div class="brand-circle bg-shad"><i class="fa-solid fa-graduation-cap"></i></div><span>شاد</span></a>
             </div>
         </div>
-        
         <div style="text-align: center; margin-top: 30px;">
             <button class="btn-add" style="justify-content: center; padding: 12px 25px; background: var(--surface); color: var(--text-main);" onclick="document.getElementById('upload-modal').close()">بستن</button>
         </div>
@@ -790,55 +654,22 @@
         // --- 1. Particle Background Logic ---
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
-        let width, height;
-        let particles = [];
-
-        function resize() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resize);
-        resize();
-
+        let width, height, particles = [];
+        function resize() { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resize); resize();
         class Particle {
-            constructor() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                this.radius = Math.random() * 2 + 1;
-            }
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                if (this.x < 0 || this.x > width) this.vx *= -1;
-                if (this.y < 0 || this.y > height) this.vy *= -1;
-            }
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = document.documentElement.getAttribute('data-theme') === 'dark' ? 'rgba(99, 102, 241, 0.4)' : 'rgba(99, 102, 241, 0.2)';
-                ctx.fill();
-            }
+            constructor() { this.x = Math.random() * width; this.y = Math.random() * height; this.vx = (Math.random() - 0.5) * 0.5; this.vy = (Math.random() - 0.5) * 0.5; this.radius = Math.random() * 2 + 1; }
+            update() { this.x += this.vx; this.y += this.vy; if (this.x < 0 || this.x > width) this.vx *= -1; if (this.y < 0 || this.y > height) this.vy *= -1; }
+            draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2); ctx.fillStyle = document.documentElement.getAttribute('data-theme') === 'dark' ? 'rgba(99, 102, 241, 0.4)' : 'rgba(99, 102, 241, 0.2)'; ctx.fill(); }
         }
-
         for (let i = 0; i < 60; i++) particles.push(new Particle());
-
         function animateParticles() {
             ctx.clearRect(0, 0, width, height);
             particles.forEach(p => { p.update(); p.draw(); });
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 120) {
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = document.documentElement.getAttribute('data-theme') === 'dark' ? `rgba(99, 102, 241, ${0.15 - dist/800})` : `rgba(99, 102, 241, ${0.1 - dist/1200})`;
-                        ctx.stroke();
-                    }
+                    const dx = particles[i].x - particles[j].x; const dy = particles[i].y - particles[j].y; const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) { ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.strokeStyle = document.documentElement.getAttribute('data-theme') === 'dark' ? `rgba(99, 102, 241, ${0.15 - dist/800})` : `rgba(99, 102, 241, ${0.1 - dist/1200})`; ctx.stroke(); }
                 }
             }
             requestAnimationFrame(animateParticles);
@@ -848,238 +679,100 @@
         // --- 2. Scroll Reveal Animation ---
         const revealElements = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); } });
         }, { root: null, threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-
         revealElements.forEach(el => revealObserver.observe(el));
 
         // --- 3. Micro-interactions: Ripple Effect ---
         document.addEventListener('click', function(e) {
             if (e.target.closest('.btn-add') || e.target.closest('.btn-checkout')) {
                 const btn = e.target.closest('.btn-add') || e.target.closest('.btn-checkout');
-                const rect = btn.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const ripple = document.createElement('span');
-                ripple.classList.add('ripple');
-                ripple.style.left = `${x}px`;
-                ripple.style.top = `${y}px`;
-                
-                btn.appendChild(ripple);
-                setTimeout(() => ripple.remove(), 600);
+                const rect = btn.getBoundingClientRect(); const x = e.clientX - rect.left; const y = e.clientY - rect.top;
+                const ripple = document.createElement('span'); ripple.classList.add('ripple'); ripple.style.left = `${x}px`; ripple.style.top = `${y}px`;
+                btn.appendChild(ripple); setTimeout(() => ripple.remove(), 600);
             }
         });
 
-        // --- App Logic ---
+        // --- App Data & Logic ---
         const D = {
             "s": [
-                ["امور اصناف و مجوزها", "ورود به سامانه ملی مجوزها و ثبت نام اولیه", 180000, 167000],
-                ["امور اصناف و مجوزها", "ورود به سامانه نوین اصناف و صدور/تمدید جواز (حقیقی)", 360000, 335000],
-                ["امور اصناف و مجوزها", "ثبت هر مباشر یا شریک در سامانه نوین اصناف", 150000, 140000],
-                ["امور اصناف و مجوزها", "ثبت نام مراحل اشخاص حقوقی در سامانه نوین اصناف", 550000, 512000],
-                ["امور اصناف و مجوزها", "ثبت نام کلاس اصناف در سامانه", 240000, 223000],
-                ["امور اصناف و مجوزها", "ثبت تغییرات (آدرس، رسته و ...) در سامانه مجوزها", 380000, 353000],
-                ["امور اصناف و مجوزها", "ثبت مجوز مشاغل خانگی", 250000, 233000],
-                ["امور اصناف و مجوزها", "درخواست شناسه یکتای مجوزهای قدیمی", 200000, 186000],
-                ["امور اصناف و مجوزها", "ثبت نام سامانه سپتام (اسکن و پرداخت مجزا)", 450000, 419000],
-                ["امور اصناف و مجوزها", "ثبت نام سامانه شمس (اسکن مجزا)", 720000, 670000],
-                ["پلیس و امنیت", "ثبت درخواست پلیس اماکن برای مجوز", 240000, 223000],
-                ["پلیس و امنیت", "ثبت درخواست مجوز ماه رمضان در پلیس اماکن", 280000, 260000],
-                ["پلیس و امنیت", "استعلامات سایت پلیس من", 140000, 130000],
-                ["امور مالیاتی و حسابداری", "ثبت نام کد اقتصادی (پرینت مجزا)", 500000, 465000],
-                ["امور مالیاتی و حسابداری", "ویرایش کد اقتصادی به ازای هر بند", 40000, 36000],
-                ["امور مالیاتی و حسابداری", "دریافت ابلاغیه مالیاتی تا یک ابلاغیه", 60000, 54000],
-                ["امور مالیاتی و حسابداری", "ارسال لیست معاملات فصلی خرید یا فروش", 160000, 149000],
-                ["امور مالیاتی و حسابداری", "ارسال اظهارنامه ارزش افزوده در سامانه مودیان", 300000, 279000],
-                ["امور مالیاتی و حسابداری", "ورود و ارسال اظهارنامه تبصره ۱۰۰", 480000, 446000],
-                ["امور مالیاتی و حسابداری", "ورود و ارسال اظهارنامه مالیات مشاغل گروه سوم", 690000, 642000],
-                ["امور مالیاتی و حسابداری", "ورود و ارسال اظهارنامه مالیات مشاغل گروه دوم", 1000000, 930000],
-                ["امور مالیاتی و حسابداری", "ارسال اظهارنامه مالیات بر مستغلات (۱ ملک)", 650000, 605000],
-                ["امور مالیاتی و حسابداری", "ثبت مالیات بر ارث تا ۳ ملک", 480000, 446000],
-                ["امور مالیاتی و حسابداری", "ارسال لیست مالیات حقوق کارکنان تا ۴ نفر", 350000, 326000],
-                ["امور مالیاتی و حسابداری", "استعلام و پرداخت مالیات خودروهای لوکس", 190000, 177000],
-                ["امور مالیاتی و حسابداری", "استعلام و پرداخت مالیات خانه‌های لوکس", 190000, 177000],
-                ["بیمه و تامین اجتماعی", "ثبت نام / تمدید بیمه ورزشی", 150000, 140000],
-                ["بیمه و تامین اجتماعی", "اعتراض به گزارش بازرسی در سامانه تامین اجتماعی", 250000, 233000],
-                ["بیمه و تامین اجتماعی", "نام‌نویسی غیرحضوری بیمه شده برای کارفرمایان", 150000, 140000],
-                ["بیمه و تامین اجتماعی", "استعلام بدهی کارگاه", 150000, 140000],
-                ["بیمه و تامین اجتماعی", "ثبت درخواست تقسیط بدهی کارگاه", 150000, 140000],
-                ["بیمه و تامین اجتماعی", "پرداخت بدهی‌های ابلاغ شده کارگاه", 120000, 112000],
-                ["بیمه و تامین اجتماعی", "برقراری مستمری بازنشستگی (اسکن مجزا)", 240000, 223000],
-                ["بیمه و تامین اجتماعی", "درخواست غرامت دستمزد بیماری (اسکن مجزا)", 240000, 223000],
-                ["بیمه و تامین اجتماعی", "ثبت نام بیمه تکمیلی تأمین اجتماعی", 72000, 65000],
-                ["بیمه و تامین اجتماعی", "ثبت شماره حساب مستمری بگیران", 430000, 400000],
-                ["بیمه و تامین اجتماعی", "ثبت مشاغل سخت و زیان آور به ازای یک کارگاه", 120000, 112000],
-                ["بیمه و تامین اجتماعی", "ایجاد پروفایل سامانه جامع اداره کار", 400000, 372000],
-                ["بیمه و تامین اجتماعی", "شکایت از کارفرما به اداره کار (اسکن مجزا)", 400000, 372000],
-                ["بیمه و تامین اجتماعی", "ثبت بیمه بیکاری (اسکن مجزا)", 50000, 45000],
-                ["بیمه و تامین اجتماعی", "تمدید یا ثبت نام بیمه سلامت", 350000, 326000],
+                // --- جدید: خرید اینترنتی ---
+                ["خرید اینترنتی", "ثبت‌نام و خرید محصولات ایران خودرو و سایپا", 500000, 500000],
+                ["خرید اینترنتی", "ثبت‌نام و خرید اینترنتی خودرو (سایر شرکت‌ها)", 550000, 550000],
+                
+                // --- قضایی و انتظامی ---
+                ["قضایی و انتظامی", "ثبت‌نام ثنا + احراز هویت", 198000, 150000],
+                ["قضایی و انتظامی", "دریافت ابلاغیه قضایی", 50000, 45000],
+                
+                // --- پلیس +۱۰ ---
+                ["پلیس +۱۰", "ثبت‌نام سخا و احراز نشانی", 590000, 350000],
+                ["پلیس +۱۰", "نوبت‌گیری تعویض پلاک خودرو", 198000, 180000],
+                ["پلیس +۱۰", "دریافت معافیت تحصیلی", 250000, 200000],
+                ["پلیس +۱۰", "ثبت‌نام کارت سوخت", 150000, 120000],
+                
+                // --- آموزشی ---
+                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام کنکور و انتخاب رشته", 400000, 300000],
+                
+                // --- سایر خدمات پرکاربرد ---
+                ["سجام و بورس", "ثبت‌نام سجام", 198000, 150000],
+                ["خدمات عمومی و اداری", "دریافت حکم و فیش حقوقی", 80000, 60000],
+                ["خدمات عمومی و اداری", "دریافت گواهی کسر از حقوق", 120000, 120000],
+                
+                // --- سایر خدمات (نمونه) ---
+                ["مالیات و کسب‌وکار", "ثبت‌نام کد اقتصادی (حقیقی)", 500000, 465000],
+                ["مالیات و کسب‌وکار", "اظهارنامه مالیاتی مشاغل گروه ۳", 690000, 642000],
+                ["بیمه و تامین اجتماعی", "ثبت نام / تمدید بیمه سلامت", 350000, 326000],
                 ["املاک و مسکن", "ساماندهی املاک در سامانه ملی املاک و اسکان", 290000, 270000],
-                ["املاک و مسکن", "ثبت نام مسکن ملی", 290000, 270000],
-                ["املاک و مسکن", "دریافت تاییدیه (گواهی) کدپستی", 150000, 140000],
-                ["املاک و مسکن", "جستجوی کدپستی موجود در سایت پست", 180000, 167000],
-                ["املاک و مسکن", "درخواست صدور کد پستی جدید", 240000, 223000],
-                ["املاک و مسکن", "ثبت نام سند ملکی در سایت sabetmelk.ssaa.ir", 930000, 865000],
-                ["قضایی و انتظامی", "دریافت هر ابلاغیه قضایی (پرینت مجزا)", 150000, 140000],
-                ["قضایی و انتظامی", "نوبت دهی قضایی", 450000, 419000],
-                ["قضایی و انتظامی", "ثبت نام ثنا با احراز هویت (حقیقی)", 200000, 186000],
-                ["قضایی و انتظامی", "درخواست گواهی عدم سوء پیشینه", 72000, 65000],
-                ["قضایی و انتظامی", "استعلام ثبت نام ثنا با یک پرینت", 50000, 45000],
-                ["قضایی و انتظامی", "بازیابی رمز شخصی ثنا", 8000, 7200],
-                ["خدمات آموزشی و دانشگاهی", "انتخاب رشته کارشناسی / ارشد / دکترا", 440000, 409000],
-                ["خدمات آموزشی و دانشگاهی", "انتخاب واحد دانشگاه آزاد (تا یک درس)", 400000, 372000],
-                ["خدمات آموزشی و دانشگاهی", "انتخاب واحد پیام نور / سراسری / علمی کاربردی", 240000, 223000],
-                ["خدمات آموزشی و دانشگاهی", "جستجوی هر کد ثبت نامی در دفترچه‌ها", 24000, 21600],
-                ["خدمات آموزشی و دانشگاهی", "ثبت نام اولیه و تکمیل اطلاعات در سامانه سجاد", 380000, 353000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت هر درخواست در سامانه سجاد", 300000, 279000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت نام پذیرش غیر حضوری دانشگاه‌های دولتی", 700000, 651000],
-                ["خدمات آموزشی و دانشگاهی", "تاییدیه مدارک تحصیلی (آموزش و پرورش)", 240000, 223000],
-                ["خدمات آموزشی و دانشگاهی", "سنجش بدو ورود (ثبت فرزند، نوبت سنجش)", 380000, 353000],
-                ["خدمات آموزشی و دانشگاهی", "سفارش (خرید) کتاب درسی با پرینت", 100000, 90000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت نام آزمون مدارس تیزهوشان/نمونه دولتی", 240000, 223000],
-                ["خدمات آموزشی و دانشگاهی", "پیش ثبت نام مدارس در سایت my.medu.ir", 300000, 279000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت نام در سامانه فنی حرفه ای (کارگران ساختمانی و...)", 480000, 446000],
-                ["امور تخصصی", "ثبت نام در سامانه تخصصی پزشکان", 530000, 493000],
-                ["امور تخصصی", "تکمیل اطلاعات سامانه جامع آموزش مداوم پزشکی", 450000, 419000],
-                ["امور تخصصی", "سامانه پاتمک", 680000, 632000],
-                ["امور تخصصی", "سامانه سپامک", 90000, 81000],
-                ["امور تخصصی", "عضویت نظام مهندسی", 350000, 326000],
-                ["امور تخصصی", "ثبت قرارداد، ارسال لایحه، ثبت دادخواست برای وکلا", 120000, 112000],
-                ["امور تخصصی", "استعلام CMS و قراردادهای وکلا", 72000, 65000],
-                ["امور تخصصی", "دریافت روند کار پرونده‌های قضایی", 320000, 298000],
-                ["امور تخصصی", "ثبت نام سامانه ثبت من", 100000, 90000],
-                ["امور تخصصی", "استعلام از سامانه ثبت من", 120000, 112000],
-                ["امور تخصصی", "ثبت نام سامانه GICA", 480000, 446000],
-                ["امور تخصصی", "ثبت نام اولیه ستاد ایران", 640000, 595000],
-                ["امور تخصصی", "ثبت مزایده در سامانه ستاد ایران", 640000, 595000],
-                ["امور تخصصی", "ثبت مناقصه در سامانه ستاد ایران", 1200000, 1116000],
-                ["امور تخصصی", "امضا با توکن در سایت ثبت من", 320000, 298000],
-                ["امور تخصصی", "راه اندازی توکن", 800000, 744000],
-                ["خدمات عمومی و اداری", "ثبت نام اینترنتی تا حداکثر یک صفحه", 380000, 353000],
-                ["خدمات عمومی و اداری", "به ازای هر صفحه ثبت نام اضافه در اینترنت", 60000, 54000],
-                ["خدمات عمومی و اداری", "درخواست احراز نشانی بر اساس کدپستی", 180000, 167000],
-                ["خدمات عمومی و اداری", "ثبت آدرس در سامانه NCR (ثبت احوال)", 150000, 140000],
-                ["خدمات عمومی و اداری", "ثبت نام در سامانه میخک (وزارت خارجه)", 350000, 326000],
-                ["خدمات عمومی و اداری", "خرید بلیط هواپیما (هر نفر)", 240000, 223000],
-                ["خدمات عمومی و اداری", "خرید بلیط قطار و اتوبوس (هر نفر)", 160000, 149000],
-                ["خدمات عمومی و اداری", "ثبت نام وام بازنشستگان", 100000, 90000],
-                ["خدمات عمومی و اداری", "ثبت اعتراض یارانه", 150000, 140000],
-                ["خدمات عمومی و اداری", "خرید سفته الکترونیکی", 240000, 223000],
-                ["خدمات عمومی و اداری", "ایجاد پروفایل ایمیل (به همراه نصب روی گوشی)", 60000, 54000],
-                ["خدمات عمومی و اداری", "حداقل هزینه پاسخگویی و بررسی سایت", 65000, 59000],
-                ["خدمات عمومی و اداری", "پرینت فیش حقوقی (با یک برگ)", 60000, 54000],
-                ["خدمات عمومی و اداری", "مشاهده و چاپ نتایج آزمون‌ها (با یک برگ)", 60000, 54000],
-                ["خدمات عمومی و اداری", "صدور و چاپ قبوض آب، برق، گاز و تلفن", 50000, 45000],
-                ["خدمات عمومی و اداری", "بازیابی رمز عبور", 50000, 45000],
-                ["خدمات عمومی و اداری", "ثبت نام کارت ملی همراه با خدمات پرداخت", 190000, 177000],
-                ["خدمات عمومی و اداری", "ثبت نام در سامانه همیاب ۲۴", 240000, 223000],
-                ["خدمات عمومی و اداری", "پرداخت الکترونیکی در سامانه‌ها از کارت مشتری", 65000, 59000],
-                ["خدمات عمومی و اداری", "پرداخت قبوض با کارت عضو شتاب مشتری", 240000, 223000],
-                ["تایپ، اسکن و پرینت", "تایپ ساده فارسی (هر صفحه)", 80000, 72000],
-                ["تایپ، اسکن و پرینت", "تایپ انگلیسی (هر صفحه)", 190000, 177000],
-                ["تایپ، اسکن و پرینت", "تایپ تیتر، مشکی، همراه با یک برگ پرینت", 50000, 45000],
-                ["تایپ، اسکن و پرینت", "قالب بندی روزنامه فارسی", 340000, 316000],
-                ["تایپ، اسکن و پرینت", "قالب بندی روزنامه لاتین", 430000, 400000],
-                ["تایپ، اسکن و پرینت", "اسکن با سایز A4 (به همراه ویرایش در صورت نیاز)", 24000, 21600],
-                ["تایپ، اسکن و پرینت", "اسکن با سایز A3 (به همراه ویرایش در صورت نیاز)", 37000, 33300],
-                ["تایپ، اسکن و پرینت", "طراحی جدول در ورد یا اکسل با سایز A4", 190000, 177000],
-                ["تایپ، اسکن و پرینت", "ایجاد هر صفحه در پاورپوینت (ساده و بدون محتواسازی)", 48000, 43200],
-                ["تایپ، اسکن و پرینت", "مشاوره، طراحی و تدوین و ویرایش (هر ساعت)", 1200000, 1116000],
-                ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A5 (تک‌رو)", 8000, 6000],
+                ["امور اصناف و مجوزها", "ورود به سامانه نوین اصناف و صدور/تمدید جواز (حقیقی)", 360000, 335000],
                 ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A4 (تک‌رو)", 11000, 9000],
-                ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A3 (تک‌رو)", 20000, 16000],
-                ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A5 (پشت و رو)", 10000, 8000],
-                ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A4 (پشت و رو)", 15000, 12000],
-                ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A3 (پشت و رو)", 25000, 20000],
-                ["تایپ، اسکن و پرینت", "ارسال یا دریافت فکس (هر برگ داخل کشور)", 40000, 36000],
-                ["تایپ، اسکن و پرینت", "ارسال یا دریافت فکس (هر برگ خارج کشور)", 64000, 57600],
-                ["تایپ، اسکن و پرینت", "رایت لوح فشرده CD", 50000, 45000],
-                ["تایپ، اسکن و پرینت", "رایت لوح فشرده DVD", 60000, 54000],
-                ["تایپ، اسکن و پرینت", "انتقال اطلاعات از CD یا DVD به حافظه جانبی", 80000, 72000],
-                ["تایپ، اسکن و پرینت", "دریافت فایل مجاز از شبکه‌های اجتماعی", 8000, 7200]
+                ["تایپ، اسکن و پرینت", "تایپ ساده فارسی (هر صفحه)", 80000, 72000]
             ],
             "l": {
-                "خودرو و لاستیک": [
+                "خرید اینترنتی خودرو": [
                     { "name": "فروش اینترنتی ایران خودرو", "url": "https://esale.ikco.ir", "icon": "🚗" },
                     { "name": "فروش اینترنتی سایپا", "url": "https://saipa.iranecar.com", "icon": "🚗" },
                     { "name": "فروش اینترنتی مدیران خودرو", "url": "https://customer.mvmco.ir", "icon": "🚗" },
-                    { "name": "فروش اینترنتی کرمان موتور", "url": "https://sales.kermanmotor.ir", "icon": "🚗" },
-                    { "name": "خودرو ۴۵", "url": "https://khodro45.com", "icon": "🚗" },
+                    { "name": "سامانه خودرو ۴۵", "url": "https://khodro45.com", "icon": "🚗" }
+                ],
+                "لاستیک و قطعات": [
                     { "name": "فروش اینترنتی کویر تایر", "url": "https://kavirtire.ir/esale", "icon": "🛞" },
-                    { "name": "فروش اینترنتی بارز", "url": "https://shop.barez.org", "icon": "🛞" },
-                    { "name": "فروش اینترنتی یزد تایر", "url": "https://kala.ntsw.ir", "icon": "🛞" },
-                    { "name": "فروش اینترنتی سهند تایر", "url": "https://sahandtire.shop", "icon": "🛞" },
-                    { "name": "سایت رسمی ایران خودرو", "url": "https://www.ikco.ir", "icon": "🏭" },
-                    { "name": "سایت رسمی سایپا", "url": "https://www.saipacorp.com", "icon": "🏭" },
-                    { "name": "سایت رسمی مدیران خودرو", "url": "https://www.mvmco.ir", "icon": "🏭" },
-                    { "name": "سایت رسمی کرمان موتور", "url": "https://www.kermanmotor.com", "icon": "🏭" },
-                    { "name": "سایت رسمی پارس خودرو", "url": "https://www.parskhodro.ir", "icon": "🏭" },
-                    { "name": "سایت رسمی کویر تایر", "url": "https://kavirtire.ir", "icon": "🏭" },
-                    { "name": "سایت رسمی بارز", "url": "https://barez.org", "icon": "🏭" }
+                    { "name": "فروش اینترنتی بارز", "url": "https://shop.barez.org", "icon": "🛞" }
                 ],
                 "دولتی و حاکمیتی": [
                     { "name": "پنجره ملی خدمات دولت هوشمند", "url": "https://my.gov.ir", "icon": "🏛️" },
-                    { "name": "سامانه هویت یکپارچه", "url": "https://sso.my.gov.ir", "icon": "🔐" }
-                ],
-                "املاک و اسکان": [
-                    { "name": "سامانه املاک و اسکان", "url": "https://amlak.mrud.ir", "icon": "🏠" },
-                    { "name": "سامانه خودنویس", "url": "https://khodnevis.mrud.ir", "icon": "✍️" }
-                ],
-                "رفاهی و حمایتی": [
-                    { "name": "سامانه حمایت (دهک‌بندی یارانه)", "url": "https://hemayat.mcls.gov.ir", "icon": "🤝" }
+                    { "name": "سامانه هویت یکپارچه", "url": "https://sso.my.gov.ir", "icon": "🔐" },
+                    { "name": "سامانه کارت سوخت", "url": "https://fcs.niopdc.ir", "icon": "⛽" }
                 ],
                 "قضایی و حقوقی": [
                     { "name": "سامانه ثنا (عدل ایران)", "url": "https://sana.adliran.ir", "icon": "⚖️" },
                     { "name": "درگاه خدمات قضایی", "url": "https://adliran.ir", "icon": "🏛️" }
                 ],
-                "ثبت احوال و هویتی": [
-                    { "name": "سازمان ثبت احوال", "url": "https://www.sabteahval.ir", "icon": "🪪" },
-                    { "name": "ثبت نشانی (NCR)", "url": "https://ncr.ir", "icon": "🏠" }
-                ],
-                "پلیس و امنیت": [
+                "پلیس +۱۰": [
                     { "name": "پلیس +۱۰", "url": "https://www.epolice.ir", "icon": "👮" },
                     { "name": "سامانه سخا (گذرنامه)", "url": "https://sakha.epolice.ir", "icon": "🛂" }
                 ],
                 "مالیاتی و اقتصادی": [
                     { "name": "سازمان امور مالیاتی", "url": "https://tax.gov.ir", "icon": "💰" },
                     { "name": "سامانه مودیان", "url": "https://my.tax.gov.ir", "icon": "🧾" },
-                    { "name": "ستاد ایران", "url": "https://www.setadiran.ir", "icon": "🏗️" },
                     { "name": "سجام", "url": "https://sejam.ir", "icon": "📈" }
                 ],
-                "بانکی": [
-                    { "name": "بانک مرکزی", "url": "https://www.cbi.ir", "icon": "🏦" },
-                    { "name": "بانک ملی", "url": "https://www.bmi.ir", "icon": "🏦" },
-                    { "name": "بانک ملت", "url": "https://www.bankmellat.ir", "icon": "🏦" },
-                    { "name": "بانک صادرات", "url": "https://www.bsi.ir", "icon": "🏦" }
+                "بازنشستگان": [
+                    { "name": "صندوق بازنشستگی کشوری", "url": "https://www.cspf.ir", "icon": "👴" },
+                    { "name": "سامانه ساتا (لشکری)", "url": "https://saba.esata.ir", "icon": "🎖️" }
                 ],
                 "بیمه و سلامت": [
                     { "name": "تأمین اجتماعی", "url": "https://www.tamin.ir", "icon": "🛡️" },
-                    { "name": "بیمه سلامت", "url": "https://ihio.gov.ir", "icon": "❤️" },
-                    { "name": "پذیرش ۲۴", "url": "https://www.paziresh24.com", "icon": "👨‍⚕️" }
+                    { "name": "بیمه سلامت", "url": "https://ihio.gov.ir", "icon": "❤️" }
                 ],
                 "آموزشی": [
                     { "name": "سازمان سنجش", "url": "https://www.sanjesh.org", "icon": "🎓" },
-                    { "name": "آموزش و پرورش", "url": "https://www.medu.ir", "icon": "🏫" },
-                    { "name": "شبکه شاد", "url": "https://web.shad.ir", "icon": "📚" }
-                ],
-                "پیام‌رسان و شبکه اجتماعی": [
-                    { "name": "ایتا", "url": "https://eitaa.com", "icon": "💬" },
-                    { "name": "روبیکا", "url": "https://rubika.ir", "icon": "💬" },
-                    { "name": "تلگرام", "url": "https://telegram.org", "icon": "✈️" }
-                ],
-                "ابزار و خرید": [
-                    { "name": "دیجی‌کالا", "url": "https://www.digikala.com", "icon": "🛒" },
-                    { "name": "دیوار", "url": "https://divar.ir", "icon": "📌" },
-                    { "name": "گوگل", "url": "https://www.google.com", "icon": "🔍" }
+                    { "name": "آموزش و پرورش", "url": "https://www.medu.ir", "icon": "🏫" }
                 ]
             }
         };
+
+        // Top 12 Services Indices
+        const topIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]; 
 
         let cart = {};
         let activeCategory = 'همه';
@@ -1109,6 +802,7 @@
 
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.trim();
+            renderTopServices(query);
             renderServices(query);
             renderCategorizedLinks(query);
 
@@ -1117,7 +811,6 @@
                 typingTimer = setTimeout(() => {
                     const hasServices = $('#services-grid').children.length > 0 && !$('#services-grid').innerHTML.includes('یافت نشد');
                     const hasLinks = $('#links-container').innerHTML.includes('link-card');
-                    
                     if(!hasServices && !hasLinks) {
                         searchBox.classList.add('shake');
                         setTimeout(() => searchBox.classList.remove('shake'), 500);
@@ -1130,6 +823,7 @@
         });
 
         function init() {
+            renderTopServices();
             renderServices();
             renderCategorizedLinks();
             updateCartUI();
@@ -1168,17 +862,17 @@
 
         function getCategoryIcon(cat) {
             if (cat === 'همه') return 'fa-border-all';
-            if (cat.includes('اصناف') || cat.includes('مجوز')) return 'fa-building';
-            if (cat.includes('پلیس') || cat.includes('امنیت')) return 'fa-shield';
-            if (cat.includes('مالیاتی') || cat.includes('حسابداری')) return 'fa-file-invoice-dollar';
-            if (cat.includes('بیمه') || cat.includes('تامین')) return 'fa-umbrella';
-            if (cat.includes('املاک')) return 'fa-house';
+            if (cat.includes('خرید اینترنتی')) return 'fa-car';
+            if (cat.includes('پلیس')) return 'fa-shield';
             if (cat.includes('قضایی')) return 'fa-scale-balanced';
             if (cat.includes('آموزشی')) return 'fa-graduation-cap';
-            if (cat.includes('تخصصی')) return 'fa-briefcase';
+            if (cat.includes('مالیاتی')) return 'fa-file-invoice-dollar';
+            if (cat.includes('بیمه')) return 'fa-umbrella';
+            if (cat.includes('املاک')) return 'fa-house';
+            if (cat.includes('اصناف')) return 'fa-building';
+            if (cat.includes('تایپ')) return 'fa-print';
+            if (cat.includes('سجام')) return 'fa-chart-line';
             if (cat.includes('عمومی')) return 'fa-building-user';
-            if (cat.includes('پرینت')) return 'fa-print';
-            if (cat.includes('خودرو') || cat.includes('لاستیک')) return 'fa-car';
             return 'fa-layer-group';
         }
 
@@ -1188,18 +882,54 @@
         }
 
         function getWatermarkIcon(title) {
-            if (title.includes('ثنا') || title.includes('قضایی') || title.includes('سوءپیشینه') || title.includes('ابلاغیه')) return 'fa-scale-balanced';
-            if (title.includes('پلیس') || title.includes('سخا') || title.includes('گواهینامه') || title.includes('پلاک')) return 'fa-shield-halved';
-            if (title.includes('بانک') || title.includes('وام') || title.includes('چک') || title.includes('حساب') || title.includes('سفته')) return 'fa-building-columns';
-            if (title.includes('بیمه') || title.includes('تأمین') || title.includes('یارانه')) return 'fa-umbrella';
-            if (title.includes('پرینت') || title.includes('کپی') || title.includes('اسکن') || title.includes('فکس')) return 'fa-print';
-            if (title.includes('تایپ') || title.includes('ایمیل') || title.includes('word') || title.includes('پاورپوینت')) return 'fa-keyboard';
-            if (title.includes('خودرو') || title.includes('خلافی') || title.includes('ترافیک')) return 'fa-car';
-            if (title.includes('مالیات') || title.includes('اقتصادی') || title.includes('کد')) return 'fa-file-invoice-dollar';
-            if (title.includes('دانشگاه') || title.includes('سنجش') || title.includes('آموزش') || title.includes('مدرسه')) return 'fa-graduation-cap';
-            if (title.includes('سجام') || title.includes('بورس') || title.includes('سهام')) return 'fa-chart-line';
-            if (title.includes('املاک') || title.includes('مسکن') || title.includes('سند')) return 'fa-house';
+            if (title.includes('خودرو') || title.includes('ایران خودرو') || title.includes('سایپا')) return 'fa-car';
+            if (title.includes('ثنا') || title.includes('قضایی') || title.includes('ابلاغیه')) return 'fa-scale-balanced';
+            if (title.includes('پلیس') || title.includes('سخا') || title.includes('پلاک') || title.includes('معافیت') || title.includes('سوخت')) return 'fa-shield-halved';
+            if (title.includes('کنکور') || title.includes('دانشگاه') || title.includes('آموزش')) return 'fa-graduation-cap';
+            if (title.includes('سجام')) return 'fa-chart-line';
+            if (title.includes('مالیات')) return 'fa-file-invoice-dollar';
+            if (title.includes('بیمه')) return 'fa-umbrella';
+            if (title.includes('املاک')) return 'fa-house';
+            if (title.includes('پرینت') || title.includes('تایپ')) return 'fa-print';
+            if (title.includes('حقوقی') || title.includes('کسر از حقوق')) return 'fa-file-invoice';
             return 'fa-globe';
+        }
+
+        function generateServiceCardHTML(item, idx, isSearching) {
+            const isInCart = cart[idx] !== undefined;
+            const qty = isInCart ? cart[idx].qty : 1;
+            const hasQty = ['هر صفحه','هر نفر','هر درخواست','پاورپوینت','اسکن','فکس','تایپ','پرینت','کپی','نصب','بلیط','استعلام'].some(w => item[1].includes(w));
+            const wmIcon = getWatermarkIcon(item[1]);
+            const matchClass = isSearching ? 'search-match' : '';
+
+            return `
+            <div class="svc-card reveal ${matchClass}">
+                <i class="fa-solid ${wmIcon} svc-watermark"></i>
+                <div class="svc-title">${item[1]}</div>
+                <div class="svc-prices"><span class="svc-old">${fa(item[2])}</span><span class="svc-new">${fa(item[3])} تومان</span></div>
+                <div class="svc-actions">
+                    ${hasQty ? `<div class="qty-control"><button onclick="changeQty(${idx}, -1)">−</button><span id="qty-${idx}">${fa(qty)}</span><button onclick="changeQty(${idx}, 1)">+</button></div>` : `<div></div>`}
+                    <button class="btn-add ${isInCart ? 'added' : ''}" onclick="addToCart(${idx})">${isInCart ? '<i class="fa-solid fa-check"></i> افزوده' : '<i class="fa-solid fa-plus"></i> افزودن'}</button>
+                </div>
+            </div>`;
+        }
+
+        function renderTopServices(searchQuery = '') {
+            const grid = $('#top-services-grid');
+            const normalizedQuery = normalizeText(searchQuery);
+            let filteredIndices = topIndices;
+            
+            if (normalizedQuery) {
+                filteredIndices = topIndices.filter(idx => normalizeText(D.s[idx][1]).includes(normalizedQuery));
+            }
+
+            if (filteredIndices.length === 0) {
+                grid.innerHTML = '';
+                return;
+            }
+
+            grid.innerHTML = filteredIndices.map(idx => generateServiceCardHTML(D.s[idx], idx, normalizedQuery.length > 0)).join('');
+            document.querySelectorAll('#top-services-grid .svc-card.reveal').forEach(el => revealObserver.observe(el));
         }
 
         function renderServices(searchQuery = '') {
@@ -1216,31 +946,9 @@
                 grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);"><i class="fa-solid fa-face-frown" style="font-size: 40px; margin-bottom: 10px;"></i><br>خدمتی با این مشخصات یافت نشد.</div>`;
                 return;
             }
-            
-            const isSearching = normalizedQuery.length > 0;
-            const matchClass = isSearching ? 'search-match' : '';
 
-            grid.innerHTML = filtered.map(item => {
-                const idx = item.originalIndex;
-                const isInCart = cart[idx] !== undefined;
-                const qty = isInCart ? cart[idx].qty : 1;
-                const hasQty = ['هر صفحه','هر نفر','هر درخواست','پاورپوینت','اسکن','فکس','تایپ','پرینت','کپی','نصب','بلیط','استعلام'].some(w => item[1].includes(w));
-                
-                const wmIcon = getWatermarkIcon(item[1]);
-
-                return `
-                <div class="svc-card reveal ${matchClass}">
-                    <i class="fa-solid ${wmIcon} svc-watermark"></i>
-                    <div class="svc-title">${item[1]}</div>
-                    <div class="svc-prices"><span class="svc-old">${fa(item[2])}</span><span class="svc-new">${fa(item[3])} تومان</span></div>
-                    <div class="svc-actions">
-                        ${hasQty ? `<div class="qty-control"><button onclick="changeQty(${idx}, -1)">−</button><span id="qty-${idx}">${fa(qty)}</span><button onclick="changeQty(${idx}, 1)">+</button></div>` : `<div></div>`}
-                        <button class="btn-add ${isInCart ? 'added' : ''}" onclick="addToCart(${idx})">${isInCart ? '<i class="fa-solid fa-check"></i> اضافه شد' : '<i class="fa-solid fa-plus"></i> افزودن'}</button>
-                    </div>
-                </div>`;
-            }).join('');
-            
-            document.querySelectorAll('.svc-card.reveal').forEach(el => revealObserver.observe(el));
+            grid.innerHTML = filtered.map(item => generateServiceCardHTML(item, item.originalIndex, normalizedQuery.length > 0)).join('');
+            document.querySelectorAll('#services-grid .svc-card.reveal').forEach(el => revealObserver.observe(el));
         }
 
         function renderCategorizedLinks(searchQuery = '') {
@@ -1264,6 +972,7 @@
             if(cart[idx]) {
                 cart[idx].qty = Math.max(1, Math.min(999, cart[idx].qty + delta));
                 updateCartUI();
+                renderTopServices($('#searchInput').value.trim());
                 renderServices($('#searchInput').value.trim());
             }
         }
@@ -1271,6 +980,7 @@
         function addToCart(idx) {
             if(cart[idx]) { delete cart[idx]; } 
             else { const item = D.s[idx]; cart[idx] = { qty: 1, title: item[1], price: item[3] }; }
+            renderTopServices($('#searchInput').value.trim());
             renderServices($('#searchInput').value.trim());
             updateCartUI();
         }
@@ -1306,25 +1016,18 @@
         function openMessenger(e, appScheme, webFallback) {
             e.preventDefault();
             window.location.href = appScheme;
-            setTimeout(() => {
-                window.location.href = webFallback;
-            }, 1500);
+            setTimeout(() => { window.location.href = webFallback; }, 1500);
             return false;
         }
 
         function openUserPanel() {
             const list = $('#user-orders-list');
             const orders = JSON.parse(localStorage.getItem('karizma_orders')) || [];
-            
-            if(orders.length === 0) {
-                list.innerHTML = `<div class="empty-cart" style="margin-top:20px;"><i class="fa-solid fa-box-open"></i><br>شما هنوز سفارشی ثبت نکرده‌اید.</div>`;
-            } else {
+            if(orders.length === 0) { list.innerHTML = `<div class="empty-cart" style="margin-top:20px;"><i class="fa-solid fa-box-open"></i><br>شما هنوز سفارشی ثبت نکرده‌اید.</div>`; }
+            else {
                 list.innerHTML = orders.reverse().map(order => `
                     <div class="user-order-card">
-                        <div class="user-order-header">
-                            <span class="user-order-code">کد: ${order.code}</span>
-                            <span class="user-order-date">${order.date}</span>
-                        </div>
+                        <div class="user-order-header"><span class="user-order-code">کد: ${order.code}</span><span class="user-order-date">${order.date}</span></div>
                         <div class="user-order-items">${order.items}</div>
                         <span class="user-order-total">مبلغ: ${fa(order.total)} تومان</span>
                     </div>
@@ -1334,71 +1037,37 @@
         }
 
         function clearUserHistory() {
-            if(confirm('آیا از پاک کردن تاریخچه سفارشات مطمئن هستید؟')) {
-                localStorage.removeItem('karizma_orders');
-                openUserPanel();
-            }
+            if(confirm('آیا از پاک کردن تاریخچه سفارشات مطمئن هستید؟')) { localStorage.removeItem('karizma_orders'); openUserPanel(); }
         }
 
         function openCheckout() {
             if(Object.keys(cart).length === 0) return alert('سبد خرید شما خالی است!');
-            toggleCart(); 
-            $('#chk-step1').style.display = 'block';
-            $('#chk-step2').style.display = 'none';
-            $('#checkout-modal').showModal();
+            toggleCart(); $('#chk-step1').style.display = 'block'; $('#chk-step2').style.display = 'none'; $('#checkout-modal').showModal();
         }
 
         function submitOrder() {
-            const name = $('#chk-name').value.trim();
-            const contact = $('#chk-contact').value.trim();
-            const desc = $('#chk-desc').value.trim();
-
+            const name = $('#chk-name').value.trim(); const contact = $('#chk-contact').value.trim(); const desc = $('#chk-desc').value.trim();
             if(!name || !contact) return alert('لطفاً نام و راه ارتباطی را وارد کنید.');
-
             currentOrderCode = Math.floor(10000 + Math.random() * 90000).toString();
-
             let orderText = `سلام، درخواست جدید از سایت کاریزما نت\n\n🔑 کد پیگیری: ${currentOrderCode}\n👤 نام: ${name}\n📞 ارتباط: ${contact}\n\n🛒 اقلام سفارش:\n`;
-            let total = 0;
-            let itemsSummary = [];
-            
+            let total = 0; let itemsSummary = [];
             for(let idx in cart) {
-                const item = cart[idx];
-                const itemTotal = item.price * item.qty;
-                total += itemTotal;
-                orderText += `▪️ ${item.title} (${fa(item.qty)} عدد) = ${fa(itemTotal)} تومان\n`;
-                itemsSummary.push(`${item.title} (${fa(item.qty)})`);
+                const item = cart[idx]; const itemTotal = item.price * item.qty; total += itemTotal;
+                orderText += `▪️ ${item.title} (${fa(item.qty)} عدد) = ${fa(itemTotal)} تومان\n`; itemsSummary.push(`${item.title} (${fa(item.qty)})`);
             }
-            
             orderText += `\n💰 جمع کل: ${fa(total)} تومان\n`;
             if(desc) orderText += `\n📝 توضیحات: ${desc}`;
-
             $('#btn-sms-admin').href = `sms:09960062320?body=${encodeURIComponent(orderText)}`;
             $('#btn-tg-admin').href = `https://t.me/kavehnouri?text=${encodeURIComponent(orderText)}`;
-            
-            $('#chk-total-price').innerText = fa(total);
-            $('#chk-order-code').innerText = fa(currentOrderCode);
-
-            const newOrder = {
-                code: currentOrderCode,
-                date: new Date().toLocaleDateString('fa-IR'),
-                items: itemsSummary.join('، '),
-                total: total
-            };
-            const existingOrders = JSON.parse(localStorage.getItem('karizma_orders')) || [];
-            existingOrders.push(newOrder);
-            localStorage.setItem('karizma_orders', JSON.stringify(existingOrders));
-
-            $('#chk-step1').style.display = 'none';
-            $('#chk-step2').style.display = 'block';
+            $('#chk-total-price').innerText = fa(total); $('#chk-order-code').innerText = fa(currentOrderCode);
+            const newOrder = { code: currentOrderCode, date: new Date().toLocaleDateString('fa-IR'), items: itemsSummary.join('، '), total: total };
+            const existingOrders = JSON.parse(localStorage.getItem('karizma_orders')) || []; existingOrders.push(newOrder); localStorage.setItem('karizma_orders', JSON.stringify(existingOrders));
+            $('#chk-step1').style.display = 'none'; $('#chk-step2').style.display = 'block';
         }
 
         function copyCardNumber() {
             const card = '6219861945524204';
-            navigator.clipboard.writeText(card).then(() => {
-                alert('شماره کارت کپی شد!');
-            }).catch(() => {
-                alert('خطا در کپی کردن. لطفاً دستی یادداشت کنید: ' + card);
-            });
+            navigator.clipboard.writeText(card).then(() => { alert('شماره کارت کپی شد!'); }).catch(() => { alert('خطا در کپی کردن. لطفاً دستی یادداشت کنید: ' + card); });
         }
 
         init();

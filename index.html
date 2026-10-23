@@ -7,8 +7,9 @@
     <meta name="description" content="کافی‌نت آنلاین کاریزما نت؛ ثبت‌نام سامانه‌های دولتی، پرینت، کپی، اسکن، تایپ و کلیه خدمات اداری در بیرجند. سریع، مطمئن، با پیگیری اختصاصی.">
     
     <meta name="theme-color" content="#0b1120">
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/1048/1048953.png">
-    <link rel="manifest" href='data:application/manifest+json,{"name":"کاریزما نت","short_name":"کاریزما","start_url":"./","display":"standalone","background_color":"%230b1120","theme_color":"%230b1120","icons":[{"src":"https://cdn-icons-png.flaticon.com/512/1048/1048953.png","sizes":"512x512","type":"image/png"}]}'>
+    
+    <!-- PWA Manifest with Custom SVG Icon (Laptop + Globe) -->
+    <link rel="manifest" href='data:application/manifest+json,{"name":"کاریزما نت","short_name":"کاریزما","start_url":"./","display":"standalone","background_color":"%230b1120","theme_color":"%230b1120","icons":[{"src":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzBiMTEyMCIvPjxyZWN0IHg9IjEwMCIgeT0iMzYwIiB3aWR0aD0iMzEyIiBoZWlnaHQ9IjMwIiByeD0iMTUiIGZpbGw9IiM2MzY2ZjEiLz48cmVjdCB4PSIxMzAiIHk9IjEyMCIgd2lkdGg9IjI1MiIgaGVpZ2h0PSIyMjAiIHJ4PSIxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTc4YmZhIiBzdHJva2Utd2lkdGg9IjE1Ii8+PHJlY3QgeD0iMTQ1IiB5PSIxMzUiIHdpZHRoPSIyMjIiIGhlaWdodD0iMTkwIiByeD0iOCIgZmlsbD0iIzFlMjUzYiIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjIzMCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyZDNoZSIgc3Ryb2tlLXdpZHRoPSIxMiIvPjxlbGxpcHNlIGN4PSIyNTYiIGN5PSIyMzAiIHJ4PSIzMCIgcnk9IjYwIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iOCIvPjxsaW5lIHgxPSIxOTYiIHkxPSIyMzAiIHgyPSIzMTYiIHkyPSIyMzAiIHN0cm9rZT0iIzIyZDNlZSIgc3Ryb2tlLXdpZHRoPSI4Ii8+PGxpbmUgeDE9IjI1NiIgeTE9IjE3MCIgeDI9IjI1NiIgeTI9IjI5MCIgc3Ryb2tlPSIjMjJkM2VlIiBzdHJva2Utd2lkdGg9IjgiLz48L3N2Zz4=","sizes":"512x512","type":"image/svg+xml","purpose":"any maskable"}]}'>
 
     <script type="application/ld+json">
     {
@@ -32,11 +33,7 @@
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
         "opens": "08:00",
         "closes": "22:00"
-      },
-      "sameAs": [
-        "https://t.me/kavehnouri",
-        "https://eitaa.com/kavehnouri"
-      ]
+      }
     }
     </script>
 
@@ -51,8 +48,7 @@
     <style>
         :root {
             --bg: #0b1120;
-            --surface: #1e293b;
-            --surface-glass: rgba(30, 41, 59, 0.85);
+            --surface: rgba(30, 41, 59, 0.6);
             --border: rgba(255, 255, 255, 0.1);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
@@ -62,26 +58,28 @@
             --success: #22c55e;
             --danger: #ef4444;
             --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            --screen-bg: #050914;
-            --screen-glow: rgba(99, 102, 241, 0.4);
-            --glass-bg: rgba(255, 255, 255, 0.05);
+            
+            --glass-bg: rgba(255, 255, 255, 0.03);
             --glass-border: rgba(255, 255, 255, 0.15);
+            --glow: rgba(99, 102, 241, 0.4);
+            --screen-bg: #050914;
             --keyboard-bg: rgba(15, 23, 42, 0.6);
         }
         [data-theme="light"] {
             --bg: #f1f5f9;
-            --surface: #ffffff;
-            --surface-glass: rgba(255, 255, 255, 0.9);
+            --surface: rgba(255, 255, 255, 0.7);
             --border: rgba(0, 0, 0, 0.08);
             --text-main: #0f172a;
             --text-muted: #64748b;
             --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-            --screen-bg: #e2e8f0;
-            --screen-glow: rgba(99, 102, 241, 0.2);
+            
             --glass-bg: rgba(255, 255, 255, 0.6);
             --glass-border: rgba(0, 0, 0, 0.1);
+            --glow: rgba(99, 102, 241, 0.2);
+            --screen-bg: #e2e8f0;
             --keyboard-bg: rgba(255, 255, 255, 0.8);
         }
+        
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Vazirmatn', sans-serif; -webkit-tap-highlight-color: transparent; }
         
         html, body { background-color: var(--bg); color: var(--text-main); line-height: 1.7; overflow-x: clip; transition: background 0.3s, color 0.3s; }
@@ -89,61 +87,50 @@
         
         a { color: inherit; text-decoration: none; }
 
-        /* Header */
+        /* Particle Background */
+        #particles-canvas {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        [data-theme="light"] #particles-canvas { opacity: 0.3; }
+
+        /* Header & Glassmorphism 2.0 */
         header { 
             position: sticky; top: 0; left: 0; right: 0; width: 100%; z-index: 9999; 
-            background: var(--surface-glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); 
-            border-bottom: 1px solid var(--border); padding: 10px 16px; 
+            background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); 
+            border-bottom: 1px solid var(--glass-border); padding: 10px 16px; 
             display: flex; align-items: center; justify-content: space-between; gap: 10px; 
-            transition: box-shadow 0.3s ease;
+            transition: all 0.3s ease; box-shadow: 0 4px 30px rgba(0,0,0,0.1);
         }
-        header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
         
-        .logo { font-weight: 800; font-size: 20px; background: linear-gradient(90deg, var(--accent), var(--primary)); -webkit-background-clip: text; color: transparent; display: flex; align-items: center; gap: 6px; white-space: nowrap; z-index: 102;}
+        .logo { font-weight: 800; font-size: 20px; background: linear-gradient(90deg, var(--accent), var(--primary)); -webkit-background-clip: text; color: transparent; display: flex; align-items: center; gap: 6px; white-space: nowrap; z-index: 102; cursor: pointer; text-decoration: none;}
         .logo i { color: var(--accent); }
-        .nav-links { display: none; gap: 16px; font-weight: 700; font-size: 13px; }
-        .nav-links a { color: var(--text-muted); transition: color 0.2s; cursor: pointer; }
-        .nav-links a:hover { color: var(--primary); }
-
+        
         .header-actions { display: flex; align-items: center; gap: 8px; flex: 1; justify-content: flex-end; position: relative; }
         
         .search-box-mini { position: relative; width: 200px; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 101; }
-        .search-box-mini input { width: 100%; padding: 7px 12px 7px 35px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); color: var(--text-main); font-size: 13px; outline: none; transition: all 0.3s; }
-        .search-box-mini input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(99,102,241,0.3); }
+        .search-box-mini input { width: 100%; padding: 8px 12px 8px 35px; border-radius: 20px; background: var(--surface); border: 1px solid var(--glass-border); color: var(--text-main); font-size: 13px; outline: none; transition: all 0.3s; backdrop-filter: blur(10px); }
+        .search-box-mini input:focus { border-color: var(--primary); box-shadow: 0 0 15px var(--glow); }
         .search-box-mini i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 13px; cursor: pointer; z-index: 2;}
         .search-box-mini.expanded { width: 350px; }
         
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-            20%, 40%, 60%, 80% { transform: translateX(5px); }
-        }
-        .search-box-mini.shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; }
-        .search-box-mini.shake input { border-color: var(--danger); box-shadow: 0 0 10px rgba(239,68,68,0.3); }
+        .btn-icon { background: var(--surface); border: 1px solid var(--glass-border); color: var(--text-main); width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: 0.3s; font-size: 14px; position: relative; flex-shrink: 0; z-index: 102; backdrop-filter: blur(10px);}
+        .btn-icon:hover { background: var(--primary); color: #fff; box-shadow: 0 0 15px var(--glow); border-color: var(--primary); }
+        .cart-badge { position: absolute; top: -4px; right: -4px; background: var(--danger); color: #fff; font-size: 9px; font-weight: bold; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; display: none; box-shadow: 0 0 10px rgba(239,68,68,0.5);}
 
-        @keyframes pulseMatch {
-            0% { transform: scale(1); box-shadow: 0 0 0px var(--accent); }
-            50% { transform: scale(1.02); box-shadow: 0 0 20px rgba(14, 165, 233, 0.6); }
-            100% { transform: scale(1); box-shadow: 0 0 10px rgba(14, 165, 233, 0.2); }
-        }
-        .search-match { border-color: var(--accent) !important; animation: pulseMatch 1s ease; }
-
-        .btn-icon { background: var(--surface); border: 1px solid var(--border); color: var(--text-main); width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: 0.2s; font-size: 14px; position: relative; flex-shrink: 0; z-index: 102;}
-        .btn-icon:hover { background: var(--primary); color: #fff; }
-        .cart-badge { position: absolute; top: -4px; right: -4px; background: var(--danger); color: #fff; font-size: 9px; font-weight: bold; width: 16px; height: 16px; border-radius: 50%; display: grid; place-items: center; display: none; }
-
-        /* Hero */
-        .hero { padding: 30px 20px 40px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(99,102,241,0.15), transparent 70%); position: relative; display: flex; flex-direction: column; align-items: center; overflow: hidden; }
+        /* Hero & 3D Monitor */
+        .hero { padding: 40px 20px 50px; text-align: center; position: relative; display: flex; flex-direction: column; align-items: center; overflow: hidden; }
         
-        /* Golden Badge with Black Outline */
         .hero-badge { 
-            display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 18px; border-radius: 30px; 
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 20px; border-radius: 30px; 
             background: rgba(250, 204, 21, 0.1); border: 1px solid rgba(250, 204, 21, 0.5); 
             color: #facc15; font-size: clamp(11px, 3.5vw, 14px); font-weight: 800; white-space: nowrap;
             margin-bottom: 25px; backdrop-filter: blur(10px); 
-            box-shadow: 0 0 20px rgba(250, 204, 21, 0.3), inset 0 0 10px rgba(250, 204, 21, 0.1);
+            box-shadow: 0 0 25px rgba(250, 204, 21, 0.3), inset 0 0 10px rgba(250, 204, 21, 0.1);
             animation: fadeInDown 0.8s ease-out, glowPulseYellow 3s infinite alternate; 
-            /* Added black outline */
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 10px rgba(250, 204, 21, 0.6);
         }
         .hero-badge i { color: #facc15; font-size: 14px; animation: spinSlow 4s linear infinite; }
@@ -151,21 +138,20 @@
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes glowPulseYellow { 
             0% { box-shadow: 0 0 15px rgba(250, 204, 21, 0.2); border-color: rgba(250, 204, 21, 0.4); }
-            100% { box-shadow: 0 0 30px rgba(250, 204, 21, 0.6); border-color: rgba(250, 204, 21, 0.8); }
+            100% { box-shadow: 0 0 35px rgba(250, 204, 21, 0.7); border-color: rgba(250, 204, 21, 0.9); }
         }
         @keyframes spinSlow { 100% { transform: rotate(360deg); } }
         
-        /* 3D Glass Monitor */
         .monitor-wrapper { position: relative; width: 100%; max-width: 800px; perspective: 1200px; margin-top: 10px; }
         .monitor { 
             position: relative; width: 95%; margin: 0 auto; aspect-ratio: 16/8; 
             background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.02));
-            border: 2px solid rgba(255,255,255,0.3); border-radius: 20px; 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 40px var(--screen-glow), inset 0 0 30px rgba(255,255,255,0.1);
+            border: 2px solid var(--glass-border); border-radius: 20px; 
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 40px var(--glow), inset 0 0 30px rgba(255,255,255,0.1);
             backdrop-filter: blur(20px); display: flex; align-items: center; justify-content: center; 
             padding: 20px; transform: rotateX(8deg); transition: transform 0.5s, box-shadow 0.5s;
         }
-        .monitor:hover { transform: rotateX(0deg) translateY(-5px); box-shadow: 0 30px 60px rgba(0,0,0,0.7), 0 0 60px var(--screen-glow); }
+        .monitor:hover { transform: rotateX(0deg) translateY(-5px); box-shadow: 0 35px 70px rgba(0,0,0,0.7), 0 0 70px var(--glow); }
         .monitor::before { content: ''; position: absolute; inset: 8px; border-radius: 14px; background: var(--screen-bg); z-index: 1; box-shadow: inset 0 0 20px rgba(0,0,0,0.8); }
         .monitor::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 50%; background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent); border-radius: 20px 20px 0 0; pointer-events: none; z-index: 2; }
         
@@ -180,189 +166,197 @@
             padding-bottom: 5px; 
         }
         
-        .monitor-neck { width: 60px; height: 25px; background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent); margin: 0 auto; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%); }
+        .monitor-neck { width: 60px; height: 25px; background: linear-gradient(to bottom, var(--glass-border), transparent); margin: 0 auto; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%); }
         .monitor-base { width: 180px; height: 10px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 10px; margin: 0 auto; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
         /* Keyboard */
         .keyboard { position: relative; width: 90%; max-width: 700px; margin: -5px auto 0; background: var(--keyboard-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 20px 15px; transform: rotateX(35deg) translateY(-10px); transform-origin: top center; box-shadow: 0 25px 40px rgba(0,0,0,0.5), inset 0 0 30px rgba(255,255,255,0.05); backdrop-filter: blur(20px); transition: transform 0.5s; }
         .keyboard::before { content: ''; position: absolute; inset: 5px; border-radius: 8px; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px; z-index: 0; }
-        
-        /* Keyboard Text - Top is Purple */
         .keyboard-text { position: relative; z-index: 2; color: #a78bfa; font-weight: 800; font-size: clamp(12px, 1.8vw, 15px); line-height: 1.8; text-align: center; text-shadow: 0 0 10px rgba(167, 139, 250, 0.6), 0 2px 4px rgba(0,0,0,0.8); }
-        
-        /* Keyboard Text - Bottom is Neon Red */
-        .keyboard-sub { 
-            display: block; 
-            color: #f43f5e; 
-            font-size: clamp(10px, 1.5vw, 13px); 
-            margin-top: 8px; 
-            text-shadow: 0 0 10px rgba(244, 63, 94, 0.6);
-            white-space: nowrap; 
-        }
-        
-        /* Light Mode Fixes for Keyboard */
-        [data-theme="light"] .keyboard-text { 
-            color: #6d28d9; /* Darker purple */
-            text-shadow: none; 
-        }
-        [data-theme="light"] .keyboard-sub { 
-            color: #e11d48; /* Darker red */
-            text-shadow: none; 
-            font-weight: 800;
-        }
+        .keyboard-sub { display: block; color: #f43f5e; font-size: clamp(10px, 1.5vw, 13px); margin-top: 8px; text-shadow: 0 0 10px rgba(244, 63, 94, 0.6); white-space: nowrap; }
+        [data-theme="light"] .keyboard-text { color: #6d28d9; text-shadow: none; }
+        [data-theme="light"] .keyboard-sub { color: #e11d48; text-shadow: none; font-weight: 800; }
 
-        /* Sections */
-        section { max-width: 1100px; margin: 0 auto; padding: 25px 16px; }
-        .section-title { font-size: 22px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        /* Sections & Scroll Animation */
+        section { max-width: 1100px; margin: 0 auto; padding: 30px 16px; }
+        .section-title { font-size: 24px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; font-weight: 800; }
         .section-title i { color: var(--primary); }
 
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Tabs */
         .tabs { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 20px; scrollbar-width: none; }
         .tabs::-webkit-scrollbar { display: none; }
-        .tab { padding: 8px 16px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); font-size: 13px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: 0.2s; }
-        .tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+        .tab { padding: 10px 20px; border-radius: 25px; background: var(--surface); border: 1px solid var(--glass-border); color: var(--text-muted); font-size: 14px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: 0.3s; backdrop-filter: blur(10px); }
+        .tab:hover { border-color: var(--primary); color: var(--text-main); }
+        .tab.active { background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: 0 0 15px var(--glow); }
 
-        /* Services Grid & Center Watermarks */
+        /* Bento Box Layout for Why Us */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .bento-item {
+            background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            transition: all 0.4s ease; position: relative; overflow: hidden;
+        }
+        .bento-item:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 15px 35px rgba(14,165,233,0.2); }
+        .bento-item i { font-size: 40px; color: var(--accent); margin-bottom: 15px; transition: transform 0.4s; }
+        .bento-item:hover i { transform: scale(1.2) rotate(5deg); }
+        .bento-item h3 { font-size: 18px; margin-bottom: 10px; font-weight: 800; }
+        .bento-item p { font-size: 14px; color: var(--text-muted); }
+        
+        /* Specific Bento Shapes */
+        .bento-item:nth-child(1) { grid-column: span 2; flex-direction: row; gap: 20px; text-align: right; }
+        .bento-item:nth-child(1) i { margin-bottom: 0; font-size: 60px; }
+        .bento-item:nth-child(4) { grid-column: span 3; }
+
+        @media (max-width: 767px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-item:nth-child(1) { grid-column: span 1; flex-direction: column; text-align: center; }
+            .bento-item:nth-child(1) i { margin-bottom: 15px; font-size: 40px; }
+            .bento-item:nth-child(4) { grid-column: span 1; }
+        }
+
+        /* Services Grid (Glass & Micro-interactions) */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
         .svc-card { 
-            background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 16px; 
-            transition: 0.3s; position: relative; display: flex; flex-direction: column; gap: 12px; 
-            overflow: hidden; z-index: 1;
+            background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 20px; 
+            transition: 0.4s; position: relative; display: flex; flex-direction: column; gap: 12px; 
+            overflow: hidden; z-index: 1; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
         }
-        .svc-card:hover { border-color: var(--primary); box-shadow: 0 10px 25px rgba(99,102,241,0.15); transform: translateY(-3px); }
+        .svc-card:hover { border-color: var(--primary); box-shadow: 0 15px 35px var(--glow); transform: translateY(-5px); }
         .svc-card > *:not(.svc-watermark) { position: relative; z-index: 2; }
         
         .svc-watermark {
             position: absolute; top: 50%; left: 50%;
             transform: translate(-50%, -50%) rotate(-15deg);
-            font-size: 130px; 
-            opacity: 0.15; 
-            z-index: 0; pointer-events: none;
-            color: var(--primary);
-            filter: drop-shadow(0 0 15px rgba(99,102,241,0.6)); 
-            transition: 0.3s;
+            font-size: 130px; opacity: 0.1; z-index: 0; pointer-events: none;
+            color: var(--primary); filter: drop-shadow(0 0 15px rgba(99,102,241,0.6)); 
+            transition: 0.4s;
         }
-        .svc-card:hover .svc-watermark { opacity: 0.25; transform: translate(-50%, -50%) rotate(0deg) scale(1.1); }
-        
-        [data-theme="light"] .svc-watermark { opacity: 0.1; color: #6366f1; filter: drop-shadow(0 0 10px rgba(99,102,241,0.4)); }
-        [data-theme="light"] .svc-card:hover .svc-watermark { opacity: 0.2; }
+        .svc-card:hover .svc-watermark { opacity: 0.2; transform: translate(-50%, -50%) rotate(0deg) scale(1.1); }
+        [data-theme="light"] .svc-watermark { opacity: 0.08; color: #1e293b; filter: none; }
 
-        .svc-title { font-weight: 700; font-size: 15px; line-height: 1.5; min-height: 45px; }
+        .svc-title { font-weight: 800; font-size: 15px; line-height: 1.5; min-height: 45px; }
         .svc-prices { display: flex; align-items: center; gap: 10px; margin-top: auto; }
         .svc-old { color: var(--text-muted); text-decoration: line-through; font-size: 13px; }
-        .svc-new { color: var(--success); font-weight: 800; font-size: 16px; }
+        .svc-new { color: var(--success); font-weight: 800; font-size: 18px; text-shadow: 0 0 10px rgba(34,197,94,0.3); }
         .svc-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; border-top: 1px solid var(--border); padding-top: 12px; }
-        .qty-control { display: flex; align-items: center; background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 2px; }
+        
+        /* Micro-interaction: Ripple Effect */
+        .btn-add { 
+            background: var(--primary); color: #fff; border: none; padding: 10px 18px; border-radius: 25px; 
+            font-weight: 700; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 6px; font-size: 13px; 
+            position: relative; overflow: hidden; outline: none;
+        }
+        .btn-add:hover { background: var(--primary-hover); box-shadow: 0 0 15px var(--glow); }
+        .btn-add.added { background: var(--success); }
+        
+        .ripple {
+            position: absolute; border-radius: 50%; transform: scale(0);
+            animation: ripple-anim 0.6s linear; background: rgba(255, 255, 255, 0.4);
+            pointer-events: none;
+        }
+        @keyframes ripple-anim { to { transform: scale(4); opacity: 0; } }
+
+        .qty-control { display: flex; align-items: center; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 20px; padding: 2px; }
+        [data-theme="light"] .qty-control { background: rgba(0,0,0,0.05); }
         .qty-control button { width: 28px; height: 28px; border: none; background: transparent; color: var(--text-main); cursor: pointer; font-size: 16px; border-radius: 50%; transition: 0.2s; }
         .qty-control button:hover { background: var(--primary); color: #fff; }
         .qty-control span { width: 30px; text-align: center; font-weight: 700; font-size: 14px; }
-        .btn-add { background: var(--primary); color: #fff; border: none; padding: 8px 16px; border-radius: 20px; font-weight: 700; cursor: pointer; transition: 0.2s; display: flex; align-items: center; gap: 6px; font-size: 13px; }
-        .btn-add:hover { background: var(--primary-hover); }
-        .btn-add.added { background: var(--success); }
 
-        /* Links Grid */
+        /* Links & Action Cards */
         .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
-        .link-card { display: flex; align-items: center; gap: 10px; padding: 12px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); transition: 0.2s; font-size: 13px; font-weight: 700; }
-        .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(14, 165, 233, 0.15); }
+        .link-card { display: flex; align-items: center; gap: 10px; padding: 14px; border-radius: 16px; background: var(--glass-bg); border: 1px solid var(--glass-border); transition: 0.3s; font-size: 13px; font-weight: 700; backdrop-filter: blur(10px); }
+        .link-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(14, 165, 233, 0.2); }
         .link-card .emoji { font-size: 20px; }
 
-        /* Why Us Grid */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
-        .glass-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center; transition: 0.3s; }
-        .glass-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(14,165,233,0.15); }
-        .glass-card i { font-size: 36px; color: var(--accent); margin-bottom: 15px; }
-        .glass-card h3 { font-size: 16px; margin-bottom: 8px; }
-        .glass-card p { font-size: 13px; color: var(--text-muted); }
+        .action-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 24px; padding: 35px 20px; text-align: center; transition: 0.4s; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; backdrop-filter: blur(10px); }
+        .action-card:hover { border-color: var(--primary); background: rgba(99,102,241,0.1); transform: translateY(-5px); box-shadow: 0 15px 35px var(--glow); }
+        .action-card i { font-size: 45px; color: var(--primary); transition: 0.3s; }
+        .action-card:hover i { transform: scale(1.1); }
+        .action-card h3 { font-size: 18px; font-weight: 800; }
+        .action-card p { color: var(--text-muted); font-size: 14px; }
 
-        /* Action Cards (Upload / Contact) */
-        .action-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 30px 20px; text-align: center; transition: 0.3s; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
-        .action-card:hover { border-color: var(--primary); background: rgba(99,102,241,0.05); transform: translateY(-3px); }
-        .action-card i { font-size: 40px; color: var(--primary); }
-        .action-card h3 { font-size: 16px; }
-        .action-card p { color: var(--text-muted); font-size: 13px; }
-
-        /* Upload Title Styling - Golden with Black Outline and One Line */
         .upload-title-main { 
-            color: #fbbf24; 
-            font-size: clamp(13px, 3.8vw, 24px); /* Adjusted to fit one line */
-            font-weight: 800; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            gap: 8px; 
-            margin-bottom: 20px;
-            white-space: nowrap; /* Force one line */
+            color: #fbbf24; font-size: clamp(14px, 4vw, 24px); font-weight: 800; 
+            display: flex; align-items: center; justify-content: center; gap: 8px; 
+            margin-bottom: 25px; white-space: nowrap;
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 15px rgba(251, 191, 36, 0.5);
         }
-        .upload-title-main i { color: #fbbf24; }
 
         /* FAQ */
-        .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
-        .faq-q { padding: 16px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .faq-a { padding: 0 16px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; color: var(--text-muted); font-size: 14px; }
-        .faq-item.active .faq-a { max-height: 300px; padding-bottom: 16px; }
+        .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; margin-bottom: 12px; overflow: hidden; backdrop-filter: blur(10px); }
+        .faq-q { padding: 18px; font-weight: 800; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-a { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; color: var(--text-muted); font-size: 14px; line-height: 1.8; }
+        .faq-item.active .faq-a { max-height: 400px; padding-bottom: 18px; }
         .faq-item.active .faq-q i { transform: rotate(180deg); }
 
-        /* Chat Widget (Support) */
+        /* Support Widget */
         .support-widget { 
             position: fixed; bottom: 85px; left: 20px; width: 60px; height: 60px; 
             background: linear-gradient(135deg, #6366f1, #0ea5e9); 
             border-radius: 50%; display: flex; justify-content: center; align-items: center; 
-            color: white; font-size: 28px; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.5); 
+            color: white; font-size: 28px; box-shadow: 0 4px 20px var(--glow); 
             z-index: 9998; transition: 0.3s; animation: pulseWidget 2s infinite; cursor: pointer;
         }
-        .support-widget:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(99, 102, 241, 0.8); }
-        @keyframes pulseWidget { 0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(99, 102, 241, 0); } 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); } }
+        .support-widget:hover { transform: scale(1.1) translateY(-5px); box-shadow: 0 8px 30px var(--glow); }
+        @keyframes pulseWidget { 0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(99, 102, 241, 0); } 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); } }
 
         /* Cart Drawer */
-        .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 10000; opacity: 0; visibility: hidden; transition: 0.3s; }
+        .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 10000; opacity: 0; visibility: hidden; transition: 0.3s; }
         .cart-overlay.open { opacity: 1; visibility: visible; }
         .cart-drawer { position: fixed; top: 0; left: -100%; width: 100%; max-width: 400px; height: 100%; background: var(--bg); z-index: 10001; box-shadow: 5px 0 30px rgba(0,0,0,0.5); transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; }
         .cart-drawer.open { left: 0; }
         .cart-header { padding: 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
         .cart-header h2 { font-size: 18px; display: flex; align-items: center; gap: 8px; }
         .cart-items { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 15px; }
-        .cart-item { display: flex; justify-content: space-between; align-items: center; background: var(--surface); padding: 12px; border-radius: 12px; border: 1px solid var(--border); }
+        .cart-item { display: flex; justify-content: space-between; align-items: center; background: var(--glass-bg); padding: 15px; border-radius: 16px; border: 1px solid var(--glass-border); }
         .cart-item-info h4 { font-size: 14px; margin-bottom: 4px; }
         .cart-item-info span { font-size: 13px; color: var(--success); font-weight: 700; }
         .cart-footer { padding: 20px; border-top: 1px solid var(--border); background: var(--surface); }
         .cart-total { display: flex; justify-content: space-between; font-size: 18px; font-weight: 800; margin-bottom: 15px; }
-        .btn-checkout { width: 100%; padding: 14px; border-radius: 12px; background: linear-gradient(90deg, var(--primary), var(--accent)); color: #fff; border: none; font-weight: 800; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        .btn-checkout { width: 100%; padding: 15px; border-radius: 15px; background: linear-gradient(90deg, var(--primary), var(--accent)); color: #fff; border: none; font-weight: 800; font-size: 16px; cursor: pointer; transition: 0.3s; box-shadow: 0 5px 20px var(--glow); }
         .btn-checkout:hover { opacity: 0.9; transform: scale(1.02); }
         .empty-cart { text-align: center; color: var(--text-muted); margin-top: 50px; }
-        .empty-cart i { font-size: 50px; margin-bottom: 15px; opacity: 0.5; }
+        .empty-cart i { font-size: 60px; margin-bottom: 15px; opacity: 0.3; }
 
         /* Bottom Nav */
-        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface-glass); backdrop-filter: blur(16px); border-top: 1px solid var(--border); display: flex; justify-content: space-around; padding: 8px 0; z-index: 999; }
-        .bn-item { display: flex; flex-direction: column; align-items: center; gap: 3px; color: var(--text-muted); font-size: 10px; font-weight: 700; transition: 0.2s; }
-        .bn-item i { font-size: 18px; }
-        .bn-item.active { color: var(--primary); }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--glass-bg); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); display: flex; justify-content: space-around; padding: 10px 0; z-index: 999; }
+        .bn-item { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--text-muted); font-size: 10px; font-weight: 700; transition: 0.3s; }
+        .bn-item i { font-size: 20px; }
+        .bn-item.active, .bn-item:hover { color: var(--primary); }
 
         /* Modals */
-        dialog { width: 90%; max-width: 500px; margin: auto; background: var(--bg); color: var(--text-main); border: 1px solid var(--border); border-radius: 20px; padding: 24px; box-shadow: var(--shadow); }
-        dialog::backdrop { background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 700; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text-main); font-family: inherit; font-size: 14px; outline: none; }
-        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); }
+        dialog { width: 90%; max-width: 500px; margin: auto; background: var(--bg); color: var(--text-main); border: 1px solid var(--glass-border); border-radius: 24px; padding: 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+        dialog::backdrop { background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 700; }
+        .form-group input, .form-group textarea { width: 100%; padding: 14px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); color: var(--text-main); font-family: inherit; font-size: 14px; outline: none; transition: 0.3s; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); box-shadow: 0 0 10px var(--glow); }
 
-        .payment-box { background: var(--surface); border: 2px dashed var(--primary); border-radius: 16px; padding: 20px; margin: 20px 0; text-align: center; }
-        .payment-box .card-number { font-size: 22px; font-weight: 800; letter-spacing: 2px; color: var(--accent); margin: 10px 0; direction: ltr; font-family: monospace; }
+        .payment-box { background: var(--surface); border: 2px dashed var(--primary); border-radius: 20px; padding: 25px; margin: 20px 0; text-align: center; }
+        .payment-box .card-number { font-size: 24px; font-weight: 800; letter-spacing: 3px; color: var(--accent); margin: 12px 0; direction: ltr; font-family: monospace; text-shadow: 0 0 10px rgba(14,165,233,0.4);}
         .payment-box .owner-name { font-size: 16px; font-weight: 700; color: var(--text-main); }
         
-        /* Messenger Logos */
-        .receipt-grid { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
-        .receipt-opt { width: 65px; height: 75px; border-radius: 12px; background: transparent; border: none; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 6px; transition: 0.2s; }
-        .receipt-opt:hover { transform: translateY(-3px); }
-        .receipt-opt span { font-size: 11px; font-weight: 700; color: var(--text-main); margin-top: 2px; }
+        .receipt-grid { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .receipt-opt { width: 70px; height: 80px; border-radius: 16px; background: transparent; border: none; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 8px; transition: 0.3s; }
+        .receipt-opt:hover { transform: translateY(-5px); }
+        .receipt-opt span { font-size: 12px; font-weight: 700; color: var(--text-main); }
         
-        .upload-options { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
-        .upload-row { display: flex; justify-content: center; gap: 15px; }
-        .upload-opt { width: 80px; padding: 10px 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: transparent; border: none; cursor: pointer; transition: all 0.3s; }
+        .upload-options { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
+        .upload-row { display: flex; justify-content: center; gap: 20px; }
+        .upload-opt { width: 85px; padding: 12px 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: transparent; border: none; cursor: pointer; transition: all 0.3s; }
         .upload-opt:hover { transform: translateY(-5px); }
-        .upload-opt span { font-size: 12px; font-weight: 700; color: var(--text-main); }
+        .upload-opt span { font-size: 13px; font-weight: 700; color: var(--text-main); }
         
-        .brand-circle { width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; font-size: 26px; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.2s; }
-        .upload-opt:hover .brand-circle, .receipt-opt:hover .brand-circle { transform: scale(1.1); box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
+        .brand-circle { width: 55px; height: 55px; border-radius: 50%; display: grid; place-items: center; font-size: 28px; color: white; box-shadow: 0 6px 15px rgba(0,0,0,0.3); transition: transform 0.3s; }
+        .upload-opt:hover .brand-circle, .receipt-opt:hover .brand-circle { transform: scale(1.15) rotate(5deg); box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
         
         .bg-telegram { background: #229ED9; }
         .bg-eitaa { background: #FF9800; }
@@ -371,37 +365,34 @@
         .bg-shad { background: #00C853; }
         .bg-sms { background: #fbbf24; color: #000 !important; }
 
-        /* User Panel Specific */
-        .user-order-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 15px; margin-bottom: 15px; }
-        .user-order-header { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border); padding-bottom: 8px; margin-bottom: 8px; }
+        .user-order-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-bottom: 15px; }
+        .user-order-header { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border); padding-bottom: 10px; margin-bottom: 10px; }
         .user-order-code { font-weight: 800; color: var(--accent); font-size: 16px; }
         .user-order-date { font-size: 12px; color: var(--text-muted); }
-        .user-order-total { font-weight: 700; color: var(--success); margin-top: 8px; display: block; }
+        .user-order-total { font-weight: 800; color: var(--success); margin-top: 10px; display: block; font-size: 15px;}
         .user-order-items { font-size: 13px; color: var(--text-muted); margin-top: 5px; }
 
-        /* SMS Fast Badge */
         .sms-btn-wrapper { position: relative; flex: 1; display: flex; }
-        .sms-btn-wrapper .btn-add { width: 100%; justify-content: center; background: #10b981; position: relative; overflow: visible; padding-top: 12px; padding-bottom: 12px;}
-        .fast-badge { position: absolute; top: -12px; right: -5px; background: linear-gradient(45deg, #fbbf24, #f59e0b); color: #000; font-size: 10px; font-weight: 800; padding: 3px 10px; border-radius: 12px; box-shadow: 0 0 12px rgba(251, 191, 36, 0.8); z-index: 10; display: flex; align-items: center; gap: 4px; animation: pulseBadge 2s infinite; pointer-events: none; }
+        .sms-btn-wrapper .btn-add { width: 100%; justify-content: center; background: #10b981; padding-top: 14px; padding-bottom: 14px;}
+        .fast-badge { position: absolute; top: -12px; right: -5px; background: linear-gradient(45deg, #fbbf24, #f59e0b); color: #000; font-size: 10px; font-weight: 800; padding: 3px 10px; border-radius: 12px; box-shadow: 0 0 15px rgba(251, 191, 36, 0.8); z-index: 10; display: flex; align-items: center; gap: 4px; animation: pulseBadge 2s infinite; pointer-events: none; }
         .fast-badge i { font-size: 10px; color: #000; margin: 0; animation: none; }
-        @keyframes pulseBadge { 0% { transform: scale(1); box-shadow: 0 0 10px rgba(251, 191, 36, 0.6); } 50% { transform: scale(1.08); box-shadow: 0 0 20px rgba(251, 191, 36, 0.9); } 100% { transform: scale(1); box-shadow: 0 0 10px rgba(251, 191, 36, 0.6); } }
+        @keyframes pulseBadge { 0% { transform: scale(1); box-shadow: 0 0 10px rgba(251, 191, 36, 0.6); } 50% { transform: scale(1.08); box-shadow: 0 0 25px rgba(251, 191, 36, 0.9); } 100% { transform: scale(1); box-shadow: 0 0 10px rgba(251, 191, 36, 0.6); } }
         
-        .contact-grid { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
-        .contact-item { display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--surface); border-radius: 12px; border: 1px solid var(--border); }
-        .contact-item i { font-size: 20px; color: var(--accent); width: 24px; text-align: center; }
+        .contact-grid { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
+        .contact-item { display: flex; align-items: center; gap: 15px; padding: 15px; background: var(--surface); border-radius: 16px; border: 1px solid var(--border); }
+        .contact-item i { font-size: 24px; color: var(--accent); width: 30px; text-align: center; }
         .contact-item div { flex: 1; }
-        .contact-item .label { font-size: 11px; color: var(--text-muted); display: block; }
-        .contact-item .value { font-weight: 700; font-size: 15px; }
+        .contact-item .label { font-size: 12px; color: var(--text-muted); display: block; }
+        .contact-item .value { font-weight: 800; font-size: 16px; }
         .contact-actions { display: flex; gap: 8px; }
-        .contact-actions a { width: 36px; height: 36px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-size: 14px; transition: 0.2s; }
-        .contact-actions a:hover { background: var(--primary-hover); }
+        .contact-actions a { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-size: 16px; transition: 0.3s; }
+        .contact-actions a:hover { background: var(--primary-hover); transform: scale(1.1); }
 
         @media (max-width: 767px) {
             .search-box-mini { width: 100%; flex: 1; }
-            .search-box-mini.expanded { position: absolute; top: -5px; left: 0; right: 0; width: 100%; padding: 5px; background: var(--surface); border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.5); z-index: 105; }
+            .search-box-mini.expanded { position: absolute; top: -5px; left: 0; right: 0; width: 100%; padding: 6px; background: var(--surface); border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.5); z-index: 105; }
             .search-box-mini.expanded input { font-size: 14px; padding: 10px 15px 10px 40px; background: var(--bg);}
             .search-box-mini.expanded i { left: 15px; font-size: 16px; }
-            .upload-title-main { font-size: clamp(11px, 3.5vw, 20px); } /* Ensure it fits on mobile */
         }
 
         @media (min-width: 768px) {
@@ -409,7 +400,7 @@
             .nav-links { display: flex; }
             .bottom-nav { display: none; }
             .header-actions { flex: 0; }
-            .hero { padding: 40px 20px 60px; }
+            .hero { padding: 50px 20px 70px; }
             .monitor { width: 85%; }
             .keyboard { width: 80%; padding: 25px 20px; }
             .support-widget { bottom: 30px; }
@@ -418,8 +409,11 @@
 </head>
 <body>
 
+    <!-- Particle Background Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
     <header>
-        <div class="logo"><i class="fa-solid fa-bolt"></i> کاریزما نت</div>
+        <a href="#top" class="logo"><i class="fa-solid fa-bolt"></i> کاریزما نت</a>
         <nav class="nav-links">
             <a href="#services">خدمات</a>
             <a href="#why-us">چرا ما؟</a>
@@ -431,7 +425,7 @@
                 <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
                 <input type="text" id="searchInput" placeholder="جستجو...">
             </div>
-            <button class="btn-icon" onclick="openUserPanel()" title="پنل کاربری (سفارشات من)"><i class="fa-solid fa-user"></i></button>
+            <button class="btn-icon" onclick="openUserPanel()" title="پنل کاربری"><i class="fa-solid fa-user"></i></button>
             <button class="btn-icon" onclick="toggleTheme()" title="تغییر تم"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
             <button class="btn-icon" onclick="toggleCart()" title="سبد خرید">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -440,13 +434,13 @@
         </div>
     </header>
 
-    <div class="hero">
-        <div class="hero-badge">
+    <div class="hero" id="top">
+        <div class="hero-badge reveal">
             <i class="fa-solid fa-rocket"></i> 
             کافی‌نت آنلاین: نسل جدید خدمات آنلاین در ایران
         </div>
         
-        <div class="monitor-wrapper">
+        <div class="monitor-wrapper reveal">
             <div class="monitor">
                 <div class="monitor-content">
                     <h1><span class="cyan-text">کافی‌نت، در جیب شما؛</span><br>سریع، مطمئن، پیگیری اختصاصی</h1>
@@ -464,50 +458,50 @@
     </div>
 
     <section id="why-us">
-        <h2 class="section-title"><i class="fa-solid fa-star"></i> چرا کاریزما نت؟</h2>
-        <div class="grid-3">
-            <div class="glass-card">
+        <h2 class="section-title reveal"><i class="fa-solid fa-star"></i> چرا کاریزما نت؟</h2>
+        <div class="bento-grid">
+            <div class="bento-item reveal">
                 <i class="fa-solid fa-bolt"></i>
-                <h3>سرعت بالا</h3>
-                <p>انجام سریع امور اداری و ثبت‌نام‌ها بدون معطلی.</p>
+                <div>
+                    <h3>سرعت بالا</h3>
+                    <p>انجام سریع امور اداری و ثبت‌نام‌ها بدون معطلی، همراه با پیگیری لحظه‌ای.</p>
+                </div>
             </div>
-            <div class="glass-card">
+            <div class="bento-item reveal" style="transition-delay: 0.1s;">
                 <i class="fa-solid fa-shield-halved"></i>
                 <h3>امنیت اطلاعات</h3>
                 <p>اطلاعات شخصی و مدارک شما با بالاترین استاندارد محافظت می‌شود.</p>
             </div>
-            <div class="glass-card">
+            <div class="bento-item reveal" style="transition-delay: 0.2s;">
                 <i class="fa-solid fa-headset"></i>
                 <h3>پشتیبانی واقعی</h3>
                 <p>پاسخگویی از طریق تمام پیام‌رسان‌ها و تماس تلفنی.</p>
             </div>
-            <div class="glass-card">
+            <div class="bento-item reveal" style="transition-delay: 0.3s;">
                 <i class="fa-solid fa-magnifying-glass-chart"></i>
                 <h3>پیگیری اختصاصی</h3>
-                <p>کد رهگیری ۵ رقمی برای تمام سفارشات جهت پیگیری دقیق.</p>
+                <p>کد رهگیری ۵ رقمی برای تمام سفارشات جهت پیگیری دقیق شما.</p>
             </div>
         </div>
     </section>
 
     <section id="services">
-        <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> خدمات و تعرفه‌ها</h2>
-        <div class="tabs" id="tabs-container"></div>
+        <h2 class="section-title reveal"><i class="fa-solid fa-layer-group"></i> خدمات و تعرفه‌ها</h2>
+        <div class="tabs reveal" id="tabs-container"></div>
         <div class="services-grid" id="services-grid"></div>
     </section>
 
-    <!-- Removed Testimonials Section -->
-
     <section id="links">
-        <h2 class="section-title"><i class="fa-solid fa-link"></i> سایت‌های مهم (رایگان)</h2>
-        <div id="links-container"></div>
+        <h2 class="section-title reveal"><i class="fa-solid fa-link"></i> سایت‌های مهم (رایگان)</h2>
+        <div id="links-container" class="reveal"></div>
     </section>
 
     <section id="upload">
-        <div class="upload-title-main">
+        <div class="upload-title-main reveal">
             <i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت، ویرایش و تدوین
         </div>
         
-        <div class="action-card" onclick="openModal('upload-modal')">
+        <div class="action-card reveal" onclick="openModal('upload-modal')">
             <i class="fa-solid fa-file-pdf"></i>
             <h3>فایل خود را برای ما ارسال کنید</h3>
             <p>کلیک کنید و از طریق پیام‌رسان‌های زیر فایل خود را بفرستید تا آماده‌سازی شود.</p>
@@ -515,8 +509,8 @@
     </section>
 
     <section id="contact-section">
-        <h2 class="section-title"><i class="fa-solid fa-headset"></i> ارتباط با ما</h2>
-        <div class="action-card" onclick="openModal('contact-modal')">
+        <h2 class="section-title reveal"><i class="fa-solid fa-headset"></i> ارتباط با ما</h2>
+        <div class="action-card reveal" onclick="openModal('contact-modal')">
             <i class="fa-solid fa-address-book"></i>
             <h3>راه‌های ارتباطی با کاریزما نت</h3>
             <p>جهت تماس تلفنی، ارسال پیام یا مشاهده آدرس ما کلیک کنید.</p>
@@ -524,37 +518,33 @@
     </section>
 
     <section id="faq">
-        <h2 class="section-title"><i class="fa-solid fa-circle-question"></i> سوالات متداول</h2>
+        <h2 class="section-title reveal"><i class="fa-solid fa-circle-question"></i> سوالات متداول</h2>
         
-        <div class="faq-item">
+        <div class="faq-item reveal">
             <div class="faq-q" onclick="toggleFaq(this)">آیکون کاربر (سفارشات من) در بالای سایت چه کاربردی دارد؟ <i class="fa-solid fa-chevron-down"></i></div>
             <div class="faq-a">
-                با کلیک روی این آیکون (شکل انسان)، می‌توانید لیست تمام سفارش‌هایی که ثبت کرده‌اید را مشاهده کنید. در این بخش، کد پیگیری ۵ رقمی، تاریخ ثبت و مبلغ هر سفارش نمایش داده می‌شود. این پنل به شما کمک می‌کند تا سابقه درخواست‌های خود را در هر زمان بررسی کنید.
+                با کلیک روی این آیکون (شکل انسان)، می‌توانید لیست تمام سفارش‌هایی که ثبت کرده‌اید را مشاهده کنید. در این بخش، کد پیگیری ۵ رقمی، تاریخ ثبت و مبلغ هر سفارش نمایش داده می‌شود.
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
             <div class="faq-q" onclick="toggleFaq(this)">چگونه فایل خود را برای پرینت ارسال کنم؟ <i class="fa-solid fa-chevron-down"></i></div>
             <div class="faq-a">
                 ۱. از بخش «ارسال فایل جهت پرینت» در همین صفحه، روی باکس کلیک کنید.<br>
                 ۲. پیام‌رسان مورد نظر خود (ایتا، تلگرام، روبیکا، بله یا شاد) را انتخاب کنید.<br>
-                ۳. فایل خود را (PDF، Word یا عکس) برای ما ارسال کنید.<br>
+                ۳. فایل خود را برای ما ارسال کنید.<br>
                 ۴. پس از بررسی توسط ما، هزینه به شما اعلام و فایل شما جهت پرینت آماده می‌شود. (توجه: تحویل پرینت حتماً باید حضوری در بیرجند انجام شود).
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
             <div class="faq-q" onclick="toggleFaq(this)">چطور مطمئن بشم کارم انجام میشه؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">تمامی درخواست‌ها دارای کد رهگیری ۵ رقمی هستند. پس از پرداخت و انجام کار، فایل یا نتیجه نهایی از طریق راه‌های ارتباطی برای شما ارسال می‌شود.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">هزینه خدمات چطور محاسبه می‌شود؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">قیمت‌ها در لیست خدمات مشخص شده‌اند (با احتساب تخفیف). برای خدمات دارای تعداد (مثل پرینت یا تایپ)، تعداد را در سبد خرید مشخص می‌کنید و مبلغ به صورت خودکار محاسبه می‌شود.</div>
+            <div class="faq-a">تمامی درخواست‌ها دارای کد رهگیری ۵ رقمی هستند. پس از پرداخت و انجام کار، فایل یا نتیجه نهایی برای شما ارسال می‌شود.</div>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 30px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px;">
-        © کاریزما نت ۱۴۰۳ - طراحی شده با <i class="fa-solid fa-heart" style="color: var(--danger);"></i> برای شما
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px;">
+        © کاریزما نت ۱۴۰۳ - طراحی شده با <i class="fa-solid fa-heart" style="color: var(--danger); animation: pulseWidget 2s infinite;"></i> برای شما
     </footer>
 
     <div class="support-widget" onclick="openModal('contact-modal')" title="ارتباط با ما">
@@ -595,42 +585,42 @@
             <div class="form-group"><label>توضیحات (اختیاری)</label><textarea id="chk-desc" rows="2" placeholder="اگر توضیح خاصی دارید بنویسید..."></textarea></div>
             <div style="display: flex; gap: 10px; margin-top: 20px;">
                 <button class="btn-checkout" onclick="submitOrder()">ثبت اطلاعات و مشاهده فاکتور <i class="fa-solid fa-arrow-left"></i></button>
-                <button class="btn-add" style="background: var(--surface); color: var(--text-main); padding: 12px;" onclick="document.getElementById('checkout-modal').close()">انصراف</button>
+                <button class="btn-add" style="background: var(--surface); color: var(--text-main); padding: 14px;" onclick="document.getElementById('checkout-modal').close()">انصراف</button>
             </div>
         </div>
 
         <div id="chk-step2" style="display: none;">
             <div style="text-align: center; margin-bottom: 20px;">
-                <i class="fa-solid fa-circle-check" style="font-size: 50px; color: var(--success); margin-bottom: 10px;"></i>
+                <i class="fa-solid fa-circle-check" style="font-size: 60px; color: var(--success); margin-bottom: 15px;"></i>
                 <h2>فاکتور صادر شد!</h2>
-                <div style="background: var(--surface); border: 1px solid var(--border); padding: 10px; border-radius: 10px; margin-top: 10px; display: inline-block;">
-                    <span style="font-size: 13px; color: var(--text-muted);">کد پیگیری شما (در پنل کاربری نیز ذخیره شد):</span>
-                    <b id="chk-order-code" style="color: var(--accent); font-size: 18px; letter-spacing: 2px;"></b>
+                <div style="background: var(--surface); border: 1px solid var(--border); padding: 12px; border-radius: 12px; margin-top: 10px; display: inline-block;">
+                    <span style="font-size: 13px; color: var(--text-muted);">کد پیگیری شما:</span>
+                    <b id="chk-order-code" style="color: var(--accent); font-size: 20px; letter-spacing: 3px;"></b>
                 </div>
-                <p style="color: var(--text-muted); font-size: 13px; margin-top: 10px;">مبلغ قابل پرداخت: <b id="chk-total-price" style="color: var(--accent); font-size: 16px;"></b> تومان</p>
+                <p style="color: var(--text-muted); font-size: 14px; margin-top: 15px;">مبلغ قابل پرداخت: <b id="chk-total-price" style="color: var(--accent); font-size: 18px;"></b> تومان</p>
             </div>
 
-            <div class="box" style="background: var(--surface-glass); border: 1px solid var(--border); border-radius: 12px; padding: 15px; margin-bottom: 20px;">
-                <h4 style="margin-bottom: 10px; font-size: 14px;">۱. ارسال خلاصه سفارش به مدیر:</h4>
-                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 10px;">لطفاً برای اطلاع مدیر از ثبت سفارش، یکی از روش‌های زیر را انتخاب کنید:</p>
-                <div style="display: flex; gap: 10px; align-items: flex-start;">
+            <div class="box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px; margin-bottom: 20px;">
+                <h4 style="margin-bottom: 12px; font-size: 15px;">۱. ارسال خلاصه سفارش به مدیر:</h4>
+                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">لطفاً برای اطلاع مدیر از ثبت سفارش، یکی از روش‌های زیر را انتخاب کنید:</p>
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
                     <div class="sms-btn-wrapper">
                         <div class="fast-badge"><i class="fa-solid fa-bolt"></i> روش سریع‌تر</div>
                         <a href="#" id="btn-sms-admin" class="btn-add"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
                     </div>
-                    <a href="#" id="btn-tg-admin" class="btn-add" style="flex: 1; justify-content: center; background: #0088cc; padding-top: 12px; padding-bottom: 12px;"><i class="fa-brands fa-telegram"></i> تلگرام</a>
+                    <a href="#" id="btn-tg-admin" class="btn-add" style="flex: 1; justify-content: center; background: #0088cc; padding-top: 14px; padding-bottom: 14px;"><i class="fa-brands fa-telegram"></i> تلگرام</a>
                 </div>
             </div>
 
             <div class="payment-box">
-                <h4 style="margin-bottom: 5px; font-size: 14px;">۲. واریز مبلغ به شماره کارت:</h4>
+                <h4 style="margin-bottom: 8px; font-size: 15px;">۲. واریز مبلغ به شماره کارت:</h4>
                 <div class="card-number" id="card-number-text">6219 8619 4552 4204</div>
                 <div class="owner-name">به نام: <b>نرجس ملائی</b></div>
-                <button onclick="copyCardNumber()" style="margin-top: 10px; background: var(--primary); color: #fff; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; font-size: 12px;"><i class="fa-solid fa-copy"></i> کپی شماره کارت</button>
+                <button onclick="copyCardNumber()" style="margin-top: 15px; background: var(--primary); color: #fff; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-size: 13px; font-weight: 700; transition: 0.3s; box-shadow: 0 0 10px var(--glow);"><i class="fa-solid fa-copy"></i> کپی شماره کارت</button>
             </div>
 
-            <div class="box" style="background: var(--surface-glass); border: 1px solid var(--border); border-radius: 12px; padding: 15px; text-align: center;">
-                <h4 style="margin-bottom: 10px; font-size: 14px;">۳. ارسال رسید پرداخت:</h4>
+            <div class="box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px; text-align: center;">
+                <h4 style="margin-bottom: 12px; font-size: 15px;">۳. ارسال رسید پرداخت:</h4>
                 <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">پس از واریز، تصویر رسید را از طریق یکی از راه‌های زیر ارسال کنید:</p>
                 <div class="receipt-grid">
                     <a href="sms:09960062320" class="receipt-opt">
@@ -660,12 +650,12 @@
                 </div>
             </div>
             
-            <button class="btn-add" style="width: 100%; justify-content: center; margin-top: 15px; background: var(--surface);" onclick="location.reload()">بستن و بازگشت</button>
+            <button class="btn-add" style="width: 100%; justify-content: center; margin-top: 20px; background: var(--surface); padding: 14px;" onclick="location.reload()">بستن و بازگشت</button>
         </div>
     </dialog>
 
     <dialog id="contact-modal">
-        <h2 style="margin-bottom: 20px; text-align: center;"><i class="fa-solid fa-address-card"></i> ارتباط با ما</h2>
+        <h2 style="margin-bottom: 25px; text-align: center;"><i class="fa-solid fa-address-card"></i> ارتباط با ما</h2>
         <div class="contact-grid">
             <div class="contact-item">
                 <i class="fa-solid fa-phone"></i>
@@ -690,14 +680,14 @@
                 <div><span class="label">آدرس</span><span class="value" style="font-size: 13px;">بیرجند، شهرک فرهیختگان، نبش میدان دانش، کافی‌نت کاریزما</span></div>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 20px;">
-            <button class="btn-add" style="justify-content: center; padding: 10px 20px;" onclick="document.getElementById('contact-modal').close()">بستن</button>
+        <div style="text-align: center; margin-top: 25px;">
+            <button class="btn-add" style="justify-content: center; padding: 12px 25px;" onclick="document.getElementById('contact-modal').close()">بستن</button>
         </div>
     </dialog>
 
     <dialog id="upload-modal">
-        <h2 style="margin-bottom: 10px; text-align: center;"><i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت</h2>
-        <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">پیام‌رسان مورد نظر خود را انتخاب کنید:</p>
+        <h2 style="margin-bottom: 15px; text-align: center;"><i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت</h2>
+        <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">پیام‌رسان مورد نظر خود را انتخاب کنید:</p>
         
         <div class="upload-options">
             <div class="upload-row">
@@ -726,12 +716,11 @@
             </div>
         </div>
         
-        <div style="text-align: center; margin-top: 25px;">
-            <button class="btn-add" style="justify-content: center; padding: 10px 20px; background: var(--surface); color: var(--text-main);" onclick="document.getElementById('upload-modal').close()">بستن</button>
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="btn-add" style="justify-content: center; padding: 12px 25px; background: var(--surface); color: var(--text-main);" onclick="document.getElementById('upload-modal').close()">بستن</button>
         </div>
     </dialog>
 
-    <!-- Bottom Navigation -->
     <div class="bottom-nav">
         <a href="#services" class="bn-item active"><i class="fa-solid fa-house"></i> خدمات</a>
         <a href="#links" class="bn-item"><i class="fa-solid fa-link"></i> سایت‌ها</a>
@@ -740,9 +729,99 @@
     </div>
 
     <script>
+        // --- 1. Particle Background Logic ---
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 2 + 1;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = document.documentElement.getAttribute('data-theme') === 'dark' ? 'rgba(99, 102, 241, 0.4)' : 'rgba(99, 102, 241, 0.2)';
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 60; i++) particles.push(new Particle());
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            // Draw lines between close particles
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = document.documentElement.getAttribute('data-theme') === 'dark' ? `rgba(99, 102, 241, ${0.15 - dist/800})` : `rgba(99, 102, 241, ${0.1 - dist/1200})`;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // --- 2. Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { root: null, threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // --- 3. Micro-interactions: Ripple Effect ---
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.btn-add') || e.target.closest('.btn-checkout')) {
+                const btn = e.target.closest('.btn-add') || e.target.closest('.btn-checkout');
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+                
+                btn.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            }
+        });
+
+        // --- App Logic ---
         const D = {
             "s": [
-                // --- امور اصناف و مجوزها ---
                 ["امور اصناف و مجوزها", "ورود به سامانه ملی مجوزها و ثبت نام اولیه", 180000, 167000],
                 ["امور اصناف و مجوزها", "ورود به سامانه نوین اصناف و صدور/تمدید جواز (حقیقی)", 360000, 335000],
                 ["امور اصناف و مجوزها", "ثبت هر مباشر یا شریک در سامانه نوین اصناف", 150000, 140000],
@@ -753,13 +832,9 @@
                 ["امور اصناف و مجوزها", "درخواست شناسه یکتای مجوزهای قدیمی", 200000, 186000],
                 ["امور اصناف و مجوزها", "ثبت نام سامانه سپتام (اسکن و پرداخت مجزا)", 450000, 419000],
                 ["امور اصناف و مجوزها", "ثبت نام سامانه شمس (اسکن مجزا)", 720000, 670000],
-
-                // --- پلیس و امنیت ---
                 ["پلیس و امنیت", "ثبت درخواست پلیس اماکن برای مجوز", 240000, 223000],
                 ["پلیس و امنیت", "ثبت درخواست مجوز ماه رمضان در پلیس اماکن", 280000, 260000],
                 ["پلیس و امنیت", "استعلامات سایت پلیس من", 140000, 130000],
-
-                // --- امور مالیاتی و حسابداری ---
                 ["امور مالیاتی و حسابداری", "ثبت نام کد اقتصادی (پرینت مجزا)", 500000, 465000],
                 ["امور مالیاتی و حسابداری", "ویرایش کد اقتصادی به ازای هر بند", 40000, 36000],
                 ["امور مالیاتی و حسابداری", "دریافت ابلاغیه مالیاتی تا یک ابلاغیه", 60000, 54000],
@@ -773,8 +848,6 @@
                 ["امور مالیاتی و حسابداری", "ارسال لیست مالیات حقوق کارکنان تا ۴ نفر", 350000, 326000],
                 ["امور مالیاتی و حسابداری", "استعلام و پرداخت مالیات خودروهای لوکس", 190000, 177000],
                 ["امور مالیاتی و حسابداری", "استعلام و پرداخت مالیات خانه‌های لوکس", 190000, 177000],
-
-                // --- بیمه و تامین اجتماعی ---
                 ["بیمه و تامین اجتماعی", "ثبت نام / تمدید بیمه ورزشی", 150000, 140000],
                 ["بیمه و تامین اجتماعی", "اعتراض به گزارش بازرسی در سامانه تامین اجتماعی", 250000, 233000],
                 ["بیمه و تامین اجتماعی", "نام‌نویسی غیرحضوری بیمه شده برای کارفرمایان", 150000, 140000],
@@ -790,24 +863,18 @@
                 ["بیمه و تامین اجتماعی", "شکایت از کارفرما به اداره کار (اسکن مجزا)", 400000, 372000],
                 ["بیمه و تامین اجتماعی", "ثبت بیمه بیکاری (اسکن مجزا)", 50000, 45000],
                 ["بیمه و تامین اجتماعی", "تمدید یا ثبت نام بیمه سلامت", 350000, 326000],
-
-                // --- املاک و مسکن ---
                 ["املاک و مسکن", "ساماندهی املاک در سامانه ملی املاک و اسکان", 290000, 270000],
                 ["املاک و مسکن", "ثبت نام مسکن ملی", 290000, 270000],
                 ["املاک و مسکن", "دریافت تاییدیه (گواهی) کدپستی", 150000, 140000],
                 ["املاک و مسکن", "جستجوی کدپستی موجود در سایت پست", 180000, 167000],
                 ["املاک و مسکن", "درخواست صدور کد پستی جدید", 240000, 223000],
                 ["املاک و مسکن", "ثبت نام سند ملکی در سایت sabetmelk.ssaa.ir", 930000, 865000],
-
-                // --- قضایی و انتظامی ---
                 ["قضایی و انتظامی", "دریافت هر ابلاغیه قضایی (پرینت مجزا)", 150000, 140000],
                 ["قضایی و انتظامی", "نوبت دهی قضایی", 450000, 419000],
                 ["قضایی و انتظامی", "ثبت نام ثنا با احراز هویت (حقیقی)", 200000, 186000],
                 ["قضایی و انتظامی", "درخواست گواهی عدم سوء پیشینه", 72000, 65000],
                 ["قضایی و انتظامی", "استعلام ثبت نام ثنا با یک پرینت", 50000, 45000],
                 ["قضایی و انتظامی", "بازیابی رمز شخصی ثنا", 8000, 7200],
-
-                // --- خدمات آموزشی و دانشگاهی ---
                 ["خدمات آموزشی و دانشگاهی", "انتخاب رشته کارشناسی / ارشد / دکترا", 440000, 409000],
                 ["خدمات آموزشی و دانشگاهی", "انتخاب واحد دانشگاه آزاد (تا یک درس)", 400000, 372000],
                 ["خدمات آموزشی و دانشگاهی", "انتخاب واحد پیام نور / سراسری / علمی کاربردی", 240000, 223000],
@@ -821,8 +888,6 @@
                 ["خدمات آموزشی و دانشگاهی", "ثبت نام آزمون مدارس تیزهوشان/نمونه دولتی", 240000, 223000],
                 ["خدمات آموزشی و دانشگاهی", "پیش ثبت نام مدارس در سایت my.medu.ir", 300000, 279000],
                 ["خدمات آموزشی و دانشگاهی", "ثبت نام در سامانه فنی حرفه ای (کارگران ساختمانی و...)", 480000, 446000],
-
-                // --- امور تخصصی ---
                 ["امور تخصصی", "ثبت نام در سامانه تخصصی پزشکان", 530000, 493000],
                 ["امور تخصصی", "تکمیل اطلاعات سامانه جامع آموزش مداوم پزشکی", 450000, 419000],
                 ["امور تخصصی", "سامانه پاتمک", 680000, 632000],
@@ -839,8 +904,6 @@
                 ["امور تخصصی", "ثبت مناقصه در سامانه ستاد ایران", 1200000, 1116000],
                 ["امور تخصصی", "امضا با توکن در سایت ثبت من", 320000, 298000],
                 ["امور تخصصی", "راه اندازی توکن", 800000, 744000],
-
-                // --- خدمات عمومی و اداری ---
                 ["خدمات عمومی و اداری", "ثبت نام اینترنتی تا حداکثر یک صفحه", 380000, 353000],
                 ["خدمات عمومی و اداری", "به ازای هر صفحه ثبت نام اضافه در اینترنت", 60000, 54000],
                 ["خدمات عمومی و اداری", "درخواست احراز نشانی بر اساس کدپستی", 180000, 167000],
@@ -861,8 +924,6 @@
                 ["خدمات عمومی و اداری", "ثبت نام در سامانه همیاب ۲۴", 240000, 223000],
                 ["خدمات عمومی و اداری", "پرداخت الکترونیکی در سامانه‌ها از کارت مشتری", 65000, 59000],
                 ["خدمات عمومی و اداری", "پرداخت قبوض با کارت عضو شتاب مشتری", 240000, 223000],
-
-                // --- تایپ، اسکن و پرینت ---
                 ["تایپ، اسکن و پرینت", "تایپ ساده فارسی (هر صفحه)", 80000, 72000],
                 ["تایپ، اسکن و پرینت", "تایپ انگلیسی (هر صفحه)", 190000, 177000],
                 ["تایپ، اسکن و پرینت", "تایپ تیتر، مشکی، همراه با یک برگ پرینت", 50000, 45000],
@@ -1070,7 +1131,7 @@
                 const wmIcon = getWatermarkIcon(item[1]);
 
                 return `
-                <div class="svc-card ${matchClass}">
+                <div class="svc-card reveal ${matchClass}">
                     <i class="fa-solid ${wmIcon} svc-watermark"></i>
                     <div class="svc-title">${item[1]}</div>
                     <div class="svc-prices"><span class="svc-old">${fa(item[2])}</span><span class="svc-new">${fa(item[3])} تومان</span></div>
@@ -1080,6 +1141,9 @@
                     </div>
                 </div>`;
             }).join('');
+            
+            // Re-trigger observer for newly created elements
+            document.querySelectorAll('.svc-card.reveal').forEach(el => revealObserver.observe(el));
         }
 
         function renderCategorizedLinks(searchQuery = '') {
@@ -1127,7 +1191,7 @@
                     const item = cart[idx];
                     const itemTotal = item.price * item.qty;
                     total += itemTotal; count += item.qty;
-                    return `<div class="cart-item"><div class="cart-item-info"><h4>${item.title}</h4><span>${fa(item.qty)} × ${fa(item.price)} = ${fa(itemTotal)} تومان</span></div><button class="btn-icon" style="width: 30px; height: 30px; font-size: 12px; color: var(--danger);" onclick="addToCart(${idx})"><i class="fa-solid fa-trash"></i></button></div>`;
+                    return `<div class="cart-item"><div class="cart-item-info"><h4>${item.title}</h4><span>${fa(item.qty)} × ${fa(item.price)} = ${fa(itemTotal)} تومان</span></div><button class="btn-icon" style="width: 32px; height: 32px; font-size: 14px; color: var(--danger);" onclick="addToCart(${idx})"><i class="fa-solid fa-trash"></i></button></div>`;
                 }).join('');
                 badge.innerText = fa(count);
             }
@@ -1156,7 +1220,7 @@
             const orders = JSON.parse(localStorage.getItem('karizma_orders')) || [];
             
             if(orders.length === 0) {
-                list.innerHTML = `<div class="empty-cart" style="margin-top:10px;"><i class="fa-solid fa-box-open"></i><br>شما هنوز سفارشی ثبت نکرده‌اید.</div>`;
+                list.innerHTML = `<div class="empty-cart" style="margin-top:20px;"><i class="fa-solid fa-box-open"></i><br>شما هنوز سفارشی ثبت نکرده‌اید.</div>`;
             } else {
                 list.innerHTML = orders.reverse().map(order => `
                     <div class="user-order-card">

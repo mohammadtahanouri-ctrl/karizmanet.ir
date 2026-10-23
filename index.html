@@ -66,6 +66,7 @@
             --screen-bg: #050914;
             --keyboard-bg: rgba(15, 23, 42, 0.6);
             --top-glow: rgba(14, 165, 233, 0.6);
+            --design-glow: rgba(236, 72, 153, 0.6);
         }
         [data-theme="light"] {
             --bg: #f1f5f9;
@@ -81,6 +82,7 @@
             --screen-bg: #e2e8f0;
             --keyboard-bg: rgba(255, 255, 255, 0.8);
             --top-glow: rgba(14, 165, 233, 0.3);
+            --design-glow: rgba(236, 72, 153, 0.3);
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Vazirmatn', sans-serif; -webkit-tap-highlight-color: transparent; }
@@ -215,6 +217,18 @@
         .top-svc:hover {
             box-shadow: 0 0 25px var(--top-glow), inset 0 0 15px rgba(14, 165, 233, 0.2);
         }
+
+        /* Design Service Special Style */
+        .design-svc {
+            border: 1px solid #ec4899 !important;
+            box-shadow: 0 0 15px var(--design-glow), inset 0 0 10px rgba(236, 72, 153, 0.1);
+            background: rgba(236, 72, 153, 0.05);
+        }
+        .design-svc:hover {
+            box-shadow: 0 0 25px var(--design-glow), inset 0 0 15px rgba(236, 72, 153, 0.2);
+        }
+        .design-svc .btn-add { background: #ec4899; }
+        .design-svc .btn-add:hover { background: #db2777; }
 
         .svc-watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); font-size: 80px; opacity: 0.05; z-index: 0; pointer-events: none; color: var(--primary); transition: 0.3s; }
         .svc-card:hover .svc-watermark { opacity: 0.12; transform: translate(-50%, -50%) rotate(0deg) scale(1.1); }
@@ -470,8 +484,8 @@
     <section id="services">
         <h2 class="section-title reveal"><i class="fa-solid fa-layer-group"></i> خدمات و تعرفه‌ها</h2>
         
-        <!-- Top 12 Services -->
-        <div class="top-services-title reveal"><i class="fa-solid fa-fire"></i> ۱۲ خدمت پرکاربرد</div>
+        <!-- Top 14 Services -->
+        <div class="top-services-title reveal"><i class="fa-solid fa-fire"></i> ۱۴ خدمت پرکاربرد</div>
         <div class="services-grid reveal" id="top-services-grid" style="margin-bottom: 30px;"></div>
 
         <div class="category-trigger-wrap reveal">
@@ -745,36 +759,24 @@
         // --- App Data ---
         const D = {
             "s": [
-                // --- 12 خدمات پرکاربرد (First items for top 12) ---
+                // --- 14 خدمات پرکاربرد (First items for top 14) ---
+                ["پلیس +۱۰", "دریافت معافیت تحصیلی", 250000, 200000],
                 ["خرید اینترنتی", "ثبت‌نام و خرید محصولات ایران خودرو و سایپا", 500000, 500000],
-                ["خرید اینترنتی", "ثبت‌نام و خرید اینترنتی خودرو (سایر شرکت‌ها)", 550000, 550000],
                 ["قضایی و انتظامی", "ثبت‌نام ثنا + احراز هویت", 198000, 150000],
                 ["قضایی و انتظامی", "دریافت ابلاغیه قضایی", 50000, 45000],
                 ["پلیس +۱۰", "ثبت‌نام سخا و احراز نشانی", 590000, 350000],
                 ["پلیس +۱۰", "نوبت‌گیری تعویض پلاک خودرو", 198000, 180000],
-                ["پلیس +۱۰", "دریافت معافیت تحصیلی", 250000, 200000],
                 ["پلیس +۱۰", "ثبت‌نام کارت سوخت", 150000, 120000],
                 ["خدمات آموزشی و دانشگاهی", "ثبت‌نام کنکور و انتخاب رشته", 400000, 300000],
                 ["سجام و بورس", "ثبت‌نام سجام", 198000, 150000],
                 ["خدمات عمومی و اداری", "دریافت حکم و فیش حقوقی", 80000, 60000],
                 ["خدمات عمومی و اداری", "دریافت گواهی کسر از حقوق", 120000, 120000],
+                ["پلیس +۱۰", "تاییدیه تحصیلی", 205000, 185000],
+                ["بیمه و تامین اجتماعی", "دریافت سوابق بیمه", 60000, 55000],
+                ["طراحی سایت", "طراحی سایت (توافقی)", 0, 0], // Index 13
 
-                // --- سایر خدمات آموزشی و دانشگاهی ---
-                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام مدارس نمونه و تیزهوشان", 250000, 240000],
-                ["خدمات آموزشی و دانشگاهی", "پیش ثبت‌نام مدرسه", 320000, 300000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام کتاب درسی", 100000, 90000],
-                ["خدمات آموزشی و دانشگاهی", "دریافت کارنامه تحصیلی", 60000, 50000],
-                ["خدمات آموزشی و دانشگاهی", "دریافت کارنامه کنکور", 60000, 50000],
-                ["خدمات آموزشی و دانشگاهی", "ترمیم معدل", 450000, 400000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت نمرات امتحانات نهایی", 220000, 200000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام امتحانات نهایی", 220000, 200000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام غیرحضوری دانشگاه آزاد", 365000, 330000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام غیرحضوری دانشگاه پیام نور", 400000, 360000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام غیرحضوری دانشگاه دولتی", 525000, 475000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام اولیه سامانه سجاد", 295000, 265000],
-                ["خدمات آموزشی و دانشگاهی", "ثبت هر درخواست در سامانه سجاد", 235000, 210000],
-                ["خدمات آموزشی و دانشگاهی", "تأییدیه تحصیلی", 205000, 185000],
-
+                // --- Main Services (Filtered out of top 14) ---
+                
                 // --- مالیات و کسب و کار ---
                 ["مالیات و کسب‌وکار", "ثبت‌نام کد اقتصادی (حقیقی)", 500000, 465000],
                 ["مالیات و کسب‌وکار", "حذف پروفایل مالیاتی", 90000, 80000],
@@ -788,18 +790,14 @@
                 ["مالیات و کسب‌وکار", "ثبت مزایده در ستاد ایران", 520000, 470000],
                 ["مالیات و کسب‌وکار", "ثبت مناقصه در ستاد ایران", 1100000, 990000],
 
-                // --- بیمه و تأمین اجتماعی ---
-                ["بیمه و تامین اجتماعی", "ثبت‌نام در سامانه تأمین اجتماعی", 105000, 95000],
-                ["بیمه و تامین اجتماعی", "دریافت فیش بیمه", 50000, 45000],
-                ["بیمه و تامین اجتماعی", "دریافت سوابق بیمه", 60000, 55000],
-                ["بیمه و تامین اجتماعی", "ارسال لیست بیمه کارگاه (تا ۳ نفر)", 200000, 180000],
-                ["بیمه و تامین اجتماعی", "ثبت‌نام / تمدید بیمه سلامت", 185000, 165000],
-                ["بیمه و تامین اجتماعی", "ثبت‌نام / تمدید بیمه ورزشی", 150000, 140000],
-                ["بیمه و تامین اجتماعی", "ثبت اعتراض یارانه", 150000, 135000],
-                ["بیمه و تامین اجتماعی", "ثبت‌نام وام بازنشستگان", 100000, 95000],
-                ["بیمه و تامین اجتماعی", "اعتراض به گزارش بازرسی در سامانه تامین اجتماعی", 250000, 233000],
-                ["بیمه و تامین اجتماعی", "نام‌نویسی غیرحضوری بیمه شده برای کارفرمایان", 150000, 140000],
-                ["بیمه و تامین اجتماعی", "استعلام بدهی کارگاه", 150000, 140000],
+                // --- امور اصناف و مجوزها ---
+                ["امور اصناف و مجوزها", "ورود به سامانه ملی مجوزها و ثبت‌نام اولیه", 180000, 167000],
+                ["امور اصناف و مجوزها", "ورود به سامانه نوین اصناف و صدور/تمدید جواز (حقیقی)", 360000, 335000],
+                ["امور اصناف و مجوزها", "ثبت هر مباشر یا شریک در سامانه نوین اصناف", 150000, 140000],
+                ["امور اصناف و مجوزها", "ثبت نام مراحل اشخاص حقوقی در سامانه نوین اصناف", 550000, 512000],
+                ["امور اصناف و مجوزها", "ثبت مجوز مشاغل خانگی", 250000, 233000],
+                ["امور اصناف و مجوزها", "ثبت نام سامانه سپتام", 450000, 419000],
+                ["امور اصناف و مجوزها", "ثبت نام سامانه شمس", 720000, 670000],
 
                 // --- املاک و مسکن ---
                 ["املاک و مسکن", "ساماندهی املاک در سامانه ملی املاک و اسکان", 290000, 270000],
@@ -807,37 +805,40 @@
                 ["املاک و مسکن", "دریافت تاییدیه (گواهی) کدپستی", 150000, 140000],
                 ["املاک و مسکن", "ثبت نام سند ملکی در سایت sabetmelk.ssaa.ir", 930000, 865000],
                 ["املاک و مسکن", "سامانه خودنویس (ثبت قرارداد اجاره)", 240000, 220000],
+
+                // --- وام و بانک ---
                 ["وام و بانک", "ثبت‌نام وام ازدواج", 165000, 150000],
                 ["وام و بانک", "ثبت‌نام وام فرزندآوری", 265000, 240000],
                 ["وام و بانک", "افتتاح حساب آنلاین بانکی", 245000, 220000],
                 ["وام و بانک", "ثبت / تأیید / انتقال چک صیادی", 75000, 70000],
                 ["وام و بانک", "صدور سفته الکترونیکی", 240000, 223000],
 
-                // --- ثبت‌نام و سامانه‌ها (عمومی) ---
-                ["ثبت‌نام و سامانه‌ها", "ثبت‌نام اینترنتی متفرقه (تا یک صفحه)", 260000, 235000],
-                ["ثبت‌نام و سامانه‌ها", "ورود به سامانه ملی مجوزها و ثبت‌نام اولیه", 180000, 167000],
-                ["ثبت‌نام و سامانه‌ها", "احراز هویت سجام", 150000, 135000],
-                ["ثبت‌نام و سامانه‌ها", "بازیابی رمز ثنا", 48500, 43500],
-                ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه همیاب ۲۴", 240000, 223000],
-                ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه ثبت‌من", 110000, 100000],
-                ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه جیکا (GICA)", 480000, 446000],
-                ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه سماح (اربعین / زیارتی)", 145000, 130000],
-                ["ثبت‌نام و سامانه‌ها", "امضای دیجیتال با توکن", 215000, 195000],
-                ["ثبت‌نام و سامانه‌ها", "ثبت‌نام سامانه میخک", 350000, 326000],
-                ["ثبت‌نام و سامانه‌ها", "استعلام و پرداخت خلافی", 85000, 75000],
-                ["ثبت‌نام و سامانه‌ها", "استعلام و پرداخت آزادراهی", 75000, 70000],
-                ["ثبت‌نام و سامانه‌ها", "ساخت / ارسال ایمیل", 65000, 60000],
-                ["ثبت‌نام و سامانه‌ها", "ارسال / دریافت فکس (هر صفحه)", 40000, 36000],
-                ["ثبت‌نام و سامانه‌ها", "بلیط قطار (هر نفر)", 180000, 160000],
-                ["ثبت‌نام و سامانه‌ها", "بلیط هواپیما (هر نفر)", 240000, 215000],
-                
-                // --- امور اصناف و مجوزها ---
-                ["امور اصناف و مجوزها", "ورود به سامانه نوین اصناف و صدور/تمدید جواز (حقیقی)", 360000, 335000],
-                ["امور اصناف و مجوزها", "ثبت هر مباشر یا شریک در سامانه نوین اصناف", 150000, 140000],
-                ["امور اصناف و مجوزها", "ثبت نام مراحل اشخاص حقوقی در سامانه نوین اصناف", 550000, 512000],
-                ["امور اصناف و مجوزها", "ثبت مجوز مشاغل خانگی", 250000, 233000],
-                ["امور اصناف و مجوزها", "ثبت نام سامانه سپتام", 450000, 419000],
-                ["امور اصناف و مجوزها", "ثبت نام سامانه شمس", 720000, 670000],
+                // --- سایر خدمات عمومی ---
+                ["خدمات عمومی و اداری", "ثبت‌نام اینترنتی متفرقه (تا یک صفحه)", 260000, 235000],
+                ["خدمات عمومی و اداری", "احراز هویت سجام", 150000, 135000],
+                ["خدمات عمومی و اداری", "بازیابی رمز ثنا", 48500, 43500],
+                ["خدمات عمومی و اداری", "ثبت‌نام سامانه همیاب ۲۴", 240000, 223000],
+                ["خدمات عمومی و اداری", "ثبت‌نام سامانه ثبت‌من", 110000, 100000],
+                ["خدمات عمومی و اداری", "ثبت‌نام سامانه جیکا (GICA)", 480000, 446000],
+                ["خدمات عمومی و اداری", "ثبت‌نام سامانه سماح (اربعین / زیارتی)", 145000, 130000],
+                ["خدمات عمومی و اداری", "امضای دیجیتال با توکن", 215000, 195000],
+                ["خدمات عمومی و اداری", "ثبت‌نام سامانه میخک", 350000, 326000],
+                ["خدمات عمومی و اداری", "استعلام و پرداخت خلافی", 85000, 75000],
+                ["خدمات عمومی و اداری", "استعلام و پرداخت آزادراهی", 75000, 70000],
+                ["خدمات عمومی و اداری", "ساخت / ارسال ایمیل", 65000, 60000],
+                ["خدمات عمومی و اداری", "ارسال / دریافت فکس (هر صفحه)", 40000, 36000],
+                ["خدمات عمومی و اداری", "بلیط قطار (هر نفر)", 180000, 160000],
+                ["خدمات عمومی و اداری", "بلیط هواپیما (هر نفر)", 240000, 215000],
+                ["خدمات عمومی و اداری", "دریافت فیش بیمه", 50000, 45000],
+                ["خدمات عمومی و اداری", "ارسال لیست بیمه کارگاه (تا ۳ نفر)", 200000, 180000],
+                ["خدمات عمومی و اداری", "ثبت‌نام / تمدید بیمه سلامت", 185000, 165000],
+                ["خدمات عمومی و اداری", "ثبت‌نام / تمدید بیمه ورزشی", 150000, 140000],
+                ["خدمات عمومی و اداری", "ثبت اعتراض یارانه", 150000, 135000],
+                ["خدمات عمومی و اداری", "ثبت‌نام وام بازنشستگان", 100000, 95000],
+                ["خدمات عمومی و اداری", "اعتراض به گزارش بازرسی در سامانه تامین اجتماعی", 250000, 233000],
+                ["خدمات عمومی و اداری", "نام‌نویسی غیرحضوری بیمه شده برای کارفرمایان", 150000, 140000],
+                ["خدمات عمومی و اداری", "استعلام بدهی کارگاه", 150000, 140000],
+                ["خدمات عمومی و اداری", "ثبت‌نام در سامانه تأمین اجتماعی", 105000, 95000],
 
                 // --- امور تخصصی ---
                 ["امور تخصصی", "ثبت نام در سامانه تخصصی پزشکان", 530000, 493000],
@@ -846,7 +847,12 @@
                 ["امور تخصصی", "عضویت نظام مهندسی", 350000, 326000],
                 ["امور تخصصی", "ثبت قرارداد، ارسال لایحه برای وکلا", 120000, 112000],
 
-                // --- تایپ، اسکن و پرینت ---
+                // --- خدمات فنی ---
+                ["خدمات فنی", "نصب ویندوز (PC و لپ‌تاپ)", 500000, 450000],
+                ["خدمات فنی", "نصب نرم‌افزار کاربردی + آنتی‌ویروس", 500000, 450000],
+                ["خدمات فنی", "عیب‌یابی نرم‌افزاری", 300000, 270000],
+
+                // --- تایپ، اسکن و پرینت (Moved to the very end) ---
                 ["تایپ، اسکن و پرینت", "تایپ ساده فارسی (هر صفحه)", 80000, 72000],
                 ["تایپ، اسکن و پرینت", "تایپ انگلیسی (هر صفحه)", 190000, 177000],
                 ["تایپ، اسکن و پرینت", "تایپ نامه اداری", 65000, 60000],
@@ -859,12 +865,7 @@
                 ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A3 (تک‌رو)", 20000, 16000],
                 ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A5 (پشت و رو)", 10000, 8000],
                 ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A4 (پشت و رو)", 15000, 12000],
-                ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A3 (پشت و رو)", 25000, 20000],
-
-                // --- خدمات فنی ---
-                ["خدمات فنی", "نصب ویندوز (PC و لپ‌تاپ)", 500000, 450000],
-                ["خدمات فنی", "نصب نرم‌افزار کاربردی + آنتی‌ویروس", 500000, 450000],
-                ["خدمات فنی", "عیب‌یابی نرم‌افزاری", 300000, 270000]
+                ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A3 (پشت و رو)", 25000, 20000]
             ],
             "l": {
                 "خرید اینترنتی خودرو": [
@@ -884,34 +885,54 @@
                 ],
                 "قضایی و حقوقی": [
                     { "name": "سامانه ثنا (عدل ایران)", "url": "https://sana.adliran.ir", "icon": "⚖️" },
-                    { "name": "درگاه خدمات قضایی", "url": "https://adliran.ir", "icon": "🏛️" }
+                    { "name": "درگاه خدمات قضایی", "url": "https://adliran.ir", "icon": "🏛️" },
+                    { "name": "سامانه ابلاغ الکترونیک", "url": "https://epl.ir", "icon": "📄" }
                 ],
                 "پلیس +۱۰": [
                     { "name": "پلیس +۱۰", "url": "https://www.epolice.ir", "icon": "👮" },
-                    { "name": "سامانه سخا (گذرنامه)", "url": "https://sakha.epolice.ir", "icon": "🛂" }
+                    { "name": "سامانه سخا (گذرنامه)", "url": "https://sakha.epolice.ir", "icon": "🛂" },
+                    { "name": "سامانه راهور ۱۲۰ (خلافی)", "url": "https://120.ir", "icon": "🚦" }
                 ],
                 "مالیاتی و اقتصادی": [
                     { "name": "سازمان امور مالیاتی", "url": "https://tax.gov.ir", "icon": "💰" },
                     { "name": "سامانه مودیان", "url": "https://my.tax.gov.ir", "icon": "🧾" },
+                    { "name": "سامانه ارزش افزوده", "url": "https://evat.tax.gov.ir", "icon": "📊" },
                     { "name": "سجام", "url": "https://sejam.ir", "icon": "📈" }
                 ],
                 "بازنشستگان": [
                     { "name": "صندوق بازنشستگی کشوری", "url": "https://www.cspf.ir", "icon": "👴" },
-                    { "name": "سامانه ساتا (لشکری)", "url": "https://saba.esata.ir", "icon": "🎖️" }
+                    { "name": "سامانه ساتا (لشکری)", "url": "https://saba.esata.ir", "icon": "🎖️" },
+                    { "name": "تأمین اجتماعی", "url": "https://www.tamin.ir", "icon": "🛡️" }
                 ],
                 "بیمه و سلامت": [
                     { "name": "تأمین اجتماعی", "url": "https://www.tamin.ir", "icon": "🛡️" },
-                    { "name": "بیمه سلامت", "url": "https://ihio.gov.ir", "icon": "❤️" }
+                    { "name": "بیمه سلامت", "url": "https://ihio.gov.ir", "icon": "❤️" },
+                    { "name": "بیمه ورزشی", "url": "https://sportfed.ir", "icon": "🏅" },
+                    { "name": "سامانه سلامت", "url": "https://salamat.gov.ir", "icon": "🩺" }
                 ],
                 "آموزشی": [
                     { "name": "سازمان سنجش", "url": "https://www.sanjesh.org", "icon": "🎓" },
-                    { "name": "آموزش و پرورش", "url": "https://www.medu.ir", "icon": "🏫" }
+                    { "name": "آموزش و پرورش", "url": "https://www.medu.ir", "icon": "🏫" },
+                    { "name": "ثبت‌نام کتاب درسی", "url": "https://irtextbook.ir", "icon": "📚" },
+                    { "name": "سامانه سجاد", "url": "https://sajjad.msrt.ir", "icon": "🎓" },
+                    { "name": "انتخاب واحد دانشگاه آزاد", "url": "https://azmoon.iau.ac.ir", "icon": "🎓" },
+                    { "name": "دانشگاه پیام نور", "url": "https://reg.pnu.ac.ir", "icon": "🎓" },
+                    { "name": "مدارس تیزهوشان", "url": "https://sampad.medu.ir", "icon": "🏫" }
+                ],
+                "سایر سامانه‌ها": [
+                    { "name": "سامانه میخک (خارجه)", "url": "https://mikhak.mfa.gov.ir", "icon": "🛂" },
+                    { "name": "سامانه سماح (اربعین)", "url": "https://samah.hajj.ir", "icon": "🕋" },
+                    { "name": "سامانه توکن (امضای دیجیتال)", "url": "https://caa.gov.ir", "icon": "🔏" },
+                    { "name": "ستاد ایران", "url": "https://www.setadiran.ir", "icon": "🏗️" },
+                    { "name": "سامانه GICA", "url": "https://gica.ir", "icon": "📊" },
+                    { "name": "ثبت من", "url": "https://sabetman.ir", "icon": "📝" },
+                    { "name": "همیاب ۲۴", "url": "https://hamyab24.ir", "icon": "📱" }
                 ]
             }
         };
 
-        // Top 12 Services Indices
-        const topIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]; 
+        // Top 14 Services Indices
+        const topIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; 
 
         let cart = {};
         let activeCategory = 'همه';
@@ -984,7 +1005,7 @@
 
         function openCategoryModal() {
             const grid = $('#cat-grid');
-            const categories = ['همه', ...new Set(D.s.map(item => item[0]))];
+            const categories = ['همه', ...new Set(D.s.filter((_, i) => i >= 14).map(item => item[0]))];
             grid.innerHTML = categories.map(cat => `
                 <div class="cat-card ${cat === activeCategory ? 'active' : ''}" onclick="setCategoryFromModal('${cat}')">
                     <i class="fa-solid ${getCategoryIcon(cat)}"></i>
@@ -1011,7 +1032,7 @@
             if (cat.includes('اصناف')) return 'fa-building';
             if (cat.includes('تایپ')) return 'fa-print';
             if (cat.includes('سجام')) return 'fa-chart-line';
-            if (cat.includes('عمومی') || cat.includes('سامانه‌ها')) return 'fa-building-user';
+            if (cat.includes('عمومی')) return 'fa-building-user';
             if (cat.includes('فنی')) return 'fa-laptop-code';
             return 'fa-layer-group';
         }
@@ -1024,34 +1045,42 @@
         function getWatermarkIcon(title) {
             if (title.includes('خودرو') || title.includes('ایران خودرو') || title.includes('سایپا')) return 'fa-car';
             if (title.includes('ثنا') || title.includes('قضایی') || title.includes('ابلاغیه')) return 'fa-scale-balanced';
-            if (title.includes('پلیس') || title.includes('سخا') || title.includes('پلاک') || title.includes('معافیت') || title.includes('سوخت')) return 'fa-shield-halved';
-            if (title.includes('کنکور') || title.includes('دانشگاه') || title.includes('آموزش') || title.includes('مدرسه')) return 'fa-graduation-cap';
+            if (title.includes('پلیس') || title.includes('سخا') || title.includes('پلاک') || title.includes('معافیت') || title.includes('سوخت') || title.includes('تحصیلی')) return 'fa-shield-halved';
+            if (title.includes('کنکور') || title.includes('دانشگاه') || title.includes('آموزش') || title.includes('مدرسه') || title.includes('کتاب')) return 'fa-graduation-cap';
             if (title.includes('سجام')) return 'fa-chart-line';
             if (title.includes('مالیات') || title.includes('اقتصادی') || title.includes('کد')) return 'fa-file-invoice-dollar';
-            if (title.includes('بیمه') || title.includes('تأمین') || title.includes('یارانه')) return 'fa-umbrella';
+            if (title.includes('بیمه') || title.includes('تأمین') || title.includes('یارانه') || title.includes('سوابق')) return 'fa-umbrella';
             if (title.includes('املاک') || title.includes('مسکن') || title.includes('سند')) return 'fa-house';
             if (title.includes('پرینت') || title.includes('کپی') || title.includes('اسکن') || title.includes('فکس')) return 'fa-print';
             if (title.includes('تایپ') || title.includes('ایمیل') || title.includes('word') || title.includes('پاورپوینت')) return 'fa-keyboard';
             if (title.includes('حقوقی') || title.includes('کسر از حقوق')) return 'fa-file-invoice';
             if (title.includes('ویندوز') || title.includes('نرم‌افزار')) return 'fa-laptop-code';
+            if (title.includes('طراحی سایت')) return 'fa-code';
             return 'fa-globe';
         }
 
-        function generateServiceCardHTML(item, idx, isSearching, isTop = false) {
+        function generateServiceCardHTML(item, idx, isSearching, isTop = false, isDesign = false) {
             const isInCart = cart[idx] !== undefined;
             const qty = isInCart ? cart[idx].qty : 1;
             const hasQty = ['هر صفحه','هر نفر','هر درخواست','پاورپوینت','اسکن','فکس','تایپ','پرینت','کپی','نصب','بلیط','استعلام'].some(w => item[1].includes(w));
             const wmIcon = getWatermarkIcon(item[1]);
             const matchClass = isSearching ? 'search-match' : '';
-            const topClass = isTop ? 'top-svc' : '';
+            let extraClass = '';
+            if (isTop) extraClass = 'top-svc';
+            if (isDesign) extraClass = 'design-svc';
+
+            let priceDisplay = `<span class="svc-old">${fa(item[2])}</span><span class="svc-new">${fa(item[3])} تومان</span>`;
+            if (isDesign) {
+                priceDisplay = `<span class="svc-new" style="color: #ec4899; font-size: 15px; text-shadow: 0 0 10px rgba(236,72,153,0.5);">توافقی</span>`;
+            }
 
             return `
-            <div class="svc-card reveal ${matchClass} ${topClass}">
+            <div class="svc-card reveal ${matchClass} ${extraClass}">
                 <i class="fa-solid ${wmIcon} svc-watermark"></i>
                 <div class="svc-title">${item[1]}</div>
-                <div class="svc-prices"><span class="svc-old">${fa(item[2])}</span><span class="svc-new">${fa(item[3])} تومان</span></div>
+                <div class="svc-prices">${priceDisplay}</div>
                 <div class="svc-actions">
-                    ${hasQty ? `<div class="qty-control"><button onclick="changeQty(${idx}, -1)">−</button><span id="qty-${idx}">${fa(qty)}</span><button onclick="changeQty(${idx}, 1)">+</button></div>` : `<div></div>`}
+                    ${hasQty && !isDesign ? `<div class="qty-control"><button onclick="changeQty(${idx}, -1)">−</button><span id="qty-${idx}">${fa(qty)}</span><button onclick="changeQty(${idx}, 1)">+</button></div>` : `<div></div>`}
                     <button class="btn-add ${isInCart ? 'added' : ''}" onclick="addToCart(${idx})">${isInCart ? '<i class="fa-solid fa-check"></i> افزوده' : '<i class="fa-solid fa-plus"></i> افزودن'}</button>
                 </div>
             </div>`;
@@ -1071,13 +1100,20 @@
                 return;
             }
 
-            grid.innerHTML = filteredIndices.map(idx => generateServiceCardHTML(D.s[idx], idx, normalizedQuery.length > 0, true)).join('');
+            grid.innerHTML = filteredIndices.map(idx => {
+                const isDesign = (idx === 13);
+                return generateServiceCardHTML(D.s[idx], idx, normalizedQuery.length > 0, true, isDesign);
+            }).join('');
             document.querySelectorAll('#top-services-grid .svc-card.reveal').forEach(el => revealObserver.observe(el));
         }
 
         function renderServices(searchQuery = '') {
             const grid = $('#services-grid');
             let filtered = D.s.map((item, index) => ({ ...item, originalIndex: index }));
+            
+            // Filter out top 14 indices
+            filtered = filtered.filter(item => item.originalIndex >= 14);
+            
             if (activeCategory !== 'همه') filtered = filtered.filter(item => item[0] === activeCategory);
             
             const normalizedQuery = normalizeText(searchQuery);
@@ -1090,7 +1126,7 @@
                 return;
             }
 
-            grid.innerHTML = filtered.map(item => generateServiceCardHTML(item, item.originalIndex, normalizedQuery.length > 0, false)).join('');
+            grid.innerHTML = filtered.map(item => generateServiceCardHTML(item, item.originalIndex, normalizedQuery.length > 0, false, false)).join('');
             document.querySelectorAll('#services-grid .svc-card.reveal').forEach(el => revealObserver.observe(el));
         }
 
@@ -1122,7 +1158,10 @@
 
         function addToCart(idx) {
             if(cart[idx]) { delete cart[idx]; } 
-            else { const item = D.s[idx]; cart[idx] = { qty: 1, title: item[1], price: item[3] }; }
+            else { 
+                const item = D.s[idx]; 
+                cart[idx] = { qty: 1, title: item[1], price: item[3] || 0 }; 
+            }
             renderTopServices($('#searchInput').value.trim());
             renderServices($('#searchInput').value.trim());
             updateCartUI();
@@ -1141,7 +1180,8 @@
                     const item = cart[idx];
                     const itemTotal = item.price * item.qty;
                     total += itemTotal; count += item.qty;
-                    return `<div class="cart-item"><div class="cart-item-info"><h4>${item.title}</h4><span>${fa(item.qty)} × ${fa(item.price)} = ${fa(itemTotal)} تومان</span></div><button class="btn-icon" style="width: 32px; height: 32px; font-size: 14px; color: var(--danger);" onclick="addToCart(${idx})"><i class="fa-solid fa-trash"></i></button></div>`;
+                    const priceStr = item.title.includes('طراحی سایت') ? 'توافقی' : fa(itemTotal) + ' تومان';
+                    return `<div class="cart-item"><div class="cart-item-info"><h4>${item.title}</h4><span>${fa(item.qty)} × ${item.title.includes('طراحی سایت') ? 'توافقی' : fa(item.price)} = ${priceStr}</span></div><button class="btn-icon" style="width: 32px; height: 32px; font-size: 14px; color: var(--danger);" onclick="addToCart(${idx})"><i class="fa-solid fa-trash"></i></button></div>`;
                 }).join('');
                 badge.innerText = fa(count);
             }
@@ -1172,7 +1212,7 @@
                     <div class="user-order-card">
                         <div class="user-order-header"><span class="user-order-code">کد: ${order.code}</span><span class="user-order-date">${order.date}</span></div>
                         <div class="user-order-items">${order.items}</div>
-                        <span class="user-order-total">مبلغ: ${fa(order.total)} تومان</span>
+                        <span class="user-order-total">مبلغ: ${order.total > 0 ? fa(order.total) + ' تومان' : 'توافقی'}</span>
                     </div>
                 `).join('');
             }
@@ -1193,18 +1233,38 @@
             if(!name || !contact) return alert('لطفاً نام و راه ارتباطی را وارد کنید.');
             currentOrderCode = Math.floor(10000 + Math.random() * 90000).toString();
             let orderText = `سلام، درخواست جدید از سایت کاریزما نت\n\n🔑 کد پیگیری: ${currentOrderCode}\n👤 نام: ${name}\n📞 ارتباط: ${contact}\n\n🛒 اقلام سفارش:\n`;
-            let total = 0; let itemsSummary = [];
+            let total = 0; let itemsSummary = []; let hasDesign = false;
+            
             for(let idx in cart) {
-                const item = cart[idx]; const itemTotal = item.price * item.qty; total += itemTotal;
-                orderText += `▪️ ${item.title} (${fa(item.qty)} عدد) = ${fa(itemTotal)} تومان\n`; itemsSummary.push(`${item.title} (${fa(item.qty)})`);
+                const item = cart[idx]; 
+                if (item.title.includes('طراحی سایت')) {
+                    hasDesign = true;
+                    orderText += `▪️ ${item.title} = توافقی\n`;
+                    itemsSummary.push(item.title);
+                } else {
+                    const itemTotal = item.price * item.qty; 
+                    total += itemTotal;
+                    orderText += `▪️ ${item.title} (${fa(item.qty)} عدد) = ${fa(itemTotal)} تومان\n`; 
+                    itemsSummary.push(`${item.title} (${fa(item.qty)})`);
+                }
             }
-            orderText += `\n💰 جمع کل: ${fa(total)} تومان\n`;
+            
+            orderText += `\n💰 جمع کل: ${fa(total)} تومان ${hasDesign ? '(+ هزینه توافقی طراحی سایت)' : ''}\n`;
             if(desc) orderText += `\n📝 توضیحات: ${desc}`;
+            
             $('#btn-sms-admin').href = `sms:09960062320?body=${encodeURIComponent(orderText)}`;
             $('#btn-tg-admin').href = `https://t.me/kavehnouri?text=${encodeURIComponent(orderText)}`;
-            $('#chk-total-price').innerText = fa(total); $('#chk-order-code').innerText = fa(currentOrderCode);
+            
+            $('#chk-total-price').innerText = fa(total);
+            if (hasDesign) $('#chk-total-price').innerText += ' (+ توافقی)';
+            
+            $('#chk-order-code').innerText = fa(currentOrderCode);
+            
             const newOrder = { code: currentOrderCode, date: new Date().toLocaleDateString('fa-IR'), items: itemsSummary.join('، '), total: total };
-            const existingOrders = JSON.parse(localStorage.getItem('karizma_orders')) || []; existingOrders.push(newOrder); localStorage.setItem('karizma_orders', JSON.stringify(existingOrders));
+            const existingOrders = JSON.parse(localStorage.getItem('karizma_orders')) || []; 
+            existingOrders.push(newOrder); 
+            localStorage.setItem('karizma_orders', JSON.stringify(existingOrders));
+            
             $('#chk-step1').style.display = 'none'; $('#chk-step2').style.display = 'block';
         }
 

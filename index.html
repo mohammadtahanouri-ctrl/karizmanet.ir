@@ -295,10 +295,10 @@
 
         .upload-title-main { color: #fbbf24; font-size: clamp(15px, 4vw, 26px); font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 25px; white-space: nowrap; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 15px rgba(251, 191, 36, 0.5); }
 
-        /* FAQ */
+        /* FAQ - BUG FIXED (No reveal class on items) */
         .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; margin-bottom: 12px; overflow: hidden; backdrop-filter: blur(10px); }
         .faq-q { padding: 18px; font-weight: 800; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .faq-a { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; color: var(--text-muted); font-size: 14px; line-height: 1.8; }
+        .faq-a { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease; color: var(--text-muted); font-size: 14px; line-height: 1.8; }
         .faq-item.active .faq-a { max-height: 400px; padding-bottom: 18px; }
         .faq-item.active .faq-q i { transform: rotate(180deg); }
 
@@ -534,14 +534,15 @@
     <section id="faq">
         <h2 class="section-title reveal"><i class="fa-solid fa-circle-question"></i> سوالات متداول</h2>
         
-        <div class="faq-item reveal">
+        <!-- FAQ Items (reveal removed to fix the bug) -->
+        <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">آیکون کاربر (سفارشات من) در بالای سایت چه کاربردی دارد؟ <i class="fa-solid fa-chevron-down"></i></div>
             <div class="faq-a">
                 با کلیک روی این آیکون (شکل انسان)، می‌توانید لیست تمام سفارش‌هایی که ثبت کرده‌اید را مشاهده کنید. در این بخش، کد پیگیری ۵ رقمی، تاریخ ثبت و مبلغ هر سفارش نمایش داده می‌شود.
             </div>
         </div>
 
-        <div class="faq-item reveal">
+        <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">چگونه فایل خود را برای پرینت ارسال کنم؟ <i class="fa-solid fa-chevron-down"></i></div>
             <div class="faq-a">
                 ۱. از بخش «ارسال فایل جهت پرینت» در همین صفحه، روی باکس کلیک کنید.<br>
@@ -551,7 +552,7 @@
             </div>
         </div>
 
-        <div class="faq-item reveal">
+        <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">چطور مطمئن بشم کارم انجام میشه؟ <i class="fa-solid fa-chevron-down"></i></div>
             <div class="faq-a">تمامی درخواست‌ها دارای کد رهگیری ۵ رقمی هستند. پس از پرداخت و انجام کار، فایل یا نتیجه نهایی برای شما ارسال می‌شود.</div>
         </div>
@@ -868,31 +869,6 @@
                 ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A3 (پشت و رو)", 25000, 20000]
             ],
             "l": {
-                "خرید اینترنتی خودرو": [
-                    { "name": "فروش اینترنتی ایران خودرو", "url": "https://esale.ikco.ir", "icon": "🚗" },
-                    { "name": "فروش اینترنتی سایپا", "url": "https://saipa.iranecar.com", "icon": "🚗" },
-                    { "name": "پارس خودرو", "url": "https://parskhodro.ir", "icon": "🚗" },
-                    { "name": "بهمن موتور", "url": "https://bahman.ir", "icon": "🚗" },
-                    { "name": "کرمان موتور", "url": "https://kermanmotor.com", "icon": "🚗" },
-                    { "name": "مدیران خودرو (MVM)", "url": "https://mvmco.ir", "icon": "🚗" },
-                    { "name": "فردا موتور", "url": "https://fardamotors.com", "icon": "🚗" },
-                    { "name": "ایلیا خودرو", "url": "https://ilia-auto.com", "icon": "🚗" },
-                    { "name": "تیگارد موتور", "url": "https://tigardmotor.com", "icon": "🚗" },
-                    { "name": "سروش موتور", "url": "https://soroush-motor.com", "icon": "🚗" },
-                    { "name": "لوکانو", "url": "https://ecodalucano.com", "icon": "🚗" },
-                    { "name": "دیار خودرو", "url": "https://diar-khodro.com", "icon": "🚗" },
-                    { "name": "لاماری", "url": "https://lamari.ir", "icon": "🚗" },
-                    { "name": "راسا موتور", "url": "https://rasamotor.co", "icon": "🚗" },
-                    { "name": "کوشا خودرو", "url": "https://kooshakhodro.com", "icon": "🚗" },
-                    { "name": "هرمس خودرو", "url": "https://hermeskhodro.com", "icon": "🚗" },
-                    { "name": "نامی خودرو", "url": "https://namikhodro.com", "icon": "🚗" },
-                    { "name": "سامانه خودرو ۴۵", "url": "https://khodro45.com", "icon": "🚗" },
-                    { "name": "فروش خودروهای وارداتی", "url": "https://salecars.ir", "icon": "🚗" }
-                ],
-                "لاستیک و قطعات": [
-                    { "name": "فروش اینترنتی کویر تایر", "url": "https://kavirtire.ir/esale", "icon": "🛞" },
-                    { "name": "فروش اینترنتی بارز", "url": "https://shop.barez.org", "icon": "🛞" }
-                ],
                 "دولتی و حاکمیتی": [
                     { "name": "پنجره ملی خدمات دولت هوشمند", "url": "https://my.gov.ir", "icon": "🏛️" },
                     { "name": "سامانه هویت یکپارچه", "url": "https://sso.my.gov.ir", "icon": "🔐" },
@@ -948,6 +924,31 @@
                     { "name": "سامانه GICA", "url": "https://gica.ir", "icon": "📊" },
                     { "name": "ثبت من", "url": "https://sabetman.ir", "icon": "📝" },
                     { "name": "همیاب ۲۴", "url": "https://hamyab24.ir", "icon": "📱" }
+                ],
+                "خرید اینترنتی خودرو": [
+                    { "name": "فروش اینترنتی ایران خودرو", "url": "https://esale.ikco.ir", "icon": "🚗" },
+                    { "name": "فروش اینترنتی سایپا", "url": "https://saipa.iranecar.com", "icon": "🚗" },
+                    { "name": "پارس خودرو", "url": "https://parskhodro.ir", "icon": "🚗" },
+                    { "name": "بهمن موتور", "url": "https://bahman.ir", "icon": "🚗" },
+                    { "name": "کرمان موتور", "url": "https://kermanmotor.com", "icon": "🚗" },
+                    { "name": "مدیران خودرو (MVM)", "url": "https://mvmco.ir", "icon": "🚗" },
+                    { "name": "فردا موتور", "url": "https://fardamotors.com", "icon": "🚗" },
+                    { "name": "ایلیا خودرو", "url": "https://ilia-auto.com", "icon": "🚗" },
+                    { "name": "تیگارد موتور", "url": "https://tigardmotor.com", "icon": "🚗" },
+                    { "name": "سروش موتور", "url": "https://soroush-motor.com", "icon": "🚗" },
+                    { "name": "لوکانو", "url": "https://ecodalucano.com", "icon": "🚗" },
+                    { "name": "دیار خودرو", "url": "https://diar-khodro.com", "icon": "🚗" },
+                    { "name": "لاماری", "url": "https://lamari.ir", "icon": "🚗" },
+                    { "name": "راسا موتور", "url": "https://rasamotor.co", "icon": "🚗" },
+                    { "name": "کوشا خودرو", "url": "https://kooshakhodro.com", "icon": "🚗" },
+                    { "name": "هرمس خودرو", "url": "https://hermeskhodro.com", "icon": "🚗" },
+                    { "name": "نامی خودرو", "url": "https://namikhodro.com", "icon": "🚗" },
+                    { "name": "سامانه خودرو ۴۵", "url": "https://khodro45.com", "icon": "🚗" },
+                    { "name": "فروش خودروهای وارداتی", "url": "https://salecars.ir", "icon": "🚗" }
+                ],
+                "لاستیک و قطعات": [
+                    { "name": "فروش اینترنتی کویر تایر", "url": "https://kavirtire.ir/esale", "icon": "🛞" },
+                    { "name": "فروش اینترنتی بارز", "url": "https://shop.barez.org", "icon": "🛞" }
                 ]
             }
         };
@@ -1214,11 +1215,17 @@
         }
 
         function toggleCart() { $('#cart-overlay').classList.toggle('open'); $('#cart-drawer').classList.toggle('open'); }
+        
+        // --- 4. FAQ Bug Fix (Only one opens, no glitching) ---
         function toggleFaq(el) {
             const item = el.parentElement;
-            item.classList.toggle('active');
-            document.querySelectorAll('.faq-item').forEach(faq => { if(faq !== item) faq.classList.remove('active'); });
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(faq => faq.classList.remove('active'));
+            if (!isActive) {
+                item.classList.add('active');
+            }
         }
+
         function openModal(id) { document.getElementById(id).showModal(); }
         
         function openMessenger(e, appScheme, webFallback) {

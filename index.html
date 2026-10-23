@@ -161,6 +161,15 @@
         .btn-open-categories:hover { border-color: var(--primary); box-shadow: 0 0 20px var(--glow); transform: translateY(-2px); }
         .btn-open-categories i { color: var(--primary); }
 
+        /* Active category bar (shows selected category + show all button) */
+        .active-cat-bar { display: none; align-items: center; justify-content: space-between; gap: 10px; background: rgba(99, 102, 241, 0.12); border: 1px solid var(--primary); border-radius: 16px; padding: 10px 14px; margin-bottom: 15px; scroll-margin-top: 80px; box-shadow: 0 0 15px var(--glow); }
+        .active-cat-bar.show { display: flex; }
+        .active-cat-title { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 14px; }
+        .active-cat-title i { color: var(--primary); }
+        .btn-show-all { background: var(--primary); color: #fff; border: none; padding: 7px 14px; border-radius: 15px; font-weight: 700; font-size: 12px; cursor: pointer; transition: 0.3s; white-space: nowrap; }
+        .btn-show-all:hover { background: var(--primary-hover); box-shadow: 0 0 10px var(--glow); }
+        #services-grid { scroll-margin-top: 80px; }
+
         .category-dialog { width: 90%; max-width: 600px; margin: auto; background: var(--glass-bg); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 25px; color: var(--text-main); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
         .category-dialog::backdrop { background: rgba(0,0,0,0.6); backdrop-filter: blur(5px); }
         .cat-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
@@ -326,7 +335,7 @@
 
         /* Bottom Nav */
         .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--glass-bg); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); display: flex; justify-content: space-around; padding: 10px 0; z-index: 999; }
-        .bn-item { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--text-muted); font-size: 10px; font-weight: 700; transition: 0.3s; }
+        .bn-item { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--text-muted); font-size: 10px; font-weight: 700; transition: 0.3s; cursor: pointer; }
         .bn-item i { font-size: 20px; }
         .bn-item.active, .bn-item:hover { color: var(--primary); }
 
@@ -492,6 +501,12 @@
             <button class="btn-open-categories" onclick="openCategoryModal()">
                 <i class="fa-solid fa-list-ul"></i> مشاهده همه دسته‌بندی‌ها <i class="fa-solid fa-chevron-down"></i>
             </button>
+        </div>
+
+        <!-- Selected category bar -->
+        <div class="active-cat-bar" id="active-cat-bar">
+            <div class="active-cat-title"><i class="fa-solid fa-layer-group" id="active-cat-icon"></i> دسته: <span id="active-cat-name"></span></div>
+            <button class="btn-show-all" onclick="showAllCategories()"><i class="fa-solid fa-border-all"></i> نمایش همه</button>
         </div>
         
         <div class="services-grid" id="services-grid"></div>
@@ -708,7 +723,8 @@
     </dialog>
 
     <div class="bottom-nav">
-        <a href="#services" class="bn-item active"><i class="fa-solid fa-house"></i> خدمات</a>
+        <!-- دکمه خدمات: باز کردن پنجره دسته‌بندی‌ها -->
+        <a href="#services" class="bn-item active" onclick="event.preventDefault(); openCategoryModal();"><i class="fa-solid fa-layer-group"></i> خدمات</a>
         <a href="#links" class="bn-item"><i class="fa-solid fa-link"></i> سایت‌ها</a>
         <a href="#upload" class="bn-item"><i class="fa-solid fa-cloud-arrow-up"></i> آپلود</a>
         <a onclick="openUserPanel()" class="bn-item"><i class="fa-solid fa-file-invoice"></i> سفارشات</a>
@@ -790,6 +806,9 @@
                 ["مالیات و کسب‌وکار", "ثبت‌نام ستاد ایران", 495000, 445000],
                 ["مالیات و کسب‌وکار", "ثبت مزایده در ستاد ایران", 520000, 470000],
                 ["مالیات و کسب‌وکار", "ثبت مناقصه در ستاد ایران", 1100000, 990000],
+                // جدید
+                ["مالیات و کسب‌وکار", "اظهارنامه ارزش افزوده", 450000, 405000],
+                ["مالیات و کسب‌وکار", "ثبت‌نام سامانه مودیان", 350000, 315000],
 
                 // --- امور اصناف و مجوزها ---
                 ["امور اصناف و مجوزها", "ورود به سامانه ملی مجوزها و ثبت‌نام اولیه", 180000, 167000],
@@ -806,6 +825,9 @@
                 ["املاک و مسکن", "دریافت تاییدیه (گواهی) کدپستی", 150000, 140000],
                 ["املاک و مسکن", "ثبت نام سند ملکی در سایت sabetmelk.ssaa.ir", 930000, 865000],
                 ["املاک و مسکن", "سامانه خودنویس (ثبت قرارداد اجاره)", 240000, 220000],
+                // جدید
+                ["املاک و مسکن", "دریافت کد رهگیری قرارداد ملکی", 200000, 180000],
+                ["املاک و مسکن", "استعلام اصالت سند", 150000, 135000],
 
                 // --- وام و بانک ---
                 ["وام و بانک", "ثبت‌نام وام ازدواج", 165000, 150000],
@@ -813,6 +835,9 @@
                 ["وام و بانک", "افتتاح حساب آنلاین بانکی", 245000, 220000],
                 ["وام و بانک", "ثبت / تأیید / انتقال چک صیادی", 75000, 70000],
                 ["وام و بانک", "صدور سفته الکترونیکی", 240000, 223000],
+                // جدید
+                ["وام و بانک", "فعال‌سازی اینترنت‌بانک و رمز پویا", 120000, 108000],
+                ["وام و بانک", "ثبت‌نام وام ودیعه مسکن", 250000, 225000],
 
                 // --- سایر خدمات عمومی ---
                 ["خدمات عمومی و اداری", "ثبت‌نام اینترنتی متفرقه (تا یک صفحه)", 260000, 235000],
@@ -840,6 +865,13 @@
                 ["خدمات عمومی و اداری", "نام‌نویسی غیرحضوری بیمه شده برای کارفرمایان", 150000, 140000],
                 ["خدمات عمومی و اداری", "استعلام بدهی کارگاه", 150000, 140000],
                 ["خدمات عمومی و اداری", "ثبت‌نام در سامانه تأمین اجتماعی", 105000, 95000],
+                // جدید
+                ["خدمات عمومی و اداری", "پیش‌ثبت‌نام کارت ملی هوشمند", 120000, 108000],
+                ["خدمات عمومی و اداری", "نوبت‌گیری ثبت‌احوال (شناسنامه)", 100000, 90000],
+                ["خدمات عمومی و اداری", "احراز هویت سیم‌کارت", 90000, 81000],
+                ["خدمات عمومی و اداری", "استعلام و پرداخت عوارض و مالیات خودرو", 100000, 90000],
+                ["خدمات عمومی و اداری", "ساخت رزومه حرفه‌ای", 150000, 135000],
+                ["خدمات عمومی و اداری", "ثبت‌نام یارانه / سرپرست خانوار", 120000, 108000],
 
                 // --- امور تخصصی ---
                 ["امور تخصصی", "ثبت نام در سامانه تخصصی پزشکان", 530000, 493000],
@@ -852,6 +884,51 @@
                 ["خدمات فنی", "نصب ویندوز (PC و لپ‌تاپ)", 500000, 450000],
                 ["خدمات فنی", "نصب نرم‌افزار کاربردی + آنتی‌ویروس", 500000, 450000],
                 ["خدمات فنی", "عیب‌یابی نرم‌افزاری", 300000, 270000],
+                // جدید
+                ["خدمات فنی", "ریکاوری و بازیابی اطلاعات", 500000, 450000],
+                ["خدمات فنی", "ویروس‌کشی و بهینه‌سازی سیستم", 250000, 225000],
+                ["خدمات فنی", "نصب درایور و فرمت فلش / هارد", 150000, 135000],
+
+                // --- جدید: پلیس +۱۰ (ادامه) ---
+                ["پلیس +۱۰", "استعلام سوءپیشینه", 150000, 135000],
+                ["پلیس +۱۰", "نوبت‌گیری گواهینامه و آزمون", 180000, 165000],
+                ["پلیس +۱۰", "استعلام وضعیت سربازی", 70000, 63000],
+
+                // --- جدید: قضایی و انتظامی (ادامه) ---
+                ["قضایی و انتظامی", "ثبت دادخواست الکترونیک", 300000, 270000],
+                ["قضایی و انتظامی", "پیگیری پرونده قضایی", 80000, 72000],
+                ["قضایی و انتظامی", "بازیابی رمز و فعال‌سازی ثنا", 60000, 54000],
+
+                // --- جدید: خدمات آموزشی و دانشگاهی (ادامه) ---
+                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام آزمون کارشناسی ارشد / دکتری", 350000, 315000],
+                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام آزمون‌های استخدامی", 250000, 225000],
+                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام وام دانشجویی", 200000, 180000],
+                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام و انتخاب واحد دانشگاه", 150000, 135000],
+                ["خدمات آموزشی و دانشگاهی", "ثبت‌نام آزمون زبان", 250000, 225000],
+
+                // --- جدید: سجام و بورس (ادامه) ---
+                ["سجام و بورس", "دریافت کد بورسی", 150000, 135000],
+                ["سجام و بورس", "بازیابی رمز و تغییر موبایل سجام", 80000, 72000],
+
+                // --- جدید: بیمه و تامین اجتماعی (ادامه) ---
+                ["بیمه و تامین اجتماعی", "ثبت‌نام بیمه بیکاری", 180000, 165000],
+                ["بیمه و تامین اجتماعی", "ثبت‌نام بیمه خوداشتغالی / صنفی", 220000, 200000],
+                ["بیمه و تامین اجتماعی", "استعلام حق بیمه", 50000, 45000],
+
+                // --- جدید: آموزش و پرورش و دانش‌آموزان (سامانه my.medu.ir) ---
+                ["آموزش و پرورش و دانش‌آموزان", "ثبت‌نام و فعال‌سازی حساب دانش‌آموزی (my.medu.ir)", 120000, 108000],
+                ["آموزش و پرورش و دانش‌آموزان", "بازیابی رمز و ویرایش اطلاعات حساب (my.medu.ir)", 70000, 63000],
+                ["آموزش و پرورش و دانش‌آموزان", "پیش‌ثبت‌نام اول دبستان", 150000, 135000],
+                ["آموزش و پرورش و دانش‌آموزان", "ثبت‌نام / تمدید ثبت‌نام دانش‌آموز", 150000, 135000],
+                ["آموزش و پرورش و دانش‌آموزان", "ثبت‌نام و انتخاب رشته پایه دهم", 130000, 117000],
+                ["آموزش و پرورش و دانش‌آموزان", "انتقالی و جابه‌جایی مدرسه", 180000, 165000],
+                ["آموزش و پرورش و دانش‌آموزان", "دریافت کارنامه و گواهی اشتغال به تحصیل", 60000, 54000],
+                ["آموزش و پرورش و دانش‌آموزان", "ثبت‌نام آزمون ورودی تیزهوشان (سمپاد)", 220000, 200000],
+                ["آموزش و پرورش و دانش‌آموزان", "ثبت‌نام آزمون مدارس نمونه دولتی", 200000, 180000],
+                ["آموزش و پرورش و دانش‌آموزان", "ثبت‌نام هنرستان و مدارس خاص", 200000, 180000],
+                ["آموزش و پرورش و دانش‌آموزان", "ثبت‌نام کتاب درسی", 80000, 72000],
+                ["آموزش و پرورش و دانش‌آموزان", "ثبت‌نام سامانه سجاد", 130000, 117000],
+                ["آموزش و پرورش و دانش‌آموزان", "ثبت‌نام اینترنتی دانش‌آموز بزرگسال", 200000, 180000],
 
                 // --- تایپ، اسکن و پرینت (Moved to the very end) ---
                 ["تایپ، اسکن و پرینت", "تایپ ساده فارسی (هر صفحه)", 80000, 72000],
@@ -866,7 +943,17 @@
                 ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A3 (تک‌رو)", 20000, 16000],
                 ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A5 (پشت و رو)", 10000, 8000],
                 ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A4 (پشت و رو)", 15000, 12000],
-                ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A3 (پشت و رو)", 25000, 20000]
+                ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A3 (پشت و رو)", 25000, 20000],
+                // جدید
+                ["تایپ، اسکن و پرینت", "کپی سیاه سفید A4 (هر صفحه)", 6000, 5000],
+                ["تایپ، اسکن و پرینت", "کپی سیاه سفید A3 (هر صفحه)", 12000, 10000],
+                ["تایپ، اسکن و پرینت", "پرینت رنگی A4 (هر صفحه)", 30000, 25000],
+                ["تایپ، اسکن و پرینت", "پرینت رنگی A3 (هر صفحه)", 60000, 50000],
+                ["تایپ، اسکن و پرینت", "پرینت عکس (هر قطعه)", 25000, 20000],
+                ["تایپ، اسکن و پرینت", "لمینت A4", 40000, 35000],
+                ["تایپ، اسکن و پرینت", "صحافی و فنر (هر جلد)", 100000, 90000],
+                ["تایپ، اسکن و پرینت", "تبدیل PDF به Word (هر صفحه)", 60000, 54000],
+                ["تایپ، اسکن و پرینت", "ویرایش فایل (هر صفحه)", 50000, 45000]
             ],
             "l": {
                 "دولتی و حاکمیتی": [
@@ -910,6 +997,7 @@
                 "آموزشی": [
                     { "name": "سازمان سنجش", "url": "https://www.sanjesh.org", "icon": "🎓" },
                     { "name": "آموزش و پرورش", "url": "https://www.medu.ir", "icon": "🏫" },
+                    { "name": "سامانه my.medu.ir (دانش‌آموزی)", "url": "https://my.medu.ir", "icon": "🧑‍🎓" },
                     { "name": "ثبت‌نام کتاب درسی", "url": "https://irtextbook.ir", "icon": "📚" },
                     { "name": "سامانه سجاد", "url": "https://sajjad.msrt.ir", "icon": "🎓" },
                     { "name": "انتخاب واحد دانشگاه آزاد", "url": "https://azmoon.org", "icon": "🎓" },
@@ -1042,6 +1130,8 @@
         function setCategoryFromModal(cat) {
             setCategory(cat);
             $('#category-modal').close();
+            // اسکرول خودکار به نتایج بعد از بسته شدن پنجره
+            setTimeout(scrollToResults, 150);
         }
 
         function getCategoryIcon(cat) {
@@ -1049,7 +1139,8 @@
             if (cat.includes('خرید اینترنتی')) return 'fa-car';
             if (cat.includes('پلیس')) return 'fa-shield';
             if (cat.includes('قضایی')) return 'fa-scale-balanced';
-            if (cat.includes('آموزشی')) return 'fa-graduation-cap';
+            if (cat.includes('پرورش')) return 'fa-school';
+            if (cat.includes('آموزش')) return 'fa-graduation-cap';
             if (cat.includes('مالیاتی')) return 'fa-file-invoice-dollar';
             if (cat.includes('بیمه')) return 'fa-umbrella';
             if (cat.includes('املاک')) return 'fa-house';
@@ -1064,14 +1155,37 @@
 
         function setCategory(cat) {
             activeCategory = cat;
+            updateActiveCatBar();
             renderServices($('#searchInput').value.trim());
+        }
+
+        function updateActiveCatBar() {
+            const bar = $('#active-cat-bar');
+            if (activeCategory === 'همه') {
+                bar.classList.remove('show');
+                return;
+            }
+            $('#active-cat-name').textContent = activeCategory;
+            $('#active-cat-icon').className = 'fa-solid ' + getCategoryIcon(activeCategory);
+            bar.classList.add('show');
+        }
+
+        function scrollToResults() {
+            const bar = $('#active-cat-bar');
+            const target = bar.classList.contains('show') ? bar : $('#services-grid');
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function showAllCategories() {
+            setCategory('همه');
+            setTimeout(scrollToResults, 50);
         }
 
         function getWatermarkIcon(title) {
             if (title.includes('خودرو') || title.includes('ایران خودرو') || title.includes('سایپا')) return 'fa-car';
             if (title.includes('ثنا') || title.includes('قضایی') || title.includes('ابلاغیه')) return 'fa-scale-balanced';
             if (title.includes('پلیس') || title.includes('سخا') || title.includes('پلاک') || title.includes('معافیت') || title.includes('سوخت') || title.includes('تحصیلی')) return 'fa-shield-halved';
-            if (title.includes('کنکور') || title.includes('دانشگاه') || title.includes('آموزش') || title.includes('مدرسه') || title.includes('کتاب')) return 'fa-graduation-cap';
+            if (title.includes('کنکور') || title.includes('دانشگاه') || title.includes('آموزش') || title.includes('مدرسه') || title.includes('کتاب') || title.includes('دانش‌آموز') || title.includes('کارنامه') || title.includes('دبستان') || title.includes('تیزهوشان')) return 'fa-graduation-cap';
             if (title.includes('سجام')) return 'fa-chart-line';
             if (title.includes('مالیات') || title.includes('اقتصادی') || title.includes('کد')) return 'fa-file-invoice-dollar';
             if (title.includes('بیمه') || title.includes('تأمین') || title.includes('یارانه') || title.includes('سوابق')) return 'fa-umbrella';

@@ -65,6 +65,7 @@
             --glow: rgba(99, 102, 241, 0.4);
             --screen-bg: #050914;
             --keyboard-bg: rgba(15, 23, 42, 0.6);
+            --top-glow: rgba(14, 165, 233, 0.6);
         }
         [data-theme="light"] {
             --bg: #f1f5f9;
@@ -79,6 +80,7 @@
             --glow: rgba(99, 102, 241, 0.2);
             --screen-bg: #e2e8f0;
             --keyboard-bg: rgba(255, 255, 255, 0.8);
+            --top-glow: rgba(14, 165, 233, 0.3);
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Vazirmatn', sans-serif; -webkit-tap-highlight-color: transparent; }
@@ -88,21 +90,15 @@
         
         a { color: inherit; text-decoration: none; }
 
+        /* Particles */
         #particles-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; opacity: 0.6; }
         [data-theme="light"] #particles-canvas { opacity: 0.3; }
 
-        header { 
-            position: sticky; top: 0; left: 0; right: 0; width: 100%; z-index: 9999; 
-            background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); 
-            border-bottom: 1px solid var(--glass-border); padding: 10px 16px; 
-            display: flex; align-items: center; justify-content: space-between; gap: 10px; 
-            transition: all 0.3s ease; box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-        }
-        
+        /* Header */
+        header { position: sticky; top: 0; left: 0; right: 0; width: 100%; z-index: 9999; background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border); padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; transition: all 0.3s ease; box-shadow: 0 4px 30px rgba(0,0,0,0.1); }
         .logo-container { display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; z-index: 102; cursor: pointer; }
         .logo-main { font-weight: 800; font-size: 22px; line-height: 1.2; background: linear-gradient(90deg, var(--accent), var(--primary)); -webkit-background-clip: text; color: transparent; }
         .logo-sub { font-size: 10px; font-weight: 700; color: var(--text-muted); margin-top: 2px; }
-        
         .header-actions { display: flex; align-items: center; gap: 8px; flex: 1; justify-content: flex-end; position: relative; }
         
         .search-box-mini { position: relative; width: 200px; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 101; }
@@ -115,6 +111,7 @@
         .btn-icon:hover { background: var(--primary); color: #fff; box-shadow: 0 0 15px var(--glow); border-color: var(--primary); }
         .cart-badge { position: absolute; top: -4px; right: -4px; background: var(--danger); color: #fff; font-size: 9px; font-weight: bold; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; display: none; box-shadow: 0 0 10px rgba(239,68,68,0.5);}
 
+        /* Hero */
         .hero { padding: 40px 20px 50px; text-align: center; position: relative; display: flex; flex-direction: column; align-items: center; overflow: hidden; }
         .hero-badge { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 20px; border-radius: 30px; background: rgba(250, 204, 21, 0.1); border: 1px solid rgba(250, 204, 21, 0.5); color: #facc15; font-size: clamp(11px, 3.5vw, 14px); font-weight: 800; white-space: nowrap; margin-bottom: 25px; backdrop-filter: blur(10px); box-shadow: 0 0 25px rgba(250, 204, 21, 0.3); animation: fadeInDown 0.8s ease-out, glowPulseYellow 3s infinite alternate; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 10px rgba(250, 204, 21, 0.6); }
         .hero-badge i { color: #facc15; font-size: 14px; animation: spinSlow 4s linear infinite; }
@@ -143,6 +140,7 @@
         [data-theme="light"] .keyboard-text { color: #6d28d9; text-shadow: none; }
         [data-theme="light"] .keyboard-sub { color: #e11d48; text-shadow: none; font-weight: 800; }
 
+        /* Sections */
         section { max-width: 1200px; margin: 0 auto; padding: 30px 16px; }
         .section-title { font-size: 24px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; font-weight: 800; }
         .section-title i { color: var(--primary); }
@@ -150,10 +148,12 @@
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
+        /* Separator */
         .separator { display: flex; align-items: center; justify-content: center; max-width: 1100px; margin: 0 auto; padding: 20px 16px; }
         .separator::before, .separator::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); }
         .separator i { color: var(--accent); margin: 0 15px; font-size: 16px; text-shadow: 0 0 10px var(--accent); animation: pulseWidget 2s infinite; }
 
+        /* Categories */
         .category-trigger-wrap { display: flex; justify-content: center; margin-bottom: 25px; }
         .btn-open-categories { background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-main); padding: 12px 25px; border-radius: 30px; font-size: 15px; font-weight: 800; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: 0.3s; backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .btn-open-categories:hover { border-color: var(--primary); box-shadow: 0 0 20px var(--glow); transform: translateY(-2px); }
@@ -176,41 +176,84 @@
         .cat-card.active i { color: #fff; }
         .cat-card span { font-size: 13px; font-weight: 700; }
 
-        .top-services-title { font-size: 20px; font-weight: 800; color: var(--accent); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        /* Top Services Title */
+        .top-services-title { font-size: 20px; font-weight: 800; color: var(--accent); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; text-shadow: 0 0 10px rgba(14,165,233,0.5); }
         .top-services-title i { animation: pulseWidget 2s infinite; }
 
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
-        @media (max-width: 767px) { .services-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; } }
+        /* Grid Layout - EXACTLY 5 COLUMNS DESKTOP, 2 MOBILE */
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(5, 1fr); 
+            gap: 12px; 
+        }
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        @media (max-width: 767px) {
+            .services-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 8px; 
+            }
+        }
 
-        .svc-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 12px; transition: 0.3s; position: relative; display: flex; flex-direction: column; gap: 8px; overflow: hidden; z-index: 1; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); min-height: 120px; }
+        /* Service Card Compact */
+        .svc-card { 
+            background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 10px; 
+            transition: 0.3s; position: relative; display: flex; flex-direction: column; gap: 6px; 
+            overflow: hidden; z-index: 1; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            min-height: 130px;
+        }
         .svc-card:hover { border-color: var(--primary); box-shadow: 0 10px 25px var(--glow); transform: translateY(-3px); }
         .svc-card > *:not(.svc-watermark) { position: relative; z-index: 2; }
         
-        .svc-watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); font-size: 90px; opacity: 0.08; z-index: 0; pointer-events: none; color: var(--primary); filter: drop-shadow(0 0 10px rgba(99,102,241,0.5)); transition: 0.3s; }
-        .svc-card:hover .svc-watermark { opacity: 0.15; transform: translate(-50%, -50%) rotate(0deg) scale(1.1); }
-        [data-theme="light"] .svc-watermark { opacity: 0.06; color: #1e293b; filter: none; }
+        /* Top Service Neon Border */
+        .top-svc {
+            border: 1px solid var(--accent) !important;
+            box-shadow: 0 0 15px var(--top-glow), inset 0 0 10px rgba(14, 165, 233, 0.1);
+            background: rgba(14, 165, 233, 0.05);
+        }
+        .top-svc:hover {
+            box-shadow: 0 0 25px var(--top-glow), inset 0 0 15px rgba(14, 165, 233, 0.2);
+        }
 
-        .svc-title { font-weight: 700; font-size: 13px; line-height: 1.4; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 36px; flex-grow: 1; }
+        .svc-watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); font-size: 80px; opacity: 0.05; z-index: 0; pointer-events: none; color: var(--primary); transition: 0.3s; }
+        .svc-card:hover .svc-watermark { opacity: 0.12; transform: translate(-50%, -50%) rotate(0deg) scale(1.1); }
+        [data-theme="light"] .svc-watermark { opacity: 0.04; color: #1e293b; }
+
+        /* Typography: Small, Centered, Single Line Preference */
+        .svc-title { 
+            font-weight: 700; font-size: 12px; line-height: 1.4; 
+            display: flex; align-items: center; justify-content: center; text-align: center; 
+            min-height: 34px; flex-grow: 1; word-break: break-word;
+        }
         
         .svc-prices { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: auto; flex-wrap: wrap; }
-        .svc-old { color: var(--text-muted); text-decoration: line-through; font-size: 11px; }
-        .svc-new { color: var(--success); font-weight: 800; font-size: 14px; text-shadow: 0 0 8px rgba(34,197,94,0.3); }
+        .svc-old { color: var(--text-muted); text-decoration: line-through; font-size: 10px; }
+        .svc-new { color: var(--success); font-weight: 800; font-size: 13px; text-shadow: 0 0 5px rgba(34,197,94,0.3); }
         
-        .svc-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 5px; border-top: 1px solid var(--border); padding-top: 8px; }
+        .svc-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 5px; border-top: 1px solid var(--border); padding-top: 8px; gap: 4px; }
         
-        .btn-add { background: var(--primary); color: #fff; border: none; padding: 6px 12px; border-radius: 20px; font-weight: 700; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 4px; font-size: 11px; position: relative; overflow: hidden; outline: none; width: 100%; }
+        .btn-add { 
+            background: var(--primary); color: #fff; border: none; padding: 6px 8px; border-radius: 15px; 
+            font-weight: 700; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 4px; font-size: 10px; 
+            position: relative; overflow: hidden; outline: none; width: 100%;
+        }
         .btn-add:hover { background: var(--primary-hover); box-shadow: 0 0 10px var(--glow); }
         .btn-add.added { background: var(--success); }
+        .top-svc .btn-add { background: var(--accent); }
+        .top-svc .btn-add:hover { background: #0284c7; }
+        .top-svc .btn-add.added { background: var(--success); }
         
         .ripple { position: absolute; border-radius: 50%; transform: scale(0); animation: ripple-anim 0.6s linear; background: rgba(255, 255, 255, 0.4); pointer-events: none; }
         @keyframes ripple-anim { to { transform: scale(4); opacity: 0; } }
 
-        .qty-control { display: flex; align-items: center; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 20px; padding: 2px; }
+        .qty-control { display: flex; align-items: center; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 15px; padding: 1px; }
         [data-theme="light"] .qty-control { background: rgba(0,0,0,0.05); }
-        .qty-control button { width: 22px; height: 22px; border: none; background: transparent; color: var(--text-main); cursor: pointer; font-size: 14px; border-radius: 50%; transition: 0.2s; }
+        .qty-control button { width: 20px; height: 20px; border: none; background: transparent; color: var(--text-main); cursor: pointer; font-size: 12px; border-radius: 50%; transition: 0.2s; }
         .qty-control button:hover { background: var(--primary); color: #fff; }
-        .qty-control span { width: 24px; text-align: center; font-weight: 700; font-size: 12px; }
+        .qty-control span { width: 20px; text-align: center; font-weight: 700; font-size: 11px; }
 
+        /* Bento Box Layout */
         .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
         .bento-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: all 0.4s ease; position: relative; overflow: hidden; }
         .bento-item:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 15px 35px rgba(14,165,233,0.2); }
@@ -223,6 +266,7 @@
         .bento-item:nth-child(4) { grid-column: span 3; }
         @media (max-width: 767px) { .bento-grid { grid-template-columns: 1fr; } .bento-item:nth-child(1) { grid-column: span 1; flex-direction: column; text-align: center; } .bento-item:nth-child(1) i { margin-bottom: 15px; font-size: 40px; } .bento-item:nth-child(4) { grid-column: span 1; } }
 
+        /* Links & Action Cards */
         .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
         .link-card { display: flex; align-items: center; gap: 10px; padding: 14px; border-radius: 16px; background: var(--glass-bg); border: 1px solid var(--glass-border); transition: 0.3s; font-size: 13px; font-weight: 700; backdrop-filter: blur(10px); }
         .link-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(14, 165, 233, 0.2); }
@@ -237,6 +281,7 @@
 
         .upload-title-main { color: #fbbf24; font-size: clamp(15px, 4vw, 26px); font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 25px; white-space: nowrap; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 15px rgba(251, 191, 36, 0.5); }
 
+        /* FAQ */
         .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; margin-bottom: 12px; overflow: hidden; backdrop-filter: blur(10px); }
         .faq-q { padding: 18px; font-weight: 800; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
         .faq-a { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; color: var(--text-muted); font-size: 14px; line-height: 1.8; }
@@ -247,6 +292,7 @@
         .support-widget:hover { transform: scale(1.1) translateY(-5px); box-shadow: 0 8px 30px var(--glow); }
         @keyframes pulseWidget { 0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(99, 102, 241, 0); } 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); } }
 
+        /* Cart */
         .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 10000; opacity: 0; visibility: hidden; transition: 0.3s; }
         .cart-overlay.open { opacity: 1; visibility: visible; }
         .cart-drawer { position: fixed; top: 0; left: -100%; width: 100%; max-width: 400px; height: 100%; background: var(--bg); z-index: 10001; box-shadow: 5px 0 30px rgba(0,0,0,0.5); transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; }
@@ -264,11 +310,13 @@
         .empty-cart { text-align: center; color: var(--text-muted); margin-top: 50px; }
         .empty-cart i { font-size: 60px; margin-bottom: 15px; opacity: 0.3; }
 
+        /* Bottom Nav */
         .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--glass-bg); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); display: flex; justify-content: space-around; padding: 10px 0; z-index: 999; }
         .bn-item { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--text-muted); font-size: 10px; font-weight: 700; transition: 0.3s; }
         .bn-item i { font-size: 20px; }
         .bn-item.active, .bn-item:hover { color: var(--primary); }
 
+        /* Modals */
         dialog { width: 90%; max-width: 500px; margin: auto; background: var(--bg); color: var(--text-main); border: 1px solid var(--glass-border); border-radius: 24px; padding: 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
         dialog::backdrop { background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); }
         .form-group { margin-bottom: 18px; }
@@ -422,6 +470,7 @@
     <section id="services">
         <h2 class="section-title reveal"><i class="fa-solid fa-layer-group"></i> خدمات و تعرفه‌ها</h2>
         
+        <!-- Top 12 Services -->
         <div class="top-services-title reveal"><i class="fa-solid fa-fire"></i> ۱۲ خدمت پرکاربرد</div>
         <div class="services-grid reveal" id="top-services-grid" style="margin-bottom: 30px;"></div>
 
@@ -693,39 +742,36 @@
             }
         });
 
-        // --- App Data & Logic ---
+        // --- App Data ---
         const D = {
             "s": [
-                // --- جدید: خرید اینترنتی ---
+                // --- 12 خدمات پرکاربرد ---
                 ["خرید اینترنتی", "ثبت‌نام و خرید محصولات ایران خودرو و سایپا", 500000, 500000],
                 ["خرید اینترنتی", "ثبت‌نام و خرید اینترنتی خودرو (سایر شرکت‌ها)", 550000, 550000],
-                
-                // --- قضایی و انتظامی ---
                 ["قضایی و انتظامی", "ثبت‌نام ثنا + احراز هویت", 198000, 150000],
                 ["قضایی و انتظامی", "دریافت ابلاغیه قضایی", 50000, 45000],
-                
-                // --- پلیس +۱۰ ---
                 ["پلیس +۱۰", "ثبت‌نام سخا و احراز نشانی", 590000, 350000],
                 ["پلیس +۱۰", "نوبت‌گیری تعویض پلاک خودرو", 198000, 180000],
                 ["پلیس +۱۰", "دریافت معافیت تحصیلی", 250000, 200000],
                 ["پلیس +۱۰", "ثبت‌نام کارت سوخت", 150000, 120000],
-                
-                // --- آموزشی ---
                 ["خدمات آموزشی و دانشگاهی", "ثبت‌نام کنکور و انتخاب رشته", 400000, 300000],
-                
-                // --- سایر خدمات پرکاربرد ---
                 ["سجام و بورس", "ثبت‌نام سجام", 198000, 150000],
                 ["خدمات عمومی و اداری", "دریافت حکم و فیش حقوقی", 80000, 60000],
                 ["خدمات عمومی و اداری", "دریافت گواهی کسر از حقوق", 120000, 120000],
                 
-                // --- سایر خدمات (نمونه) ---
+                // --- سایر خدمات (نمونه برای دسته‌بندی) ---
                 ["مالیات و کسب‌وکار", "ثبت‌نام کد اقتصادی (حقیقی)", 500000, 465000],
                 ["مالیات و کسب‌وکار", "اظهارنامه مالیاتی مشاغل گروه ۳", 690000, 642000],
                 ["بیمه و تامین اجتماعی", "ثبت نام / تمدید بیمه سلامت", 350000, 326000],
+                ["بیمه و تامین اجتماعی", "اعتراض به گزارش بازرسی تامین اجتماعی", 250000, 233000],
                 ["املاک و مسکن", "ساماندهی املاک در سامانه ملی املاک و اسکان", 290000, 270000],
+                ["املاک و مسکن", "ثبت نام مسکن ملی", 290000, 270000],
                 ["امور اصناف و مجوزها", "ورود به سامانه نوین اصناف و صدور/تمدید جواز (حقیقی)", 360000, 335000],
+                ["امور اصناف و مجوزها", "ثبت مجوز مشاغل خانگی", 250000, 233000],
                 ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A4 (تک‌رو)", 11000, 9000],
-                ["تایپ، اسکن و پرینت", "تایپ ساده فارسی (هر صفحه)", 80000, 72000]
+                ["تایپ، اسکن و پرینت", "پرینت سیاه سفید A4 (پشت و رو)", 15000, 12000],
+                ["تایپ، اسکن و پرینت", "تایپ ساده فارسی (هر صفحه)", 80000, 72000],
+                ["تایپ، اسکن و پرینت", "تایپ انگلیسی (هر صفحه)", 190000, 177000]
             ],
             "l": {
                 "خرید اینترنتی خودرو": [
@@ -895,15 +941,16 @@
             return 'fa-globe';
         }
 
-        function generateServiceCardHTML(item, idx, isSearching) {
+        function generateServiceCardHTML(item, idx, isSearching, isTop = false) {
             const isInCart = cart[idx] !== undefined;
             const qty = isInCart ? cart[idx].qty : 1;
             const hasQty = ['هر صفحه','هر نفر','هر درخواست','پاورپوینت','اسکن','فکس','تایپ','پرینت','کپی','نصب','بلیط','استعلام'].some(w => item[1].includes(w));
             const wmIcon = getWatermarkIcon(item[1]);
             const matchClass = isSearching ? 'search-match' : '';
+            const topClass = isTop ? 'top-svc' : '';
 
             return `
-            <div class="svc-card reveal ${matchClass}">
+            <div class="svc-card reveal ${matchClass} ${topClass}">
                 <i class="fa-solid ${wmIcon} svc-watermark"></i>
                 <div class="svc-title">${item[1]}</div>
                 <div class="svc-prices"><span class="svc-old">${fa(item[2])}</span><span class="svc-new">${fa(item[3])} تومان</span></div>
@@ -928,7 +975,7 @@
                 return;
             }
 
-            grid.innerHTML = filteredIndices.map(idx => generateServiceCardHTML(D.s[idx], idx, normalizedQuery.length > 0)).join('');
+            grid.innerHTML = filteredIndices.map(idx => generateServiceCardHTML(D.s[idx], idx, normalizedQuery.length > 0, true)).join('');
             document.querySelectorAll('#top-services-grid .svc-card.reveal').forEach(el => revealObserver.observe(el));
         }
 
@@ -947,7 +994,7 @@
                 return;
             }
 
-            grid.innerHTML = filtered.map(item => generateServiceCardHTML(item, item.originalIndex, normalizedQuery.length > 0)).join('');
+            grid.innerHTML = filtered.map(item => generateServiceCardHTML(item, item.originalIndex, normalizedQuery.length > 0, false)).join('');
             document.querySelectorAll('#services-grid .svc-card.reveal').forEach(el => revealObserver.observe(el));
         }
 

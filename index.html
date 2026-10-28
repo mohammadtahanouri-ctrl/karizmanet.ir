@@ -156,8 +156,8 @@
 
         /* Sections */
         section { position: relative; max-width: 1200px; margin: 0 auto; padding: 30px 16px; z-index: 1; }
-        .section-title { font-size: 24px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; font-weight: 800; }
-        .section-title i { color: var(--primary); }
+        .section-title { font-size: 24px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; font-weight: 800; text-shadow: 0 0 20px var(--glow); }
+        .section-title i { color: var(--accent); }
 
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -452,48 +452,48 @@
         @media (min-width: 1024px) { .bento-grid { grid-template-columns: repeat(4, 1fr); } }
         @media (prefers-reduced-motion: reduce) { * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
     
-/* ===== KZ 3D THEME (only active with html.adv) ===== */
-#kz-gl{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:none}
-#kz-hero-spacer{display:none}
-.kz-cursor,.mode-fab{display:none}
-.mode-toggle .mode-label{font-size:10px}
-html.adv #kz-gl{display:block}
-html.adv.gl #particles-canvas{display:none}
-html.adv.gl #kz-hero-spacer{display:block;width:min(100%,520px);height:clamp(230px,62vw,340px);margin:-4px 0 6px}
-html.adv.gl .monitor,html.adv.gl .monitor-neck,html.adv.gl .monitor-base,html.adv.gl .keyboard::before{display:none!important}
-html.adv.gl .monitor-wrapper{margin-top:0}
-html.adv.gl .monitor{display:block!important;position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);border:0;padding:0}
-html.adv.gl .monitor-content{position:static}
-html.adv body::before{content:"";position:fixed;inset:-20%;z-index:-2;pointer-events:none;background:radial-gradient(40% 35% at 20% 25%,rgba(99,102,241,.28),transparent 70%),radial-gradient(35% 30% at 80% 20%,rgba(236,72,153,.2),transparent 70%),radial-gradient(40% 35% at 60% 85%,rgba(14,165,233,.22),transparent 70%);animation:kzAurora 18s ease-in-out infinite alternate}
-@keyframes kzAurora{to{transform:translate3d(4%,3%,0) rotate(6deg) scale(1.1)}}
-[data-theme="light"].adv #kz-gl{opacity:.55}
-html.adv .reveal{opacity:0;transform:perspective(900px) translateY(70px) rotateX(-16deg) scale(.95);filter:blur(6px);transition:all .9s cubic-bezier(.2,.8,.2,1)}
-html.adv .reveal.active{opacity:1;transform:none;filter:none}
-html.adv .svc-card,html.adv .link-card,html.adv .cat-card,html.adv .action-card{position:relative;transform-style:preserve-3d;transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out,box-shadow .3s,border-color .3s;box-shadow:0 18px 40px -22px rgba(99,102,241,.55),inset 0 1px 0 rgba(255,255,255,.12);will-change:transform}
-html.adv .svc-card:hover,html.adv .link-card:hover,html.adv .cat-card:hover,html.adv .action-card:hover{border-color:rgba(34,211,238,.6);box-shadow:0 26px 60px -20px rgba(34,211,238,.45),0 0 28px rgba(168,85,247,.3)}
-html.adv .svc-card::after,html.adv .link-card::after,html.adv .cat-card::after,html.adv .action-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.22),transparent 55%)}
-html.adv .svc-card:hover::after,html.adv .link-card:hover::after,html.adv .cat-card:hover::after,html.adv .action-card:hover::after{opacity:1}
-html.adv .section-title{text-shadow:0 0 22px rgba(99,102,241,.7),0 0 4px rgba(34,211,238,.4);letter-spacing:.2px}
-html.adv .cyan-text{background:linear-gradient(90deg,#22d3ee,#a78bfa,#ec4899,#22d3ee);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:kzGrad 6s linear infinite}
-@keyframes kzGrad{to{background-position:300% 0}}
-html.adv dialog[open]{animation:kzDlg .6s cubic-bezier(.2,.9,.2,1);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 60px rgba(99,102,241,.3)}
-@keyframes kzDlg{from{opacity:0;transform:perspective(900px) rotateX(-24deg) translateY(50px) scale(.9)}}
-html.adv header{box-shadow:0 10px 40px -15px rgba(99,102,241,.5)}
-html.adv .bottom-nav{left:10px;right:10px;bottom:8px;border-radius:22px;border:1px solid var(--glass-border);box-shadow:0 18px 40px rgba(0,0,0,.45),0 0 30px rgba(99,102,241,.25),inset 0 1px 0 rgba(255,255,255,.15);padding:9px 4px}
-html.adv .bn-item{transition:transform .3s cubic-bezier(.2,.9,.2,1.4),color .3s}
-html.adv .bn-item:hover,html.adv .bn-item:active{transform:translateY(-6px) scale(1.12);text-shadow:0 0 14px var(--glow)}
-html.adv body{padding-bottom:86px}
-.mode-toggle{cursor:pointer;user-select:none}
-html.adv .mode-toggle{color:#22d3ee}
-.kz-toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:rgba(15,23,42,.92);color:#f8fafc;border:1px solid rgba(255,255,255,.2);padding:10px 18px;border-radius:14px;font-size:13px;font-weight:700;z-index:3000;backdrop-filter:blur(10px);animation:kzDlg .4s both}
-@media (min-width:768px){
- .mode-fab{display:flex;align-items:center;gap:8px;position:fixed;left:18px;bottom:18px;z-index:999;padding:11px 18px;border-radius:16px;background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(20px);color:var(--text-main);font-weight:800;font-size:13px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
- .mode-fab:hover{border-color:#22d3ee;box-shadow:0 0 24px rgba(34,211,238,.4)}
- html.adv body{padding-bottom:0}
- @media (pointer:fine){html.adv .kz-cursor{display:block;position:fixed;top:0;left:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1.5px solid rgba(34,211,238,.7);box-shadow:0 0 22px rgba(99,102,241,.55);pointer-events:none;z-index:4000;transition:width .2s,height .2s,margin .2s,background .2s}
-  html.adv .kz-cursor.big{width:54px;height:54px;margin:-27px 0 0 -27px;background:rgba(99,102,241,.14)}}
-}
-@media (prefers-reduced-motion:reduce){html.adv *{animation:none!important}}
+        /* ===== KZ 3D THEME (only active with html.adv) ===== */
+        #kz-gl{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:none}
+        #kz-hero-spacer{display:none}
+        .kz-cursor,.mode-fab{display:none}
+        .mode-toggle .mode-label{font-size:10px}
+        html.adv #kz-gl{display:block}
+        html.adv.gl #particles-canvas{display:none}
+        html.adv.gl #kz-hero-spacer{display:block;width:min(100%,520px);height:clamp(230px,62vw,340px);margin:-4px 0 6px}
+        html.adv.gl .monitor,html.adv.gl .monitor-neck,html.adv.gl .monitor-base,html.adv.gl .keyboard::before{display:none!important}
+        html.adv.gl .monitor-wrapper{margin-top:0}
+        html.adv.gl .monitor{display:block!important;position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);border:0;padding:0}
+        html.adv.gl .monitor-content{position:static}
+        html.adv body::before{content:"";position:fixed;inset:-20%;z-index:-2;pointer-events:none;background:radial-gradient(40% 35% at 20% 25%,rgba(99,102,241,.28),transparent 70%),radial-gradient(35% 30% at 80% 20%,rgba(236,72,153,.2),transparent 70%),radial-gradient(40% 35% at 60% 85%,rgba(14,165,233,.22),transparent 70%);animation:kzAurora 18s ease-in-out infinite alternate}
+        @keyframes kzAurora{to{transform:translate3d(4%,3%,0) rotate(6deg) scale(1.1)}}
+        [data-theme="light"].adv #kz-gl{opacity:.55}
+        html.adv .reveal{opacity:0;transform:perspective(900px) translateY(70px) rotateX(-16deg) scale(.95);filter:blur(6px);transition:all .9s cubic-bezier(.2,.8,.2,1)}
+        html.adv .reveal.active{opacity:1;transform:none;filter:none}
+        html.adv .svc-card,html.adv .link-card,html.adv .cat-card,html.adv .action-card,html.adv .bento-item{position:relative;transform-style:preserve-3d;transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out,box-shadow .3s,border-color .3s;box-shadow:0 18px 40px -22px rgba(99,102,241,.55),inset 0 1px 0 rgba(255,255,255,.12);will-change:transform}
+        html.adv .svc-card:hover,html.adv .link-card:hover,html.adv .cat-card:hover,html.adv .action-card:hover,html.adv .bento-item:hover{border-color:rgba(34,211,238,.6);box-shadow:0 26px 60px -20px rgba(34,211,238,.45),0 0 28px rgba(168,85,247,.3)}
+        html.adv .svc-card::after,html.adv .link-card::after,html.adv .cat-card::after,html.adv .action-card::after,html.adv .bento-item::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.22),transparent 55%)}
+        html.adv .svc-card:hover::after,html.adv .link-card:hover::after,html.adv .cat-card:hover::after,html.adv .action-card:hover::after,html.adv .bento-item:hover::after{opacity:1}
+        html.adv .section-title{text-shadow:0 0 22px rgba(99,102,241,.7),0 0 4px rgba(34,211,238,.4);letter-spacing:.2px}
+        html.adv .cyan-text{background:linear-gradient(90deg,#22d3ee,#a78bfa,#ec4899,#22d3ee);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:kzGrad 6s linear infinite}
+        @keyframes kzGrad{to{background-position:300% 0}}
+        html.adv dialog[open]{animation:kzDlg .6s cubic-bezier(.2,.9,.2,1);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 60px rgba(99,102,241,.3)}
+        @keyframes kzDlg{from{opacity:0;transform:perspective(900px) rotateX(-24deg) translateY(50px) scale(.9)}}
+        html.adv header{box-shadow:0 10px 40px -15px rgba(99,102,241,.5)}
+        html.adv .bottom-nav{left:10px;right:10px;bottom:8px;border-radius:22px;border:1px solid var(--glass-border);box-shadow:0 18px 40px rgba(0,0,0,.45),0 0 30px rgba(99,102,241,.25),inset 0 1px 0 rgba(255,255,255,.15);padding:9px 4px}
+        html.adv .bn-item{transition:transform .3s cubic-bezier(.2,.9,.2,1.4),color .3s}
+        html.adv .bn-item:hover,html.adv .bn-item:active{transform:translateY(-6px) scale(1.12);text-shadow:0 0 14px var(--glow)}
+        html.adv body{padding-bottom:86px}
+        .mode-toggle{cursor:pointer;user-select:none}
+        html.adv .mode-toggle{color:#22d3ee}
+        .kz-toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:rgba(15,23,42,.92);color:#f8fafc;border:1px solid rgba(255,255,255,.2);padding:10px 18px;border-radius:14px;font-size:13px;font-weight:700;z-index:3000;backdrop-filter:blur(10px);animation:kzDlg .4s both}
+        @media (min-width:768px){
+         .mode-fab{display:flex;align-items:center;gap:8px;position:fixed;left:18px;bottom:18px;z-index:999;padding:11px 18px;border-radius:16px;background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(20px);color:var(--text-main);font-weight:800;font-size:13px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+         .mode-fab:hover{border-color:#22d3ee;box-shadow:0 0 24px rgba(34,211,238,.4)}
+         html.adv body{padding-bottom:0}
+         @media (pointer:fine){html.adv .kz-cursor{display:block;position:fixed;top:0;left:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1.5px solid rgba(34,211,238,.7);box-shadow:0 0 22px rgba(99,102,241,.55);pointer-events:none;z-index:4000;transition:width .2s,height .2s,margin .2s,background .2s}
+          html.adv .kz-cursor.big{width:54px;height:54px;margin:-27px 0 0 -27px;background:rgba(99,102,241,.14)}}
+        }
+        @media (prefers-reduced-motion:reduce){html.adv *{animation:none!important}}
 
     </style>
 
@@ -561,311 +561,313 @@ html.adv .mode-toggle{color:#22d3ee}
         </div>
     </div>
 
-    <section id="why-us">
-        <h2 class="section-title reveal"><i class="fa-solid fa-star"></i> چرا کاریزما نت؟</h2>
-        <div class="bento-grid">
-            <div class="bento-item reveal">
-                <i class="fa-solid fa-bolt"></i>
-                <div>
-                    <h3>سرعت بالا</h3>
-                    <p>انجام سریع امور اداری و ثبت‌نام‌ها بدون معطلی، همراه با پیگیری لحظه‌ای.</p>
-                </div>
-            </div>
-            <div class="bento-item reveal" style="transition-delay: 0.1s;">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h3>امنیت اطلاعات</h3>
-                <p>اطلاعات شخصی و مدارک شما با بالاترین استاندارد محافظت می‌شود.</p>
-            </div>
-            <div class="bento-item reveal" style="transition-delay: 0.2s;">
-                <i class="fa-solid fa-headset"></i>
-                <h3>پشتیبانی واقعی</h3>
-                <p>پاسخگویی از طریق تمام پیام‌رسان‌ها و تماس تلفنی.</p>
-            </div>
-            <div class="bento-item reveal" style="transition-delay: 0.3s;">
-                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                <h3>پیگیری اختصاصی</h3>
-                <p>کد رهگیری ۵ رقمی برای تمام سفارشات جهت پیگیری دقیق شما.</p>
+<section id="why-us">
+    <h2 class="section-title reveal"><i class="fa-solid fa-star"></i> چرا کاریزما نت؟</h2>
+    <div class="bento-grid">
+        <div class="bento-item reveal">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+                <h3>سرعت بالا</h3>
+                <p>انجام سریع امور اداری و ثبت‌نام‌ها بدون معطلی، همراه با پیگیری لحظه‌ای.</p>
             </div>
         </div>
-    </section>
-
-    <div class="separator reveal"><i class="fa-solid fa-diamond"></i></div>
-
-    <section id="services">
-        <h2 class="section-title reveal"><i class="fa-solid fa-layer-group"></i> خدمات و تعرفه‌ها</h2>
-        
-        <!-- Top 14 Services -->
-        <div class="search-info" id="search-info" aria-live="polite"></div>
-        <div class="top-services-title reveal"><i class="fa-solid fa-fire"></i> ۱۴ خدمت پرکاربرد</div>
-        <div class="services-grid reveal" id="top-services-grid" style="margin-bottom: 30px;"></div>
-
-        <div class="cat-chips" id="cat-chips" role="tablist" aria-label="دسته‌بندی خدمات"></div>
-
-        <div class="category-trigger-wrap reveal">
-            <button class="btn-open-categories" onclick="openCategoryModal()">
-                <i class="fa-solid fa-list-ul"></i> مشاهده همه دسته‌بندی‌ها <i class="fa-solid fa-chevron-down"></i>
-            </button>
+        <div class="bento-item reveal" style="transition-delay: 0.1s;">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>امنیت اطلاعات</h3>
+            <p>اطلاعات شخصی و مدارک شما با بالاترین استاندارد محافظت می‌شود.</p>
         </div>
-
-        <!-- Selected category bar -->
-        <div class="active-cat-bar" id="active-cat-bar">
-            <div class="active-cat-title"><i class="fa-solid fa-layer-group" id="active-cat-icon"></i> دسته: <span id="active-cat-name"></span></div>
-            <button class="btn-show-all" onclick="showAllCategories()"><i class="fa-solid fa-border-all"></i> نمایش همه</button>
+        <div class="bento-item reveal" style="transition-delay: 0.2s;">
+            <i class="fa-solid fa-headset"></i>
+            <h3>پشتیبانی واقعی</h3>
+            <p>پاسخگویی از طریق تمام پیام‌رسان‌ها و تماس تلفنی.</p>
         </div>
-        
-        <div class="services-grid" id="services-grid"></div>
-    </section>
-
-    <div class="separator reveal"><i class="fa-solid fa-diamond"></i></div>
-
-    <section id="links">
-        <h2 class="section-title reveal"><i class="fa-solid fa-link"></i> سایت‌های مهم (رایگان)</h2>
-        <div id="links-container" class="reveal"></div>
-    </section>
-
-    <div class="separator reveal"><i class="fa-solid fa-diamond"></i></div>
-
-    <section id="upload">
-        <div class="upload-title-main reveal">
-            <i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت، ویرایش و تدوین
+        <div class="bento-item reveal" style="transition-delay: 0.3s;">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <h3>پیگیری اختصاصی</h3>
+            <p>کد رهگیری ۵ رقمی برای تمام سفارشات جهت پیگیری دقیق شما.</p>
         </div>
-        
-        <div class="action-card reveal" onclick="openModal('upload-modal')">
-            <i class="fa-solid fa-file-pdf"></i>
-            <h3>فایل خود را برای ما ارسال کنید</h3>
-            <p>کلیک کنید و از طریق پیام‌رسان‌های زیر فایل خود را بفرستید تا آماده‌سازی شود.</p>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <div class="separator reveal"><i class="fa-solid fa-diamond"></i></div>
+<div class="separator reveal"><i class="fa-solid fa-diamond"></i></div>
 
-    <section id="contact-section">
-        <h2 class="section-title reveal"><i class="fa-solid fa-headset"></i> ارتباط با ما</h2>
-        <div class="action-card reveal" onclick="openModal('contact-modal')">
-            <i class="fa-solid fa-address-book"></i>
-            <h3>راه‌های ارتباطی با کاریزما نت</h3>
-            <p>جهت تماس تلفنی، ارسال پیام یا مشاهده آدرس ما کلیک کنید.</p>
-        </div>
-    </section>
+<section id="services">
+    <h2 class="section-title reveal"><i class="fa-solid fa-layer-group"></i> خدمات و تعرفه‌ها</h2>
+    
+    <!-- Top 14 Services -->
+    <div class="search-info" id="search-info" aria-live="polite"></div>
+    <div class="top-services-title reveal"><i class="fa-solid fa-fire"></i> ۱۴ خدمت پرکاربرد</div>
+    <div class="services-grid reveal" id="top-services-grid" style="margin-bottom: 30px;"></div>
 
-    <div class="separator reveal"><i class="fa-solid fa-diamond"></i></div>
+    <div class="cat-chips" id="cat-chips" role="tablist" aria-label="دسته‌بندی خدمات"></div>
 
-    <section id="faq">
-        <h2 class="section-title reveal"><i class="fa-solid fa-circle-question"></i> سوالات متداول</h2>
-        
-        <!-- FAQ Items (reveal removed to fix the bug) -->
-        <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">آیکون کاربر (سفارشات من) در بالای سایت چه کاربردی دارد؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">
-                با کلیک روی این آیکون (شکل انسان)، می‌توانید لیست تمام سفارش‌هایی که ثبت کرده‌اید را مشاهده کنید. در این بخش، کد پیگیری ۵ رقمی، تاریخ ثبت و مبلغ هر سفارش نمایش داده می‌شود.
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">چگونه فایل خود را برای پرینت ارسال کنم؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">
-                ۱. از بخش «ارسال فایل جهت پرینت» در همین صفحه، روی باکس کلیک کنید.<br>
-                ۲. پیام‌رسان مورد نظر خود (ایتا، تلگرام، روبیکا، بله یا شاد) را انتخاب کنید.<br>
-                ۳. فایل خود را برای ما ارسال کنید.<br>
-                ۴. پس از بررسی توسط ما، هزینه به شما اعلام و فایل شما جهت پرینت آماده می‌شود. (توجه: تحویل پرینت حتماً باید حضوری در بیرجند انجام شود).
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">چطور مطمئن بشم کارم انجام میشه؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">تمامی درخواست‌ها دارای کد رهگیری ۵ رقمی هستند. پس از پرداخت و انجام کار، فایل یا نتیجه نهایی برای شما ارسال می‌شود.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">ساعت کاری کاریزما نت چیست؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">ثبت سفارش آنلاین ۲۴ ساعته است. خدمات حضوری در بیرجند از ساعت ۸:۰۰ تا ۱۳:۳۰ و از ۱۷:۰۰ تا ۲۱:۳۰ ارائه می‌شود.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">روش پرداخت چیست؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">پرداخت کارت‌به‌کارت است. پس از ثبت سفارش و دریافت فاکتور، مبلغ را به شماره کارت اعلام‌شده واریز کنید و تصویر رسید را از طریق پیامک یا یکی از پیام‌رسان‌ها ارسال کنید.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">زمان انجام کار چقدر است؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">زمان انجام به نوع خدمت و شرایط سامانه مربوطه بستگی دارد. پس از ارسال رسید، کار شروع می‌شود و با کد رهگیری ۵ رقمی می‌توانید وضعیت آن را پیگیری کنید.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q" onclick="toggleFaq(this)">اگر خدمتی انجام نشد چه می‌شود؟ <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-a">اگر به هر دلیل انجام خدمت امکان‌پذیر نباشد، موضوع از طریق پشتیبانی پیگیری می‌شود. برای هماهنگی با شماره ۰۹۹۶۰۰۶۲۳۲۰ یا پیام‌رسان‌ها در تماس باشید.</div>
-        </div>
-
-    </section>
-
-    <footer style="text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px;">
-        © کاریزما نت <span id="footer-year">۱۴۰۵</span> - طراحی شده با <i class="fa-solid fa-heart" style="color: var(--danger); animation: pulseWidget 2s infinite;"></i> برای شما
-    </footer>
-
-    <div class="support-widget" onclick="openModal('contact-modal')" title="ارتباط با ما">
-        <i class="fa-solid fa-headset"></i>
+    <div class="category-trigger-wrap reveal">
+        <button class="btn-open-categories" onclick="openCategoryModal()">
+            <i class="fa-solid fa-list-ul"></i> مشاهده همه دسته‌بندی‌ها <i class="fa-solid fa-chevron-down"></i>
+        </button>
     </div>
 
-    <dialog id="category-modal" class="category-dialog">
-        <div class="cat-header">
-            <h3><i class="fa-solid fa-layer-group"></i> دسته‌بندی خدمات</h3>
-            <button onclick="document.getElementById('category-modal').close()"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="cat-grid" id="cat-grid"></div>
-    </dialog>
+    <!-- Selected category bar -->
+    <div class="active-cat-bar" id="active-cat-bar">
+        <div class="active-cat-title"><i class="fa-solid fa-layer-group" id="active-cat-icon"></i> دسته: <span id="active-cat-name"></span></div>
+        <button class="btn-show-all" onclick="showAllCategories()"><i class="fa-solid fa-border-all"></i> نمایش همه</button>
+    </div>
+    
+    <div class="services-grid" id="services-grid"></div>
+</section>
 
-    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
-    <div class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h2><i class="fa-solid fa-cart-shopping"></i> سبد درخواست‌ها</h2>
-            <button class="btn-icon" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="cart-items" id="cart-items"></div>
-        <div class="cart-footer">
-            <div class="cart-total"><span>جمع کل:</span><span id="cart-total-price">۰ تومان</span></div>
-            <button class="btn-checkout" onclick="openCheckout()">ثبت نهایی درخواست <i class="fa-solid fa-arrow-left"></i></button>
+<div class="separator reveal"><i class="fa-solid fa-diamond"></i></div>
+
+<section id="links">
+    <h2 class="section-title reveal"><i class="fa-solid fa-link"></i> سایت‌های مهم (رایگان)</h2>
+    <div id="links-container" class="reveal"></div>
+</section>
+
+<div class="separator reveal"><i class="fa-solid fa-diamond"></i></div>
+
+<section id="upload">
+    <div class="upload-title-main reveal">
+        <i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت، ویرایش و تدوین
+    </div>
+    
+    <div class="action-card reveal" onclick="openModal('upload-modal')">
+        <i class="fa-solid fa-file-pdf"></i>
+        <h3>فایل خود را برای ما ارسال کنید</h3>
+        <p>کلیک کنید و از طریق پیام‌رسان‌های زیر فایل خود را بفرستید تا آماده‌سازی شود.</p>
+    </div>
+</section>
+
+<div class="separator reveal"><i class="fa-solid fa-diamond"></i></div>
+
+<section id="contact-section">
+    <h2 class="section-title reveal"><i class="fa-solid fa-headset"></i> ارتباط با ما</h2>
+    <div class="action-card reveal" onclick="openModal('contact-modal')">
+        <i class="fa-solid fa-address-book"></i>
+        <h3>راه‌های ارتباطی با کاریزما نت</h3>
+        <p>جهت تماس تلفنی، ارسال پیام یا مشاهده آدرس ما کلیک کنید.</p>
+    </div>
+</section>
+
+<div class="separator reveal"><i class="fa-solid fa-diamond"></i></div>
+
+<section id="faq">
+    <h2 class="section-title reveal"><i class="fa-solid fa-circle-question"></i> سوالات متداول</h2>
+    
+    <!-- FAQ Items (reveal removed to fix the bug) -->
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">آیکون کاربر (سفارشات من) در بالای سایت چه کاربردی دارد؟ <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">
+            با کلیک روی این آیکون (شکل انسان)، می‌توانید لیست تمام سفارش‌هایی که ثبت کرده‌اید را مشاهده کنید. در این بخش، کد پیگیری ۵ رقمی، تاریخ ثبت و مبلغ هر سفارش نمایش داده می‌شود.
         </div>
     </div>
 
-    <dialog id="user-panel-modal">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-            <h2><i class="fa-solid fa-user"></i> سفارشات من</h2>
-            <button class="btn-icon" onclick="document.getElementById('user-panel-modal').close()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">چگونه فایل خود را برای پرینت ارسال کنم؟ <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">
+            ۱. از بخش «ارسال فایل جهت پرینت» در همین صفحه، روی باکس کلیک کنید.<br>
+            ۲. پیام‌رسان مورد نظر خود (ایتا، تلگرام، روبیکا، بله یا شاد) را انتخاب کنید.<br>
+            ۳. فایل خود را برای ما ارسال کنید.<br>
+            ۴. پس از بررسی توسط ما، هزینه به شما اعلام و فایل شما جهت پرینت آماده می‌شود. (توجه: تحویل پرینت حتماً باید حضوری در بیرجند انجام شود).
         </div>
-        <div id="user-orders-list" style="max-height: 60vh; overflow-y: auto;"></div>
-        <div style="text-align: center; margin-top: 20px;">
-            <button class="btn-add" style="background: var(--danger); justify-content: center; width: 100%;" onclick="clearUserHistory()">پاک کردن تاریخچه</button>
-        </div>
-    </dialog>
-
-    <dialog id="checkout-modal">
-        <div id="chk-step1">
-            <h2 style="margin-bottom: 20px;"><i class="fa-solid fa-file-invoice"></i> تکمیل اطلاعات</h2>
-            <div class="form-group"><label>نام و نام خانوادگی</label><input type="text" id="chk-name" placeholder="مثال: علی رضایی"></div>
-            <div class="form-group"><label>شماره تماس یا آیدی پیام‌رسان</label><input type="text" id="chk-contact" placeholder="۰۹۱۲... یا @username"></div>
-            <div class="form-group"><label>توضیحات (اختیاری)</label><textarea id="chk-desc" rows="2" placeholder="اگر توضیح خاصی دارید بنویسید..."></textarea></div>
-            <div style="display: flex; gap: 10px; margin-top: 20px;">
-                <button class="btn-checkout" onclick="submitOrder()">ثبت اطلاعات و مشاهده فاکتور <i class="fa-solid fa-arrow-left"></i></button>
-                <button class="btn-add" style="background: var(--surface); color: var(--text-main); padding: 14px;" onclick="document.getElementById('checkout-modal').close()">انصراف</button>
-            </div>
-        </div>
-
-        <div id="chk-step2" style="display: none;">
-            <div style="text-align: center; margin-bottom: 20px;">
-                <i class="fa-solid fa-circle-check" style="font-size: 60px; color: var(--success); margin-bottom: 15px;"></i>
-                <h2>فاکتور صادر شد!</h2>
-                <div style="background: var(--surface); border: 1px solid var(--border); padding: 12px; border-radius: 12px; margin-top: 10px; display: inline-block;">
-                    <span style="font-size: 13px; color: var(--text-muted);">کد پیگیری شما:</span>
-                    <b id="chk-order-code" style="color: var(--accent); font-size: 20px; letter-spacing: 3px;"></b>
-                </div>
-                <p style="color: var(--text-muted); font-size: 14px; margin-top: 15px;">مبلغ قابل پرداخت: <b id="chk-total-price" style="color: var(--accent); font-size: 18px;"></b> تومان</p>
-            </div>
-
-            <div class="box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px; margin-bottom: 20px;">
-                <h4 style="margin-bottom: 12px; font-size: 15px;">۱. ارسال خلاصه سفارش به مدیر:</h4>
-                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">لطفاً برای اطلاع مدیر از ثبت سفارش، یکی از روش‌های زیر را انتخاب کنید:</p>
-                <div style="display: flex; gap: 12px; align-items: flex-start;">
-                    <div class="sms-btn-wrapper">
-                        <div class="fast-badge"><i class="fa-solid fa-bolt"></i> روش سریع‌تر</div>
-                        <a href="#" id="btn-sms-admin" class="btn-add"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
-                    </div>
-                    <a href="#" id="btn-tg-admin" class="btn-add" style="flex: 1; justify-content: center; background: #0088cc; padding-top: 14px; padding-bottom: 14px;"><i class="fa-brands fa-telegram"></i> تلگرام</a>
-                </div>
-            </div>
-
-            <button class="btn-add" style="width:100%;justify-content:center;margin-bottom:20px;padding:12px;background:var(--surface);color:var(--text-main);border:1px solid var(--glass-border);" onclick="copyOrderText()"><i class="fa-solid fa-copy"></i> کپی متن سفارش (برای ارسال دستی)</button>
-
-            <div class="payment-box">
-                <h4 style="margin-bottom: 8px; font-size: 15px;">۲. واریز مبلغ به شماره کارت:</h4>
-                <div class="card-number" id="card-number-text">6219 8619 4552 4204</div>
-                <div class="owner-name">به نام: <b>نرجس ملائی</b></div>
-                <button onclick="copyCardNumber()" style="margin-top: 15px; background: var(--primary); color: #fff; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-size: 13px; font-weight: 700; transition: 0.3s; box-shadow: 0 0 10px var(--glow);"><i class="fa-solid fa-copy"></i> کپی شماره کارت</button>
-            </div>
-
-            <div class="box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px; text-align: center;">
-                <h4 style="margin-bottom: 12px; font-size: 15px;">۳. ارسال رسید پرداخت:</h4>
-                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">پس از واریز، تصویر رسید را از طریق یکی از راه‌های زیر ارسال کنید:</p>
-                <div class="receipt-grid">
-                    <a href="sms:09960062320" class="receipt-opt"><div class="brand-circle bg-sms"><i class="fa-solid fa-comment-sms"></i></div><span>پیامک</span></a>
-                    <a href="https://t.me/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-telegram"><i class="fa-brands fa-telegram"></i></div><span>تلگرام</span></a>
-                    <a href="https://eitaa.com/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-eitaa"><i class="fa-solid fa-comment-dots"></i></div><span>ایتا</span></a>
-                    <a href="rubika://kavehnouri" onclick="openMessenger(event, 'rubika://kavehnouri', 'https://rubika.ir/kavehnouri')" class="receipt-opt"><div class="brand-circle bg-rubika"><i class="fa-solid fa-comments"></i></div><span>روبیکا</span></a>
-                    <a href="https://ble.ir/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-bale"><i class="fa-solid fa-comment"></i></div><span>بله</span></a>
-                    <a href="https://shad.ir/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-shad"><i class="fa-solid fa-graduation-cap"></i></div><span>شاد</span></a>
-                </div>
-            </div>
-            
-            <button class="btn-add" style="width: 100%; justify-content: center; margin-top: 20px; background: var(--surface); padding: 14px;" onclick="location.reload()">بستن و بازگشت</button>
-        </div>
-    </dialog>
-
-    <dialog id="contact-modal">
-        <h2 style="margin-bottom: 25px; text-align: center;"><i class="fa-solid fa-address-card"></i> ارتباط با ما</h2>
-        <div class="contact-grid">
-            <div class="contact-item">
-                <i class="fa-solid fa-phone"></i>
-                <div><span class="label">شماره تماس</span><span class="value" dir="ltr">09960062320</span></div>
-                <div class="contact-actions">
-                    <a href="tel:09960062320" title="تماس"><i class="fa-solid fa-phone"></i></a>
-                    <a href="sms:09960062320" title="پیامک"><i class="fa-solid fa-comment-sms"></i></a>
-                </div>
-            </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-at"></i>
-                <div><span class="label">آیدی پیام‌رسان‌ها</span><span class="value" dir="ltr">@kavehnouri</span></div>
-                <div class="contact-actions" style="flex-wrap: wrap;">
-                    <a href="https://t.me/kavehnouri" target="_blank" title="تلگرام"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="https://eitaa.com/kavehnouri" target="_blank" title="ایتا"><i class="fa-solid fa-comment-dots"></i></a>
-                    <a href="rubika://kavehnouri" onclick="openMessenger(event, 'rubika://kavehnouri', 'https://rubika.ir/kavehnouri')" title="روبیکا"><i class="fa-solid fa-comments"></i></a>
-                    <a href="https://ble.ir/kavehnouri" target="_blank" title="بله"><i class="fa-solid fa-comment"></i></a>
-                </div>
-            </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <div><span class="label">آدرس</span><span class="value" style="font-size: 13px;">بیرجند، شهرک فرهیختگان، نبش میدان دانش، کافی‌نت کاریزما</span></div>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 25px;">
-            <button class="btn-add" style="justify-content: center; padding: 12px 25px;" onclick="document.getElementById('contact-modal').close()">بستن</button>
-        </div>
-    </dialog>
-
-    <dialog id="upload-modal">
-        <h2 style="margin-bottom: 15px; text-align: center;"><i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت</h2>
-        <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">پیام‌رسان مورد نظر خود را انتخاب کنید:</p>
-        <div class="upload-options">
-            <div class="upload-row">
-                <a href="https://t.me/kavehnouri" target="_blank" class="upload-opt"><div class="brand-circle bg-telegram"><i class="fa-brands fa-telegram"></i></div><span>تلگرام</span></a>
-                <a href="https://eitaa.com/kavehnouri" class="upload-opt"><div class="brand-circle bg-eitaa"><i class="fa-solid fa-comment-dots"></i></div><span>ایتا</span></a>
-                <a href="rubika://kavehnouri" onclick="openMessenger(event, 'rubika://kavehnouri', 'https://rubika.ir/kavehnouri')" class="upload-opt"><div class="brand-circle bg-rubika"><i class="fa-solid fa-comments"></i></div><span>روبیکا</span></a>
-            </div>
-            <div class="upload-row">
-                <a href="https://ble.ir/kavehnouri" class="upload-opt"><div class="brand-circle bg-bale"><i class="fa-solid fa-comment"></i></div><span>بله</span></a>
-                <a href="https://shad.ir/kavehnouri" class="upload-opt"><div class="brand-circle bg-shad"><i class="fa-solid fa-graduation-cap"></i></div><span>شاد</span></a>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 30px;">
-            <button class="btn-add" style="justify-content: center; padding: 12px 25px; background: var(--surface); color: var(--text-main);" onclick="document.getElementById('upload-modal').close()">بستن</button>
-        </div>
-    </dialog>
-
-    <dialog id="docs-modal">
-        <h2 style="margin-bottom:6px;font-size:18px;"><i class="fa-solid fa-circle-info"></i> مدارک لازم</h2>
-        <p id="docs-title" style="color:var(--accent);font-weight:800;font-size:14px;margin-bottom:14px;"></p>
-        <ul id="docs-list" style="padding-right:20px;line-height:2;font-size:14px;"></ul>
-        <p style="font-size:12px;color:var(--text-muted);margin-top:14px;">این فهرست کلی است؛ اگر مدرک دیگری لازم باشد هنگام بررسی سفارش اعلام می‌شود.</p>
-        <div style="text-align:center;margin-top:20px;"><button class="btn-add" style="justify-content:center;padding:12px 25px;" onclick="document.getElementById('docs-modal').close()">بستن</button></div>
-    </dialog>
-
-    <canvas id="kz-gl" aria-hidden="true"></canvas>
-    <div class="kz-cursor" aria-hidden="true"></div>
-    <a class="mode-toggle mode-fab" onclick="kzToggleMode()" role="button"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="mode-label">پیشرفته</span></a>
-    <div class="bottom-nav">
-        <a href="#services" class="bn-item active" onclick="event.preventDefault(); openCategoryModal();"><i class="fa-solid fa-layer-group"></i> خدمات</a>
-        <a href="#links" class="bn-item"><i class="fa-solid fa-link"></i> سایت‌ها</a>
-        <a href="#upload" class="bn-item"><i class="fa-solid fa-cloud-arrow-up"></i> آپلود</a>
-        <a onclick="openUserPanel()" class="bn-item"><i class="fa-solid fa-file-invoice"></i> سفارشات</a>
-        <a class="bn-item mode-toggle" onclick="kzToggleMode()" role="button" aria-label="تغییر حالت ساده / پیشرفته"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="mode-label">پیشرفته</span></a>
     </div>
+
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">چطور مطمئن بشم کارم انجام میشه؟ <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">تمامی درخواست‌ها دارای کد رهگیری ۵ رقمی هستند. پس از پرداخت و انجام کار، فایل یا نتیجه نهایی برای شما ارسال می‌شود.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">ساعت کاری کاریزما نت چیست؟ <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">ثبت سفارش آنلاین ۲۴ ساعته است. خدمات حضوری در بیرجند از ساعت ۸:۰۰ تا ۱۳:۳۰ و از ۱۷:۰۰ تا ۲۱:۳۰ ارائه می‌شود.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">روش پرداخت چیست؟ <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">پرداخت کارت‌به‌کارت است. پس از ثبت سفارش و دریافت فاکتور، مبلغ را به شماره کارت اعلام‌شده واریز کنید و تصویر رسید را از طریق پیامک یا یکی از پیام‌رسان‌ها ارسال کنید.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">زمان انجام کار چقدر است؟ <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">زمان انجام به نوع خدمت و شرایط سامانه مربوطه بستگی دارد. پس از ارسال رسید، کار شروع می‌شود و با کد رهگیری ۵ رقمی می‌توانید وضعیت آن را پیگیری کنید.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">اگر خدمتی انجام نشد چه می‌شود؟ <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="faq-a">اگر به هر دلیل انجام خدمت امکان‌پذیر نباشد، موضوع از طریق پشتیبانی پیگیری می‌شود. برای هماهنگی با شماره ۰۹۹۶۰۰۶۲۳۲۰ یا پیام‌رسان‌ها در تماس باشید.</div>
+    </div>
+
+</section>
+
+<footer style="text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px;">
+    © کاریزما نت <span id="footer-year">۱۴۰۵</span> - طراحی شده با <i class="fa-solid fa-heart" style="color: var(--danger); animation: pulseWidget 2s infinite;"></i> برای شما
+</footer>
+
+<div class="support-widget" onclick="openModal('contact-modal')" title="ارتباط با ما">
+    <i class="fa-solid fa-headset"></i>
+</div>
+
+<!-- ================= MODALS ================= -->
+<dialog id="category-modal" class="category-dialog">
+    <div class="cat-header">
+        <h3><i class="fa-solid fa-layer-group"></i> دسته‌بندی خدمات</h3>
+        <button onclick="document.getElementById('category-modal').close()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cat-grid" id="cat-grid"></div>
+</dialog>
+
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+        <h2><i class="fa-solid fa-cart-shopping"></i> سبد درخواست‌ها</h2>
+        <button class="btn-icon" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+        <div class="cart-total"><span>جمع کل:</span><span id="cart-total-price">۰ تومان</span></div>
+        <button class="btn-checkout" onclick="openCheckout()">ثبت نهایی درخواست <i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+</div>
+
+<dialog id="user-panel-modal">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2><i class="fa-solid fa-user"></i> سفارشات من</h2>
+        <button class="btn-icon" onclick="document.getElementById('user-panel-modal').close()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div id="user-orders-list" style="max-height: 60vh; overflow-y: auto;"></div>
+    <div style="text-align: center; margin-top: 20px;">
+        <button class="btn-add" style="background: var(--danger); justify-content: center; width: 100%;" onclick="clearUserHistory()">پاک کردن تاریخچه</button>
+    </div>
+</dialog>
+
+<dialog id="checkout-modal">
+    <div id="chk-step1">
+        <h2 style="margin-bottom: 20px;"><i class="fa-solid fa-file-invoice"></i> تکمیل اطلاعات</h2>
+        <div class="form-group"><label>نام و نام خانوادگی</label><input type="text" id="chk-name" placeholder="مثال: علی رضایی"></div>
+        <div class="form-group"><label>شماره تماس یا آیدی پیام‌رسان</label><input type="text" id="chk-contact" placeholder="۰۹۱۲... یا @username"></div>
+        <div class="form-group"><label>توضیحات (اختیاری)</label><textarea id="chk-desc" rows="2" placeholder="اگر توضیح خاصی دارید بنویسید..."></textarea></div>
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <button class="btn-checkout" onclick="submitOrder()">ثبت اطلاعات و مشاهده فاکتور <i class="fa-solid fa-arrow-left"></i></button>
+            <button class="btn-add" style="background: var(--surface); color: var(--text-main); padding: 14px;" onclick="document.getElementById('checkout-modal').close()">انصراف</button>
+        </div>
+    </div>
+
+    <div id="chk-step2" style="display: none;">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <i class="fa-solid fa-circle-check" style="font-size: 60px; color: var(--success); margin-bottom: 15px;"></i>
+            <h2>فاکتور صادر شد!</h2>
+            <div style="background: var(--surface); border: 1px solid var(--border); padding: 12px; border-radius: 12px; margin-top: 10px; display: inline-block;">
+                <span style="font-size: 13px; color: var(--text-muted);">کد پیگیری شما:</span>
+                <b id="chk-order-code" style="color: var(--accent); font-size: 20px; letter-spacing: 3px;"></b>
+            </div>
+            <p style="color: var(--text-muted); font-size: 14px; margin-top: 15px;">مبلغ قابل پرداخت: <b id="chk-total-price" style="color: var(--accent); font-size: 18px;"></b> تومان</p>
+        </div>
+
+        <div class="box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px; margin-bottom: 20px;">
+            <h4 style="margin-bottom: 12px; font-size: 15px;">۱. ارسال خلاصه سفارش به مدیر:</h4>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">لطفاً برای اطلاع مدیر از ثبت سفارش، یکی از روش‌های زیر را انتخاب کنید:</p>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <div class="sms-btn-wrapper">
+                    <div class="fast-badge"><i class="fa-solid fa-bolt"></i> روش سریع‌تر</div>
+                    <a href="#" id="btn-sms-admin" class="btn-add"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
+                </div>
+                <a href="#" id="btn-tg-admin" class="btn-add" style="flex: 1; justify-content: center; background: #0088cc; padding-top: 14px; padding-bottom: 14px;"><i class="fa-brands fa-telegram"></i> تلگرام</a>
+            </div>
+        </div>
+
+        <button class="btn-add" style="width:100%;justify-content:center;margin-bottom:20px;padding:12px;background:var(--surface);color:var(--text-main);border:1px solid var(--glass-border);" onclick="copyOrderText()"><i class="fa-solid fa-copy"></i> کپی متن سفارش (برای ارسال دستی)</button>
+
+        <div class="payment-box">
+            <h4 style="margin-bottom: 8px; font-size: 15px;">۲. واریز مبلغ به شماره کارت:</h4>
+            <div class="card-number" id="card-number-text">6219 8619 4552 4204</div>
+            <div class="owner-name">به نام: <b>نرجس ملائی</b></div>
+            <button onclick="copyCardNumber()" style="margin-top: 15px; background: var(--primary); color: #fff; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-size: 13px; font-weight: 700; transition: 0.3s; box-shadow: 0 0 10px var(--glow);"><i class="fa-solid fa-copy"></i> کپی شماره کارت</button>
+        </div>
+
+        <div class="box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px; text-align: center;">
+            <h4 style="margin-bottom: 12px; font-size: 15px;">۳. ارسال رسید پرداخت:</h4>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">پس از واریز، تصویر رسید را از طریق یکی از راه‌های زیر ارسال کنید:</p>
+            <div class="receipt-grid">
+                <a href="sms:09960062320" class="receipt-opt"><div class="brand-circle bg-sms"><i class="fa-solid fa-comment-sms"></i></div><span>پیامک</span></a>
+                <a href="https://t.me/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-telegram"><i class="fa-brands fa-telegram"></i></div><span>تلگرام</span></a>
+                <a href="https://eitaa.com/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-eitaa"><i class="fa-solid fa-comment-dots"></i></div><span>ایتا</span></a>
+                <a href="rubika://kavehnouri" onclick="openMessenger(event, 'rubika://kavehnouri', 'https://rubika.ir/kavehnouri')" class="receipt-opt"><div class="brand-circle bg-rubika"><i class="fa-solid fa-comments"></i></div><span>روبیکا</span></a>
+                <a href="https://ble.ir/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-bale"><i class="fa-solid fa-comment"></i></div><span>بله</span></a>
+                <a href="https://shad.ir/kavehnouri" target="_blank" class="receipt-opt"><div class="brand-circle bg-shad"><i class="fa-solid fa-graduation-cap"></i></div><span>شاد</span></a>
+            </div>
+        </div>
+        
+        <button class="btn-add" style="width: 100%; justify-content: center; margin-top: 20px; background: var(--surface); padding: 14px;" onclick="location.reload()">بستن و بازگشت</button>
+    </div>
+</dialog>
+
+<dialog id="contact-modal">
+    <h2 style="margin-bottom: 25px; text-align: center;"><i class="fa-solid fa-address-card"></i> ارتباط با ما</h2>
+    <div class="contact-grid">
+        <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><span class="label">شماره تماس</span><span class="value" dir="ltr">09960062320</span></div>
+            <div class="contact-actions">
+                <a href="tel:09960062320" title="تماس"><i class="fa-solid fa-phone"></i></a>
+                <a href="sms:09960062320" title="پیامک"><i class="fa-solid fa-comment-sms"></i></a>
+            </div>
+        </div>
+        <div class="contact-item">
+            <i class="fa-solid fa-at"></i>
+            <div><span class="label">آیدی پیام‌رسان‌ها</span><span class="value" dir="ltr">@kavehnouri</span></div>
+            <div class="contact-actions" style="flex-wrap: wrap;">
+                <a href="https://t.me/kavehnouri" target="_blank" title="تلگرام"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://eitaa.com/kavehnouri" target="_blank" title="ایتا"><i class="fa-solid fa-comment-dots"></i></a>
+                <a href="rubika://kavehnouri" onclick="openMessenger(event, 'rubika://kavehnouri', 'https://rubika.ir/kavehnouri')" title="روبیکا"><i class="fa-solid fa-comments"></i></a>
+                <a href="https://ble.ir/kavehnouri" target="_blank" title="بله"><i class="fa-solid fa-comment"></i></a>
+            </div>
+        </div>
+        <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><span class="label">آدرس</span><span class="value" style="font-size: 13px;">بیرجند، شهرک فرهیختگان، نبش میدان دانش، کافی‌نت کاریزما</span></div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 25px;">
+        <button class="btn-add" style="justify-content: center; padding: 12px 25px;" onclick="document.getElementById('contact-modal').close()">بستن</button>
+    </div>
+</dialog>
+
+<dialog id="upload-modal">
+    <h2 style="margin-bottom: 15px; text-align: center;"><i class="fa-solid fa-cloud-arrow-up"></i> ارسال فایل جهت پرینت</h2>
+    <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">پیام‌رسان مورد نظر خود را انتخاب کنید:</p>
+    <div class="upload-options">
+        <div class="upload-row">
+            <a href="https://t.me/kavehnouri" target="_blank" class="upload-opt"><div class="brand-circle bg-telegram"><i class="fa-brands fa-telegram"></i></div><span>تلگرام</span></a>
+            <a href="https://eitaa.com/kavehnouri" class="upload-opt"><div class="brand-circle bg-eitaa"><i class="fa-solid fa-comment-dots"></i></div><span>ایتا</span></a>
+            <a href="rubika://kavehnouri" onclick="openMessenger(event, 'rubika://kavehnouri', 'https://rubika.ir/kavehnouri')" class="upload-opt"><div class="brand-circle bg-rubika"><i class="fa-solid fa-comments"></i></div><span>روبیکا</span></a>
+        </div>
+        <div class="upload-row">
+            <a href="https://ble.ir/kavehnouri" class="upload-opt"><div class="brand-circle bg-bale"><i class="fa-solid fa-comment"></i></div><span>بله</span></a>
+            <a href="https://shad.ir/kavehnouri" class="upload-opt"><div class="brand-circle bg-shad"><i class="fa-solid fa-graduation-cap"></i></div><span>شاد</span></a>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 30px;">
+        <button class="btn-add" style="justify-content: center; padding: 12px 25px; background: var(--surface); color: var(--text-main);" onclick="document.getElementById('upload-modal').close()">بستن</button>
+    </div>
+</dialog>
+
+<dialog id="docs-modal">
+    <h2 style="margin-bottom:6px;font-size:18px;"><i class="fa-solid fa-circle-info"></i> مدارک لازم</h2>
+    <p id="docs-title" style="color:var(--accent);font-weight:800;font-size:14px;margin-bottom:14px;"></p>
+    <ul id="docs-list" style="padding-right:20px;line-height:2;font-size:14px;"></ul>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:14px;">این فهرست کلی است؛ اگر مدرک دیگری لازم باشد هنگام بررسی سفارش اعلام می‌شود.</p>
+    <div style="text-align:center;margin-top:20px;"><button class="btn-add" style="justify-content:center;padding:12px 25px;" onclick="document.getElementById('docs-modal').close()">بستن</button></div>
+</dialog>
+
+<canvas id="kz-gl" aria-hidden="true"></canvas>
+<div class="kz-cursor" aria-hidden="true"></div>
+<a class="mode-toggle mode-fab" onclick="kzToggleMode()" role="button"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="mode-label">پیشرفته</span></a>
+
+<div class="bottom-nav">
+    <a href="#services" class="bn-item active" onclick="event.preventDefault(); openCategoryModal();"><i class="fa-solid fa-layer-group"></i> خدمات</a>
+    <a href="#links" class="bn-item"><i class="fa-solid fa-link"></i> سایت‌ها</a>
+    <a href="#upload" class="bn-item"><i class="fa-solid fa-cloud-arrow-up"></i> آپلود</a>
+    <a onclick="openUserPanel()" class="bn-item"><i class="fa-solid fa-file-invoice"></i> سفارشات</a>
+    <a class="bn-item mode-toggle" onclick="kzToggleMode()" role="button" aria-label="تغییر حالت ساده / پیشرفته"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="mode-label">پیشرفته</span></a>
+</div>    
 
     <script>
         // --- 1. Particle Background Logic ---
@@ -910,9 +912,18 @@ html.adv .mode-toggle{color:#22d3ee}
             }
         });
 
-        // --- App Data (کپی شده از فایل اصلی) ---
+        // --- 4. App Data (کپی دقیق از فایل اصلی) ---
+        const SERVICE_DOCS = {
+            "ثبت‌نام سجام": { docs: ["کارت ملی هوشمند", "شناسنامه", "شماره شبا بانکی (به نام خودتان)", "شماره موبایل به نام خودتان"], condition: "حداقل سن ۱۸ سال تمام", warning: "اگر کد بورسی دارید، ثبت‌نام مجدد نکنید. موبایل حتماً باید به نام شخص باشد." },
+            "ثبت‌نام ثنا + احراز هویت": { docs: ["کارت ملی", "شماره موبایل به نام خودتان"], condition: "داشتن گوشی هوشمند برای دریافت کد پیامکی", warning: "اگر قبلاً ثبت‌نام کرده‌اید نیازی به ثبت‌نام مجدد نیست، فقط احراز هویت کنید." },
+            "دریافت معافیت تحصیلی": { docs: ["کارت ملی", "شماره دانشجویی", "گواهی اشتغال به تحصیل"], condition: "دانشجوی فعال در دانشگاه‌های مورد تایید", warning: "برای دانشجویان انصرافی یا اخراجی صادر نمی‌شود." },
+            "ثبت سریع محل سکونت در سامانه ملی املاک و اسکان": { docs: ["کد ملی", "کد پستی محل سکونت", "شماره پلاک"], condition: "مالک یا مستاجر بودن", warning: "مستاجرین حتماً باید کد رهگیری اجاره‌نامه داشته باشند." },
+            "ثبت‌نام وام ازدواج": { docs: ["کارت ملی", "شناسنامه (صفحه عقد)", "شماره حساب بانکی"], condition: "حداکثر ۵ سال از تاریخ عقد گذشته باشد", warning: "برای هر دو طرف باید ثبت‌نام انجام شود. سربازی آقایان باید مشخص باشد." }
+        };
+
         const D = {
             "s": [
+                // --- 14 خدمات پرکاربرد ---
                 ["پلیس +۱۰", "دریافت معافیت تحصیلی", 280000, 220000],
                 ["خرید اینترنتی", "ثبت‌نام و خرید محصولات ایران خودرو و سایپا", 500000, 400000],
                 ["قضایی و انتظامی", "ثبت‌نام ثنا + احراز هویت", 200000, 150000],
@@ -928,6 +939,7 @@ html.adv .mode-toggle{color:#22d3ee}
                 ["بیمه و تامین اجتماعی", "دریافت سوابق بیمه", 60000, 55000],
                 ["طراحی سایت", "طراحی سایت (توافقی)", 0, 0],
 
+                // --- Main Services ---
                 ["مالیات و کسب‌وکار", "ثبت‌نام کد اقتصادی (حقیقی)", 500000, 420000],
                 ["مالیات و کسب‌وکار", "حذف پروفایل مالیاتی", 90000, 80000],
                 ["مالیات و کسب‌وکار", "اظهارنامه مالیاتی مشاغل گروه ۳", 460000, 400000],
@@ -1155,7 +1167,6 @@ html.adv .mode-toggle{color:#22d3ee}
             }
         };
 
-        // Top 14 Services Indices
         const topIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; 
 
         let cart = {};
@@ -1193,6 +1204,7 @@ html.adv .mode-toggle{color:#22d3ee}
         let qtyDraft = {};
         function loadCart() { try { const s = JSON.parse(safeGet('karizma_cart') || '{}'); Object.entries(s).forEach(([title, qty]) => { const idx = D.s.findIndex(r => r[1] === title); if (idx > -1) cart[idx] = { qty: Math.max(1, Math.min(999, +qty || 1)), title: D.s[idx][1], price: getPrices(D.s[idx]).now }; }); } catch (e) {} }
         function saveCart() { const o = {}; Object.values(cart).forEach(c => o[c.title] = c.qty); safeSet('karizma_cart', JSON.stringify(o)); }
+        
         const DOCS = {
             'مالیات و کسب‌وکار': ['کد ملی و موبایل به نام خودتان', 'اطلاعات واحد/شغل (آدرس و کد پستی)', 'اطلاعات و رمز سامانه‌های قبلی (در صورت وجود)'],
             'امور اصناف و مجوزها': ['کد ملی و موبایل به نام خودتان', 'اطلاعات واحد صنفی (آدرس و کد پستی)', 'مدارک شغلی یا مجوز قبلی (در صورت وجود)'],
@@ -1209,12 +1221,41 @@ html.adv .mode-toggle{color:#22d3ee}
             'خدمات فنی': ['مشخصات دستگاه و شرح مشکل', 'شماره تماس برای هماهنگی'],
             'امور تخصصی': ['کد ملی', 'مدارک شغلی یا تخصصی مرتبط']
         };
+
         function showDocs(idx) {
-            const it = D.s[idx]; const list = DOCS[it[0]] || ['کد ملی', 'موبایل به نام خودتان', 'اطلاعات مرتبط با خدمت'];
-            $('#docs-title').textContent = it[1];
-            $('#docs-list').innerHTML = list.map(x => '<li>' + x + '</li>').join('');
+            const item = D.s[idx];
+            const title = item[1];
+            const category = item[0];
+            $('#docs-title').textContent = title;
+            let docsList = [];
+            let condition = null;
+            let warning = null;
+            
+            if (SERVICE_DOCS[title]) {
+                docsList = SERVICE_DOCS[title].docs;
+                condition = SERVICE_DOCS[title].condition;
+                warning = SERVICE_DOCS[title].warning;
+            } else {
+                docsList = DOCS[category] || ['کد ملی', 'موبایل به نام خودتان'];
+            }
+            
+            $('#docs-list').innerHTML = docsList.map(d => `
+                <li class="doc-item" onclick="this.querySelector('input').click()">
+                    <input type="checkbox" onclick="event.stopPropagation()">
+                    <span>${d}</span>
+                </li>
+            `).join('');
+            
+            if (condition) { $('#doc-condition-box').style.display = 'flex'; $('#doc-condition-text').textContent = condition; }
+            else { $('#doc-condition-box').style.display = 'none'; }
+            
+            if (warning) { $('#doc-warning-box').style.display = 'flex'; $('#doc-warning-text').textContent = warning; }
+            else { $('#doc-warning-box').style.display = 'none'; }
+            
+            $('#docs-date').textContent = new Date().toLocaleDateString('fa-IR');
             $('#docs-modal').showModal();
         }
+
         function copyOrderText() {
             const txt = window.lastOrderText || '';
             const ok = () => alert('متن سفارش کپی شد.');
@@ -1222,12 +1263,14 @@ html.adv .mode-toggle{color:#22d3ee}
             else fallbackCopy(txt, ok);
         }
         function fallbackCopy(txt, ok) { const ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); ok(); } catch (e) { alert('کپی انجام نشد.'); } ta.remove(); }
+        
         function renderCatChips() {
             const wrap = $('#cat-chips'); if (!wrap) return;
             const cats = ['همه', ...new Set(D.s.map(i => i[0]))];
             wrap.innerHTML = cats.map(c => '<button class="cat-chip ' + (c === activeCategory ? 'active' : '') + '" data-c="' + c + '" onclick="chipSelect(this.dataset.c)"><i class="fa-solid ' + getCategoryIcon(c) + '"></i> ' + c + '</button>').join('');
         }
         function chipSelect(c) { setCategory(c); setTimeout(scrollToResults, 60); }
+        
         function updateOpenBadge() {
             const el = $('#open-badge'); if (!el) return;
             let now;
@@ -1239,14 +1282,7 @@ html.adv .mode-toggle{color:#22d3ee}
             el.className = 'open-badge reveal active ' + (open ? 'is-open' : '');
             el.innerHTML = '<span class="dot"></span><span>' + msg + ' · <small>سفارش آنلاین ۲۴ ساعته</small></span>';
         }
-        function injectOfferLD() {
-            try {
-                const offers = D.s.filter(r => !isDesignItem(r)).map(r => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: r[1], category: r[0] }, priceCurrency: 'IRR', price: String(getPrices(r).now * 10) }));
-                const s = document.createElement('script'); s.type = 'application/ld+json';
-                s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'OfferCatalog', name: 'خدمات و تعرفه‌های کاریزما نت', itemListElement: offers });
-                document.head.appendChild(s);
-            } catch (e) {}
-        }
+
         function updateSearchInfo() {
             const q = $('#searchInput').value.trim(); const el = $('#search-info');
             if (!q) { el.textContent = ''; return; }
@@ -1286,7 +1322,6 @@ html.adv .mode-toggle{color:#22d3ee}
             renderCategorizedLinks();
             updateCartUI();
             updateThemeIcon(safeGet('theme') || 'dark');
-            injectOfferLD();
             updateOpenBadge(); setInterval(updateOpenBadge, 60000);
             const y = $('#footer-year'); if (y) y.textContent = new Date().toLocaleDateString('fa-IR', { year: 'numeric' });
         }
@@ -1321,7 +1356,6 @@ html.adv .mode-toggle{color:#22d3ee}
         function setCategoryFromModal(cat) {
             setCategory(cat);
             $('#category-modal').close();
-            // اسکرول خودکار به نتایج بعد از بسته شدن پنجره
             setTimeout(scrollToResults, 150);
         }
 
@@ -1591,83 +1625,83 @@ html.adv .mode-toggle{color:#22d3ee}
         init();
     </script>
 
-<script id="kz-theme">
-(function(){
-var root=document.documentElement,KEY='kz_mode',three=null,G=null,loading=false;
-function toast(t){var d=document.createElement('div');d.className='kz-toast';d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},2200)}
-function auto(){var c=navigator.hardwareConcurrency||4,m=navigator.deviceMemory||4,r=matchMedia('(prefers-reduced-motion: reduce)').matches,sd=navigator.connection&&navigator.connection.saveData;return(c>=6&&m>=4&&!r&&!sd)?'adv':'lite'}
-function label(){document.querySelectorAll('.mode-label').forEach(function(e){e.textContent=root.classList.contains('adv')?'ساده':'پیشرفته'})}
-function set(m,save){if(save){try{localStorage.setItem(KEY,m)}catch(e){}}
- if(m==='adv'){root.classList.add('adv');load3D()}else{root.classList.remove('adv','gl');stop3D()}label()}
-window.kzToggleMode=function(){var a=root.classList.contains('adv');set(a?'lite':'adv',true);toast(a?'حالت ساده فعال شد (سبک و سریع)':'حالت پیشرفته فعال شد (سه‌بعدی)')};
-var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
-set(saved||auto(),false);
+    <script id="kz-theme">
+        (function(){
+        var root=document.documentElement,KEY='kz_mode',three=null,G=null,loading=false;
+        function toast(t){var d=document.createElement('div');d.className='kz-toast';d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},2200)}
+        function auto(){var c=navigator.hardwareConcurrency||4,m=navigator.deviceMemory||4,r=matchMedia('(prefers-reduced-motion: reduce)').matches,sd=navigator.connection&&navigator.connection.saveData;return(c>=6&&m>=4&&!r&&!sd)?'adv':'lite'}
+        function label(){document.querySelectorAll('.mode-label').forEach(function(e){e.textContent=root.classList.contains('adv')?'ساده':'پیشرفته'})}
+        function set(m,save){if(save){try{localStorage.setItem(KEY,m)}catch(e){}}
+         if(m==='adv'){root.classList.add('adv');load3D()}else{root.classList.remove('adv','gl');stop3D()}label()}
+        window.kzToggleMode=function(){var a=root.classList.contains('adv');set(a?'lite':'adv',true);toast(a?'حالت ساده فعال شد (سبک و سریع)':'حالت پیشرفته فعال شد (سه‌بعدی)')};
+        var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+        set(saved||auto(),false);
 
-/* tilt + glare + magnetic */
-var SEL='.svc-card,.link-card,.cat-card,.action-card';
-function tilt(e){if(!root.classList.contains('adv'))return;var t=e.target.closest&&e.target.closest(SEL);if(!t)return;var r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;t.style.setProperty('--ry',((x-.5)*14).toFixed(1)+'deg');t.style.setProperty('--rx',((.5-y)*14).toFixed(1)+'deg');t.style.setProperty('--mx',(x*100)+'%');t.style.setProperty('--my',(y*100)+'%')}
-function untilt(e){var t=e.target.closest&&e.target.closest(SEL);if(t){t.style.setProperty('--rx','0deg');t.style.setProperty('--ry','0deg')}}
-document.addEventListener('pointermove',function(e){if(e.pointerType==='mouse')tilt(e)},{passive:true});
-document.addEventListener('pointerdown',tilt,{passive:true});
-document.addEventListener('pointerup',untilt,{passive:true});
-document.addEventListener('pointerout',function(e){if(e.pointerType==='mouse')untilt(e)},{passive:true});
-var cur=document.querySelector('.kz-cursor'),MG='button,.btn-open-categories,.action-card,.mode-fab';
-document.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse'||!root.classList.contains('adv'))return;
- cur.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';
- var b=e.target.closest&&e.target.closest(MG);cur.classList.toggle('big',!!(e.target.closest&&e.target.closest('a,button,'+SEL)));
- if(b){var r=b.getBoundingClientRect();b.style.translate=((e.clientX-r.left-r.width/2)*.12).toFixed(1)+'px '+((e.clientY-r.top-r.height/2)*.18).toFixed(1)+'px'}},{passive:true});
-document.addEventListener('pointerout',function(e){var b=e.target.closest&&e.target.closest(MG);if(b)b.style.translate=''},{passive:true});
+        /* tilt + glare + magnetic */
+        var SEL='.svc-card,.link-card,.cat-card,.action-card,.bento-item';
+        function tilt(e){if(!root.classList.contains('adv'))return;var t=e.target.closest&&e.target.closest(SEL);if(!t)return;var r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;t.style.setProperty('--ry',((x-.5)*14).toFixed(1)+'deg');t.style.setProperty('--rx',((.5-y)*14).toFixed(1)+'deg');t.style.setProperty('--mx',(x*100)+'%');t.style.setProperty('--my',(y*100)+'%')}
+        function untilt(e){var t=e.target.closest&&e.target.closest(SEL);if(t){t.style.setProperty('--rx','0deg');t.style.setProperty('--ry','0deg')}}
+        document.addEventListener('pointermove',function(e){if(e.pointerType==='mouse')tilt(e)},{passive:true});
+        document.addEventListener('pointerdown',tilt,{passive:true});
+        document.addEventListener('pointerup',untilt,{passive:true});
+        document.addEventListener('pointerout',function(e){if(e.pointerType==='mouse')untilt(e)},{passive:true});
+        var cur=document.querySelector('.kz-cursor'),MG='button,.btn-open-categories,.action-card,.mode-fab';
+        document.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse'||!root.classList.contains('adv'))return;
+         cur.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';
+         var b=e.target.closest&&e.target.closest(MG);cur.classList.toggle('big',!!(e.target.closest&&e.target.closest('a,button,'+SEL)));
+         if(b){var r=b.getBoundingClientRect();b.style.translate=((e.clientX-r.left-r.width/2)*.12).toFixed(1)+'px '+((e.clientY-r.top-r.height/2)*.18).toFixed(1)+'px'}},{passive:true});
+        document.addEventListener('pointerout',function(e){var b=e.target.closest&&e.target.closest(MG);if(b)b.style.translate=''},{passive:true});
 
-/* 3D scene */
-function load3D(){if(three||loading||G)return init3D();loading=true;var s=document.createElement('script');
- s.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
- s.onload=function(){loading=false;three=window.THREE;if(root.classList.contains('adv'))init3D()};
- s.onerror=function(){loading=false};document.head.appendChild(s)}
-function stop3D(){if(G){G.run=false}}
-function screenTex(T){var c=document.createElement('canvas');c.width=1216;c.height=600;var x=c.getContext('2d');
- function draw(){var g=x.createLinearGradient(0,0,1216,600);g.addColorStop(0,'#0b1020');g.addColorStop(.55,'#1b1550');g.addColorStop(1,'#3b0f4a');x.fillStyle=g;x.fillRect(0,0,1216,600);
-  x.globalAlpha=.25;x.strokeStyle='#22d3ee';for(var i=0;i<14;i++){x.beginPath();x.moveTo(i*95,0);x.lineTo(i*95-150,600);x.stroke()}x.globalAlpha=1;
-  x.direction='rtl';x.textAlign='center';x.font='800 74px Vazirmatn,Tahoma,sans-serif';x.shadowColor='#22d3ee';x.shadowBlur=30;x.fillStyle='#67e8f9';x.fillText('کافی‌نت، در جیب شما؛',608,250);
-  x.shadowColor='#a78bfa';x.fillStyle='#fff';x.font='700 48px Vazirmatn,Tahoma,sans-serif';x.fillText('سریع، مطمئن، پیگیری اختصاصی',608,350);
-  x.shadowBlur=0;x.fillStyle='rgba(255,255,255,.55)';x.font='600 30px Vazirmatn,Tahoma,sans-serif';x.fillText('KARIZMA NET',608,470)}
- draw();var t=new T.CanvasTexture(c);t.anisotropy=4;if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){draw();t.needsUpdate=true});return t}
-function init3D(){var T=three||window.THREE;if(!T||G){if(G&&!G.run){G.run=true;loop()}root.classList.add('gl');return}
- var cv=document.getElementById('kz-gl'),R;try{R=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){root.classList.remove('adv','gl');label();return}
- R.setPixelRatio(Math.min(devicePixelRatio||1,1.75));R.outputEncoding=T.sRGBEncoding;
- var sc=new T.Scene(),cam=new T.PerspectiveCamera(40,1,.1,100);cam.position.z=8;
- sc.add(new T.AmbientLight(0xffffff,.75));var dl=new T.DirectionalLight(0xffffff,1.1);dl.position.set(2,3,5);sc.add(dl);
- var p1=new T.PointLight(0x22d3ee,1.6,14);p1.position.set(-3,1,3);sc.add(p1);var p2=new T.PointLight(0xec4899,1.4,14);p2.position.set(3,-1,3);sc.add(p2);
- var mac=new T.Group(),inner=new T.Group();mac.add(inner);sc.add(mac);
- var sh=new T.Shape(),w=1.6,h=1,r=.14;sh.moveTo(-w+r,-h);sh.lineTo(w-r,-h);sh.quadraticCurveTo(w,-h,w,-h+r);sh.lineTo(w,h-r);sh.quadraticCurveTo(w,h,w-r,h);sh.lineTo(-w+r,h);sh.quadraticCurveTo(-w,h,-w,h-r);sh.lineTo(-w,-h+r);sh.quadraticCurveTo(-w,-h,-w+r,-h);
- var bg=new T.ExtrudeGeometry(sh,{depth:.14,bevelEnabled:true,bevelSize:.025,bevelThickness:.025,bevelSegments:3});bg.center();
- var body=new T.Mesh(bg,new T.MeshStandardMaterial({color:0xb9b2f7,metalness:.75,roughness:.28}));inner.add(body);
- var bez=new T.Mesh(new T.PlaneGeometry(3.12,1.58),new T.MeshStandardMaterial({color:0x05070f,roughness:.2,metalness:.3}));bez.position.set(0,.2,.092);inner.add(bez);
- var scr=new T.Mesh(new T.PlaneGeometry(3.0,1.48),new T.MeshBasicMaterial({map:screenTex(T)}));scr.position.set(0,.2,.095);inner.add(scr);
- var neck=new T.Mesh(new T.BoxGeometry(.5,.95,.07),new T.MeshStandardMaterial({color:0xcfd3ff,metalness:.85,roughness:.25}));neck.position.set(0,-1.4,-.12);inner.add(neck);
- var foot=new T.Mesh(new T.BoxGeometry(1.3,.06,.85),neck.material);foot.position.set(0,-1.88,0);inner.add(foot);
- var ring=new T.Mesh(new T.TorusGeometry(2.5,.012,8,120),new T.MeshBasicMaterial({color:0x22d3ee}));ring.rotation.x=1.25;inner.add(ring);
- var orb=[];for(var i=0;i<3;i++){var o=new T.Mesh(new T.IcosahedronGeometry(.11,0),new T.MeshBasicMaterial({color:[0x22d3ee,0xec4899,0xa78bfa][i],wireframe:true}));inner.add(o);orb.push(o)}
- inner.position.y=.45;
- var N=1100,pa=new Float32Array(N*3);for(i=0;i<N*3;i++)pa[i]=(Math.random()-.5)*(i%3==2?60:42);
- var pg=new T.BufferGeometry();pg.setAttribute('position',new T.BufferAttribute(pa,3));var pm=new T.PointsMaterial({color:0xffffff,size:.06,transparent:true,opacity:.85,depthWrite:false});var stars=new T.Points(pg,pm);stars.position.z=-6;sc.add(stars);
- G={run:true,R:R,cam:cam,sc:sc,mac:mac,inner:inner,orb:orb,ring:ring,stars:stars,pm:pm,mx:0,my:0,tx:0,ty:0,ft:0,fc:0,last:performance.now()};
- function size(){R.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}size();addEventListener('resize',size);
- addEventListener('pointermove',function(e){G.tx=(e.clientX/innerWidth-.5);G.ty=(e.clientY/innerHeight-.5)},{passive:true});
- addEventListener('deviceorientation',function(e){if(e.gamma!=null){G.tx=Math.max(-.5,Math.min(.5,e.gamma/60));G.ty=Math.max(-.5,Math.min(.5,(e.beta-45)/90))}});
- root.classList.add('gl');loop()}
-function loop(){if(!G||!G.run)return;requestAnimationFrame(loop);if(document.hidden)return;
- var now=performance.now(),dt=now-G.last;G.last=now;G.ft+=dt;G.fc++;if(G.fc===120){if(G.ft/120>38){root.classList.remove('adv','gl');label();G.run=false;toast('دستگاه شما کند بود؛ حالت ساده فعال شد');return}}
- var t=now/1000,sp=document.getElementById('kz-hero-spacer'),vh=2*8*Math.tan(20*Math.PI/180),vw=vh*G.cam.aspect;
- var rc=sp.getBoundingClientRect(),cx=(rc.left+rc.width/2)/innerWidth*2-1,cy=-((rc.top+rc.height/2)/innerHeight*2-1);
- var sc=Math.min((rc.height/innerHeight*vh)/3.9,(rc.width/innerWidth*vw)/3.5);
- G.mac.position.set(cx*vw/2,cy*vh/2,0);G.mac.scale.setScalar(sc);
- G.mx+=(G.tx-G.mx)*.06;G.my+=(G.ty-G.my)*.06;var sy=Math.min(scrollY/innerHeight,2);
- G.mac.rotation.y=G.mx*.9+Math.sin(t*.6)*.12+sy*.5;G.mac.rotation.x=G.my*.4-sy*.25;G.inner.position.y=.45+Math.sin(t*1.2)*.07;
- G.ring.rotation.z=t*.4;G.orb.forEach(function(o,i){var a=t*.8+i*2.1;o.position.set(Math.cos(a)*2.5,Math.sin(a*1.3)*.6+.3,Math.sin(a)*1.2);o.rotation.x=t;o.rotation.y=t*1.3});
- G.stars.rotation.y=t*.012+scrollY*.0004;G.stars.position.y=scrollY*.0035;G.pm.color.set(root.getAttribute('data-theme')==='light'?0x6366f1:0xffffff);
- G.R.render(G.sc,G.cam)}
-})();
-</script>
+        /* 3D scene */
+        function load3D(){if(three||loading||G)return init3D();loading=true;var s=document.createElement('script');
+         s.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+         s.onload=function(){loading=false;three=window.THREE;if(root.classList.contains('adv'))init3D()};
+         s.onerror=function(){loading=false};document.head.appendChild(s)}
+        function stop3D(){if(G){G.run=false}}
+        function screenTex(T){var c=document.createElement('canvas');c.width=1216;c.height=600;var x=c.getContext('2d');
+         function draw(){var g=x.createLinearGradient(0,0,1216,600);g.addColorStop(0,'#0b1020');g.addColorStop(.55,'#1b1550');g.addColorStop(1,'#3b0f4a');x.fillStyle=g;x.fillRect(0,0,1216,600);
+          x.globalAlpha=.25;x.strokeStyle='#22d3ee';for(var i=0;i<14;i++){x.beginPath();x.moveTo(i*95,0);x.lineTo(i*95-150,600);x.stroke()}x.globalAlpha=1;
+          x.direction='rtl';x.textAlign='center';x.font='800 74px Vazirmatn,Tahoma,sans-serif';x.shadowColor='#22d3ee';x.shadowBlur=30;x.fillStyle='#67e8f9';x.fillText('کافی‌نت، در جیب شما؛',608,250);
+          x.shadowColor='#a78bfa';x.fillStyle='#fff';x.font='700 48px Vazirmatn,Tahoma,sans-serif';x.fillText('سریع، مطمئن، پیگیری اختصاصی',608,350);
+          x.shadowBlur=0;x.fillStyle='rgba(255,255,255,.55)';x.font='600 30px Vazirmatn,Tahoma,sans-serif';x.fillText('KARIZMA NET',608,470)}
+         draw();var t=new T.CanvasTexture(c);t.anisotropy=4;if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){draw();t.needsUpdate=true});return t}
+        function init3D(){var T=three||window.THREE;if(!T||G){if(G&&!G.run){G.run=true;loop()}root.classList.add('gl');return}
+         var cv=document.getElementById('kz-gl'),R;try{R=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){root.classList.remove('adv','gl');label();return}
+         R.setPixelRatio(Math.min(devicePixelRatio||1,1.75));R.outputEncoding=T.sRGBEncoding;
+         var sc=new T.Scene(),cam=new T.PerspectiveCamera(40,1,.1,100);cam.position.z=8;
+         sc.add(new T.AmbientLight(0xffffff,.75));var dl=new T.DirectionalLight(0xffffff,1.1);dl.position.set(2,3,5);sc.add(dl);
+         var p1=new T.PointLight(0x22d3ee,1.6,14);p1.position.set(-3,1,3);sc.add(p1);var p2=new T.PointLight(0xec4899,1.4,14);p2.position.set(3,-1,3);sc.add(p2);
+         var mac=new T.Group(),inner=new T.Group();mac.add(inner);sc.add(mac);
+         var sh=new T.Shape(),w=1.6,h=1,r=.14;sh.moveTo(-w+r,-h);sh.lineTo(w-r,-h);sh.quadraticCurveTo(w,-h,w,-h+r);sh.lineTo(w,h-r);sh.quadraticCurveTo(w,h,w-r,h);sh.lineTo(-w+r,h);sh.quadraticCurveTo(-w,h,-w,h-r);sh.lineTo(-w,-h+r);sh.quadraticCurveTo(-w,-h,-w+r,-h);
+         var bg=new T.ExtrudeGeometry(sh,{depth:.14,bevelEnabled:true,bevelSize:.025,bevelThickness:.025,bevelSegments:3});bg.center();
+         var body=new T.Mesh(bg,new T.MeshStandardMaterial({color:0xb9b2f7,metalness:.75,roughness:.28}));inner.add(body);
+         var bez=new T.Mesh(new T.PlaneGeometry(3.12,1.58),new T.MeshStandardMaterial({color:0x05070f,roughness:.2,metalness:.3}));bez.position.set(0,.2,.092);inner.add(bez);
+         var scr=new T.Mesh(new T.PlaneGeometry(3.0,1.48),new T.MeshBasicMaterial({map:screenTex(T)}));scr.position.set(0,.2,.095);inner.add(scr);
+         var neck=new T.Mesh(new T.BoxGeometry(.5,.95,.07),new T.MeshStandardMaterial({color:0xcfd3ff,metalness:.85,roughness:.25}));neck.position.set(0,-1.4,-.12);inner.add(neck);
+         var foot=new T.Mesh(new T.BoxGeometry(1.3,.06,.85),neck.material);foot.position.set(0,-1.88,0);inner.add(foot);
+         var ring=new T.Mesh(new T.TorusGeometry(2.5,.012,8,120),new T.MeshBasicMaterial({color:0x22d3ee}));ring.rotation.x=1.25;inner.add(ring);
+         var orb=[];for(var i=0;i<3;i++){var o=new T.Mesh(new T.IcosahedronGeometry(.11,0),new T.MeshBasicMaterial({color:[0x22d3ee,0xec4899,0xa78bfa][i],wireframe:true}));inner.add(o);orb.push(o)}
+         inner.position.y=.45;
+         var N=1100,pa=new Float32Array(N*3);for(i=0;i<N*3;i++)pa[i]=(Math.random()-.5)*(i%3==2?60:42);
+         var pg=new T.BufferGeometry();pg.setAttribute('position',new T.BufferAttribute(pa,3));var pm=new T.PointsMaterial({color:0xffffff,size:.06,transparent:true,opacity:.85,depthWrite:false});var stars=new T.Points(pg,pm);stars.position.z=-6;sc.add(stars);
+         G={run:true,R:R,cam:cam,sc:sc,mac:mac,inner:inner,orb:orb,ring:ring,stars:stars,pm:pm,mx:0,my:0,tx:0,ty:0,ft:0,fc:0,last:performance.now()};
+         function size(){R.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}size();addEventListener('resize',size);
+         addEventListener('pointermove',function(e){G.tx=(e.clientX/innerWidth-.5);G.ty=(e.clientY/innerHeight-.5)},{passive:true});
+         addEventListener('deviceorientation',function(e){if(e.gamma!=null){G.tx=Math.max(-.5,Math.min(.5,e.gamma/60));G.ty=Math.max(-.5,Math.min(.5,(e.beta-45)/90))}});
+         root.classList.add('gl');loop()}
+        function loop(){if(!G||!G.run)return;requestAnimationFrame(loop);if(document.hidden)return;
+         var now=performance.now(),dt=now-G.last;G.last=now;G.ft+=dt;G.fc++;if(G.fc===120){if(G.ft/120>38){root.classList.remove('adv','gl');label();G.run=false;toast('دستگاه شما کند بود؛ حالت ساده فعال شد');return}}
+         var t=now/1000,sp=document.getElementById('kz-hero-spacer'),vh=2*8*Math.tan(20*Math.PI/180),vw=vh*G.cam.aspect;
+         var rc=sp.getBoundingClientRect(),cx=(rc.left+rc.width/2)/innerWidth*2-1,cy=-((rc.top+rc.height/2)/innerHeight*2-1);
+         var sc=Math.min((rc.height/innerHeight*vh)/3.9,(rc.width/innerWidth*vw)/3.5);
+         G.mac.position.set(cx*vw/2,cy*vh/2,0);G.mac.scale.setScalar(sc);
+         G.mx+=(G.tx-G.mx)*.06;G.my+=(G.ty-G.my)*.06;var sy=Math.min(scrollY/innerHeight,2);
+         G.mac.rotation.y=G.mx*.9+Math.sin(t*.6)*.12+sy*.5;G.mac.rotation.x=G.my*.4-sy*.25;G.inner.position.y=.45+Math.sin(t*1.2)*.07;
+         G.ring.rotation.z=t*.4;G.orb.forEach(function(o,i){var a=t*.8+i*2.1;o.position.set(Math.cos(a)*2.5,Math.sin(a*1.3)*.6+.3,Math.sin(a)*1.2);o.rotation.x=t;o.rotation.y=t*1.3});
+         G.stars.rotation.y=t*.012+scrollY*.0004;G.stars.position.y=scrollY*.0035;G.pm.color.set(root.getAttribute('data-theme')==='light'?0x6366f1:0xffffff);
+         G.R.render(G.sc,G.cam)}
+        })();
+    </script>
 
 </body>
-</html>
+</html>    

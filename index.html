@@ -513,13 +513,18 @@ html.adv .kz-mon .ct{transform-style:preserve-3d}html.adv .kz-mon .ct>*{transfor
 html.adv .kz3-kb{margin-top:6px;margin-bottom:-18px;transform:perspective(700px) rotateX(32deg);transform-origin:top;box-shadow:0 24px 44px rgba(0,0,0,.6),0 0 56px rgba(168,85,247,.45);animation:kzHue 8s linear infinite}
 html.adv .kz3-kb b{box-shadow:0 0 6px hsl(var(--h) 100% 55%/.7)}
 /* ===== LITE PERFORMANCE: strip everything costly ===== */
-html:not(.adv) *,html:not(.adv) *::before,html:not(.adv) *::after{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;animation:none!important;transition:none!important;filter:none!important;text-shadow:none!important}
+html:not(.adv) *,html:not(.adv) *::before,html:not(.adv) *::after{animation:none!important;transition:none!important;filter:none!important;text-shadow:none!important}
 html:not(.adv) #particles-canvas,html:not(.adv) #kz-gl{display:none!important}
 html:not(.adv) .reveal{opacity:1!important;transform:none!important}
 html:not(.adv) .svc-card,html:not(.adv) .link-card,html:not(.adv) .cat-card,html:not(.adv) .action-card,html:not(.adv) .top-svc,html:not(.adv) .hero-badge,html:not(.adv) .open-badge,html:not(.adv) header,html:not(.adv) .bottom-nav{box-shadow:none!important}
 html:not(.adv) .svc-card,html:not(.adv) .link-card{content-visibility:auto;contain-intrinsic-size:auto 140px}
 html:not(.adv) .bottom-nav,html:not(.adv) header{background:var(--bg)!important}
-@media (max-width:899px){.svc-card,.link-card,.cat-card{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
+@media (max-width:899px){.svc-card,.link-card{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
+
+
+/* ===== KZ v7: glass only where it matters ===== */
+.svc-card,.top-svc{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+html:not(.adv) .link-card,html:not(.adv) .bento-item,html:not(.adv) .action-card,html:not(.adv) .faq-item,html:not(.adv) .cat-chip,html:not(.adv) .search-box-mini input,html:not(.adv) .btn-icon,html:not(.adv) .hero-badge,html:not(.adv) .open-badge,html:not(.adv) .btn-open-categories,html:not(.adv) header,html:not(.adv) .bottom-nav{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
 
 /* ===== KZ v3: Apple all-in-one + gyro + scroll depth ===== */
 .keyboard-text{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -962,14 +967,14 @@ html.adv .mode-toggle{color:#22d3ee}
 
     <canvas id="kz-gl" aria-hidden="true"></canvas>
     <div class="kz-cursor" aria-hidden="true"></div>
-    <a class="mode-toggle mode-fab" onclick="kzToggleMode()" role="button"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="mode-label">پیشرفته</span></a>
+    <a class="mode-toggle mode-fab" onclick="kzToggleMode()" role="button"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="mode-label">حالت ساده</span></a>
     <div class="bottom-nav">
         <!-- دکمه خدمات: باز کردن پنجره دسته‌بندی‌ها -->
         <a href="#services" class="bn-item active" onclick="event.preventDefault(); openCategoryModal();"><i class="fa-solid fa-layer-group"></i> خدمات</a>
         <a href="#links" class="bn-item"><i class="fa-solid fa-link"></i> سایت‌ها</a>
         <a href="#upload" class="bn-item"><i class="fa-solid fa-cloud-arrow-up"></i> آپلود</a>
         <a onclick="openUserPanel()" class="bn-item"><i class="fa-solid fa-file-invoice"></i> سفارشات</a>
-        <a class="bn-item mode-toggle" onclick="kzToggleMode()" role="button" aria-label="تغییر حالت ساده / پیشرفته"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="mode-label">پیشرفته</span></a>
+        <a class="bn-item mode-toggle" onclick="kzToggleMode()" role="button" aria-label="تغییر حالت ساده / پیشرفته"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="mode-label">حالت ساده</span></a>
     </div>
 
     <script>
@@ -1741,10 +1746,10 @@ function showDocs(idx) {
 
 <script id="kz-theme">
 (function(){
-var root=document.documentElement,KEY='kz_mode2',three=null,G=null,loading=false;
+var root=document.documentElement,KEY='kz_mode3',three=null,G=null,loading=false;
 function toast(t){var d=document.createElement('div');d.className='kz-toast';d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},2200)}
-function auto(){var d=matchMedia('(min-width:900px) and (pointer:fine)').matches,r=matchMedia('(prefers-reduced-motion: reduce)').matches,sd=navigator.connection&&navigator.connection.saveData;return(d&&!r&&!sd&&(navigator.hardwareConcurrency||4)>=4)?'adv':'lite'}
-function label(){document.querySelectorAll('.mode-label').forEach(function(e){e.textContent=root.classList.contains('adv')?'ساده':'پیشرفته'})}
+function auto(){return 'adv'}
+function label(){var a=root.classList.contains('adv');document.querySelectorAll('.mode-toggle').forEach(function(t){var l=t.querySelector('.mode-label'),i=t.querySelector('i');l.textContent=a?'حالت پیشرفته':'حالت ساده';i.className='fa-solid '+(a?'fa-wand-magic-sparkles':'fa-feather');t.setAttribute('aria-label',a?'حالت فعلی: پیشرفته. برای رفتن به حالت ساده بزنید':'حالت فعلی: ساده. برای رفتن به حالت پیشرفته بزنید')})}
 function set(m,save){if(save){try{localStorage.setItem(KEY,m)}catch(e){}}
  if(m==='adv'){root.classList.add('adv');load3D()}else{root.classList.remove('adv','gl');stop3D()}label()}
 window.kzToggleMode=function(){var a=root.classList.contains('adv');set(a?'lite':'adv',true);toast(a?'حالت ساده فعال شد (سبک و سریع)':'حالت پیشرفته فعال شد (سه‌بعدی)')};
@@ -1804,7 +1809,7 @@ function init3D(){var T=three||window.THREE;if(!T||G){if(G&&!G.run){G.run=true;l
  addEventListener('deviceorientation',function(e){if(e.gamma!=null){G.tx=Math.max(-.5,Math.min(.5,e.gamma/60));G.ty=Math.max(-.5,Math.min(.5,(e.beta-45)/90))}});
  root.classList.add('gl');var hero=document.querySelector('.hero'),dx=null;hero.addEventListener('pointerdown',function(e){if(e.target.closest('.kz-stage,a,button'))return;dx=e.clientX});addEventListener('pointermove',function(e){if(dx!=null){G.vy=(e.clientX-dx)*.0012;dx=e.clientX}});addEventListener('pointerup',function(){dx=null});loop()}
 function loop(){if(!G||!G.run)return;requestAnimationFrame(loop);if(document.hidden)return;
- var now=performance.now(),dt=now-G.last;G.last=now;G.ft+=dt;G.fc++;if(G.fc===120){if(G.ft/120>50){root.classList.remove('adv','gl');label();G.run=false;toast('دستگاه شما کند بود؛ حالت ساده فعال شد');return}}
+ var now=performance.now(),dt=now-G.last;G.last=now;G.ft+=dt;G.fc++;if(G.fc===120){if(G.ft/120>90){root.classList.remove('adv','gl');label();G.run=false;toast('دستگاه شما کند بود؛ حالت ساده فعال شد');return}}
  var t=now/1000,sp=document.querySelector('.kz-stage'),vh=2*8*Math.tan(20*Math.PI/180),vw=vh*G.cam.aspect;
  var rc=sp.getBoundingClientRect(),cx=(rc.left+rc.width/2)/innerWidth*2-1,cy=-((rc.top+rc.height/2)/innerHeight*2-1);
  var sc=(rc.width/innerWidth*vw)/3.2*1.05;

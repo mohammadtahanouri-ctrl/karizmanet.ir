@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fa" dir="rtl" data-theme="dark">
+<html class="adv" lang="fa" dir="rtl" data-theme="dark">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -456,24 +456,7 @@
 
 
 
-/* ===== KZ v4: slim monitor + gaming keyboard ===== */
-.monitor-wrapper{max-width:940px!important}
-.monitor{width:100%!important;aspect-ratio:2.25/1!important;border-width:4px!important;border-radius:16px 16px 2px 2px!important}
-.kz-chin{width:100%!important;border-radius:0 0 18px 18px!important}
-.monitor .kz-slide{padding:8px 14px}
-.keyboard{width:min(98%,860px)!important;max-width:none!important;margin:14px auto 0!important;padding:14px 12px 16px!important;background:linear-gradient(160deg,#151a3a,#090b1a)!important;border:1px solid rgba(255,255,255,.16)!important;border-radius:22px!important;transform:rotateX(26deg)!important;transform-origin:top center;box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 70px rgba(168,85,247,.45),inset 0 1px 0 rgba(255,255,255,.18)!important}
-.keyboard::after{content:"";position:absolute;left:6%;right:6%;bottom:-16px;height:34px;border-radius:50%;background:radial-gradient(#a855f7cc,#22d3ee55 55%,transparent 72%);filter:blur(12px);z-index:-1}
-.kz-kb{position:relative;z-index:1;display:flex;flex-direction:column;gap:clamp(3px,.9vw,6px)}
-.kz-kb div{display:flex;gap:clamp(3px,.9vw,6px)}
-.kz-kb b{flex:var(--w,1) 1 0;height:clamp(20px,5.2vw,40px);border-radius:clamp(4px,1vw,8px);display:flex;align-items:center;justify-content:center;font:800 clamp(7px,1.7vw,12px) Vazirmatn,sans-serif;color:hsl(var(--h),95%,72%);background:linear-gradient(180deg,#232a55,#0d1030);border:1px solid hsl(var(--h),90%,60%,.55);box-shadow:0 clamp(2px,.6vw,4px) 0 #05060f,0 0 12px hsl(var(--h),95%,60%,.45),inset 0 1px 0 rgba(255,255,255,.2);text-shadow:0 0 8px hsl(var(--h),95%,65%)}
-.kz-kb b.ac{background:linear-gradient(180deg,hsl(var(--h),90%,58%),hsl(var(--h),90%,34%));color:#fff}
-html.adv .kz-kb{animation:kzHue 9s linear infinite}
-html.adv .kz-kb b{animation:kzPress 2.8s ease-in-out infinite;animation-delay:calc(var(--i)*55ms)}
-@keyframes kzHue{to{filter:hue-rotate(360deg)}}
-@keyframes kzPress{45%,55%{transform:translateY(2px);box-shadow:0 0 0 #05060f,0 0 22px hsl(var(--h),95%,65%),inset 0 0 8px hsl(var(--h),95%,60%,.6)}}
-
-
-
+.monitor-wrapper,.keyboard{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;margin:0!important;padding:0!important;border:0!important;opacity:0!important}
 /* ===== KZ v6: separate layers. LITE = flat & minimal, ADV = full 3D ===== */
 .monitor-wrapper,.keyboard{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;margin:0!important;padding:0!important;border:0!important;opacity:0!important}
 .monitor-wrapper *,.keyboard *{animation:none!important}
@@ -493,11 +476,6 @@ html.adv .kz-kb b{animation:kzPress 2.8s ease-in-out infinite;animation-delay:ca
 .kz3-kb{position:relative;width:min(90%,620px);margin:10px auto 0;padding:7px;border-radius:12px;background:#0a0c1b;border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:3px}
 .kz3-kb div{display:flex;gap:3px}
 .kz3-kb b{flex:var(--w,1) 1 0;height:clamp(14px,3.3cqw,26px);border-radius:3px;background:#151932;border-bottom:2px solid hsl(var(--h) 100% 60%);font:700 clamp(6px,1.5cqw,10px)/1 sans-serif;color:hsl(var(--h) 100% 80%);display:flex;align-items:center;justify-content:center}
-/* LITE: native scroll-snap strip, zero 3D, zero animation */
-html:not(.adv) .kz-stage{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 7%;scrollbar-width:none;touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
-html:not(.adv) .kz-stage::-webkit-scrollbar{display:none}
-html:not(.adv) .kz-mon{flex:0 0 86%;scroll-snap-align:center}
-html:not(.adv) .kz-dots{display:none}
 /* ADV: 3D coverflow */
 html.adv .kz-stage{height:calc(min(86cqw,820px)/1.7 + 34px);perspective:1300px;cursor:grab}
 html.adv .kz-stage:active{cursor:grabbing}
@@ -512,97 +490,53 @@ html.adv .kz-mon .cy{text-shadow:0 0 14px #22d3ee,0 0 28px rgba(34,211,238,.5)}
 html.adv .kz-mon .ct{transform-style:preserve-3d}html.adv .kz-mon .ct>*{transform:translateZ(var(--z,22px))}html.adv .kz-mon h2{--z:40px}html.adv .kz-mon .cb{--z:62px}
 html.adv .kz3-kb{margin-top:6px;margin-bottom:-18px;transform:perspective(700px) rotateX(32deg);transform-origin:top;box-shadow:0 24px 44px rgba(0,0,0,.6),0 0 56px rgba(168,85,247,.45);animation:kzHue 8s linear infinite}
 html.adv .kz3-kb b{box-shadow:0 0 6px hsl(var(--h) 100% 55%/.7)}
-/* ===== LITE PERFORMANCE: strip everything costly ===== */
-html:not(.adv) *,html:not(.adv) *::before,html:not(.adv) *::after{animation:none!important;transition:none!important;filter:none!important;text-shadow:none!important}
-html:not(.adv) #particles-canvas,html:not(.adv) #kz-gl{display:none!important}
-html:not(.adv) .reveal{opacity:1!important;transform:none!important}
-html:not(.adv) .svc-card,html:not(.adv) .link-card,html:not(.adv) .cat-card,html:not(.adv) .action-card,html:not(.adv) .top-svc,html:not(.adv) .hero-badge,html:not(.adv) .open-badge,html:not(.adv) header,html:not(.adv) .bottom-nav{box-shadow:none!important}
-html:not(.adv) .svc-card,html:not(.adv) .link-card{content-visibility:auto;contain-intrinsic-size:auto 140px}
-html:not(.adv) .bottom-nav,html:not(.adv) header{background:var(--bg)!important}
-@media (max-width:899px){.svc-card,.link-card{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
 
-
-/* ===== KZ v7: glass only where it matters ===== */
-.svc-card,.top-svc{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
-html:not(.adv) .link-card,html:not(.adv) .bento-item,html:not(.adv) .action-card,html:not(.adv) .faq-item,html:not(.adv) .cat-chip,html:not(.adv) .search-box-mini input,html:not(.adv) .btn-icon,html:not(.adv) .hero-badge,html:not(.adv) .open-badge,html:not(.adv) .btn-open-categories,html:not(.adv) header,html:not(.adv) .bottom-nav{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
-
-/* ===== KZ v3: Apple all-in-one + gyro + scroll depth ===== */
-.keyboard-text{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.monitor{background:linear-gradient(135deg,#080b17,#1b1550 55%,#3b0f4a)!important;border:9px solid #05070d!important;border-radius:20px 20px 3px 3px!important;box-shadow:0 0 0 3px #c9ccd8,0 0 0 4px #7d8196,0 30px 70px rgba(0,0,0,.65),0 0 60px rgba(99,102,241,.45)!important;overflow:hidden}
-.monitor::before{content:"";position:absolute;inset:0;z-index:1;background:repeating-linear-gradient(115deg,rgba(34,211,238,.07) 0 2px,transparent 2px 38px);pointer-events:none}
-.kz-chin{width:95%;margin:-1px auto 0;height:clamp(26px,6vw,40px);border-radius:0 0 22px 22px;background:linear-gradient(#eceefa,#bdb6f6 55%,#9d95e8);box-shadow:0 14px 30px rgba(0,0,0,.45),inset 0 -3px 6px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;position:relative;z-index:2}
-.kz-chin::after{content:"";width:9px;height:9px;border-radius:50%;background:radial-gradient(#fff,#8b83e0);box-shadow:0 0 10px #fff8}
-.monitor-neck{display:block!important;position:relative!important;width:20%!important;height:clamp(34px,8vw,60px)!important;margin:-2px auto 0!important;transform:none!important;border-radius:0!important;background:linear-gradient(90deg,#7d8196,#eceefa 45%,#8d91a8)!important;box-shadow:none!important;border:0!important}
-.monitor-base{display:block!important;position:relative!important;width:34%!important;height:11px!important;margin:0 auto!important;transform:none!important;border-radius:50% 50% 8px 8px/100% 100% 8px 8px!important;background:linear-gradient(#eceefa,#8d91a8)!important;box-shadow:0 18px 26px rgba(0,0,0,.55)!important;border:0!important}
-.kz-sub{--z:46px;font-size:clamp(11px,3vw,15px);font-weight:800;text-align:center;background:linear-gradient(90deg,#a78bfa,#f9a8d4,#67e8f9,#a78bfa);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:kzGrad 5s linear infinite;max-width:90%}
-html.adv .svc-card,html.adv .link-card,html.adv .cat-card,html.adv .action-card{transform:perspective(800px) rotateX(calc(var(--rx,0deg) + var(--gy,0deg))) rotateY(calc(var(--ry,0deg) + var(--gx,0deg)))}
-html.adv .svc-card>*,html.adv .link-card>*{transform:translateZ(26px)}
-html.adv .svc-card .svc-title,html.adv .link-card i,html.adv .link-card .icon{transform:translateZ(46px)}
-html.adv .section-title,html.adv .services-grid,html.adv #links-container{transform:perspective(1200px) rotateX(calc(var(--sp,0)*8deg)) translateZ(calc(var(--sp,0)*var(--sp,0)*-70px));transition:transform .2s linear}
-html.adv .monitor-wrapper{transform:perspective(1100px) rotateX(calc(var(--hs,0)*1deg)) translateZ(calc(var(--hs,0)*-5px));opacity:calc(1 - var(--hs,0)/45)}
-
-/* ===== KZ HERO: layered 3D monitor + keyboard ===== */
-.hero{touch-action:pan-y}
-.monitor-wrapper{perspective:1100px;z-index:2}
-.monitor-wrapper::before{content:"";position:absolute;left:50%;top:50%;width:78%;aspect-ratio:1;transform:translate(-50%,-52%);border-radius:50%;background:radial-gradient(circle at 35% 30%,#7dd3fc,#2563eb 45%,#0b1b4d 75%);opacity:.45;filter:blur(1px);z-index:-1}
-html.gl .monitor-wrapper::before{display:none}
-.monitor{transform-style:preserve-3d;transform:rotateX(var(--mrx,4deg)) rotateY(var(--mry,0deg));transition:transform .3s ease-out;animation:kzFloat 6s ease-in-out infinite}
-@keyframes kzFloat{50%{translate:0 -8px}}
-.monitor::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.14) 45%,transparent 60%);transform:translateZ(60px)}
-.monitor .kz-slide{position:absolute!important;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;opacity:0;pointer-events:none;transform-style:preserve-3d;transform:rotateY(70deg) translateZ(-90px);transition:all .75s cubic-bezier(.2,.8,.2,1);z-index:3}
-.monitor .kz-slide.on{opacity:1;pointer-events:auto;transform:translateZ(24px)}
-.monitor .kz-slide.prev{transform:rotateY(-70deg) translateZ(-90px)}
-.kz-slide>*{transform:translateZ(var(--z,18px))}
-.kz-slide h2,.kz-slide h1{--z:34px}.kz-chips{--z:52px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
-.kz-chips span,.kz-cta{padding:4px 11px;border-radius:99px;font-size:clamp(10px,2.6vw,13px);font-weight:800;background:rgba(34,211,238,.14);border:1px solid rgba(34,211,238,.5);color:#67e8f9;box-shadow:0 0 14px rgba(34,211,238,.3)}
-.kz-cta{--z:70px;background:linear-gradient(90deg,#6366f1,#ec4899);color:#fff;border:0;padding:7px 18px}
-.kz-slide h2{font-size:clamp(16px,4.4vw,28px);font-weight:800;line-height:1.5;text-align:center}
-.kz-dots{display:flex;gap:8px;justify-content:center;margin:10px 0 0;position:relative;z-index:5}
-.kz-dots i{width:9px;height:9px;border-radius:50%;background:var(--glass-border);cursor:pointer;transition:.3s}.kz-dots i.on{width:26px;border-radius:9px;background:#22d3ee;box-shadow:0 0 12px #22d3ee}
-.kz-keys{position:absolute;inset:8px;display:grid;grid-template-columns:repeat(14,1fr);grid-auto-rows:1fr;gap:4px;opacity:.55;z-index:0}
-.kz-keys b{border-radius:4px;background:linear-gradient(#ffffff26,#ffffff08);border:1px solid var(--glass-border);box-shadow:0 2px 0 rgba(0,0,0,.4)}
-html.adv .kz-keys b{animation:kzKey 3.2s ease-in-out infinite;animation-delay:calc(var(--i)*60ms)}
-@keyframes kzKey{50%{background:linear-gradient(#22d3ee66,#6366f122);box-shadow:0 0 10px #22d3ee,0 2px 0 rgba(0,0,0,.4)}}
-.keyboard{padding:26px 15px}.keyboard-text{position:relative;z-index:2}
-html:not(.adv) .monitor{animation:none}
-
-/* ===== KZ 3D THEME (only active with html.adv) ===== */
-#kz-gl{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:none}
-#kz-hero-spacer{display:none}
-.kz-cursor,.mode-fab{display:none}
-.mode-toggle .mode-label{font-size:10px}
-html.adv #kz-gl{display:block}
-html.adv.gl #particles-canvas{display:none}
-html.adv body::before{content:"";position:fixed;inset:-20%;z-index:-2;pointer-events:none;background:radial-gradient(40% 35% at 20% 25%,rgba(99,102,241,.28),transparent 70%),radial-gradient(35% 30% at 80% 20%,rgba(236,72,153,.2),transparent 70%),radial-gradient(40% 35% at 60% 85%,rgba(14,165,233,.22),transparent 70%);animation:kzAurora 18s ease-in-out infinite alternate}
-@keyframes kzAurora{to{transform:translate3d(4%,3%,0) rotate(6deg) scale(1.1)}}
-[data-theme="light"].adv #kz-gl{opacity:.55}
-html.adv .reveal{opacity:0;transform:perspective(900px) translateY(70px) rotateX(-16deg) scale(.95);filter:blur(6px);transition:all .9s cubic-bezier(.2,.8,.2,1)}
-html.adv .reveal.active{opacity:1;transform:none;filter:none}
-html.adv .svc-card,html.adv .link-card,html.adv .cat-card,html.adv .action-card{position:relative;transform-style:preserve-3d;transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out,box-shadow .3s,border-color .3s;box-shadow:0 18px 40px -22px rgba(99,102,241,.55),inset 0 1px 0 rgba(255,255,255,.12);will-change:transform}
-html.adv .svc-card:hover,html.adv .link-card:hover,html.adv .cat-card:hover,html.adv .action-card:hover{border-color:rgba(34,211,238,.6);box-shadow:0 26px 60px -20px rgba(34,211,238,.45),0 0 28px rgba(168,85,247,.3)}
-html.adv .svc-card::after,html.adv .link-card::after,html.adv .cat-card::after,html.adv .action-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.22),transparent 55%)}
-html.adv .svc-card:hover::after,html.adv .link-card:hover::after,html.adv .cat-card:hover::after,html.adv .action-card:hover::after{opacity:1}
-html.adv .section-title{text-shadow:0 0 22px rgba(99,102,241,.7),0 0 4px rgba(34,211,238,.4);letter-spacing:.2px}
-html.adv .cyan-text{background:linear-gradient(90deg,#22d3ee,#a78bfa,#ec4899,#22d3ee);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:kzGrad 6s linear infinite}
-@keyframes kzGrad{to{background-position:300% 0}}
-html.adv dialog[open]{animation:kzDlg .6s cubic-bezier(.2,.9,.2,1);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 60px rgba(99,102,241,.3)}
-@keyframes kzDlg{from{opacity:0;transform:perspective(900px) rotateX(-24deg) translateY(50px) scale(.9)}}
-html.adv header{box-shadow:0 10px 40px -15px rgba(99,102,241,.5)}
-html.adv .bottom-nav{left:10px;right:10px;bottom:8px;border-radius:22px;border:1px solid var(--glass-border);box-shadow:0 18px 40px rgba(0,0,0,.45),0 0 30px rgba(99,102,241,.25),inset 0 1px 0 rgba(255,255,255,.15);padding:9px 4px}
-html.adv .bn-item{transition:transform .3s cubic-bezier(.2,.9,.2,1.4),color .3s}
-html.adv .bn-item:hover,html.adv .bn-item:active{transform:translateY(-6px) scale(1.12);text-shadow:0 0 14px var(--glow)}
+/* ===== KZ FINAL: one advanced mode, mobile-safe ===== */
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes kzHue{to{filter:hue-rotate(360deg)}}@keyframes kzGrad{to{background-position:300% 0}}@keyframes kzSpin{to{--ang:360deg}}
+@keyframes kzDlg{from{opacity:0;transform:perspective(900px) rotateX(-20deg) translateY(40px) scale(.94)}}@keyframes kzAurora{to{transform:translate3d(4%,3%,0) rotate(6deg) scale(1.1)}}
+html{--kzc:#10142a}html[data-theme="light"]{--kzc:#fff}
+#kz-gl{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block}
+html[data-theme="light"] #kz-gl{opacity:.55}
+html.gl #particles-canvas{display:none}
+body::before{content:"";position:fixed;inset:-20%;z-index:-2;pointer-events:none;background:radial-gradient(40% 35% at 20% 25%,rgba(99,102,241,.26),transparent 70%),radial-gradient(35% 30% at 80% 20%,rgba(236,72,153,.18),transparent 70%),radial-gradient(40% 35% at 60% 85%,rgba(14,165,233,.2),transparent 70%)}
 html.adv body{padding-bottom:86px}
-.mode-toggle{cursor:pointer;user-select:none}
-html.adv .mode-toggle{color:#22d3ee}
-.kz-toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:rgba(15,23,42,.92);color:#f8fafc;border:1px solid rgba(255,255,255,.2);padding:10px 18px;border-radius:14px;font-size:13px;font-weight:700;z-index:3000;backdrop-filter:blur(10px);animation:kzDlg .4s both}
-@media (min-width:768px){
- .mode-fab{display:flex;align-items:center;gap:8px;position:fixed;left:18px;bottom:18px;z-index:999;padding:11px 18px;border-radius:16px;background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(20px);color:var(--text-main);font-weight:800;font-size:13px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
- .mode-fab:hover{border-color:#22d3ee;box-shadow:0 0 24px rgba(34,211,238,.4)}
- html.adv body{padding-bottom:0}
- @media (pointer:fine){html.adv .kz-cursor{display:block;position:fixed;top:0;left:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1.5px solid rgba(34,211,238,.7);box-shadow:0 0 22px rgba(99,102,241,.55);pointer-events:none;z-index:4000;transition:width .2s,height .2s,margin .2s,background .2s}
-  html.adv .kz-cursor.big{width:54px;height:54px;margin:-27px 0 0 -27px;background:rgba(99,102,241,.14)}}
-}
-@media (prefers-reduced-motion:reduce){html.adv *{animation:none!important}}
+.section-title{text-shadow:0 0 18px rgba(99,102,241,.6)}
+.cyan-text{background:linear-gradient(90deg,#22d3ee,#a78bfa,#ec4899,#22d3ee);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+dialog[open]{animation:kzDlg .5s cubic-bezier(.2,.9,.2,1)}
+html.adv .bottom-nav{left:10px;right:10px;bottom:8px;border-radius:22px;border:1px solid var(--glass-border);box-shadow:0 14px 30px rgba(0,0,0,.4),0 0 24px rgba(99,102,241,.22);padding:9px 4px}
+.kz-toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:rgba(15,23,42,.92);color:#f8fafc;border:1px solid rgba(255,255,255,.2);padding:10px 18px;border-radius:14px;font-size:13px;font-weight:700;z-index:3000}
+.kz-cursor{display:none}
+.kz-fly{position:fixed;width:14px;height:14px;border-radius:50%;background:radial-gradient(#fff,#22d3ee 60%,#6366f1);box-shadow:0 0 14px #22d3ee;z-index:5000;pointer-events:none}
+.kz-rip{position:absolute;width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.55);pointer-events:none}
+.btn-add{position:relative;overflow:hidden}
+/* --- service cards: gradient border, colour per category, zero glass, no 3D layers --- */
+.svc-card{--ch:250;border:1px solid transparent!important;border-radius:18px!important;contain:layout style;background:linear-gradient(180deg,rgba(255,255,255,.05),transparent 42%) padding-box,linear-gradient(var(--kzc),var(--kzc)) padding-box,linear-gradient(140deg,hsl(var(--ch) 95% 66%/.75),hsl(calc(var(--ch) + 70) 90% 60%/.12) 45%,hsl(var(--ch) 95% 66%/.45)) border-box!important;box-shadow:0 8px 18px -14px hsl(var(--ch) 95% 60%/.9)!important;transition:opacity .45s var(--d,0ms),translate .45s var(--d,0ms),transform .2s,box-shadow .25s}
+.svc-card::before{content:"";position:absolute;top:0;left:14%;right:14%;height:1px;background:linear-gradient(90deg,transparent,hsl(var(--ch) 100% 82%/.85),transparent);pointer-events:none}
+.svc-card .svc-watermark{position:absolute!important;top:8px!important;right:8px!important;left:auto!important;transform:none!important;width:30px;height:30px;font-size:14px!important;opacity:1!important;display:flex;align-items:center;justify-content:center;border-radius:10px;color:#fff;background:linear-gradient(135deg,hsl(var(--ch) 90% 58%),hsl(calc(var(--ch) + 50) 90% 48%));box-shadow:0 4px 12px -2px hsl(var(--ch) 90% 55%/.7);z-index:3!important}
+.svc-card:hover .svc-watermark{transform:scale(1.1) rotate(-6deg)!important;opacity:1!important}
+.svc-card .svc-title{padding:0 34px}
+.svc-pct{background:linear-gradient(90deg,#ef4444,#f97316)!important;color:#fff!important;border:0!important;border-radius:8px!important;font-weight:800}
+.svc-new:not([style]){background:linear-gradient(90deg,#34d399,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.svc-card:active{transform:perspective(600px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) scale(.97)}
+html.kz-js .svc-card:not(.kz-in){opacity:0;translate:0 16px}
+@media (hover:none){.svc-card:hover{transform:none;box-shadow:0 8px 18px -14px hsl(var(--ch) 95% 60%/.9)!important}}
+.top-svc{border:1px solid transparent!important;background:linear-gradient(var(--kzc),var(--kzc)) padding-box,conic-gradient(from var(--ang),#22d3ee,#a78bfa,#ec4899,#f59e0b,#22d3ee) border-box!important;box-shadow:0 0 18px rgba(34,211,238,.22)!important}
+.kz-hot{position:absolute!important;top:-9px;left:50%;transform:translateX(-50%);padding:1px 10px;border-radius:99px;font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#f59e0b,#ef4444);z-index:4;white-space:nowrap}
+@media (max-width:899px){.link-card,.bento-item,.action-card,.faq-item,.cat-chip{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}html.adv .kz3-kb{animation:none}}
+/* --- desktop only: heavy effects, always on ONE hovered card --- */
+@media (hover:hover) and (pointer:fine) and (min-width:900px){
+ body::before{animation:kzAurora 18s ease-in-out infinite alternate}
+ .cyan-text{animation:kzGrad 6s linear infinite}
+ .top-svc{animation:kzSpin 6s linear infinite}
+ .svc-card:hover{transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-4px);box-shadow:0 18px 34px -16px hsl(var(--ch) 95% 60%/.9)!important}
+ .svc-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .25s;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.18),transparent 55%)}
+ .svc-card:hover::after{opacity:1}
+ .section-title{transform:perspective(900px) rotateX(calc(var(--sp,0)*10deg)) translateZ(calc(var(--sp,0)*var(--sp,0)*-30px))}
+ .kz-cursor{display:block;position:fixed;top:0;left:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1.5px solid rgba(34,211,238,.7);box-shadow:0 0 22px rgba(99,102,241,.55);pointer-events:none;z-index:4000;transition:width .2s,height .2s,margin .2s,background .2s}
+ .kz-cursor.big{width:54px;height:54px;margin:-27px 0 0 -27px;background:rgba(99,102,241,.14)}
+ html.adv body{padding-bottom:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
 
     </style>
 
@@ -967,14 +901,12 @@ html.adv .mode-toggle{color:#22d3ee}
 
     <canvas id="kz-gl" aria-hidden="true"></canvas>
     <div class="kz-cursor" aria-hidden="true"></div>
-    <a class="mode-toggle mode-fab" onclick="kzToggleMode()" role="button"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="mode-label">حالت ساده</span></a>
     <div class="bottom-nav">
         <!-- دکمه خدمات: باز کردن پنجره دسته‌بندی‌ها -->
         <a href="#services" class="bn-item active" onclick="event.preventDefault(); openCategoryModal();"><i class="fa-solid fa-layer-group"></i> خدمات</a>
         <a href="#links" class="bn-item"><i class="fa-solid fa-link"></i> سایت‌ها</a>
         <a href="#upload" class="bn-item"><i class="fa-solid fa-cloud-arrow-up"></i> آپلود</a>
         <a onclick="openUserPanel()" class="bn-item"><i class="fa-solid fa-file-invoice"></i> سفارشات</a>
-        <a class="bn-item mode-toggle" onclick="kzToggleMode()" role="button" aria-label="تغییر حالت ساده / پیشرفته"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="mode-label">حالت ساده</span></a>
     </div>
 
     <script>
@@ -1522,7 +1454,6 @@ function showDocs(idx) {
             const target = bar.classList.contains('show') ? bar : $('#services-grid');
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-
         function showAllCategories() {
             setCategory('همه');
             setTimeout(scrollToResults, 50);
@@ -1746,16 +1677,9 @@ function showDocs(idx) {
 
 <script id="kz-theme">
 (function(){
-var root=document.documentElement,KEY='kz_mode3',three=null,G=null,loading=false;
+var root=document.documentElement,three=null,G=null,loading=false;
 function toast(t){var d=document.createElement('div');d.className='kz-toast';d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},2200)}
-function auto(){return 'adv'}
-function label(){var a=root.classList.contains('adv');document.querySelectorAll('.mode-toggle').forEach(function(t){var l=t.querySelector('.mode-label'),i=t.querySelector('i');l.textContent=a?'حالت پیشرفته':'حالت ساده';i.className='fa-solid '+(a?'fa-wand-magic-sparkles':'fa-feather');t.setAttribute('aria-label',a?'حالت فعلی: پیشرفته. برای رفتن به حالت ساده بزنید':'حالت فعلی: ساده. برای رفتن به حالت پیشرفته بزنید')})}
-function set(m,save){if(save){try{localStorage.setItem(KEY,m)}catch(e){}}
- if(m==='adv'){root.classList.add('adv');load3D()}else{root.classList.remove('adv','gl');stop3D()}label()}
-window.kzToggleMode=function(){var a=root.classList.contains('adv');set(a?'lite':'adv',true);toast(a?'حالت ساده فعال شد (سبک و سریع)':'حالت پیشرفته فعال شد (سه‌بعدی)')};
-var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
-set(saved||auto(),false);
-
+root.classList.add('adv');load3D();
 /* tilt + glare + magnetic */
 var SEL='.svc-card,.link-card,.cat-card,.action-card';
 function tilt(e){if(!root.classList.contains('adv'))return;var t=e.target.closest&&e.target.closest(SEL);if(!t)return;var r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;t.style.setProperty('--ry',((x-.5)*14).toFixed(1)+'deg');t.style.setProperty('--rx',((.5-y)*14).toFixed(1)+'deg');t.style.setProperty('--mx',(x*100)+'%');t.style.setProperty('--my',(y*100)+'%')}
@@ -1764,7 +1688,7 @@ document.addEventListener('pointermove',function(e){if(e.pointerType==='mouse')t
 document.addEventListener('pointerdown',tilt,{passive:true});
 document.addEventListener('pointerup',untilt,{passive:true});
 document.addEventListener('pointerout',function(e){if(e.pointerType==='mouse')untilt(e)},{passive:true});
-var cur=document.querySelector('.kz-cursor'),MG='button,.btn-open-categories,.action-card,.mode-fab';
+var cur=document.querySelector('.kz-cursor'),MG='button,.btn-open-categories,.action-card';
 document.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse'||!root.classList.contains('adv'))return;
  cur.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';
  var b=e.target.closest&&e.target.closest(MG);cur.classList.toggle('big',!!(e.target.closest&&e.target.closest('a,button,'+SEL)));
@@ -1785,7 +1709,7 @@ function screenTex(T){var c=document.createElement('canvas');c.width=1216;c.heig
   x.shadowBlur=0;x.fillStyle='rgba(255,255,255,.55)';x.font='600 30px Vazirmatn,Tahoma,sans-serif';x.fillText('KARIZMA NET',608,470)}
  draw();var t=new T.CanvasTexture(c);t.anisotropy=4;if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){draw();t.needsUpdate=true});return t}
 function init3D(){var T=three||window.THREE;if(!T||G){if(G&&!G.run){G.run=true;loop()}root.classList.add('gl');return}
- var cv=document.getElementById('kz-gl'),R;try{R=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){root.classList.remove('adv','gl');label();return}
+ var cv=document.getElementById('kz-gl'),R;try{R=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){root.classList.remove('gl');return}
  R.setPixelRatio(Math.min(devicePixelRatio||1,innerWidth<900?1.1:2));R.outputEncoding=T.sRGBEncoding;
  var sc=new T.Scene(),cam=new T.PerspectiveCamera(40,1,.1,100);cam.position.z=8;
  sc.add(new T.AmbientLight(0xffffff,.75));var dl=new T.DirectionalLight(0xffffff,1.1);dl.position.set(2,3,5);sc.add(dl);
@@ -1808,8 +1732,8 @@ function init3D(){var T=three||window.THREE;if(!T||G){if(G&&!G.run){G.run=true;l
  addEventListener('pointermove',function(e){G.tx=(e.clientX/innerWidth-.5);G.ty=(e.clientY/innerHeight-.5)},{passive:true});
  addEventListener('deviceorientation',function(e){if(e.gamma!=null){G.tx=Math.max(-.5,Math.min(.5,e.gamma/60));G.ty=Math.max(-.5,Math.min(.5,(e.beta-45)/90))}});
  root.classList.add('gl');var hero=document.querySelector('.hero'),dx=null;hero.addEventListener('pointerdown',function(e){if(e.target.closest('.kz-stage,a,button'))return;dx=e.clientX});addEventListener('pointermove',function(e){if(dx!=null){G.vy=(e.clientX-dx)*.0012;dx=e.clientX}});addEventListener('pointerup',function(){dx=null});loop()}
-function loop(){if(!G||!G.run)return;requestAnimationFrame(loop);if(document.hidden)return;
- var now=performance.now(),dt=now-G.last;G.last=now;G.ft+=dt;G.fc++;if(G.fc===120){if(G.ft/120>90){root.classList.remove('adv','gl');label();G.run=false;toast('دستگاه شما کند بود؛ حالت ساده فعال شد');return}}
+function loop(){if(!G||!G.run)return;requestAnimationFrame(loop);if(document.hidden||(innerWidth<900&&scrollY>innerHeight*1.2))return;
+ var now=performance.now(),dt=now-G.last;G.last=now;G.ft+=dt;G.fc++;if(G.fc===120){if(G.ft/120>90){root.classList.remove('gl');G.run=false;return}}
  var t=now/1000,sp=document.querySelector('.kz-stage'),vh=2*8*Math.tan(20*Math.PI/180),vw=vh*G.cam.aspect;
  var rc=sp.getBoundingClientRect(),cx=(rc.left+rc.width/2)/innerWidth*2-1,cy=-((rc.top+rc.height/2)/innerHeight*2-1);
  var sc=(rc.width/innerWidth*vw)/3.2*1.05;
@@ -1822,20 +1746,6 @@ function loop(){if(!G||!G.run)return;requestAnimationFrame(loop);if(document.hid
 })();
 </script>
 
-<script id="kz-v3">
-(function(){var R=document.documentElement,w=document.querySelector('.monitor-wrapper'),m=document.querySelector('.monitor');
-if(m&&!document.querySelector('.kz-chin')){var c=document.createElement('div');c.className='kz-chin';m.after(c)}
-var f=document.querySelector('.kz-slide.on');if(f&&!f.querySelector('.kz-sub')){var p=document.createElement('p');p.className='kz-sub';p.textContent='ثبت‌نام در سامانه‌های دولتی، بانکی، دانشگاهی و بیمه';f.appendChild(p)}
-var cl=function(v,a){return Math.max(-a,Math.min(a,v))};
-addEventListener('deviceorientation',function(e){if(!R.classList.contains('adv')||e.gamma==null)return;R.style.setProperty('--gx',cl(e.gamma/4,9)+'deg');R.style.setProperty('--gy',cl(-(e.beta-50)/5,9)+'deg')});
-addEventListener('pointerdown',function(){if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission&&!window.__kzp){window.__kzp=1;DeviceOrientationEvent.requestPermission().catch(function(){})}},{once:true});
-var tk=0,els=[];function q(){els=[].slice.call(document.querySelectorAll('.section-title,.services-grid,#links-container'))}
-function upd(){tk=0;if(!R.classList.contains('adv'))return;var h=innerHeight;if(w)w.style.setProperty('--hs',Math.min(scrollY/h,1)*18);
- els.forEach(function(e){var r=e.getBoundingClientRect(),v=cl(((r.top+r.height/2)-h/2)/h,1);e.style.setProperty('--sp',v.toFixed(3))})}
-addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(upd)}},{passive:true});
-setTimeout(function(){q();upd()},600);setInterval(q,4000);
-})();
-</script>
 <script id="kz-hero3">
 (function(){var R=document.documentElement,old=document.querySelector('.monitor-wrapper');if(!old)return;
 var W=document.createElement('div');W.className='kz-h3';var st=document.createElement('div');st.className='kz-stage';st.id='kzStage';
@@ -1876,6 +1786,24 @@ addEventListener('deviceorientation',function(e){if(adv()&&e.gamma!=null){tx=Mat
 addEventListener('scroll',function(){if(adv()){var y=Math.min(scrollY,600);W.style.transform='translateY('+(y*.1)+'px) scale('+(1-y/3200)+')';W.style.opacity=1-y/900}else W.style.transform=W.style.opacity=''},{passive:true});
 new MutationObserver(render).observe(R,{attributes:true,attributeFilter:['class']});
 render();auto()})();
+</script>
+<script id="kz-cards">
+(function(){var SV=D.s,R=document.documentElement,pal=[255,190,150,320,35,210,285,12,170,95],mp={},nx=0,n=0;R.classList.add('kz-js');
+function hue(c){if(!(c in mp))mp[c]=pal[nx++%pal.length];return mp[c]}
+var io=window.IntersectionObserver?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('kz-in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -3% 0px'}):null;
+function prep(c){if(c.__k)return;c.__k=1;var b=c.querySelector('.btn-info'),m=b&&/showDocs\((\d+)\)/.exec(b.getAttribute('onclick')||'');
+ try{if(m&&SV[m[1]])c.style.setProperty('--ch',hue(SV[m[1]][0]))}catch(e){}
+ if(c.classList.contains('top-svc')){var h=document.createElement('b');h.className='kz-hot';h.textContent='🔥 پرطرفدار';c.appendChild(h)}
+ c.style.setProperty('--d',((n++%6)*45)+'ms');if(io)io.observe(c);else c.classList.add('kz-in')}
+function scan(){document.querySelectorAll('.svc-card').forEach(prep)}
+scan();new MutationObserver(scan).observe(document.body,{childList:true,subtree:true});
+setTimeout(function(){document.querySelectorAll('.svc-card').forEach(function(c){c.classList.add('kz-in')})},4000);
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.btn-add');if(!b)return;var a=b.getBoundingClientRect(),
+ r=document.createElement('i');r.className='kz-rip';r.style.left=(e.clientX-a.left-6)+'px';r.style.top=(e.clientY-a.top-6)+'px';b.appendChild(r);r.animate([{transform:'scale(1)',opacity:.7},{transform:'scale(16)',opacity:0}],{duration:500}).onfinish=function(){r.remove()};
+ var ct=document.querySelector('#cart-badge');ct=ct&&(ct.closest('button')||ct);if(!ct)return;var c=ct.getBoundingClientRect(),d=document.createElement('i');d.className='kz-fly';d.style.left=(a.left+a.width/2-7)+'px';d.style.top=(a.top+a.height/2-7)+'px';document.body.appendChild(d);
+ d.animate([{transform:'translate(0,0) scale(1)',opacity:1},{transform:'translate('+(c.left+c.width/2-a.left-a.width/2)+'px,'+(c.top+c.height/2-a.top-a.height/2)+'px) scale(.3)',opacity:.2}],{duration:650,easing:'cubic-bezier(.5,-.2,.7,1)'}).onfinish=function(){d.remove()}},true);
+if(matchMedia('(min-width:900px) and (hover:hover)').matches){var tk=0;addEventListener('scroll',function(){if(tk)return;tk=1;requestAnimationFrame(function(){tk=0;var h=innerHeight;document.querySelectorAll('.section-title').forEach(function(e){var r=e.getBoundingClientRect();e.style.setProperty('--sp',Math.max(-1,Math.min(1,((r.top+r.height/2)-h/2)/h)).toFixed(3))})})},{passive:true})}
+})();
 </script>
 </body>
 </html>

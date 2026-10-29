@@ -19,7 +19,17 @@
     <meta property="og:url" content="https://karizmanet.ir/">
     <meta name="twitter:card" content="summary">
     
-    <link rel="manifest" href='data:application/manifest+json,{"name":"کافی نت آنلاین کاریزما","short_name":"کاریزما نت","start_url":"./","display":"standalone","background_color":"%230b1120","theme_color":"%230b1120","icons":[{"src":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzBiMTEyMCIvPjxyZWN0IHg9IjEwMCIgeT0iMzYwIiB3aWR0aD0iMzEyIiBoZWlnaHQ9IjMwIiByeD0iMTUiIGZpbGw9IiM2MzY2ZjEiLz48cmVjdCB4PSIxMzAiIHk9IjEyMCIgd2lkdGg9IjI1MiIgaGVpZ2h0PSIyMjAiIHJ4PSIxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTc4YmZhIiBzdHJva2Utd2lkdGg9IjE1Ii8+PHJlY3QgeD0iMTQ1IiB5PSIxMzUiIHdpZHRoPSIyMjIiIGhlaWdodD0iMTkwIiByeD0iOCIgZmlsbD0iIzFlMjUzYiIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjIzMCIgcj0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyZDNlZSIgc3Ryb2tlLXdpZHRoPSIxMiIvPjxlbGxpcHNlIGN4PSIyNTYiIGN5PSIyMzAiIHJ4PSIzMCIgcnk9IjYwIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iOCIvPjxsaW5lIHgxPSIxOTYiIHkxPSIyMzAiIHgyPSIzMTYiIHkyPSIyMzAiIHN0cm9rZT0iIzIyZDNlZSIgc3Ryb2tlLXdpZHRoPSI4Ii8+PGxpbmUgeDE9IjI1NiIgeTE9IjE3MCIgeDI9IjI1NiIgeTI9IjI5MCIgc3Ryb2tlPSIjMjJkM2VlIiBzdHJva2Utd2lkdGg9IjgiLz48L3N2Zz4=","sizes":"512x512","type":"image/svg+xml","purpose":"any maskable"}]}'>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="کافی‌نت آنلاین">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta property="og:image" content="https://karizmanet.ir/icon-512.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"کافی‌نت آنلاین","alternateName":["کاریزمانت","کاریزما نت"],"url":"https://karizmanet.ir/"}</script>
+    <script>window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();window.__kzDef=e;window.dispatchEvent(new Event('kz-installable'))});</script>
 
     <script type="application/ld+json">
     {
@@ -571,7 +581,48 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
  .link-card:hover{transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-4px);box-shadow:0 18px 34px -16px hsl(var(--ch) 95% 60%/.9)!important}
  .link-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .25s;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.18),transparent 55%)}
  .link-card:hover::after{opacity:1}}
-</style>
+
+/* ===== KZ v11: bold linked titles, compact why-us, docs buttons, bank cards, install bar ===== */
+.svc-card .svc-title{font-weight:800;color:var(--text-main);cursor:pointer;text-decoration:underline dotted hsl(var(--ch) 90% 66%);text-decoration-thickness:1.5px;text-underline-offset:5px;-webkit-tap-highlight-color:transparent}
+.svc-card .svc-title:active{opacity:.7}
+.svc-title[data-l="a"]{font-size:13px}.svc-title[data-l="b"]{font-size:12.5px}.svc-title[data-l="c"]{font-size:11.5px}.svc-title[data-l="d"]{font-size:10.5px}
+@media (min-width:900px){.svc-title[data-l="a"]{font-size:14px}.svc-title[data-l="b"]{font-size:13.5px}.svc-title[data-l="c"]{font-size:12.5px}.svc-title[data-l="d"]{font-size:11.5px}}
+#why-us .bento-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (min-width:900px){#why-us .bento-grid{grid-template-columns:repeat(4,1fr)}}
+#why-us .bento-item{display:flex;flex-direction:row;align-items:flex-start;gap:10px;padding:12px;min-height:66px;text-align:right;cursor:pointer;border-radius:16px;margin:0}
+#why-us .bento-item>i{font-size:20px;flex:none;width:28px;margin:2px 0 0;text-align:center}
+#why-us .bento-item h3{font-size:13px;margin:0;line-height:1.4}
+#why-us .bento-item p{font-size:11px;line-height:1.7;margin:3px 0 0;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;opacity:.8}
+#why-us .bento-item.open p{-webkit-line-clamp:unset}
+.kz-docs-actions{display:flex;gap:10px;margin-top:20px}
+.kz-docs-actions .btn-add{flex:1;justify-content:center;padding:12px 8px;font-weight:800;font-size:13px;white-space:nowrap}
+.kz-back{background:var(--surface)!important;color:var(--text-main)!important;border:1px solid var(--glass-border)!important;box-shadow:none!important}
+.kz-go{background:linear-gradient(90deg,#10b981,#06b6d4)!important;color:#fff!important;box-shadow:0 0 14px rgba(16,185,129,.45)!important}
+.kz-pay-hint{font-size:12px;color:var(--text-muted);margin:0 0 10px}
+.kz-cards{display:grid;gap:12px}
+.kz-bcard{position:relative;overflow:hidden;border-radius:18px;padding:14px 16px 12px;min-height:128px;color:#fff;text-align:right;cursor:pointer;-webkit-tap-highlight-color:transparent;background:linear-gradient(135deg,#1e1b4b,#4338ca 55%,#7c3aed);box-shadow:0 12px 24px -12px rgba(67,56,202,.85),inset 0 1px 0 rgba(255,255,255,.28);transition:transform .2s}
+.kz-bcard.b2{background:linear-gradient(135deg,#042f2e,#0f766e 55%,#22d3ee);box-shadow:0 12px 24px -12px rgba(13,148,136,.85),inset 0 1px 0 rgba(255,255,255,.28)}
+.kz-bcard::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 0 0,rgba(255,255,255,.22),transparent 55%),linear-gradient(115deg,transparent 40%,rgba(255,255,255,.1) 50%,transparent 60%);pointer-events:none}
+.kz-bcard::after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;left:-60px;bottom:-110px;border:26px solid rgba(255,255,255,.07);pointer-events:none}
+.kz-bcard:active{transform:scale(.98)}
+.kz-bt{display:flex;justify-content:space-between;align-items:center;direction:rtl}
+.kz-chip{width:38px;height:28px;border-radius:6px;background:linear-gradient(135deg,#fde68a,#f59e0b 55%,#fcd34d);box-shadow:inset 0 0 0 1px rgba(120,53,15,.4),inset 0 0 8px rgba(255,255,255,.5);position:relative}
+.kz-chip::after{content:"";position:absolute;inset:6px 8px;border-top:1px solid rgba(120,53,15,.45);border-bottom:1px solid rgba(120,53,15,.45)}
+.kz-bn{font-size:11px;font-weight:700;opacity:.8}
+.kz-bnum{direction:ltr;text-align:center;font:800 clamp(17px,5.6vw,23px) ui-monospace,Menlo,Consolas,monospace;letter-spacing:2px;margin:14px 0 12px;text-shadow:0 2px 6px rgba(0,0,0,.45)}
+.kz-bf{display:flex;justify-content:space-between;align-items:flex-end;direction:rtl;gap:8px}
+.kz-own{display:flex;flex-direction:column;line-height:1.35}.kz-own small{font-size:9.5px;opacity:.7}.kz-own b{font-size:14px;font-weight:800}
+.kz-cp{font-size:11px;font-weight:800;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);white-space:nowrap}
+.kz-ok{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:15px;background:rgba(5,150,105,.92);opacity:0;pointer-events:none;transition:opacity .2s;z-index:3}
+.kz-bcard.copied .kz-ok{opacity:1}
+.kz-install{display:flex;align-items:center;gap:10px;padding:8px 12px;color:#fff;background:linear-gradient(90deg,#0b1020,#1b1550 60%,#3b0f4a);border-bottom:1px solid rgba(255,255,255,.15);position:relative;z-index:60;direction:rtl}
+.kz-install[hidden]{display:none}.kz-install img{border-radius:10px;flex:none}
+.ki-t{flex:1;display:flex;flex-direction:column;line-height:1.4;min-width:0}.ki-t b{font-size:14px;font-weight:800}.ki-t small{font-size:11px;opacity:.8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ki-b{border:0;border-radius:99px;padding:8px 18px;font:800 13px inherit;font-family:inherit;color:#fff;background:linear-gradient(90deg,#10b981,#06b6d4);cursor:pointer}
+.ki-x{border:0;background:transparent;color:#fff;font-size:22px;line-height:1;opacity:.7;cursor:pointer;padding:4px 6px}
+.ki-sheet{position:fixed;left:12px;right:12px;bottom:92px;z-index:5000;padding:16px;border-radius:18px;background:#0f172a;color:#f8fafc;border:1px solid rgba(255,255,255,.2);box-shadow:0 20px 50px rgba(0,0,0,.6);font-size:13px;line-height:2;direction:rtl}
+
+    </style>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -588,6 +639,7 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
     <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+<div class="kz-install" id="kz-install" hidden><img src="icon-192.png" alt="" width="42" height="42" onerror="this.style.display='none'"><div class="ki-t"><b>کافی‌نت آنلاین</b><small>کاریزمانت · نصب رایگان روی گوشی و کامپیوتر</small></div><button class="ki-b" id="kz-install-btn" type="button">نصب</button><button class="ki-x" id="kz-install-x" type="button" aria-label="بستن">×</button></div>
 
     <canvas id="particles-canvas"></canvas>
 
@@ -672,7 +724,7 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
         
         <!-- Top 14 Services -->
         <div class="search-info" id="search-info" aria-live="polite"></div>
-        <div class="top-services-title reveal"><i class="fa-solid fa-fire"></i> ۱۴ خدمت پرکاربرد</div>
+        <div class="top-services-title reveal"><i class="fa-solid fa-fire"></i> ۱۶ خدمت پرکاربرد</div>
         <div class="services-grid reveal" id="top-services-grid" style="margin-bottom: 30px;"></div>
 
         <div class="cat-chips" id="cat-chips" role="tablist" aria-label="دسته‌بندی خدمات"></div>
@@ -851,10 +903,22 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
             <button class="btn-add" style="width:100%;justify-content:center;margin-bottom:20px;padding:12px;background:var(--surface);color:var(--text-main);border:1px solid var(--glass-border);" onclick="copyOrderText()"><i class="fa-solid fa-copy"></i> کپی متن سفارش (برای ارسال دستی)</button>
 
             <div class="payment-box">
-                <h4 style="margin-bottom: 8px; font-size: 15px;">۲. واریز مبلغ به شماره کارت:</h4>
-                <div class="card-number" id="card-number-text">6219 8619 4552 4204</div>
-                <div class="owner-name">به نام: <b>نرجس ملائی</b></div>
-                <button onclick="copyCardNumber()" style="margin-top: 15px; background: var(--primary); color: #fff; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-size: 13px; font-weight: 700; transition: 0.3s; box-shadow: 0 0 10px var(--glow);"><i class="fa-solid fa-copy"></i> کپی شماره کارت</button>
+                <h4 style="margin-bottom: 4px; font-size: 15px;">۲. واریز مبلغ به شماره کارت:</h4>
+                <p class="kz-pay-hint">یکی از دو کارت را انتخاب کنید؛ با لمس هر کارت، شماره آن کپی می‌شود.</p>
+                <div class="kz-cards">
+                    <div class="kz-bcard b1" onclick="copyCardNumber('6219861945524204',this)" onkeydown="if(event.key==='Enter'){copyCardNumber('6219861945524204',this)}" role="button" tabindex="0" aria-label="کپی شماره کارت نرجس ملائی">
+                        <div class="kz-bt"><span class="kz-chip"></span><span class="kz-bn">کارت بانکی</span></div>
+                        <div class="kz-bnum" id="card-number-text">6219 8619 4552 4204</div>
+                        <div class="kz-bf"><span class="kz-own"><small>به نام</small><b>نرجس ملائی</b></span><span class="kz-cp"><i class="fa-solid fa-copy"></i> کپی</span></div>
+                        <div class="kz-ok"><i class="fa-solid fa-check"></i> شماره کپی شد</div>
+                    </div>
+                    <div class="kz-bcard b2" onclick="copyCardNumber('6063731282532549',this)" onkeydown="if(event.key==='Enter'){copyCardNumber('6063731282532549',this)}" role="button" tabindex="0" aria-label="کپی شماره کارت مصطفی نوری">
+                        <div class="kz-bt"><span class="kz-chip"></span><span class="kz-bn">کارت بانکی</span></div>
+                        <div class="kz-bnum" id="card-number-text-2">6063 7312 8253 2549</div>
+                        <div class="kz-bf"><span class="kz-own"><small>به نام</small><b>مصطفی نوری</b></span><span class="kz-cp"><i class="fa-solid fa-copy"></i> کپی</span></div>
+                        <div class="kz-ok"><i class="fa-solid fa-check"></i> شماره کپی شد</div>
+                    </div>
+                </div>
             </div>
 
             <div class="box" style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px; text-align: center;">
@@ -929,7 +993,7 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
         <p id="docs-title" style="color:var(--accent);font-weight:800;font-size:14px;margin-bottom:14px;"></p>
         <ul id="docs-list" style="padding-right:20px;line-height:2;font-size:14px;"></ul>
         <p style="font-size:12px;color:var(--text-muted);margin-top:14px;">این فهرست کلی است؛ اگر مدرک دیگری لازم باشد هنگام بررسی سفارش اعلام می‌شود.</p>
-        <div style="text-align:center;margin-top:20px;"><button class="btn-add" style="justify-content:center;padding:12px 25px;" onclick="document.getElementById('docs-modal').close()">بستن</button></div>
+        <div class="kz-docs-actions"><button class="btn-add kz-back" onclick="document.getElementById('docs-modal').close()">بازگشت</button><button class="btn-add kz-go" id="docs-go" onclick="kzDocsGo()"><i class="fa-solid fa-cart-shopping"></i> ثبت در سبد خرید</button></div>
     </dialog>
 
     <canvas id="kz-gl" aria-hidden="true"></canvas>
@@ -938,7 +1002,7 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
         <!-- دکمه خدمات: باز کردن پنجره دسته‌بندی‌ها -->
         <a href="#services" class="bn-item active" onclick="event.preventDefault(); openCategoryModal();"><i class="fa-solid fa-layer-group"></i> خدمات</a>
         <a href="#links" class="bn-item"><i class="fa-solid fa-link"></i> سایت‌ها</a>
-        <a href="#upload" class="bn-item"><i class="fa-solid fa-cloud-arrow-up"></i> آپلود</a>
+        <a href="#upload" class="bn-item" onclick="event.preventDefault();openModal('upload-modal')"><i class="fa-solid fa-cloud-arrow-up"></i> آپلود مدارک</a>
         <a onclick="openUserPanel()" class="bn-item"><i class="fa-solid fa-file-invoice"></i> سفارشات</a>
     </div>
 
@@ -1072,7 +1136,7 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
                 ["خدمات عمومی و اداری", "ارسال لیست بیمه کارگاه (تا ۳ نفر)", 200000, 180000],
                 ["خدمات عمومی و اداری", "ثبت‌نام / تمدید بیمه سلامت", 190000, 160000],
                 ["خدمات عمومی و اداری", "ثبت‌نام / تمدید بیمه ورزشی", 150000, 110000],
-                ["خدمات عمومی و اداری", "ثبت اعتراض یارانه", 150000, 130000],
+                ["یارانه و کالابرگ", "ثبت اعتراض یارانه", 150000, 130000],
                 ["خدمات عمومی و اداری", "ثبت‌نام وام بازنشستگان", 100000, 90000],
                 ["خدمات عمومی و اداری", "اعتراض به گزارش بازرسی در سامانه تامین اجتماعی", 250000, 230000],
                 ["خدمات عمومی و اداری", "نام‌نویسی غیرحضوری بیمه شده برای کارفرمایان", 150000, 130000],
@@ -1084,7 +1148,7 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
                 ["خدمات عمومی و اداری", "احراز هویت سیم‌کارت", 90000, 80000],
                 ["خدمات عمومی و اداری", "استعلام و پرداخت عوارض و مالیات خودرو", 100000, 90000],
                 ["خدمات عمومی و اداری", "ساخت رزومه حرفه‌ای", 200000, 150000],
-                ["خدمات عمومی و اداری", "ثبت‌نام یارانه / سرپرست خانوار", 120000, 100000],
+                ["یارانه و کالابرگ", "ثبت‌نام یارانه / سرپرست خانوار", 120000, 100000],
 
                 // --- امور تخصصی ---
                 ["امور تخصصی", "ثبت نام در سامانه تخصصی پزشکان", 550000, 480000],
@@ -1162,7 +1226,12 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
                 ["تایپ، اسکن و پرینت", "لمینت A4", 40000, 35000],
                 ["تایپ، اسکن و پرینت", "صحافی و فنر (هر جلد)", 90000, 70000],
                 ["تایپ، اسکن و پرینت", "تبدیل PDF به Word (هر صفحه)", 60000, 54000],
-                ["تایپ، اسکن و پرینت", "ویرایش فایل (هر صفحه)", 50000, 40000]
+                ["تایپ، اسکن و پرینت", "ویرایش فایل (هر صفحه)", 50000, 40000],
+                ["یارانه و کالابرگ", "تغییر شماره حساب یارانه", 120000, 100000],
+                ["یارانه و کالابرگ", "اعتراض به دهک‌بندی", 150000, 130000],
+                ["یارانه و کالابرگ", "ثبت‌نام کالابرگ", 120000, 100000],
+                ["یارانه و کالابرگ", "اعتراض به کالابرگ", 150000, 130000],
+                ["یارانه و کالابرگ", "استعلام وضعیت یارانه و کالابرگ", 100000, 90000]
             ],
             "l": {
                 "دولتی و حاکمیتی": [
@@ -1230,6 +1299,13 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
                     { "name": "سپامک (پروانه اشتغال مهندسی)", "url": "https://spamak.mrud.ir", "icon": "📐" },
                     { "name": "پاتمک (اطلاعات و مدارک تحصیلی)", "url": "https://it.saorg.ir", "icon": "🎓" }
                 ],
+                "یارانه و کالابرگ": [
+                    { "name": "ثبت شکایت تخلفات کالابرگ", "url": "https://zrm.mcls.gov.ir", "icon": "⚠️" },
+                    { "name": "سامانه حمایت (اعتراض به دهک‌بندی)", "url": "https://hemayat.mcls.gov.ir", "icon": "📝" },
+                    { "name": "سامانه شما (شبکه ملی اعتبار)", "url": "https://shoma.sfara.ir", "icon": "💳" },
+                    { "name": "شمیم (شبکه ملی یارانه‌های متمرکز)", "url": "https://hemayat.sfara.ir", "icon": "🛒" },
+                    { "name": "سامانه سیمین (یارانه‌ها)", "url": "https://simin.hadafmandi.ir", "icon": "🏠" }
+                ],
                 "سایر سامانه‌ها": [
                     { "name": "سامانه میخک (خارجه)", "url": "https://mikhak.mfa.gov.ir", "icon": "🛂" },
                     { "name": "سامانه سماح (اربعین)", "url": "https://samah.hajj.ir", "icon": "🕋" },
@@ -1268,7 +1344,7 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
         };
 
         // Top 14 Services Indices
-        const topIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; 
+        const topIndices = [0, 1, 138, 139, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; 
 
         let cart = {};
         let activeCategory = 'همه';
@@ -1322,16 +1398,22 @@ html.kz-js .link-card:not(.kz-in){opacity:0;translate:0 16px}
             'امور تخصصی': ['کد ملی', 'مدارک شغلی یا تخصصی مرتبط']
         };
         const KZD=[
+ ['تغییر شماره حساب یارانه',['کد ملی سرپرست خانوار','شماره موبایل به نام سرپرست خانوار (کد تأیید پیامکی)','شماره حساب یا شبای بانکی فعال که یارانه به آن واریز شود']],
+ ['اعتراض به دهک',['کد ملی سرپرست خانوار','شماره موبایل منطبق با کد ملی (به نام سرپرست)','اطلاعات وضعیت خانوار و درآمد برای ثبت دلیل اعتراض','در صورت وجود، مدارک مؤید ادعا (مثلاً گواهی درآمد یا مستندات وضعیت خانوار)']],
+ ['ثبت‌نام کالابرگ',['کد ملی سرپرست خانوار','شماره موبایل به نام سرپرست خانوار']],
+ ['اعتراض به کالابرگ',['کد ملی سرپرست خانوار','شماره موبایل به نام سرپرست خانوار','توضیح و دلیل اعتراض؛ در صورت شکایت از فروشگاه، آدرس فروشگاه و تصویر فیش خرید']],
+ ['استعلام وضعیت یارانه و کالابرگ',['کد ملی سرپرست خانوار','شماره موبایل به نام سرپرست خانوار']],
  ['ثبت نام سند ملکی',['کد ملی و اطلاعات هویتی متقاضی برای ورود و ثبت‌نام در سامانه','مدارک مالکیت یا ادعا: سند/قولنامه و مدارک انتقال‌های قبلی ملک','نقشه UTM ملک (از مهم‌ترین مدارک ثبت اطلاعات ملک)','مشخصات ملک: مساحت، آدرس دقیق و کد پستی','اسکن واضح مدارک؛ اطلاعات را دقیقاً مطابق مدارک هویتی و مالکیت وارد کنید']],
  ['خودنویس',['شناسنامه و اطلاعات هویتی طرفین قرارداد (موجر و مستأجر یا فروشنده و خریدار)','سند ملک، کد پستی و قبوض ملک (در صورت بدهی)','نوع سند و مشخصات ثبتی روی سند و تطبیق اطلاعات مالکیت','مبلغ و مدت قرارداد (برای اجاره: رهن و اجاره)','اطلاعات دو شاهد']]
 ];
 const KZ_DATE='آخرین بررسی: ۷ آبان ۱۴۰۵';
 function showDocs(idx) {
             const it = D.s[idx]; const kd = KZD.find(function(d){return it[1].indexOf(d[0])>-1}); const list = (kd ? kd[1].concat(['<small>طبق راهنمای سامانه؛ '+KZ_DATE+' (شرایط ممکن است تغییر کند)</small>']) : (DOCS[it[0]] || ['کد ملی', 'موبایل به نام خودتان', 'اطلاعات مرتبط با خدمت']).concat(['<small>فهرست کلی این دسته؛ برای مدرک دقیق همین خدمت از ما بپرسید</small>']));
-            $('#docs-title').textContent = it[1];
+            $('#docs-title').textContent = it[1]; window.kzDocsIdx = idx; $('#docs-go').innerHTML = '<i class="fa-solid fa-cart-shopping"></i> ' + (cart[idx] ? 'رفتن به سبد خرید' : 'ثبت در سبد خرید');
             $('#docs-list').innerHTML = list.map(x => '<li>' + x + '</li>').join('');
             $('#docs-modal').showModal();
         }
+        function kzDocsGo(){var i=window.kzDocsIdx;if(i==null)return;if(!cart[i])addToCart(i);$('#docs-modal').close();if(!$('#cart-drawer').classList.contains('open'))toggleCart();}
         function copyOrderText() {
             const txt = window.lastOrderText || '';
             const ok = () => alert('متن سفارش کپی شد.');
@@ -1442,7 +1524,7 @@ function showDocs(idx) {
             setTimeout(scrollToResults, 150);
         }
 
-        function getCategoryIcon(cat) {
+        function getCategoryIcon(cat) { if (String(cat).includes('یارانه')) return 'fa-hand-holding-dollar';
             if (cat === 'همه') return 'fa-border-all';
             if (cat.includes('خرید اینترنتی')) return 'fa-car';
             if (cat.includes('پلیس')) return 'fa-shield';
@@ -1526,8 +1608,7 @@ function showDocs(idx) {
             return `
             <div class="svc-card reveal active ${matchClass} ${extraClass}">
                 <i class="fa-solid ${wmIcon} svc-watermark"></i>
-                <button class="btn-info" onclick="showDocs(${idx})" title="مدارک لازم" aria-label="مدارک لازم"><i class="fa-solid fa-circle-info"></i></button>
-                <div class="svc-title">${item[1]}</div>
+                <div class="svc-title" role="button" tabindex="0" title="مشاهده مدارک لازم" onclick="showDocs(${idx})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showDocs(${idx})}">${item[1]}</div>
                 <div class="svc-prices">${priceDisplay}</div>
                 <div class="svc-actions">
                     ${hasQty && !isDesign ? `<div class="qty-control"><button onclick="changeQty(${idx}, -1)" aria-label="کم کردن">−</button><span>${fa(qty)}</span><button onclick="changeQty(${idx}, 1)" aria-label="زیاد کردن">+</button></div>` : `<div></div>`}
@@ -1701,9 +1782,11 @@ function showDocs(idx) {
             $('#chk-step1').style.display = 'none'; $('#chk-step2').style.display = 'block';
         }
 
-        function copyCardNumber() {
-            const card = '6219861945524204';
-            navigator.clipboard.writeText(card).then(() => { alert('شماره کارت کپی شد!'); }).catch(() => { alert('خطا در کپی کردن. لطفاً دستی یادداشت کنید: ' + card); });
+        function copyCardNumber(n, el) {
+            const card = n || '6219861945524204';
+            const done = () => { if (el) { el.classList.add('copied'); setTimeout(() => el.classList.remove('copied'), 1800); } else alert('شماره کارت کپی شد!'); };
+            const fb = () => { const ta = document.createElement('textarea'); ta.value = card; ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); done(); } catch (e) { alert('خطا در کپی کردن. لطفاً دستی یادداشت کنید: ' + card); } ta.remove(); };
+            if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(card).then(done).catch(fb); else fb();
         }
 
         init();
@@ -1786,7 +1869,7 @@ var W=document.createElement('div');W.className='kz-h3';var st=document.createEl
 var chips=function(a){return'<div class="ch">'+a.map(function(x){return'<span>'+x+'</span>'}).join('')+'</div>'};
 var H=['<h2><span class="cy">کافی‌نت، در جیب شما؛</span><br>سریع، مطمئن، پیگیری اختصاصی</h2><p>ثبت‌نام در سامانه‌های دولتی، بانکی،<br>دانشگاهی و بیمه</p>',
 '<h2><span class="cy">سفارش آنلاین؛</span><br>پیگیری با کد رهگیری</h2>'+chips(['ثبت‌نام','بیمه','بانک','دانشگاه'])+'<a class="cb" href="#services">مشاهده خدمات</a>',
-'<h2>فایل بفرست؛ <span class="cy">پرینت بگیر</span></h2>'+chips(['تایپ و اسکن','پرینت رنگی','لمینت'])+'<a class="cb" href="#upload">ارسال فایل</a>'];
+'<h2>فایل بفرست؛ <span class="cy">پرینت بگیر</span></h2>'+chips(['تایپ و اسکن','پرینت رنگی','لمینت'])+'<a class="cb" href="#upload" onclick="event.preventDefault();openModal(&quot;upload-modal&quot;)">ارسال فایل</a>'];
 var N=3,C=H.map(function(h){var d=document.createElement('div');d.className='kz-mon';d.innerHTML='<div class="scr"><i class="bg"></i><div class="ct">'+h+'</div></div>';st.appendChild(d);return d});
 var dots=document.createElement('div');dots.className='kz-dots';C.forEach(function(_,k){var d=document.createElement('i');d.onclick=function(){go(k)};dots.appendChild(d)});
 var kb=document.createElement('div');kb.className='kz3-kb';var n=0;
@@ -1823,7 +1906,7 @@ render();auto()})();
 </script>
 <script id="kz-cards">
 (function(){var R=document.documentElement,n=0,ord=[];R.classList.add('kz-js');
-function order(){if(ord.length)return;(D.s||[]).forEach(function(c){if(ord.indexOf(c[0])<0)ord.push(c[0])});Object.keys(D.l||{}).forEach(function(k){if(ord.indexOf(k)<0)ord.push(k)})}
+function order(){if(ord.length)return;var NC='یارانه و کالابرگ';(D.s||[]).forEach(function(c){if(c[0]!==NC&&ord.indexOf(c[0])<0)ord.push(c[0])});Object.keys(D.l||{}).forEach(function(k){if(k!==NC&&ord.indexOf(k)<0)ord.push(k)});ord.push(NC)}
 var PERM=[0,8,4,12,2,10,6,14,1,9,5,13,3,11,7,15];
 function hue(c){order();var i=ord.indexOf(c);if(i<0){ord.push(c);i=ord.length-1}return i<16?(250+PERM[i]*22.5)%360:(261.25+((i-16)*7%16)*22.5)%360}
 function hueText(t){order();var b='';ord.forEach(function(c){if(t.indexOf(c)>-1&&c.length>b.length)b=c});return b?hue(b):null}
@@ -1831,7 +1914,7 @@ var X=[['دولتی','fa-landmark'],['بازنشست','fa-hourglass-half'],['م�
 function icon(c){var i='fa-layer-group';try{i=getCategoryIcon(c)}catch(e){}if(i==='fa-layer-group')for(var k=0;k<X.length;k++)if(c.indexOf(X[k][0])>-1)return X[k][1];return i}
 var io=window.IntersectionObserver?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('kz-in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -3% 0px'}):null;
 function stag(c){c.style.setProperty('--d',((n++%6)*45)+'ms');if(io)io.observe(c);else c.classList.add('kz-in')}
-function svc(c){if(c.__k)return;c.__k=1;var b=c.querySelector('.btn-info'),m=b&&/showDocs\((\d+)\)/.exec(b.getAttribute('onclick')||''),it=m&&D.s[m[1]];
+function svc(c){if(c.__k)return;c.__k=1;var b=c.querySelector('.svc-title'),m=b&&/showDocs\((\d+)\)/.exec(b.getAttribute('onclick')||''),it=m&&D.s[m[1]];
  if(it){c.style.setProperty('--ch',hue(it[0]));var t=c.querySelector('.svc-title'),L=t?t.textContent.trim().length:0;if(t)t.setAttribute('data-l',L<=20?'a':L<=30?'b':L<=38?'c':'d')}stag(c)}
 function links(){document.querySelectorAll('.links-grid:not([data-kz])').forEach(function(g){g.setAttribute('data-kz','1');var h=g.previousElementSibling;if(!h||h.tagName!=='H3')return;
  var name=h.textContent.trim(),ch=hue(name);h.removeAttribute('style');h.className='kz-lh';h.style.setProperty('--ch',ch);g.style.setProperty('--ch',ch);
@@ -1849,6 +1932,25 @@ document.addEventListener('click',function(e){var b=e.target.closest&&e.target.c
  var ct=document.querySelector('#cart-badge');ct=ct&&(ct.closest('button')||ct);if(!ct)return;var c=ct.getBoundingClientRect(),d=document.createElement('i');d.className='kz-fly';d.style.left=(a.left+a.width/2-7)+'px';d.style.top=(a.top+a.height/2-7)+'px';document.body.appendChild(d);
  d.animate([{transform:'translate(0,0) scale(1)',opacity:1},{transform:'translate('+(c.left+c.width/2-a.left-a.width/2)+'px,'+(c.top+c.height/2-a.top-a.height/2)+'px) scale(.3)',opacity:.2}],{duration:650,easing:'cubic-bezier(.5,-.2,.7,1)'}).onfinish=function(){d.remove()}},true);
 if(matchMedia('(min-width:900px) and (hover:hover)').matches){var tk=0;addEventListener('scroll',function(){if(tk)return;tk=1;requestAnimationFrame(function(){tk=0;var h=innerHeight;document.querySelectorAll('.section-title').forEach(function(e){var r=e.getBoundingClientRect();e.style.setProperty('--sp',Math.max(-1,Math.min(1,((r.top+r.height/2)-h/2)/h)).toFixed(3))})})},{passive:true})}
+})();
+</script>
+<script id="kz-final">
+(function(){
+document.querySelectorAll('#why-us .bento-item').forEach(function(it){if(!it.querySelector(':scope>div')){var d=document.createElement('div');[].slice.call(it.children).forEach(function(c){if(c.tagName!=='I')d.appendChild(c)});it.appendChild(d)}
+ it.addEventListener('click',function(){it.classList.toggle('open')})});
+var bar=document.getElementById('kz-install'),btn=document.getElementById('kz-install-btn'),x=document.getElementById('kz-install-x'),KEY='kz_install_dismiss';
+function standalone(){return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}
+function dismissed(){try{var t=+localStorage.getItem(KEY);return t&&Date.now()-t<6048e5}catch(e){return false}}
+function show(){if(!standalone()&&!dismissed())bar.hidden=false}
+var ua=navigator.userAgent,ios=/iPhone|iPad|iPod/.test(ua)&&/Safari/.test(ua)&&!/CriOS|FxiOS|Instagram|FBAN|FBAV|Telegram|Line/.test(ua);
+if(window.__kzDef)show();window.addEventListener('kz-installable',show);
+if(ios)show();
+window.addEventListener('appinstalled',function(){bar.hidden=true});
+x.onclick=function(){bar.hidden=true;try{localStorage.setItem(KEY,Date.now())}catch(e){}};
+btn.onclick=function(){
+ if(window.__kzDef){var e=window.__kzDef;e.prompt();e.userChoice.then(function(r){if(r.outcome==='accepted')bar.hidden=true;window.__kzDef=null})}
+ else if(ios){var o=document.querySelector('.ki-sheet');if(o){o.remove();return}o=document.createElement('div');o.className='ki-sheet';o.innerHTML='برای نصب در آیفون:<br>۱) دکمه <b>اشتراک‌گذاری</b> (مربع با فلش رو به بالا) را در سافاری بزنید.<br>۲) گزینه <b>«افزودن به صفحه اصلی»</b> را انتخاب کنید.';document.body.appendChild(o);setTimeout(function(){o.remove()},9000)}};
+if('serviceWorker' in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register('sw.js').catch(function(){});
 })();
 </script>
 </body>

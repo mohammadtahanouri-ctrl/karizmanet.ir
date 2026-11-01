@@ -1,0 +1,24 @@
+{
+  "id": "./",
+  "name": "کافی‌نت آنلاین",
+  "short_name": "کافی‌نت آنلاین",
+  "description": "کاریزمانت؛ ثبت‌نام سامانه‌های دولتی، پرینت، کپی، اسکن، تایپ و کلیه خدمات اداری با کد رهگیری",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070b18",
+  "theme_color": "#0b1120",
+  "categories": ["business", "utilities"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "آپلود مدارک", "short_name": "آپلود", "url": "./#upload" },
+    { "name": "خدمات", "short_name": "خدمات", "url": "./#services" }
+  ]
+}

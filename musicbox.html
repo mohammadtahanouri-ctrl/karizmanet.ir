@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>موزیک‌باکس | آهنگ و مداحی</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f5fa;--cd:#fff;--tx:#16161f;--mu:#6e6e80;--ln:#e7e7f0;--a:#7c5cff;--b:#ff5f9e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d0d14;--cd:#1a1a25;--tx:#f3f3f8;--mu:#9a9ab0;--ln:#2a2a39}}
+:root[data-theme=dark]{--bg:#0d0d14;--cd:#1a1a25;--tx:#f3f3f8;--mu:#9a9ab0;--ln:#2a2a39}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body.m{--a:#ff3d81;--b:#7c4dff}body.d{--a:#10b981;--b:#d4a017}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+body{font:14px Vazirmatn,Tahoma,sans-serif;background:var(--bg);color:var(--tx);padding-bottom:150px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);display:flex;gap:8px;align-items:center;padding:10px 14px}
+h1{font-size:17px;font-weight:900;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+#sq{flex:1;min-width:0;border:0;border-radius:99px;padding:9px 14px;background:var(--cd);color:var(--tx);font:inherit}
+header button{border:0;background:var(--cd);color:var(--tx);width:36px;height:36px;border-radius:50%;font-size:16px}
+h2{font-size:16px;font-weight:900;margin:22px 14px 6px}
+h3{font-size:12px;color:var(--mu);margin:8px 14px 8px}
+em{font-style:normal}
+small{color:var(--mu);font-size:11px}
+.hs{display:flex;gap:12px;overflow-x:auto;padding:0 14px 4px;scrollbar-width:none}
+.c{flex:0 0 128px;position:relative}
+.cv{display:grid;place-items:center;aspect-ratio:1;border-radius:16px;font-size:34px;color:#ffffffa0;font-style:normal}
+.c .cv{width:100%}
+.c b,.in b,.av b{display:block;margin-top:6px;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c small,.in small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.n{position:absolute;top:6px;right:6px;background:#000a;color:#fff;border-radius:8px;padding:0 7px;font-weight:900;font-size:12px}
+.r{display:flex;align-items:center;gap:10px;background:var(--cd);border-radius:16px;padding:8px;margin:0 14px 8px}
+.r .cv{width:52px;height:52px;border-radius:12px;font-size:20px;flex:none}
+.r .in{flex:1;min-width:0}.r .in b{margin:0}
+.r button{border:0;background:var(--bg);color:var(--a);width:38px;height:38px;border-radius:50%;font-size:16px}
+.hero{margin:6px 14px;padding:20px;border-radius:22px;color:#fff;background:linear-gradient(135deg,var(--a),var(--b))}
+.hero h2{margin:0}.hero small{color:#ffffffcc}
+.ch{display:flex;gap:8px;overflow-x:auto;padding:10px 14px;scrollbar-width:none}
+.ch span{flex:none;padding:6px 14px;border-radius:99px;background:var(--cd)}
+.ch .on{background:var(--a);color:#fff}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:6px 14px}
+.t{position:relative;overflow:hidden;height:90px;border-radius:18px;padding:14px;color:#fff;font-weight:900;display:flex;align-items:flex-end}
+.t em{position:absolute;top:8px;left:10px;font-size:34px;opacity:.55}
+.ag{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:6px 14px}
+.av{text-align:center}.av i{display:grid;place-items:center;width:84px;height:84px;margin:auto;border-radius:50%;font-size:30px;font-weight:900;color:#fff;font-style:normal}
+.nt,.em{margin:8px 14px;padding:10px 14px;border-radius:14px;background:var(--cd);color:var(--mu);font-size:12px}
+nav{position:fixed;inset-inline:0;bottom:0;z-index:20;display:flex;background:var(--cd);border-top:1px solid var(--ln);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px))}
+nav a{flex:1;text-align:center;font-size:10px;color:var(--mu)}nav i{display:block;font-size:20px;font-style:normal}nav .on{color:var(--a);font-weight:900}
+#mini{position:fixed;inset-inline:10px;bottom:calc(66px + env(safe-area-inset-bottom,0px));z-index:19;display:flex;align-items:center;gap:10px;padding:8px;border-radius:18px;background:linear-gradient(90deg,var(--a),var(--b));color:#fff;box-shadow:0 6px 20px #0004}
+#mini .cv{width:44px;height:44px;border-radius:10px;font-size:18px}#mini .in{flex:1;min-width:0}#mini .in b{margin:0}#mini small{color:#ffffffcc}
+#mini button{border:0;background:#ffffff33;color:#fff;width:40px;height:40px;border-radius:50%;font-size:16px}
+#full{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;align-items:center;gap:10px;padding:calc(14px + env(safe-area-inset-top,0px)) 24px calc(22px + env(safe-area-inset-bottom,0px));background:linear-gradient(160deg,var(--a),var(--b) 55%,#111);color:#fff;text-align:center;transform:translateY(100%);transition:.3s;visibility:hidden}
+#full.on{transform:none;visibility:visible}
+#full button{border:0;background:none;color:#fff;font:inherit;font-size:24px}
+#full .x{align-self:flex-start}
+#fc{margin:auto 0 6px}#fc .cv{width:min(72vw,300px);border-radius:28px;font-size:90px;box-shadow:0 20px 50px #0006}
+.pl #fc .cv{animation:pu 1.6s infinite alternate}@keyframes pu{to{transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){.pl #fc .cv{animation:none}}
+#ft{font-size:22px;font-weight:900}#fa{opacity:.8}
+#rg{width:100%;accent-color:#fff}.tm{display:flex;justify-content:space-between;width:100%;font-size:12px;opacity:.8}
+.ct,.ct2{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:340px}
+.ct button{opacity:.55}.ct .ab,.ct .pp,.ct .k{opacity:1}
+#full .pp{width:68px;height:68px;border-radius:50%;background:#fff;color:#111;font-size:28px}
+.ct2 button{font-size:15px;background:#ffffff33;border-radius:99px;padding:8px 18px}
+#bk{position:fixed;inset:0;background:#0007;z-index:39;display:none}#bk.on{display:block}
+#dls{position:fixed;inset-inline:0;bottom:0;z-index:40;background:var(--cd);border-radius:24px 24px 0 0;padding:18px 18px calc(18px + env(safe-area-inset-bottom,0px));transform:translateY(110%);transition:.3s}
+#dls.on{transform:none}#dls>b{display:block;margin-bottom:12px}
+#dls button{display:flex;justify-content:space-between;width:100%;margin-top:8px;padding:14px;border:0;border-radius:14px;background:var(--bg);color:var(--tx);font:inherit}
+#ts{position:fixed;top:calc(64px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:50;background:#111d;color:#fff;padding:9px 16px;border-radius:99px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;max-width:90vw;text-align:center}#ts.on{opacity:1}
+</style></head><body>
+<header><button data-act=back id=bb hidden>→</button><h1>موزیک‌باکس</h1><input id=sq placeholder="آهنگ، مداح، هنرمند…"><button data-act=rf>⟳</button></header>
+<main></main>
+<div id=mini hidden data-act=open></div>
+<nav><a data-nv=h><i>🏠</i>خانه</a><a data-nv=m><i>🎵</i>آهنگ</a><a data-nv=d><i>🕌</i>مداحی</a><a data-nv=c><i>🗂️</i>دسته‌بندی</a><a data-nv=a><i>🎤</i>هنرمندان</a></nav>
+<section id=full><button class=x data-act=close>⌄</button><div id=fc></div><h3 id=ft></h3><p id=fa></p>
+<input id=rg type=range min=0 value=0 dir=ltr><div class=tm dir=ltr><span id=t1></span><span id=t2></span></div>
+<div class=ct dir=ltr><button data-act=shuf id=sf>🔀</button><button class=k data-act=prev>⏮</button><button class=pp id=pp data-act=play>▶</button><button class=k data-act=next>⏭</button><button data-act=rp id=rpb>🔁</button></div>
+<div class=ct2><button id=lk data-act=like>♡ پسندیدن</button><button data-act=fdl>⬇ دانلود</button></div></section>
+<div id=bk data-act=bk></div>
+<div id=dls><b id=dn></b><button data-k=128><span>کیفیت معمولی ۱۲۸</span><small id=s1></small></button><button data-k=320><span>کیفیت بالا ۳۲۰</span><small id=s3></small></button></div>
+<div id=ts></div>
+<script>
+const GM=['پاپ','سنتی','رپ','راک','الکترونیک','بیکلام','لری','کردی'],GD=['شور','روضه','مرثیه','مولودی','نوحه','سینه‌زنی','مناجات','دعا'],
+EM={'پاپ':'🎤','سنتی':'🪕','رپ':'🧢','راک':'🥁','الکترونیک':'🎛️','بیکلام':'🎹','لری':'🪘','کردی':'🎶','شور':'🔥','روضه':'🕯️','مرثیه':'🖤','مولودی':'🌹','نوحه':'🌙','سینه‌زنی':'✊','مناجات':'🤲','دعا':'📿'},
+CL=['#e0334d','#14b8a6','#a855f7','#65a30d','#3b82f6','#c2813f','#4d9a3a','#0ea5a4'],
+MS=`شب بی‌ستاره|آرین نیکو|پاپ|920|41|2|215
+باران پاییزی|سارا مهرام|پاپ|610|33|5|198
+دلتنگی|نیما راد|پاپ|1500|75|20|232
+غزل کویر|سامان فرخی|سنتی|480|29|3|276
+خیابان|پویا ام‌سی|رپ|870|52|1|184
+طوفان|بهرام ایمان|راک|410|22|8|243
+فضا|دی‌جی آرتا|الکترونیک|560|20|4|208
+یار دیرین|داریوش لر|لری|370|19|6|225`,
+DS=`شور حسینی|حاج رضا امینی|شور|1800|90|2|420
+روضه شب|حاج مهدی کرمانی|روضه|1200|70|4|540
+مرثیه غریب|حاج سعید رضوی|مرثیه|640|34|10|360
+مولودی میلاد|حاج حمید نوری|مولودی|900|46|1|300
+نوحه سنتی|حاج علی بصیر|نوحه|520|27|7|380
+سینه‌زنی|حاج مجید فرهادی|سینه‌زنی|1100|58|3|330
+مناجات سحر|حاج کریم یزدانی|مناجات|760|40|14|270
+دعای ندبه|حاج مهدی کرمانی|دعا|430|23|28|600`;
+const $=s=>document.querySelector(s),J=(l,f)=>l.map(f).join(''),
+fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]),
+fn=n=>n>=1e6?fa((n/1e6).toFixed(1)).replace('.','٫')+' میلیون':n>=1e3?fa(Math.round(n/1e3))+' هزار':fa(n),
+fm=s=>fa(Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'));
+let T=[],n=0,S={v:'h',a:{}},Q=[],cur,pl=0,pos=0,sh=0,rp=0,tm,dt,dm=1,Lk=new Set,A=new Audio;
+const mk=(s,y)=>{const[t,a,g,p,l,e,u]=s.split('|');return{id:++n,t,a,g,y,p:p*1e3,l:l*1e3,e:+e,u:+u}},
+demo=()=>{n=0;return[...MS.split('\n').map(s=>mk(s,'m')),...DS.split('\n').map(s=>mk(s,'d'))]},
+sc=t=>(t.p+t.l*8)/(1+t.e/10),pp=t=>t.p,nw=t=>-t.e,wk=t=>t.e<=7,mo=t=>t.e<=30,
+ty=y=>T.filter(t=>t.y==y),by=(y,s,f,k)=>ty(y).filter(f||(()=>1)).sort((a,b)=>s(b)-s(a)).slice(0,k),
+hv=t=>Math.abs([...t.t+t.a].reduce((s,c)=>s*31+c.charCodeAt(0)|0,7))%360,
+cv=t=>`<i class=cv style="background:${t.img?`url(${t.img}) center/cover`:`linear-gradient(135deg,hsl(${hv(t)} 70% 52%),hsl(${(hv(t)+60)%360} 65% 32%))`}">${t.img?'':t.y=='m'?'♫':'✦'}</i>`,
+q=l=>l.map(t=>t.id).join(),
+card=(t,l,i)=>`<div class=c data-p=${t.id} data-q=${q(l)}>${cv(t)}${i!=null?`<em class=n>${fa(i+1)}</em>`:''}<b>${t.t}</b><small>${t.a}</small></div>`,
+row=(t,l)=>`<div class=r data-p=${t.id} data-q=${q(l)}>${cv(t)}<div class=in><b>${t.t}</b><small>${t.a} · ${fm(t.u)}</small></div><button data-dl=${t.id}>⬇</button></div>`,
+hs=(l,r)=>`<div class=hs>${J(l,(t,i)=>card(t,l,r?null:i))}</div>`,
+two=(t,f)=>`<h2>${t}</h2><h3>🎵 آهنگ</h3>${f('m')}<h3>🕌 مداحی</h3>${f('d')}`,
+pc=y=>`<div class=hs>${J((y=='m'?GM:GD).map(g=>{const l=ty(y).filter(t=>t.g==g);return{g,l,s:l.reduce((s,t)=>s+sc(t),0)}}).filter(x=>x.l.length).sort((a,b)=>b.s-a.s),(x,i)=>`<div class=c data-gl="${y}|${x.g}"><i class=cv style="background:${CL[i%8]}">${EM[x.g]}</i>${i?'':'<em class=n>🔥 داغ</em>'}<b>پلی‌لیست ${x.g}</b><small>${fa(x.l.length)} مورد</small></div>`)}</div>`,
+home=()=>(dm?'<p class=nt>حالت نمایشی: داده‌ها نمونه‌اند. فید زنده را در data.json قرار بده.</p>':'')+
+two('🏆 برترین‌ها',y=>hs(by(y,sc,0,5)))+two('✨ جدیدترین‌ها',y=>hs(by(y,nw,0,10),1))+two('🤖 پلی‌لیست‌های هوشمند',pc)+two('📅 برترین‌های هفته',y=>hs(by(y,pp,wk,8)))+two('🗓️ برترین‌های ماه',y=>hs(by(y,pp,mo,8))),
+page=y=>{const g=S.g||'',l=ty(y).filter(t=>!g||t.g==g).sort((a,b)=>a.e-b.e);
+return`<div class=hero><h2>${y=='m'?'🎵 آهنگ‌های روز':'🕌 مداحی‌های روز'}</h2><small>${fa(l.length)} مورد</small></div><div class=ch>${J(y=='m'?GM:GD,x=>`<span data-ch="${x}" class="${x==g?'on':''}">${x}</span>`)}</div>${J(l,t=>row(t,l))||'<p class=em>موردی نیست</p>'}`},
+tiles=y=>J(y=='m'?GM:GD,(g,i)=>`<div class=t data-gl="${y}|${g}" style="background:${CL[i]}"><em>${EM[g]}</em>${g}</div>`),
+cats=()=>`<h2>🎵 سبک‌های آهنگ</h2><div class=g>${tiles('m')}</div><h2>🕌 سبک‌های مداحی</h2><div class=g>${tiles('d')}</div>`,
+ars=y=>{const m={};ty(y).forEach(t=>m[t.a]=(m[t.a]||0)+t.p);return`<div class=ag>${J(Object.entries(m).sort((a,b)=>b[1]-a[1]),([a,p])=>`<div class=av data-ar="${a}" data-y=${y}><i style="background:linear-gradient(135deg,hsl(${hv({t:a,a:''})} 70% 50%),hsl(${(hv({t:a,a:''})+50)%360} 60% 32%))">${a.replace('حاج ','')[0]}</i><b>${a}</b><small>${fn(p)} پخش</small></div>`)}</div>`},
+arts=()=>`<h2>🎤 خواننده‌ها</h2>${ars('m')}<h2>🕌 مداحان</h2>${ars('d')}`,
+lst=()=>{const a=S.a,l=T.filter(a.f).sort((x,y)=>sc(y)-sc(x));return`<h2>${a.title}</h2>`+(J(l,t=>row(t,l))||'<p class=em>موردی پیدا نشد</p>')};
+function render(){const{v,a}=S;document.body.className=v=='m'||v=='d'?v:a.y||'';$('#bb').hidden=v!='l';
+$('main').innerHTML=({h:home,m:()=>page('m'),d:()=>page('d'),c:cats,a:arts,l:lst})[v]();
+document.querySelectorAll('nav a').forEach(x=>x.classList.toggle('on',x.dataset.nv==v))}
+function go(v,a={}){if(v=='l'&&S.v!='l')S.back={v:S.v};if(v!='l'){S.g='';$('#sq').value=''}S.v=v;S.a=a;render();scrollTo(0,0)}
+const toast=m=>{const e=$('#ts');e.textContent=m;e.classList.add('on');clearTimeout(e.t);e.t=setTimeout(()=>e.classList.remove('on'),2600)};
+function ui(l){if(!cur)return;if(!l){const c=cv(cur);$('#mini').hidden=0;$('#mini').innerHTML=`${c}<div class=in><b>${cur.t}</b><small>${cur.a}</small></div><button data-act=play>${pl?'⏸':'▶'}</button>`;
+$('#fc').innerHTML=c;$('#ft').textContent=cur.t;$('#fa').textContent=cur.a;$('#rg').max=cur.u;$('#pp').textContent=pl?'⏸':'▶';$('#full').classList.toggle('pl',pl);
+$('#sf').classList.toggle('ab',sh);$('#rpb').classList.toggle('ab',rp);$('#rpb').textContent=rp==2?'🔂':'🔁';$('#lk').textContent=(Lk.has(cur.id)?'♥':'♡')+' پسندیدن'}
+$('#rg').value=pos;$('#t1').textContent=fm(pos);$('#t2').textContent=fm(cur.u)}
+function play(id,l){if(l)Q=l;cur=T.find(x=>x.id==id);if(!cur)return;pos=0;pl=1;if(cur.src){A.src=cur.src;A.play().catch(()=>{})}else A.removeAttribute('src');
+clearInterval(tm);tm=setInterval(()=>{if(!pl)return;pos=cur.src?A.currentTime:pos+1;if(pos>=cur.u)nx(1,1);ui(1)},1000);ui()}
+function nx(d,auto){if(!Q.length)return;if(auto&&rp==2){pos=0;if(cur.src){A.currentTime=0;A.play()}return}
+let i=Q.indexOf(cur.id);i=sh?Math.floor(Math.random()*Q.length):i+d;if(i>=Q.length){if(rp||!auto)i=0;else{pl=0;return ui()}}if(i<0)i=Q.length-1;play(Q[i])}
+function dl(id){dt=T.find(x=>x.id==id);const mb=k=>'حدود '+fa((dt.u*k/8/1024).toFixed(1)).replace('.','٫')+' مگابایت';
+$('#dn').textContent=dt.t+' — '+dt.a;$('#s1').textContent=mb(128);$('#s3').textContent=mb(320);$('#dls').classList.add('on');$('#bk').classList.add('on')}
+const shut=()=>{$('#dls').classList.remove('on');$('#bk').classList.remove('on')};
+document.addEventListener('click',e=>{const x=k=>e.target.closest(`[${k}]`);let el;
+if(el=x('data-dl'))return dl(+el.dataset.dl);
+if(el=x('data-k')){const u=dt['k'+el.dataset.k];shut();if(u){const a=document.createElement('a');a.href=u;a.download='';a.click()}else toast('حالت نمایشی: لینک ۱۲۸/۳۲۰ را در data.json بگذار');return}
+if(el=x('data-act')){const a=el.dataset.act;
+if(a=='open')$('#full').classList.add('on');else if(a=='close')$('#full').classList.remove('on');else if(a=='bk')shut();
+else if(a=='back'){$('#sq').value='';go(S.back.v)}else if(a=='rf')load(1);
+else if(a=='play'){if(!cur)return;pl=!pl;if(cur.src)pl?A.play():A.pause();ui()}
+else if(a=='next')nx(1);else if(a=='prev')nx(-1);else if(a=='shuf'){sh=!sh;ui()}else if(a=='rp'){rp=(rp+1)%3;ui()}
+else if(a=='like'){Lk.has(cur.id)?Lk.delete(cur.id):Lk.add(cur.id);ui()}else if(a=='fdl')dl(cur.id);return}
+if(el=x('data-p'))return play(+el.dataset.p,el.dataset.q.split(',').map(Number));
+if(el=x('data-ch')){S.g=el.dataset.ch==S.g?'':el.dataset.ch;return render()}
+if(el=x('data-gl')){const[y,g]=el.dataset.gl.split('|');return go('l',{title:g,y,f:t=>t.y==y&&t.g==g})}
+if(el=x('data-ar')){const a=el.dataset.ar;return go('l',{title:a,y:el.dataset.y,f:t=>t.a==a})}
+if(el=x('data-nv'))go(el.dataset.nv)});
+$('#rg').oninput=e=>{pos=+e.target.value;if(cur.src)A.currentTime=pos;ui(1)};
+$('#sq').oninput=e=>{const s=e.target.value.trim();if(s)go('l',{title:`نتایج «${s}»`,f:t=>(t.t+t.a+t.g).includes(s)});else if(S.v=='l')go(S.back.v)};
+async function load(m){try{const j=await(await fetch('data.json',{cache:'no-store'})).json();n=0;T=j.map(x=>({id:++n,...x}));dm=0;m&&toast('بروزرسانی شد ✓')}catch(e){dm=1;m&&toast('فید data.json پیدا نشد؛ داده نمایشی است')}render()}
+T=demo();render();load();
+</script></body></html>

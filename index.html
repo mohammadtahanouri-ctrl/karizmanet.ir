@@ -715,6 +715,15 @@ html.adv .kz-mon{will-change:transform,opacity;-webkit-backface-visibility:hidde
  html[data-theme] .hero-badge{animation:fadeInDown .6s ease-out;box-shadow:none}
  .hero-badge i{animation:none}
 }
+
+/* ===== v3: visible glass (light mode): top bar, bottom bar, categories ===== */
+html[data-theme="light"] header,html[data-theme="light"] .bottom-nav{background:rgba(236,237,242,.42)!important;-webkit-backdrop-filter:blur(18px) saturate(1.8)!important;backdrop-filter:blur(18px) saturate(1.8)!important;border-color:rgba(255,255,255,.7)!important;box-shadow:0 4px 20px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.75)!important}
+html[data-theme="light"] .cat-chip,html[data-theme="light"] .btn-open-categories,html[data-theme="light"] .active-cat-bar{background-color:rgba(236,237,242,.45)!important;-webkit-backdrop-filter:blur(14px) saturate(1.6)!important;backdrop-filter:blur(14px) saturate(1.6)!important;border:1px solid rgba(255,255,255,.75)!important;box-shadow:0 3px 14px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.8)!important}
+html[data-theme="light"] .cat-chip.active{background-color:var(--primary)!important;border-color:var(--primary)!important}
+html[data-theme="light"] .category-dialog{background:rgba(238,239,244,.5)!important;-webkit-backdrop-filter:blur(24px) saturate(1.8)!important;backdrop-filter:blur(24px) saturate(1.8)!important;border:1px solid rgba(255,255,255,.8)!important;box-shadow:0 16px 48px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.85)!important}
+html[data-theme="light"] .category-dialog .cat-card{background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.75)}
+html[data-theme="light"] .category-dialog .cat-card.active{background:var(--primary);border-color:var(--primary)}
+html[data-theme="light"] dialog::backdrop{background:rgba(30,30,40,.22);backdrop-filter:blur(4px)}
     </style>
 
     <!-- Yandex.Metrika counter -->

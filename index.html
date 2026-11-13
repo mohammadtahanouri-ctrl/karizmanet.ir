@@ -3,12 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT675TERMM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TT675TERMM');</script>
     <title>کافی‌نت آنلاین بیرجند | خدمات غیرحضوری کاریزما نت</title>
     
     <meta name="description" content="کافی‌نت آنلاین کاریزما نت در بیرجند؛ خدمات غیرحضوری شامل ثبت‌نام ایران خودرو و سایپا، کالابرگ و یارانه، تأییدیه تحصیلی، ثبت‌نام سامانه‌های دولتی و پیگیری با کد رهگیری.">
     <meta name="keywords" content="کافی نت آنلاین, کافی‌نت آنلاین, کافینت آنلاین, کافی‌نت کاریزما, کافی نت کاریزما, کافینت کاریزما, کافی‌نت بیرجند, کافی نت بیرجند, کافینت بیرجند, کافی‌نت در بیرجند, کافی نت در بیرجند, کاریزمانت, کاریزما نت, خدمات آنلاین, خدمات کافی نت, خدمات کافینت, کافی نت, کالابرگ, ثبت‌نام ایران خودرو, ثبت‌نام سایپا, تأییدیه تحصیلی, تاییدیه تحصیلی, ثبت‌نام, ثبت‌نام یارانه, ثبت نام ایران خودرو, ثبت نام سایپا, ثبت نام یارانه, ثبت نام کالابرگ, اعتراض به دهک‌بندی, تغییر شماره حساب یارانه, پرینت, کپی و اسکن, تایپ, ثبت‌نام سجام, ثبت‌نام ثنا, ثبت‌نام سخا, نوبت‌گیری, خدمات غیرحضوری, خدمات غیرحضوری کافی‌نت">
     
-    <meta name="theme-color" content="#121a30">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" id="kz-theme-color" content="#17171d">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com"><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="robots" content="index, follow">
@@ -48,17 +52,28 @@
         function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
         function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
         function safeDel(k){ try { localStorage.removeItem(k); } catch(e){} }
-        const savedTheme = safeGet('theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', savedTheme);
+        var _kzMQ = window.matchMedia ? matchMedia('(prefers-color-scheme: light)') : null;
+        function kzSysTheme(){ return (_kzMQ && _kzMQ.matches) ? 'light' : 'dark'; }
+        function kzApplyTheme(t){
+            document.documentElement.setAttribute('data-theme', t);
+            var m = document.getElementById('kz-theme-color');
+            if (m) m.setAttribute('content', t === 'light' ? '#f5f5f7' : '#17171d');
+        }
+        const savedTheme = safeGet('theme') || kzSysTheme();
+        kzApplyTheme(savedTheme);
+        if (_kzMQ) {
+            var _kzCh = function(){ if (!safeGet('theme')) { var t = kzSysTheme(); kzApplyTheme(t); if (typeof updateThemeIcon === 'function') updateThemeIcon(t); } };
+            if (_kzMQ.addEventListener) _kzMQ.addEventListener('change', _kzCh); else if (_kzMQ.addListener) _kzMQ.addListener(_kzCh);
+        }
     </script>
 
     <style>
         :root {
-            --bg: #121a30;
-            --surface: rgba(30, 41, 59, 0.6);
+            --bg: #17171d;
+            --surface: rgba(40, 40, 50, 0.7);
             --border: rgba(255, 255, 255, 0.1);
             --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --text-muted: #a3a3b0;
             --primary: #6366f1;
             --primary-hover: #4f46e5;
             --accent: #0ea5e9;
@@ -70,23 +85,23 @@
             --glass-border: rgba(255, 255, 255, 0.15);
             --glow: rgba(99, 102, 241, 0.4);
             --screen-bg: #050914;
-            --keyboard-bg: rgba(15, 23, 42, 0.6);
+            --keyboard-bg: rgba(30, 30, 38, 0.7);
             --top-glow: rgba(14, 165, 233, 0.6);
             --design-glow: rgba(236, 72, 153, 0.6);
         }
         [data-theme="light"] {
-            --bg: #f4ede1;
-            --surface: rgba(251, 247, 238, 0.8);
-            --border: rgba(90, 65, 30, 0.12);
-            --text-main: #26221b;
-            --text-muted: #6b6354;
-            --shadow: 0 8px 32px rgba(90, 65, 30, 0.1);
+            --bg: #f5f5f7;
+            --surface: rgba(255, 255, 255, 0.92);
+            --border: rgba(0, 0, 0, 0.10);
+            --text-main: #1d1d1f;
+            --text-muted: #6e6e73;
+            --shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
             
-            --glass-bg: rgba(251, 246, 236, 0.7);
-            --glass-border: rgba(90, 65, 30, 0.16);
+            --glass-bg: rgba(255, 255, 255, 0.9);
+            --glass-border: rgba(0, 0, 0, 0.12);
             --glow: rgba(99, 102, 241, 0.2);
-            --screen-bg: #e9dfcf;
-            --keyboard-bg: rgba(251, 247, 238, 0.85);
+            --screen-bg: #e8e8ed;
+            --keyboard-bg: rgba(255, 255, 255, 0.92);
             --top-glow: rgba(14, 165, 233, 0.3);
             --design-glow: rgba(236, 72, 153, 0.3);
         }
@@ -489,7 +504,7 @@ html.adv .kz3-kb b{box-shadow:0 0 6px hsl(var(--h) 100% 55%/.7)}
 @property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
 @keyframes kzHue{to{filter:hue-rotate(360deg)}}@keyframes kzGrad{to{background-position:300% 0}}@keyframes kzSpin{to{--ang:360deg}}
 @keyframes kzDlg{from{opacity:0;transform:perspective(900px) rotateX(-20deg) translateY(40px) scale(.94)}}@keyframes kzAurora{to{transform:translate3d(4%,3%,0) rotate(6deg) scale(1.1)}}
-html{--kzc:#172039}html[data-theme="light"]{--kzc:#fbf7ee}
+html{--kzc:#23232d}html[data-theme="light"]{--kzc:#ffffff}
 #kz-gl{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block}
 html[data-theme="light"] #kz-gl{opacity:.55}
 html.gl #particles-canvas{display:none}
@@ -670,6 +685,29 @@ section#seo.kz-seo{position:absolute!important;width:1px!important;height:1px!im
 .kzbot-cp{display:block;margin:12px auto 0;padding:9px 20px;border-radius:99px;border:1px solid var(--glass-border);background:var(--glass-bg);color:var(--text-main);font:700 13px inherit;font-family:inherit;direction:ltr;cursor:pointer}
 @media (min-width:900px){.kzbot{padding:38px 40px 32px}.kzbot-ic{width:96px;height:96px;font-size:50px}}
 
+
+/* ===== v2: theme palette, hero badge fix, carousel flicker fix ===== */
+body::before{opacity:.55}
+html[data-theme="light"] body::before{opacity:.18}
+html[data-theme="dark"] #why-us,html[data-theme="dark"] #telegram-bot,html[data-theme="dark"] #upload,html[data-theme="dark"] #faq{background:linear-gradient(180deg,transparent 0,rgba(255,255,255,.05) 16%,rgba(255,255,255,.05) 84%,transparent 100%)}
+html[data-theme="light"] .svc-card,html[data-theme="light"] .link-card,html[data-theme="light"] .bento-item,html[data-theme="light"] .action-card,html[data-theme="light"] .faq-item,html[data-theme="light"] .cat-chip,html[data-theme="light"] .btn-open-categories,html[data-theme="light"] .open-badge{background-color:#fff;border-color:rgba(0,0,0,.14);box-shadow:0 2px 10px rgba(0,0,0,.07),0 8px 24px -12px rgba(0,0,0,.14)!important}
+html[data-theme="light"] header,html[data-theme="light"] .bottom-nav{background:rgba(255,255,255,.86)!important;border-color:rgba(0,0,0,.1)}
+html[data-theme="light"] .hero-badge{color:#7c4a03;background:rgba(250,204,21,.28);border:1px solid rgba(161,98,7,.55);text-shadow:none;box-shadow:0 4px 18px rgba(161,98,7,.2);animation:fadeInDown .8s ease-out,glowPulseAmber 3s infinite alternate}
+html[data-theme="light"] .hero-badge i{color:#a16207}
+@keyframes glowPulseAmber{0%{box-shadow:0 2px 12px rgba(161,98,7,.15);border-color:rgba(161,98,7,.4)}100%{box-shadow:0 4px 24px rgba(161,98,7,.35);border-color:rgba(161,98,7,.75)}}
+/* carousel: no 3D-flatten pop when opacity changes, own GPU layer, eased glow */
+html.adv .kz-mon,html.adv .kz-mon .ct{transform-style:flat}
+html.adv .kz-mon{will-change:transform,opacity;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.kz-mon .scr{transform:translateZ(0)}
+#links-container.reveal,#top-services-grid.reveal,#services-grid.reveal{opacity:1;transform:none}
+@media (max-width:899px){
+ html.adv .kz-mon .scr,html.adv .kz-mon.act .scr{box-shadow:0 0 0 1px rgba(255,255,255,.22),0 10px 20px rgba(0,0,0,.45)}
+ html.adv .kz-mon.act .scr{border-color:#22d3ee}
+ .kz-mon .scr::before{display:none}
+ html.adv .kz-mon .scr::after{display:none}
+ html[data-theme] .hero-badge{animation:fadeInDown .6s ease-out;box-shadow:none}
+ .hero-badge i{animation:none}
+}
     </style>
 
     <!-- Yandex.Metrika counter -->
@@ -1402,6 +1440,7 @@ section#seo.kz-seo{position:absolute!important;width:1px!important;height:1px!im
 
         let cart = {};
         let activeCategory = 'همه';
+        let servicesOpen = false; /* لیست خدمات زیر دسته‌بندی‌ها تا انتخاب یک دسته (یا «همه») نمایش داده نمی‌شود؛ ۱۶ خدمت پرکاربرد همیشه هست */
         let currentOrderCode = '';
         const $ = document.querySelector.bind(document);
         const fa = n => n.toLocaleString('fa-IR');
@@ -1478,7 +1517,7 @@ function showDocs(idx) {
         function renderCatChips() {
             const wrap = $('#cat-chips'); if (!wrap) return;
             const cats = ['همه', ...new Set(D.s.map(i => i[0]))];
-            wrap.innerHTML = cats.map(c => '<button class="cat-chip ' + (c === activeCategory ? 'active' : '') + '" data-c="' + c + '" onclick="chipSelect(this.dataset.c)"><i class="fa-solid ' + getCategoryIcon(c) + '"></i> ' + c + '</button>').join('');
+            wrap.innerHTML = cats.map(c => '<button class="cat-chip ' + ((c === activeCategory && (c !== 'همه' || servicesOpen)) ? 'active' : '') + '" data-c="' + c + '" onclick="chipSelect(this.dataset.c)"><i class="fa-solid ' + getCategoryIcon(c) + '"></i> ' + c + '</button>').join('');
         }
         function chipSelect(c) { setCategory(c); setTimeout(scrollToResults, 60); }
         function updateOpenBadge() {
@@ -1547,7 +1586,7 @@ function showDocs(idx) {
         function toggleTheme() {
             const current = document.documentElement.getAttribute('data-theme');
             const next = current === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
+            kzApplyTheme(next);
             safeSet('theme', next);
             updateThemeIcon(next);
         }
@@ -1563,7 +1602,7 @@ function showDocs(idx) {
             const categories = ['همه', ...allCats];
             
             grid.innerHTML = categories.map(cat => `
-                <div class="cat-card ${cat === activeCategory ? 'active' : ''}" onclick="setCategoryFromModal('${cat}')">
+                <div class="cat-card ${(cat === activeCategory && (cat !== 'همه' || servicesOpen)) ? 'active' : ''}" onclick="setCategoryFromModal('${cat}')">
                     <i class="fa-solid ${getCategoryIcon(cat)}"></i>
                     <span>${cat}</span>
                 </div>
@@ -1601,6 +1640,7 @@ function showDocs(idx) {
 
         function setCategory(cat) {
             activeCategory = cat;
+            servicesOpen = true;
             updateActiveCatBar();
             renderCatChips();
             renderServices($('#searchInput').value.trim());
@@ -1676,11 +1716,14 @@ function showDocs(idx) {
             const nq = normalizeText(searchQuery);
             const list = nq ? topIndices.filter(i => matchQuery(haystack(D.s[i]), nq)) : topIndices;
             grid.innerHTML = list.map(i => generateServiceCardHTML(D.s[i], i, nq.length > 0, true, isDesignItem(D.s[i]))).join('');
+            grid.classList.add('active');
         }
 
         function renderServices(searchQuery = '') {
             const grid = $('#services-grid');
             const nq = normalizeText(searchQuery);
+            if (!servicesOpen && !nq) { grid.innerHTML = ''; return; }
+            grid.classList.add('active');
             let rows = D.s.map((r, i) => ({ r, i }));
             rows = activeCategory === 'همه' ? rows.filter(o => o.i >= 14) : rows.filter(o => o.r[0] === activeCategory);
             if (nq) rows = rows.filter(o => matchQuery(haystack(o.r), nq));
@@ -1706,6 +1749,7 @@ function showDocs(idx) {
                 }
             }
             container.innerHTML = html || '<p style="text-align:center; color:var(--text-muted); padding:20px;">سایتی یافت نشد.</p>';
+            container.classList.add('active');
         }
 
         function changeQty(idx, delta) {
@@ -1938,7 +1982,7 @@ var fl=document.createElement('div');fl.className='kz-floor';st.appendChild(fl);
 var mq=0,pos=0,tgt=0,tx=0,ty=0,run=0,drag=0,x0=0,p0=0,mv=0,tm;
 function adv(){return R.classList.contains('adv')}
 function wr(k,p){var d=((k-p)%N+N)%N;return d>N/2?d-N:d}
-function render(){var dsk=innerWidth>=900;C.forEach(function(c,k){var d=wr(k,pos),a=Math.abs(d),o=a<1?1-a*.45:Math.max(0,.55-(a-1)*1.1);
+function render(){var dsk=innerWidth>=900;C.forEach(function(c,k){var d=wr(k,pos),a=Math.abs(d),o=a<1?1-a*.45:Math.max(0,.55-(a-1)*1.1);if(a>=1.5){if(c.__h!==1){c.__h=1;c.style.visibility='hidden';c.style.opacity=0;c.style.pointerEvents='none';c.classList.remove('act')}return}if(c.__h===1){c.__h=0;c.style.visibility=''}
  c.style.transform='translateX(calc(-50% + '+(d*92)+'%)) translateZ('+(-a*110)+'px) rotateY('+(-d*34+(dsk?tx*8:0))+'deg) scale('+(1-Math.min(a,1)*.2)+')';
  c.style.opacity=o;c.style.zIndex=100-Math.round(a*40);c.style.pointerEvents=a<.5?'auto':'none';c.style.setProperty('--dim',(Math.min(a,1)*.55).toFixed(2));c.classList.toggle('act',a<.5)});
  if(dsk){st.style.setProperty('--px',tx.toFixed(2));st.style.setProperty('--py',ty.toFixed(2))}

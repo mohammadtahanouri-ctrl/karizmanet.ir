@@ -717,7 +717,7 @@ html.adv .kz-mon{will-change:transform,opacity;-webkit-backface-visibility:hidde
 }
 
 /* ===== v3: visible glass (light mode): top bar, bottom bar, categories ===== */
-html[data-theme="light"] header,html[data-theme="light"] .bottom-nav{background:rgba(236,237,242,.42)!important;-webkit-backdrop-filter:blur(18px) saturate(1.8)!important;backdrop-filter:blur(18px) saturate(1.8)!important;border-color:rgba(255,255,255,.7)!important;box-shadow:0 4px 20px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.75)!important}
+html[data-theme="light"] header,html[data-theme="light"] .bottom-nav{background:rgba(236,237,242,.22)!important;-webkit-backdrop-filter:blur(16px) saturate(1.8)!important;backdrop-filter:blur(16px) saturate(1.8)!important;border-color:rgba(255,255,255,.6)!important;box-shadow:0 4px 20px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.75)!important}
 html[data-theme="light"] .cat-chip,html[data-theme="light"] .btn-open-categories,html[data-theme="light"] .active-cat-bar{background-color:rgba(236,237,242,.45)!important;-webkit-backdrop-filter:blur(14px) saturate(1.6)!important;backdrop-filter:blur(14px) saturate(1.6)!important;border:1px solid rgba(255,255,255,.75)!important;box-shadow:0 3px 14px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.8)!important}
 html[data-theme="light"] .cat-chip.active{background-color:var(--primary)!important;border-color:var(--primary)!important}
 html[data-theme="light"] .category-dialog{background:rgba(238,239,244,.5)!important;-webkit-backdrop-filter:blur(24px) saturate(1.8)!important;backdrop-filter:blur(24px) saturate(1.8)!important;border:1px solid rgba(255,255,255,.8)!important;box-shadow:0 16px 48px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.85)!important}
@@ -1535,7 +1535,18 @@ function showDocs(idx) {
             const cats = ['همه', ...new Set(D.s.map(i => i[0]))];
             wrap.innerHTML = cats.map(c => '<button class="cat-chip ' + ((c === activeCategory && (c !== 'همه' || servicesOpen)) ? 'active' : '') + '" data-c="' + c + '" onclick="chipSelect(this.dataset.c)"><i class="fa-solid ' + getCategoryIcon(c) + '"></i> ' + c + '</button>').join('');
         }
-        function chipSelect(c) { setCategory(c); setTimeout(scrollToResults, 60); }
+        function chipSelect(c) {
+            /* دکمهٔ «همه»: بار اول خدمات را باز می‌کند، بار بعد دوباره جمع می‌کند */
+            if (c === 'همه' && activeCategory === 'همه' && servicesOpen) {
+                servicesOpen = false;
+                updateActiveCatBar();
+                renderCatChips();
+                renderServices($('#searchInput').value.trim());
+                updateSearchInfo();
+                return;
+            }
+            setCategory(c); setTimeout(scrollToResults, 60);
+        }
         function updateOpenBadge() {
             const el = $('#open-badge'); if (!el) return;
             let now;

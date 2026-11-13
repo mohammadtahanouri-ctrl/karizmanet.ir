@@ -726,8 +726,15 @@ html[data-theme="light"] .category-dialog .cat-card.active{background:var(--prim
 html[data-theme="light"] dialog::backdrop{background:rgba(30,30,40,.22);backdrop-filter:blur(4px)}
 
 /* ===== v4: monitor screens: mid-tone (not too dark, not too light) ===== */
-.kz-mon .scr{background:linear-gradient(135deg,#3552a8,#5f43b8 55%,#9a43a8);border-color:#232a55}
-.kz-mon .bg{background:radial-gradient(60% 80% at 50% 0,rgba(103,232,249,.30),transparent 70%)}
+.kz-mon .scr{background:linear-gradient(160deg,#0e0c0d 0%,#241d1b 38%,#3b2f29 72%,#54443a 100%);border-color:#1a1514}
+.kz-mon .bg{background:radial-gradient(70% 70% at 70% 100%,rgba(214,176,128,.22),transparent 70%)}
+html.adv .kz-mon .bg{background:radial-gradient(70% 70% at 70% 100%,rgba(214,176,128,.22),transparent 70%)}
+
+/* ===== v5: smooth theme switch ===== */
+html.kz-sw *,html.kz-sw *::before,html.kz-sw *::after{transition:none!important}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-old(root){z-index:1}
+::view-transition-new(root){z-index:2}
     </style>
 
     <!-- Yandex.Metrika counter -->
@@ -761,7 +768,7 @@ html[data-theme="light"] dialog::backdrop{background:rgba(30,30,40,.22);backdrop
                 <input type="text" id="searchInput" placeholder="جستجو...">
             </div>
             <button class="btn-icon" onclick="openUserPanel()" title="پنل کاربری"><i class="fa-solid fa-user"></i></button>
-            <button class="btn-icon" onclick="toggleTheme()" title="تغییر تم"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
+            <button class="btn-icon" onclick="toggleTheme(event)" title="تغییر تم"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
             <button class="btn-icon" onclick="toggleCart()" title="سبد خرید">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span class="cart-badge" id="cart-badge">0</span>
@@ -1614,12 +1621,26 @@ function showDocs(idx) {
             const y = $('#footer-year'); if (y) y.textContent = new Date().toLocaleDateString('fa-IR', { year: 'numeric' });
         }
 
-        function toggleTheme() {
-            const current = document.documentElement.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
-            kzApplyTheme(next);
-            safeSet('theme', next);
-            updateThemeIcon(next);
+        function toggleTheme(ev) {
+            const R = document.documentElement;
+            const next = R.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            const apply = () => { kzApplyTheme(next); safeSet('theme', next); updateThemeIcon(next); };
+            const calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+            R.classList.add('kz-sw'); /* خاموش کردن transitionهای تک‌تک المان‌ها هنگام تعویض تم */
+            const done = () => R.classList.remove('kz-sw');
+            if (!document.startViewTransition || calm) {
+                apply(); requestAnimationFrame(() => requestAnimationFrame(done)); return;
+            }
+            let x = innerWidth / 2, y = 40;
+            try { const b = (ev && ev.currentTarget) || document.querySelector('#theme-icon'); const r = b.getBoundingClientRect(); x = r.left + r.width / 2; y = r.top + r.height / 2; } catch (e) {}
+            const rad = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+            const vt = document.startViewTransition(apply);
+            vt.ready.then(() => {
+                R.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + rad + 'px at ' + x + 'px ' + y + 'px)'] },
+                          { duration: 520, easing: 'cubic-bezier(.4,0,.2,1)', pseudoElement: '::view-transition-new(root)' });
+            }).catch(() => {});
+            vt.finished.then(done, done);
+            setTimeout(done, 1200);
         }
         function updateThemeIcon(theme) {
             const icon = $('#theme-icon');
